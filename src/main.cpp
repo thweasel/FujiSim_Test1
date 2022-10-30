@@ -23,6 +23,8 @@
 #define ESP_HARDLOCK  10
 #define Z80_HARDLOCK   9
 
+#define CONNECT_Z80    8
+
 
 // Z80 Emulation
 #define Z80_DATA PORTA
@@ -141,11 +143,13 @@ void setup()
   pinMode(SBUS_OE_out,OUTPUT);
   pinMode(ESP_HARDLOCK,OUTPUT);
   pinMode(Z80_HARDLOCK,INPUT);
+  pinMode(CONNECT_Z80,OUTPUT);
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out,HIGH);
   digitalWrite(ESP_HARDLOCK,HIGH); // Lock on HIGH
   digitalWrite(Z80_HARDLOCK,LOW); // Lock on HIGH
+  digitalWrite(CONNECT_Z80,HIGH);  // Connect on LOW (may be buffer with NOT?)
 
   clear_ESP_SBUS_out();
 
