@@ -147,7 +147,7 @@ void setup()
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out,HIGH);
-  digitalWrite(ESP_HARDLOCK,HIGH); // Lock on HIGH
+  digitalWrite(ESP_HARDLOCK,LOW); // Lock on HIGH
   digitalWrite(Z80_HARDLOCK,LOW); // Lock on HIGH
   digitalWrite(CONNECT_Z80,HIGH);  // Connect on LOW (may be buffer with NOT?)
 
