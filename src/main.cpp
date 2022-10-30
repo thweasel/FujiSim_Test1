@@ -18,9 +18,10 @@
 #define PORT_DDR_OUTPUT 255
 #define PORT_DDR_INPUT 0
 
-#define SBUS_STC_out 49
-#define SBUS_OE_out 48
-#define ESP_HARDLOCK 5
+#define SBUS_STC_out  49
+#define SBUS_OE_out   48
+#define ESP_HARDLOCK  10
+#define Z80_HARDLOCK   9
 
 
 // Z80 Emulation
@@ -139,10 +140,12 @@ void setup()
   pinMode(SBUS_STC_out, OUTPUT);
   pinMode(SBUS_OE_out,OUTPUT);
   pinMode(ESP_HARDLOCK,OUTPUT);
+  pinMode(Z80_HARDLOCK,INPUT);
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out,HIGH);
-  digitalWrite(ESP_HARDLOCK,HIGH);
+  digitalWrite(ESP_HARDLOCK,HIGH); // Lock on HIGH
+  digitalWrite(Z80_HARDLOCK,LOW); // Lock on HIGH
 
   clear_ESP_SBUS_out();
 
