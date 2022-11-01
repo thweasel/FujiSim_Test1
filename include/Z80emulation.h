@@ -1,5 +1,8 @@
 #include <Arduino.h>
 
+#define PORT_DDR_OUTPUT 255
+#define PORT_DDR_INPUT 0
+
 // Z80 Emulation
 #define Z80_DATA PORTA
 #define Z80_DATA_DDR DDRA
@@ -20,11 +23,10 @@
 #define Z80_NMI   14
 
 
+void Z80_IDLE();
 
-void Z80_WR_Pulse();
-void Z80_RD_Pulse();
-void set_Z80_ADDR(uint16_t Address);
-void clear_Z80_ADDR();
-void set_Z80_Data(uint8_t Data);
-void clear_Z80_DATA();
 void do_Z80_IOWR(uint16_t Address, uint8_t Data);
+uint8_t do_Z80_IORD(uint16_t Address);
+
+void do_Z80_MEMWR(uint16_t Address, uint8_t Data);
+uint8_t do_Z80_MEMRD(uint16_t Address);

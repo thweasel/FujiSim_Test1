@@ -81,4 +81,13 @@ void loop()
   do_Z80_IOWR(1, 255);
 
   do_Z80_IOWR(2, 255);
+
+  do_Z80_IORD(1);
+  
+  do_Z80_IORD(2);
+
+  do_Z80_MEMWR(1,255);
+
+  do_Z80_MEMRD(1);
+
 }
