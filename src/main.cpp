@@ -78,13 +78,13 @@ void loop()
     delay(1000);
   */
 
-  //do_Z80_IOWR(1, 1);
-  //do_Z80_IORD(1);
+  do_Z80_IOWR(1, 1);
+  do_Z80_IORD(1);
 
   //do_Z80_IOWR(2, 2);
   //do_Z80_IORD(2);
 
-  do_Z80_MEMWR(3, 32);
-  do_Z80_MEMRD(3);
+  do_Z80_MEMWR(4, 32);
+  do_Z80_MEMRD(4);
 
 }
