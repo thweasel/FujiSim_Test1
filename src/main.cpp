@@ -29,12 +29,16 @@ void setup()
   pinMode(ESP_HARDLOCK, OUTPUT);
   pinMode(Z80_HARDLOCK, INPUT);
   pinMode(CONNECT_Z80, OUTPUT);
+  pinMode(TRIGGER_Local,OUTPUT);
+  pinMode(TRIGGER_Z80,OUTPUT);
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out, HIGH);
   digitalWrite(ESP_HARDLOCK, LOW); // Lock on HIGH
   digitalWrite(Z80_HARDLOCK, LOW); // Lock on HIGH
   digitalWrite(CONNECT_Z80, HIGH); // Connect on LOW (may be buffer with NOT?)
+  digitalWrite(TRIGGER_Local,HIGH);
+  digitalWrite(TRIGGER_Z80,HIGH);
 
   clear_ESP_SBUS_out();
 
