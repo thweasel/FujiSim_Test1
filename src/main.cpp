@@ -34,8 +34,8 @@ void setup()
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out, HIGH);
-  digitalWrite(ESP_HARDLOCK, LOW); // Lock on HIGH
-  digitalWrite(Z80_HARDLOCK, LOW); // Lock on HIGH
+  digitalWrite(ESP_HARDLOCK, HIGH); // Lock set LOW
+  digitalWrite(Z80_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(CONNECT_Z80, HIGH); // Connect on LOW (may be buffer with NOT?)
   digitalWrite(TRIGGER_Local,HIGH);
   digitalWrite(TRIGGER_Z80,HIGH);
@@ -82,16 +82,34 @@ void loop()
     delay(1000);
   */
 
+
+  do_Z80_MEMWR(1, 16);
+  do_Z80_MEMWR(2, 32);
+  do_Z80_MEMWR(3, 64);
+
+  do_Z80_MEMRD(1);
+  do_Z80_MEMRD(2);
+  do_Z80_MEMRD(3);
+
+
   do_Z80_IORD(1);
   do_Z80_IOWR(3, 1);
   do_Z80_IOWR(3, 2);
-  do_Z80_IOWR(3, 3);
+  do_Z80_IOWR(3, 4);
+  do_Z80_IORD(5);
+
+  do_Z80_IORD(1);
+  do_Z80_IORD(3);
+  do_Z80_IORD(3);
+  do_Z80_IORD(3);
   do_Z80_IORD(5);
 
   //do_Z80_IOWR(2, 2);
   //do_Z80_IORD(2);
 
-  do_Z80_MEMWR(4, 32);
-  do_Z80_MEMRD(4);
+  //do_Z80_MEMWR(4, 32);
+  //do_Z80_MEMRD(4);
+
+
 
 }
