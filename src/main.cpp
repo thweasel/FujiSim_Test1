@@ -13,6 +13,34 @@
   PORT K -- Z80 ADDRESS HIGH
 */
 
+
+void Z80_Memory_and_IORQ_Test(void)
+{
+
+  do_Z80_MEMWR(1, 16);
+  do_Z80_MEMWR(2, 32);
+  do_Z80_MEMWR(3, 64);
+
+  do_Z80_MEMRD(1);
+  do_Z80_MEMRD(2);
+  do_Z80_MEMRD(3);
+
+
+  do_Z80_IORD(1);
+  do_Z80_IOWR(3, 1);
+  do_Z80_IOWR(3, 2);
+  do_Z80_IOWR(3, 4);
+  do_Z80_IORD(5);
+
+  do_Z80_IORD(1);
+  do_Z80_IORD(3);
+  do_Z80_IORD(3);
+  do_Z80_IORD(3);
+  do_Z80_IORD(5);
+
+  return;
+}
+
 void setup()
 {
   // put your setup code here, to run once:
@@ -26,19 +54,22 @@ void setup()
   SPI.begin();
   pinMode(SBUS_STC_out, OUTPUT);
   pinMode(SBUS_OE_out, OUTPUT);
+  pinMode(ESP_PULSE, OUTPUT);
+  pinMode(TRIGGER_Local,OUTPUT);
+  pinMode(TRIGGER_Z80,OUTPUT);
   pinMode(ESP_HARDLOCK, OUTPUT);
   pinMode(Z80_HARDLOCK, INPUT);
   pinMode(CONNECT_Z80, OUTPUT);
-  pinMode(TRIGGER_Local,OUTPUT);
-  pinMode(TRIGGER_Z80,OUTPUT);
+
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out, HIGH);
+  digitalWrite(ESP_PULSE,HIGH);
+  digitalWrite(TRIGGER_Local,HIGH);
+  digitalWrite(TRIGGER_Z80,HIGH);
   digitalWrite(ESP_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(Z80_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(CONNECT_Z80, HIGH); // Connect on LOW (may be buffer with NOT?)
-  digitalWrite(TRIGGER_Local,HIGH);
-  digitalWrite(TRIGGER_Z80,HIGH);
 
   clear_ESP_SBUS_out();
 
@@ -83,33 +114,9 @@ void loop()
   */
 
 
-  do_Z80_MEMWR(1, 16);
-  do_Z80_MEMWR(2, 32);
-  do_Z80_MEMWR(3, 64);
+ clear_ESP_SBUS_out();
 
-  do_Z80_MEMRD(1);
-  do_Z80_MEMRD(2);
-  do_Z80_MEMRD(3);
-
-
-  do_Z80_IORD(1);
-  do_Z80_IOWR(3, 1);
-  do_Z80_IOWR(3, 2);
-  do_Z80_IOWR(3, 4);
-  do_Z80_IORD(5);
-
-  do_Z80_IORD(1);
-  do_Z80_IORD(3);
-  do_Z80_IORD(3);
-  do_Z80_IORD(3);
-  do_Z80_IORD(5);
-
-  //do_Z80_IOWR(2, 2);
-  //do_Z80_IORD(2);
-
-  //do_Z80_MEMWR(4, 32);
-  //do_Z80_MEMRD(4);
-
-
+ //Z80_Memory_and_IORQ_Test();
 
 }
+
