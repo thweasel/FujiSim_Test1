@@ -71,7 +71,7 @@ void setup()
   digitalWrite(Z80_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(CONNECT_Z80, HIGH); // Connect on LOW (may be buffer with NOT?)
 
-  clear_ESP_SBUS_out();
+  doSBUSClear();
 
   // Z80
 
@@ -114,8 +114,18 @@ void loop()
   */
 
 
- clear_ESP_SBUS_out();
+  doSBUSClear();
+  delay(500);
 
+  doIOWrite(1,1);
+  delay(500);
+  doIORead(1);
+  delay(500);
+
+  doMEMWrite(128,2);
+  delay(500);
+  doMEMRead(2);
+  delay(500);
  //Z80_Memory_and_IORQ_Test();
 
 }

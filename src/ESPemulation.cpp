@@ -6,6 +6,9 @@ uint8_t SPIpacket[4];
 
 //void transfer(void *buf, size_t count)
 
+
+
+
 uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
 {
 
@@ -14,28 +17,18 @@ uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
 
   SPIpacket[3] = Data;
   SPIpacket[2] = Control;
-  SPIpacket[1] = hiAddr;
-  SPIpacket[0] = loAddr;
+  SPIpacket[1] = loAddr;
+  SPIpacket[0] = hiAddr;
 
   return SPIpacket;
 }
 
-void clear_ESP_SBUS_out()
+
+void writeSPI(void)
 {
-
-  setSPIpacket(255,255,0);
-
   // Load the Shift Regs
   SPI.beginTransaction(mySpiSettings);
-  //SPI.transfer(255); // Addr HI
-  //SPI.transfer(255); // Addr LO
-  //SPI.transfer(255); // Z80 Control
-  //SPI.transfer(255); // Local Control
-  //SPI.transfer(255); // DATA
-  
-  SPI.transfer(SPIpacket,4);
-  
-  
+  SPI.transfer(SPIpacket,4);  
   SPI.endTransaction();
 
   // LATCH the Shift Regs to Storage (pulse)
@@ -47,5 +40,37 @@ void clear_ESP_SBUS_out()
   digitalWrite(SBUS_OE_out,LOW);
   delay(500);
   digitalWrite(SBUS_OE_out,HIGH);
+  return;
 }
 
+void doSBUSClear()
+{
+  setSPIpacket(255,CONTROL_CLEAR,0);
+  writeSPI();
+}
+
+uint8_t doIORead(uint16_t Address)
+{
+  setSPIpacket(255, CONTROL_IORQRD, Address);
+  writeSPI();
+  return 0;
+}
+
+void doIOWrite(uint8_t Data, uint16_t Address)
+{
+  setSPIpacket(Data, CONTROL_IORQWR, Address);
+  writeSPI();
+}
+
+uint8_t doMEMRead(uint16_t Address)
+{
+  setSPIpacket(255, CONTROL_MEMRQRD, Address);
+  writeSPI();
+  return 0;
+}
+
+void doMEMWrite(uint8_t Data, uint16_t Address)
+{
+  setSPIpacket(Data, CONTROL_MEMRQWR, Address);
+  writeSPI();
+}
