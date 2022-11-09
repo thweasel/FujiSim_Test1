@@ -6,9 +6,6 @@ uint8_t SPIpacket[4];
 
 //void transfer(void *buf, size_t count)
 
-
-
-
 uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
 {
 
