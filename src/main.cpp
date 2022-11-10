@@ -13,10 +13,8 @@
   PORT K -- Z80 ADDRESS HIGH
 */
 
-
-void Z80_Memory_and_IORQ_Test(void)
+void Z80_ROMMemory_Test (void)
 {
-
   do_Z80_MEMWR(1, 16);
   do_Z80_MEMWR(2, 32);
   do_Z80_MEMWR(3, 64);
@@ -24,8 +22,14 @@ void Z80_Memory_and_IORQ_Test(void)
   do_Z80_MEMRD(1);
   do_Z80_MEMRD(2);
   do_Z80_MEMRD(3);
+  
+  return;
+}
 
 
+void Z80_IORQ_Test(void)
+{
+  //do_Z80_IOWR(1,99);
   do_Z80_IORD(1);
   do_Z80_IOWR(3, 1);
   do_Z80_IOWR(3, 2);
@@ -39,6 +43,22 @@ void Z80_Memory_and_IORQ_Test(void)
   do_Z80_IORD(5);
 
   return;
+}
+
+void ESP_Bus_test(void)
+{
+  doSBUSClear();
+  delay(500);
+
+  doIOWrite(1,1);
+  delay(500);
+  doIORead(1);
+  delay(500);
+
+  doMEMWrite(128,2);
+  delay(500);
+  doMEMRead(2);
+  delay(500);
 }
 
 void setup()
@@ -113,20 +133,10 @@ void loop()
     delay(1000);
   */
 
+  //ESP_Bus_test();
 
-  doSBUSClear();
-  delay(500);
-
-  doIOWrite(1,1);
-  delay(500);
-  doIORead(1);
-  delay(500);
-
-  doMEMWrite(128,2);
-  delay(500);
-  doMEMRead(2);
-  delay(500);
- //Z80_Memory_and_IORQ_Test();
+ Z80_ROMMemory_Test();
+ Z80_IORQ_Test();
 
 }
 
