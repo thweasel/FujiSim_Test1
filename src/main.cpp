@@ -52,11 +52,13 @@ void ESP_Bus_test(void)
 
   doIOWrite(1,1);
   delay(500);
+
   doIORead(1);
   delay(500);
 
   doMEMWrite(128,2);
   delay(500);
+  
   doMEMRead(2);
   delay(500);
 }
@@ -133,7 +135,7 @@ void loop()
     delay(1000);
   */
 
-  //ESP_Bus_test();
+  ESP_Bus_test();
 
  Z80_ROMMemory_Test();
  Z80_IORQ_Test();

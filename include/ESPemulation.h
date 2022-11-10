@@ -3,7 +3,7 @@
 
 #define SBUS_STC_out 49
 #define SBUS_OE_out 48
-#define ESP_PULSE 13
+#define ESP_PULSE 47
 #define TRIGGER_Local 12
 #define TRIGGER_Z80 11
 #define ESP_HARDLOCK 10
