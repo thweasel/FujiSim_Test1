@@ -49,7 +49,7 @@ void ESP_Bus_test(void)
 {
   digitalWrite(CONTROL_Local,LOW);
 
-  doSBUSClear();
+  clearBUS();
   delay(500);
 
   doIOWrite(1,0);

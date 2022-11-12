@@ -8,22 +8,9 @@ uint8_t SPI_RXpacket[4];
 //void transfer(void *buf, size_t count)
 
 
-// ROM Select
-void setROMselect(uint8_t rom)
-{
-  if (rom < 4)
-  {
-    // set rom selection pins
-  }
-  else
-  {
-    // error condition here
-  }
 
-  return;
-}
 
-// ESP SPI Bus
+// ESP SPI Bus and Pin controls
 uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
 {
 
@@ -38,6 +25,22 @@ uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
   return SPI_TXpacket;
 }
 
+// ROM Select
+void selectROMbank(uint8_t rom)
+{
+  if (rom < 4)
+  {
+    // set rom selection pins
+  }
+  else
+  {
+    // error condition here
+  }
+
+  return;
+}
+
+// Some actions need a clock pulse to trigger, use this.
 void sendPULSE(void)
 {
   digitalWrite(ESP_PULSE,LOW);
@@ -46,6 +49,7 @@ void sendPULSE(void)
   return;
 }
 
+// SPI write for setting up the BUSout
 void writeSPI(void)
 {
   // Load the Shift Regs
@@ -63,16 +67,37 @@ void writeSPI(void)
   return;
 }
 
+
+
 // ESP Parallel BUS Functions
+void enableLocalControlBus()
+{
+  digitalWrite(CONTROL_Local,0);
+}
+
+void disableLocalControlBus()
+{
+  digitalWrite(CONTROL_Local,1);
+}
+void enableZ80ControlBus()
+{
+  digitalWrite(CONTROL_Z80,0);
+}
+void disableZ80ControlBus()
+{
+  digitalWrite(CONTROL_Z80,1);
+}
+
 void clearBUS()
 {
   delay(500);
+
   setSPIpacket(255,CONTROLBYTE_CLEAR,0);
   writeSPI();
   
-  digitalWrite(CONTROL_Local,1);
-  digitalWrite(CONTROL_Z80,1);
-
+  disableLocalControlBus();
+  disableZ80ControlBus();
+  
   digitalWrite(SBUS_OE_out,HIGH);  // disconnect S-Regs from BUS
 }
 
@@ -96,19 +121,11 @@ void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
 
 
 
-
-// ESP accessing Cache
+// ESP accessing Cache chip
 uint8_t doCacheDataRead(uint16_t Address) //A16-0
 {
-  digitalWrite(CONTROL_Local,0);
-
-  clearBUS();
-  return 0;
-}
-
-uint8_t doCacheStatusRead(uint16_t Address) //A16-1
-{
-  digitalWrite(CONTROL_Local,0);
+  enableLocalControlBus();
+  doBUSRead(Address,CONTROLBYTE_CACHEDATA_RD);
 
   clearBUS();
   return 0;
@@ -116,60 +133,117 @@ uint8_t doCacheStatusRead(uint16_t Address) //A16-1
 
 void doCacheDataWrite(uint8_t Data, uint16_t Address) //A16-0
 {
-  digitalWrite(CONTROL_Local,0);
+  enableLocalControlBus();
   
-  doBUSWrite()
+  doBUSWrite(Data,Address,CONTROLBYTE_CACHEDATA_WR);
 
   clearBUS();
+}
+
+uint8_t doCacheStatusRead(uint16_t Address) //A16-1
+{
+  enableLocalControlBus();
+  doBUSRead(Address,CONTROLBYTE_CACHESTATUS_RD);
+
+  clearBUS();
+  return 0;
 }
 
 void doCacheStatusWrite(uint8_t Data, uint16_t Address) //A16-1
 {
-  digitalWrite(CONTROL_Local,0);
+  enableLocalControlBus();
+
+  doBUSWrite(Data,Address,CONTROLBYTE_CACHESTATUS_WR);
 
   clearBUS();
 }
 
 
-// ESP accessing the ROM/IOd
-uint8_t doROMRead(uint16_t Address) //A16-0
+// ESP accessing the ROM/IOd chip VIA Z80 Bus
+// Uses these to read/write ROMs into the IOd chip
+uint8_t doROMRead(uint16_t Address, uint8_t ROMbank) //A16-0
 {
+  enableZ80ControlBus();
+  selectROMbank(ROMbank);
+
+  doBUSRead(Address,CONTROLBYTE_MEMRQ_WR);
+
+  clearBUS();
   return 0;
 }
 
-uint8_t doIOdRead(uint16_t Address )//A16-1
+void doROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) //A16-0
 {
-  return 0;
+  enableZ80ControlBus();
+  selectROMbank(ROMbank);
+
+  doBUSWrite(Data,Address,CONTROLBYTE_MEMRQ_WR);
+
+  clearBUS();
 }
 
-void doROMWrite(uint8_t Data, uint16_t Address) //A16-0
+// These methods are for programming the IOd configuration bytes
+uint8_t doIOdRead(uint16_t Address ) //A16-1
 {
+  enableZ80ControlBus();
+  // connect Z80Data and ROM/IOdbus
+  
+  doBUSRead(Address,CONTROLBYTE_IORQ_RD);
 
+  clearBUS();
+  return 0;
 }
 
 void doIOdWrite(uint8_t Data, uint16_t Address) //A16-1
 {
+  enableZ80ControlBus();
+  // connect Z80Data and ROM/IOdbus
 
+  doBUSWrite(Data,Address,CONTROLBYTE_IORQ_WR);
+
+  clearBUS();
 }
 
 
-// ESP controlling the Z80
-uint8_t doZ80IORead(uint16_t Address)
+// ESP controlling the system in place of the Z80
+// Direct access to the host system memory
+uint8_t doZ80MEMRead(uint16_t Address)
 {
+  enableZ80ControlBus();
+
+  doBUSRead(Address,CONTROLBYTE_MEMRQ_RD);
+
+  clearBUS();
   return 0;
 }
 
-uint8_t doZ80MEMRead(uint16_t Address)
+void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 {
+  enableZ80ControlBus();
+  
+  doBUSWrite(Data,Address,CONTROLBYTE_MEMRQ_WR);
+
+  clearBUS();
+}
+
+// IO calls may be needed to access system memory bank registers etc
+// Probably will not be much use for interacting with actual hardware (does not create true bus timings)
+uint8_t doZ80IORead(uint16_t Address)
+{
+  enableZ80ControlBus();
+
+  doBUSRead(Address,CONTROLBYTE_IORQ_RD);
+
+  clearBUS();
   return 0;
 }
 
 void doZ80IOWrite(uint8_t Data, uint16_t Address)
 {
+  enableZ80ControlBus();
 
+  doBUSWrite(Data,Address,CONTROLBYTE_IORQ_WR);
+
+  clearBUS();
 }
 
-void doZ80MEMWrite(uint8_t Data, uint16_t Address)
-{
-
-}
