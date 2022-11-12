@@ -47,20 +47,23 @@ void Z80_IORQ_Test(void)
 
 void ESP_Bus_test(void)
 {
+  digitalWrite(CONTROL_Local,LOW);
+
   doSBUSClear();
   delay(500);
 
-  doIOWrite(1,1);
+  doIOWrite(1,0);
   delay(500);
 
   doIORead(1);
   delay(500);
 
-  doMEMWrite(128,2);
+  doMEMWrite(128,0);
   delay(500);
   
   doMEMRead(2);
   delay(500);
+  digitalWrite(CONTROL_Local,HIGH);
 }
 
 void setup()
@@ -77,8 +80,8 @@ void setup()
   pinMode(SBUS_STC_out, OUTPUT);
   pinMode(SBUS_OE_out, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
-  pinMode(TRIGGER_Local,OUTPUT);
-  pinMode(TRIGGER_Z80,OUTPUT);
+  pinMode(CONTROL_Local,OUTPUT);
+  pinMode(CONTROL_Z80,OUTPUT);
   pinMode(ESP_HARDLOCK, OUTPUT);
   pinMode(Z80_HARDLOCK, INPUT);
   pinMode(CONNECT_Z80, OUTPUT);
@@ -87,13 +90,13 @@ void setup()
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out, HIGH);
   digitalWrite(ESP_PULSE,HIGH);
-  digitalWrite(TRIGGER_Local,HIGH);
-  digitalWrite(TRIGGER_Z80,HIGH);
+  digitalWrite(CONTROL_Local,HIGH);
+  digitalWrite(CONTROL_Z80,HIGH);
   digitalWrite(ESP_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(Z80_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(CONNECT_Z80, HIGH); // Connect on LOW (may be buffer with NOT?)
 
-  doSBUSClear();
+  clearBUS();
 
   // Z80
 
@@ -137,8 +140,8 @@ void loop()
 
   ESP_Bus_test();
 
- Z80_ROMMemory_Test();
- Z80_IORQ_Test();
+// Z80_ROMMemory_Test();
+// Z80_IORQ_Test();
 
 }
 

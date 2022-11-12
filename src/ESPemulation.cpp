@@ -7,6 +7,23 @@ uint8_t SPI_RXpacket[4];
 
 //void transfer(void *buf, size_t count)
 
+
+// ROM Select
+void setROMselect(uint8_t rom)
+{
+  if (rom < 4)
+  {
+    // set rom selection pins
+  }
+  else
+  {
+    // error condition here
+  }
+
+  return;
+}
+
+// ESP SPI Bus
 uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
 {
 
@@ -46,45 +63,113 @@ void writeSPI(void)
   return;
 }
 
-void doSBUSClear()
+// ESP Parallel BUS Functions
+void clearBUS()
 {
   delay(500);
-  setSPIpacket(255,CONTROL_CLEAR,0);
+  setSPIpacket(255,CONTROLBYTE_CLEAR,0);
   writeSPI();
+  
+  digitalWrite(CONTROL_Local,1);
+  digitalWrite(CONTROL_Z80,1);
+
   digitalWrite(SBUS_OE_out,HIGH);  // disconnect S-Regs from BUS
 }
 
-uint8_t doIORead(uint16_t Address)
+uint8_t doBUSRead(uint16_t Address, uint8_t Control)
 {
-  setSPIpacket(255, CONTROL_IORQRD, Address);
+  setSPIpacket(255, Control, Address);
   writeSPI();
-  doSBUSClear();
+  // readSPI();
+  clearBUS();
   return 0;
 }
 
-uint8_t doMEMRead(uint16_t Address)
+void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
 {
-  setSPIpacket(255, CONTROL_MEMRQRD, Address);
+  setSPIpacket(Data, Control, Address);
   writeSPI();
-  doSBUSClear();
+  sendPULSE();
+  clearBUS();
+  return;
+}
+
+
+
+
+// ESP accessing Cache
+uint8_t doCacheDataRead(uint16_t Address) //A16-0
+{
+  digitalWrite(CONTROL_Local,0);
+
+  clearBUS();
   return 0;
 }
 
-
-void doIOWrite(uint8_t Data, uint16_t Address)
+uint8_t doCacheStatusRead(uint16_t Address) //A16-1
 {
-  setSPIpacket(Data, CONTROL_IORQWR, Address);
-  writeSPI();
-  sendPULSE();
-  doSBUSClear();
-  return;
+  digitalWrite(CONTROL_Local,0);
+
+  clearBUS();
+  return 0;
 }
 
-void doMEMWrite(uint8_t Data, uint16_t Address)
+void doCacheDataWrite(uint8_t Data, uint16_t Address) //A16-0
 {
-  setSPIpacket(Data, CONTROL_MEMRQWR, Address);
-  writeSPI();
-  sendPULSE();
-  doSBUSClear();
-  return;
+  digitalWrite(CONTROL_Local,0);
+  
+  doBUSWrite()
+
+  clearBUS();
+}
+
+void doCacheStatusWrite(uint8_t Data, uint16_t Address) //A16-1
+{
+  digitalWrite(CONTROL_Local,0);
+
+  clearBUS();
+}
+
+
+// ESP accessing the ROM/IOd
+uint8_t doROMRead(uint16_t Address) //A16-0
+{
+  return 0;
+}
+
+uint8_t doIOdRead(uint16_t Address )//A16-1
+{
+  return 0;
+}
+
+void doROMWrite(uint8_t Data, uint16_t Address) //A16-0
+{
+
+}
+
+void doIOdWrite(uint8_t Data, uint16_t Address) //A16-1
+{
+
+}
+
+
+// ESP controlling the Z80
+uint8_t doZ80IORead(uint16_t Address)
+{
+  return 0;
+}
+
+uint8_t doZ80MEMRead(uint16_t Address)
+{
+  return 0;
+}
+
+void doZ80IOWrite(uint8_t Data, uint16_t Address)
+{
+
+}
+
+void doZ80MEMWrite(uint8_t Data, uint16_t Address)
+{
+
 }
