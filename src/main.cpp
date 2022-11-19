@@ -13,6 +13,21 @@
   PORT K -- Z80 ADDRESS HIGH
 */
 
+uint8_t * localPacket;
+
+void printLocalPacket()
+{
+  Serial.print("localPacket : 0[");
+  Serial.print(localPacket[0],DEC);
+  Serial.print("] 1[");
+  Serial.print(localPacket[1],DEC);
+  Serial.print("] 2[");
+  Serial.print(localPacket[2],DEC);
+  Serial.print("] 3[");
+  Serial.print(localPacket[3],DEC);
+  Serial.println("]");
+}
+
 void Z80_ROMMemory_Test (void)
 {
   do_Z80_MEMWR(1, 16);
@@ -47,21 +62,35 @@ void Z80_IORQ_Test(void)
 
 void ESP_Bus_test(void)
 {
+  
   digitalWrite(CONTROL_Local,LOW);
 
   clearBUS();
   delay(500);
 
-  doIOWrite(1,0);
-  delay(500);
+  // IOd TESTING
+  //doIOdWrite(1,0);
+  //delay(500);
 
-  doIORead(1);
-  delay(500);
+  //doIOdRead(1);
+  //delay(500);
 
-  doMEMWrite(128,0);
-  delay(500);
+
+  // CE ROM TEST
+  //doCEROMWrite(128,1,0);
+  //delay(500);
   
-  doMEMRead(2);
+  for(uint16_t i = 250; i < 1024 ; i++)
+  {
+    doCEROMWrite(0,i,0);
+
+
+    localPacket = doCEROMRead(i,0);
+    Serial.println("doCEROMRead : ");
+    printLocalPacket();
+  }
+
+  // CLEAR
   delay(500);
   digitalWrite(CONTROL_Local,HIGH);
 }
@@ -69,6 +98,9 @@ void ESP_Bus_test(void)
 void setup()
 {
   // put your setup code here, to run once:
+
+  Serial.begin(9600);
+  Serial.println("Running.");
 
   pinMode(LED_BUILTIN, OUTPUT);
 
@@ -80,6 +112,7 @@ void setup()
   pinMode(SBUS_STC_out, OUTPUT);
   pinMode(SBUS_OE_out, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
+  pinMode(ESPin_PL,OUTPUT);
   pinMode(CONTROL_Local,OUTPUT);
   pinMode(CONTROL_Z80,OUTPUT);
   pinMode(ESP_HARDLOCK, OUTPUT);
@@ -90,6 +123,7 @@ void setup()
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out, HIGH);
   digitalWrite(ESP_PULSE,HIGH);
+  digitalWrite(ESPin_PL, HIGH);
   digitalWrite(CONTROL_Local,HIGH);
   digitalWrite(CONTROL_Z80,HIGH);
   digitalWrite(ESP_HARDLOCK, HIGH); // Lock set LOW

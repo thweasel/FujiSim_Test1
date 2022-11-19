@@ -1,9 +1,11 @@
 #include <ESPemulation.h>
 
-SPISettings mySpiSettings (4000000,MSBFIRST,SPI_MODE1);
+SPISettings mySpiSettings_write (4000000,MSBFIRST,SPI_MODE1);
 
-uint8_t SPI_TXpacket[4]; 
-uint8_t SPI_RXpacket[4]; 
+
+
+uint8_t SPIpacketTX[4]; 
+uint8_t SPIpacketRX[4];
 
 //void transfer(void *buf, size_t count)
 
@@ -11,18 +13,18 @@ uint8_t SPI_RXpacket[4];
 
 
 // ESP SPI Bus and Pin controls
-uint8_t * setSPIpacket (uint8_t Data, uint8_t Control, uint16_t Address)
+uint8_t * setSPIpacketTX (uint8_t Data, uint8_t Control, uint16_t Address)
 {
 
   uint8_t loAddr = (uint8_t)(Address);
   uint8_t hiAddr = (uint8_t)(Address >> 8);
 
-  SPI_TXpacket[3] = Data;
-  SPI_TXpacket[2] = Control;
-  SPI_TXpacket[1] = loAddr;
-  SPI_TXpacket[0] = hiAddr;
+  SPIpacketTX[3] = Data;
+  SPIpacketTX[2] = Control;
+  SPIpacketTX[1] = loAddr;
+  SPIpacketTX[0] = hiAddr;
 
-  return SPI_TXpacket;
+  return SPIpacketTX;
 }
 
 // ROM Select
@@ -52,9 +54,9 @@ void sendPULSE(void)
 // SPI write for setting up the BUSout
 void writeSPI(void)
 {
-  // Load the Shift Regs
-  SPI.beginTransaction(mySpiSettings);
-  SPI.transfer(SPI_TXpacket,4);  
+  // Load TXPacket into the Shift Regs
+  SPI.beginTransaction(mySpiSettings_write);
+  SPI.transfer(SPIpacketTX,4);  
   SPI.endTransaction();
 
   // LATCH the Shift Regs to Storage (pulse)
@@ -65,6 +67,26 @@ void writeSPI(void)
   // Enable the Output from the 595s
   digitalWrite(SBUS_OE_out,LOW);
   return;
+}
+
+void readSPI(void)
+{
+
+  writeSPI();
+
+  // Unload the Shift Reg to RXPacket
+  digitalWrite(ESPin_PL, HIGH); // Serial Shift
+  SPI.beginTransaction(mySpiSettings_write);
+  SPI.transfer(SPIpacketRX,4);  
+  SPI.endTransaction();
+  
+  
+  // LATCH data into the Shift Regs (pulse)
+  digitalWrite(ESPin_PL, LOW);  // Parallel Load
+
+  digitalWrite(SBUS_OE_out,HIGH);  // Remove Control & Address
+
+  
 }
 
 
@@ -79,10 +101,12 @@ void disableLocalControlBus()
 {
   digitalWrite(CONTROL_Local,1);
 }
+
 void enableZ80ControlBus()
 {
   digitalWrite(CONTROL_Z80,0);
 }
+
 void disableZ80ControlBus()
 {
   digitalWrite(CONTROL_Z80,1);
@@ -92,7 +116,7 @@ void clearBUS()
 {
   delay(500);
 
-  setSPIpacket(255,CONTROLBYTE_CLEAR,0);
+  setSPIpacketTX(255,CONTROLBYTE_CLEAR,0);
   writeSPI();
   
   disableLocalControlBus();
@@ -101,18 +125,17 @@ void clearBUS()
   digitalWrite(SBUS_OE_out,HIGH);  // disconnect S-Regs from BUS
 }
 
-uint8_t doBUSRead(uint16_t Address, uint8_t Control)
+uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
 {
-  setSPIpacket(255, Control, Address);
-  writeSPI();
-  // readSPI();
+  setSPIpacketTX(255, Control, Address);
+  readSPI();
   clearBUS();
-  return 0;
+  return SPIpacketRX;
 }
 
 void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
 {
-  setSPIpacket(Data, Control, Address);
+  setSPIpacketTX(Data, Control, Address);
   writeSPI();
   sendPULSE();
   clearBUS();
@@ -161,23 +184,28 @@ void doCacheStatusWrite(uint8_t Data, uint16_t Address) //A16-1
 
 // ESP accessing the ROM/IOd chip VIA Z80 Bus
 // Uses these to read/write ROMs into the IOd chip
-uint8_t doROMRead(uint16_t Address, uint8_t ROMbank) //A16-0
+uint8_t * doCEROMRead(uint16_t Address, uint8_t ROMbank) //A16-0
 {
   enableZ80ControlBus();
   selectROMbank(ROMbank);
+  // Z80 CE
 
-  doBUSRead(Address,CONTROLBYTE_MEMRQ_WR);
+  doBUSRead(Address,CONTROLBYTE_CEROMRQ_RD);
 
   clearBUS();
-  return 0;
+  //SPIpacketRX[0] = 0;
+  //SPIpacketRX[1] = 1;
+  //SPIpacketRX[2] = 2;
+  //SPIpacketRX[3] = 3;
+  return SPIpacketRX;
 }
 
-void doROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) //A16-0
+void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) //A16-0
 {
   enableZ80ControlBus();
   selectROMbank(ROMbank);
 
-  doBUSWrite(Data,Address,CONTROLBYTE_MEMRQ_WR);
+  doBUSWrite(Data,Address,CONTROLBYTE_CEROMRQ_WR);
 
   clearBUS();
 }

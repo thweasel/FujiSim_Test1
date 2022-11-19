@@ -4,6 +4,7 @@
 #define SBUS_STC_out 49
 #define SBUS_OE_out 48
 #define ESP_PULSE 47
+#define ESPin_PL 46
 #define CONTROL_Local 12
 #define CONTROL_Z80 11
 #define ESP_HARDLOCK 10
@@ -24,10 +25,13 @@ Z80 control
                        //76543210
 #define CONTROLBYTE_CLEAR   B11111111
 // Z80 BUS
+#define CONTROLBYTE_CEROMRQ_RD B10110110
+#define CONTROLBYTE_CEROMRQ_WR B10110101
 #define CONTROLBYTE_MEMRQ_RD B11110110
 #define CONTROLBYTE_MEMRQ_WR B11110101
 #define CONTROLBYTE_IORQ_RD  B11111010
 #define CONTROLBYTE_IORQ_WR  B11111001
+
 // Local BUS
 #define CONTROLBYTE_CACHEDATA_RD  B11111010
 #define CONTROLBYTE_CACHEDATA_WR  B11111001
@@ -36,8 +40,15 @@ Z80 control
 
 void clearBUS();
 
-uint8_t doIORead(uint16_t Address);
-void doIOWrite(uint8_t Data, uint16_t Address);
+uint8_t * doCEROMRead(uint16_t Address, uint8_t ROMbank); //A16-0
+void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank); //A16-0
 
-uint8_t doMEMRead(uint16_t Address);
-void doMEMWrite(uint8_t Data, uint16_t Address);
+uint8_t doIOdRead(uint16_t Address ); //A16-1
+void doIOdWrite(uint8_t Data, uint16_t Address); //A16-1
+
+uint8_t doZ80MEMRead(uint16_t Address);
+void doZ80MEMWrite(uint8_t Data, uint16_t Address);
+
+
+uint8_t doZ80IORead(uint16_t Address);
+void doZ80IOWrite(uint8_t Data, uint16_t Address);
