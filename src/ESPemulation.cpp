@@ -145,13 +145,13 @@ void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
 
 
 // ESP accessing Cache chip
-uint8_t doCacheDataRead(uint16_t Address) //A16-0
+uint8_t * doCacheDataRead(uint16_t Address) //A16-0
 {
   enableLocalControlBus();
   doBUSRead(Address,CONTROLBYTE_CACHEDATA_RD);
 
   clearBUS();
-  return 0;
+  return SPIpacketRX;
 }
 
 void doCacheDataWrite(uint8_t Data, uint16_t Address) //A16-0
@@ -163,13 +163,13 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) //A16-0
   clearBUS();
 }
 
-uint8_t doCacheStatusRead(uint16_t Address) //A16-1
+uint8_t * doCacheStatusRead(uint16_t Address) //A16-1
 {
   enableLocalControlBus();
   doBUSRead(Address,CONTROLBYTE_CACHESTATUS_RD);
 
   clearBUS();
-  return 0;
+  return SPIpacketRX;
 }
 
 void doCacheStatusWrite(uint8_t Data, uint16_t Address) //A16-1
@@ -179,6 +179,7 @@ void doCacheStatusWrite(uint8_t Data, uint16_t Address) //A16-1
   doBUSWrite(Data,Address,CONTROLBYTE_CACHESTATUS_WR);
 
   clearBUS();
+
 }
 
 

@@ -18,13 +18,13 @@ uint8_t * localPacket;
 void printLocalPacket()
 {
   Serial.print("localPacket : 0[");
-  Serial.print(localPacket[0],DEC);
+  Serial.print(localPacket[0],HEX);
   Serial.print("] 1[");
-  Serial.print(localPacket[1],DEC);
+  Serial.print(localPacket[1],HEX);
   Serial.print("] 2[");
-  Serial.print(localPacket[2],DEC);
+  Serial.print(localPacket[2],HEX);
   Serial.print("] 3[");
-  Serial.print(localPacket[3],DEC);
+  Serial.print(localPacket[3],HEX);
   Serial.println("]");
 }
 
@@ -80,13 +80,24 @@ void ESP_Bus_test(void)
   //doCEROMWrite(128,1,0);
   //delay(500);
   
+  /*
   for(uint16_t i = 250; i < 1024 ; i++)
   {
     doCEROMWrite(0,i,0);
-
-
+    
     localPacket = doCEROMRead(i,0);
-    Serial.println("doCEROMRead : ");
+    Serial.print("doCEROMRead : ");
+    printLocalPacket();
+  }
+  */
+  for(uint16_t i = 0; i < 512 ; i++)
+  {
+    
+    doCacheStatusWrite(i,i);
+
+
+    localPacket = doCacheStatusRead(i);
+    Serial.print("doCacheStatusRead : ");
     printLocalPacket();
   }
 
