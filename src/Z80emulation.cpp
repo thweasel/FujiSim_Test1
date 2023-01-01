@@ -104,7 +104,7 @@ void do_Z80_IOWR(uint16_t Address, uint8_t Data)
     send_Z80_Data(Data);
 
     Z80_IDLE();
-    delay(1000);
+    delay(250);
 
     return;
 }
@@ -117,7 +117,7 @@ uint8_t do_Z80_IORD(uint16_t Address)
     uint8_t data = read_Z80_DATA();
 
     Z80_IDLE();
-    delay(1000);
+    delay(250);
 
     return data;
 }
@@ -130,7 +130,7 @@ void do_Z80_MEMWR(uint16_t Address, uint8_t Data)
     send_Z80_Data(Data);
 
     Z80_IDLE();
-    delay(1000);
+    delay(250);
 
     return;
 }
@@ -143,7 +143,7 @@ uint8_t do_Z80_MEMRD(uint16_t Address)
     uint8_t data = read_Z80_DATA();
 
     Z80_IDLE();
-    delay(1000);
+    delay(250);
 
     return data;
 }

@@ -60,7 +60,7 @@ void Z80_IORQ_Test(void)
   return;
 }
 
-void CacheStatusTest(void)
+void ESP_CacheStatusTest(void)
 {
   uint8_t data;
 
@@ -89,7 +89,7 @@ void CacheStatusTest(void)
   delay(50);
 }
 
-void CacheDataTest(void)
+void ESP_CacheData_Test(void)
 {
   uint8_t data;
 
@@ -116,6 +116,36 @@ void CacheDataTest(void)
   // CLEAR
   delay(50);
 }
+
+void ESP_ROMMemory_Test(void)
+{
+  uint8_t data;
+
+  clearBUS();
+  delay(50);
+
+  uint8_t y = 0x00;
+  for (uint16_t i = 0; i < 0x10; i++)
+  {
+    Serial.print("doCEROMWrite : ");
+    Serial.print(y,HEX);
+    Serial.print(",");
+    Serial.print(i,HEX);
+    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
+    doCEROMWrite(y, i, 0);
+    
+    data = doCEROMRead(i, 0);
+    Serial.print(" - doCEROMRead : ");
+    Serial.println(data,HEX);
+    
+    y++;
+    delay(50);
+  }
+
+  // CLEAR
+  delay(50);
+}
+
 
 void setup()
 {
@@ -194,8 +224,11 @@ void loop()
     delay(1000);
   */
 
-  CacheStatusTest();
-  CacheDataTest();
+  ESP_CacheStatusTest();
+  ESP_CacheData_Test();
+  ESP_ROMMemory_Test();
+  
+
 
   // Z80_ROMMemory_Test();
   // Z80_IORQ_Test();

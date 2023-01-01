@@ -10,6 +10,7 @@
 #define ESP_HARDLOCK 10
 #define Z80_HARDLOCK 9
 #define CONNECT_Z80 8
+#define Z80_ROMCS 15
 
 /*
 Z80 control
@@ -25,8 +26,8 @@ Z80 control
                        //76543210
 #define CONTROLBYTE_CLEAR           B11111111
 // Z80 BUS
-#define CONTROLBYTE_CEROMRQ_RD      B10110110
-#define CONTROLBYTE_CEROMRQ_WR      B10110101
+#define CONTROLBYTE_CEROMRQ_RD      B10010110
+#define CONTROLBYTE_CEROMRQ_WR      B10010101
 #define CONTROLBYTE_MEMRQ_RD        B11110110
 #define CONTROLBYTE_MEMRQ_WR        B11110101
 #define CONTROLBYTE_IORQ_RD         B11111010
@@ -62,6 +63,9 @@ void disableLocalControlBus();
 
 void enableZ80ControlBus();
 void disableZ80ControlBus();
+
+void connectZ80Bus();
+void disconnectZ80Bus();
 
 void clearBUS();
 

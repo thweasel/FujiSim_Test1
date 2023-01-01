@@ -14,8 +14,11 @@ uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
     enableZ80ControlBus();
     selectROMbank(ROMbank);
     // Z80 CE
+    //connectZ80Bus();
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CEROMRQ_RD);
+
+    clearBUS();
 
     return BUSbytesPTR[3];
 }
@@ -24,6 +27,7 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 {
     enableZ80ControlBus();
     selectROMbank(ROMbank);
+    //connectZ80Bus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_CEROMRQ_WR);
 

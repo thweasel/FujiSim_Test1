@@ -125,10 +125,21 @@ void disableZ80ControlBus()
   digitalWrite(CONTROL_Z80,DISABLE_HIGH);
 }
 
+void connectZ80Bus()
+{
+  digitalWrite(CONNECT_Z80, ENABLE_LOW);
+}
+
+void disconnectZ80Bus()
+{
+  digitalWrite(CONNECT_Z80, DISABLE_HIGH);
+}
+
 void clearBUS()
 { 
   disableLocalControlBus();
   disableZ80ControlBus();
+  disconnectZ80Bus();
   
   digitalWrite(SBUS_OE_out,HIGH);  // disconnect S-Regs from BUS
 }
