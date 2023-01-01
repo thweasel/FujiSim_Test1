@@ -13,22 +13,22 @@
   PORT K -- Z80 ADDRESS HIGH
 */
 
-uint8_t * localPacket;
+uint8_t *localPacket;
 
 void printLocalPacket()
 {
   Serial.print("localPacket : 0[");
-  Serial.print(localPacket[0],HEX);
+  Serial.print(localPacket[0], HEX);
   Serial.print("] 1[");
-  Serial.print(localPacket[1],HEX);
+  Serial.print(localPacket[1], HEX);
   Serial.print("] 2[");
-  Serial.print(localPacket[2],HEX);
+  Serial.print(localPacket[2], HEX);
   Serial.print("] 3[");
-  Serial.print(localPacket[3],HEX);
+  Serial.print(localPacket[3], HEX);
   Serial.println("]");
 }
 
-void Z80_ROMMemory_Test (void)
+void Z80_ROMMemory_Test(void)
 {
   do_Z80_MEMWR(1, 16);
   do_Z80_MEMWR(2, 32);
@@ -37,14 +37,13 @@ void Z80_ROMMemory_Test (void)
   do_Z80_MEMRD(1);
   do_Z80_MEMRD(2);
   do_Z80_MEMRD(3);
-  
+
   return;
 }
 
-
 void Z80_IORQ_Test(void)
 {
-  //do_Z80_IOWR(1,99);
+  // do_Z80_IOWR(1,99);
   do_Z80_IORD(1);
   do_Z80_IOWR(3, 1);
   do_Z80_IOWR(3, 2);
@@ -62,55 +61,38 @@ void Z80_IORQ_Test(void)
 
 void ESP_Bus_test(void)
 {
-  
-  digitalWrite(CONTROL_Local,LOW);
 
   clearBUS();
-  delay(500);
+  delay(50);
 
-  // IOd TESTING
-  //doIOdWrite(1,0);
-  //delay(500);
-
-  //doIOdRead(1);
-  //delay(500);
-
-
-  // CE ROM TEST
-  //doCEROMWrite(128,1,0);
-  //delay(500);
-  
-  /*
-  for(uint16_t i = 250; i < 1024 ; i++)
+  uint8_t y = 0x00;
+  for (uint16_t i = 0; i < 512; i++)
   {
-    doCEROMWrite(0,i,0);
-    
-    localPacket = doCEROMRead(i,0);
-    Serial.print("doCEROMRead : ");
-    printLocalPacket();
-  }
-  */
-  for(uint16_t i = 0; i < 512 ; i++)
-  {
-    
-    doCacheStatusWrite(i,i);
+    Serial.print(y,HEX);
+    Serial.print(",");
+    Serial.print(i,HEX);
+    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
+    doCacheStatusWrite(y, i);
 
+    delay(50);
 
     localPacket = doCacheStatusRead(i);
-    Serial.print("doCacheStatusRead : ");
+    Serial.print(" - doCacheStatusRead : ");
     printLocalPacket();
+
+    y++;
+    delay(50);
   }
 
   // CLEAR
-  delay(500);
-  digitalWrite(CONTROL_Local,HIGH);
+  delay(50);
 }
 
 void setup()
 {
   // put your setup code here, to run once:
 
-  Serial.begin(9600);
+  Serial.begin(115000);
   Serial.println("Running.");
 
   pinMode(LED_BUILTIN, OUTPUT);
@@ -123,9 +105,9 @@ void setup()
   pinMode(SBUS_STC_out, OUTPUT);
   pinMode(SBUS_OE_out, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
-  pinMode(ESPin_PL,OUTPUT);
-  pinMode(CONTROL_Local,OUTPUT);
-  pinMode(CONTROL_Z80,OUTPUT);
+  pinMode(ESPin_PL, OUTPUT);
+  pinMode(CONTROL_Local, OUTPUT);
+  pinMode(CONTROL_Z80, OUTPUT);
   pinMode(ESP_HARDLOCK, OUTPUT);
   pinMode(Z80_HARDLOCK, INPUT);
   pinMode(CONNECT_Z80, OUTPUT);
@@ -133,13 +115,13 @@ void setup()
   // ESP pin State
   digitalWrite(SBUS_STC_out, HIGH);
   digitalWrite(SBUS_OE_out, HIGH);
-  digitalWrite(ESP_PULSE,HIGH);
+  digitalWrite(ESP_PULSE, HIGH);
   digitalWrite(ESPin_PL, HIGH);
-  digitalWrite(CONTROL_Local,HIGH);
-  digitalWrite(CONTROL_Z80,HIGH);
+  digitalWrite(CONTROL_Local, HIGH);
+  digitalWrite(CONTROL_Z80, HIGH);
   digitalWrite(ESP_HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(Z80_HARDLOCK, HIGH); // Lock set LOW
-  digitalWrite(CONNECT_Z80, HIGH); // Connect on LOW (may be buffer with NOT?)
+  digitalWrite(CONNECT_Z80, HIGH);  // Connect on LOW (may be buffer with NOT?)
 
   clearBUS();
 
@@ -185,8 +167,6 @@ void loop()
 
   ESP_Bus_test();
 
-// Z80_ROMMemory_Test();
-// Z80_IORQ_Test();
-
+  // Z80_ROMMemory_Test();
+  // Z80_IORQ_Test();
 }
-

@@ -1,8 +1,10 @@
 #include <ESPemulation.h>
 
-SPISettings mySpiSettings_write (4000000,MSBFIRST,SPI_MODE1);
+SPISettings mySpiSettings_write (40000,MSBFIRST,SPI_MODE0);
+SPISettings mySpiSettings_read (40000,MSBFIRST,SPI_MODE0);
 
-
+//SPISettings mySpiSettings_write (500000,MSBFIRST,SPI_MODE1);
+//SPISettings mySpiSettings_read (500000,MSBFIRST,SPI_MODE3);
 
 uint8_t SPIpacketTX[4]; 
 uint8_t SPIpacketRX[4];
@@ -45,61 +47,60 @@ void selectROMbank(uint8_t rom)
 // Some actions need a clock pulse to trigger, use this.
 void sendPULSE(void)
 {
-  digitalWrite(ESP_PULSE,LOW);
-  delay(1);
-  digitalWrite(ESP_PULSE,HIGH);
+  digitalWrite(ESP_PULSE,ENABLE_LOW);
+  digitalWrite(ESP_PULSE,DISABLE_HIGH);
   return;
 }
 
-// SPI write for setting up the BUSout
+
+
+// SPI Write ESPout
 void writeSPI(void)
-{
+{ 
+  // OUTPUT 74XX595 Shift registers (x4)
+  
   // Load TXPacket into the Shift Regs
   SPI.beginTransaction(mySpiSettings_write);
   SPI.transfer(SPIpacketTX,4);  
   SPI.endTransaction();
 
   // LATCH the Shift Regs to Storage (pulse)
-  digitalWrite(SBUS_STC_out, LOW);
-  digitalWrite(SBUS_STC_out, HIGH);
+  digitalWrite(SBUS_STC_out, HIGH); // Move shift to storage
   digitalWrite(SBUS_STC_out, LOW);
   
   // Enable the Output from the 595s
-  digitalWrite(SBUS_OE_out,LOW);
+  digitalWrite(SBUS_OE_out, ENABLE_LOW);
   return;
 }
 
+// SPI Read the ESPin
 void readSPI(void)
-{
+{ 
+  // INPUT 74xx165 Shift Registers (x4)
 
-  writeSPI();
-
-  // Unload the Shift Reg to RXPacket
-  digitalWrite(ESPin_PL, HIGH); // Serial Shift
-  SPI.beginTransaction(mySpiSettings_write);
-  SPI.transfer(SPIpacketRX,4);  
-  SPI.endTransaction();
-  
-  
   // LATCH data into the Shift Regs (pulse)
   digitalWrite(ESPin_PL, LOW);  // Parallel Load
-
-  digitalWrite(SBUS_OE_out,HIGH);  // Remove Control & Address
-
   
-}
+  // Unload the Shift Reg to RXPacket
+  digitalWrite(ESPin_PL, HIGH); // Serial Shift
+  
+  SPI.beginTransaction(mySpiSettings_read);
+  SPI.transfer(SPIpacketRX,4);  
+  SPI.endTransaction();
 
+  digitalWrite(SBUS_OE_out,DISABLE_HIGH);  // Remove Control & Address  
+}
 
 
 // ESP Parallel BUS Functions
 void enableLocalControlBus()
 {
-  digitalWrite(CONTROL_Local,0);
+  digitalWrite(CONTROL_Local,ENABLE_LOW);
 }
 
 void disableLocalControlBus()
 {
-  digitalWrite(CONTROL_Local,1);
+  digitalWrite(CONTROL_Local,DISABLE_HIGH);
 }
 
 void enableZ80ControlBus()
@@ -113,12 +114,7 @@ void disableZ80ControlBus()
 }
 
 void clearBUS()
-{
-  delay(500);
-
-  setSPIpacketTX(255,CONTROLBYTE_CLEAR,0);
-  writeSPI();
-  
+{ 
   disableLocalControlBus();
   disableZ80ControlBus();
   
@@ -127,7 +123,10 @@ void clearBUS()
 
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
 {
-  setSPIpacketTX(255, Control, Address);
+
+  setSPIpacketTX(0x0, Control, Address);
+  writeSPI(); // Set Control and Address lines
+  
   readSPI();
   clearBUS();
   return SPIpacketRX;
@@ -169,6 +168,8 @@ uint8_t * doCacheStatusRead(uint16_t Address) //A16-1
   doBUSRead(Address,CONTROLBYTE_CACHESTATUS_RD);
 
   clearBUS();
+
+  digitalWrite(CONTROL_Local,HIGH);
   return SPIpacketRX;
 }
 
@@ -179,6 +180,8 @@ void doCacheStatusWrite(uint8_t Data, uint16_t Address) //A16-1
   doBUSWrite(Data,Address,CONTROLBYTE_CACHESTATUS_WR);
 
   clearBUS();
+
+  digitalWrite(CONTROL_Local,HIGH);
 
 }
 
@@ -192,12 +195,8 @@ uint8_t * doCEROMRead(uint16_t Address, uint8_t ROMbank) //A16-0
   // Z80 CE
 
   doBUSRead(Address,CONTROLBYTE_CEROMRQ_RD);
-
   clearBUS();
-  //SPIpacketRX[0] = 0;
-  //SPIpacketRX[1] = 1;
-  //SPIpacketRX[2] = 2;
-  //SPIpacketRX[3] = 3;
+
   return SPIpacketRX;
 }
 
