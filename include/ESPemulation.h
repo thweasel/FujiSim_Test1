@@ -46,27 +46,25 @@ Z80 control
 #define DISABLE_LOW LOW
 #define ENABLE_HIGH HIGH
 
+
+
+uint8_t * setSPIpacketTX (uint8_t Data, uint8_t Control, uint16_t Address);
+
+void selectROMbank(uint8_t rom);
+
+void sendPULSE(void);
+
+void writeSPI(void);
+void readSPI(void);
+
+void enableLocalControlBus();
+void disableLocalControlBus();
+
+void enableZ80ControlBus();
+void disableZ80ControlBus();
+
 void clearBUS();
 
-// ROM/IOd CHIP
-uint8_t * doCEROMRead(uint16_t Address, uint8_t ROMbank); //A16-0
-void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank); //A16-0
+uint8_t * doBUSRead(uint16_t Address, uint8_t Control);
 
-uint8_t doIOdRead(uint16_t Address ); //A16-1
-void doIOdWrite(uint8_t Data, uint16_t Address); //A16-1
-
-// CACHE CHIP
-uint8_t * doCacheDataRead(uint16_t Address);//A16-0
-void doCacheDataWrite(uint8_t Data, uint16_t Address); //A16-0
-
-uint8_t * doCacheStatusRead(uint16_t Address); //A16-1
-void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-
-
-// Z80 SYSTEM
-uint8_t doZ80MEMRead(uint16_t Address);
-void doZ80MEMWrite(uint8_t Data, uint16_t Address);
-
-
-uint8_t doZ80IORead(uint16_t Address);
-void doZ80IOWrite(uint8_t Data, uint16_t Address);
+void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control);

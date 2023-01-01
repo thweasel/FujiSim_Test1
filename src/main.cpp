@@ -2,6 +2,7 @@
 #include <SPI.h>
 
 #include <ESPemulation.h>
+#include <ESPSystemInterface.h>
 #include <Z80emulation.h>
 
 /*
@@ -59,27 +60,55 @@ void Z80_IORQ_Test(void)
   return;
 }
 
-void ESP_Bus_test(void)
+void CacheStatusTest(void)
 {
+  uint8_t data;
 
   clearBUS();
   delay(50);
 
   uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 512; i++)
+  for (uint16_t i = 0; i < 0x10; i++)
   {
+    Serial.print("doCacheStatusWrite : ");
     Serial.print(y,HEX);
     Serial.print(",");
     Serial.print(i,HEX);
     // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
     doCacheStatusWrite(y, i);
-
-    delay(50);
-
-    localPacket = doCacheStatusRead(i);
+    
+    data = doCacheStatusRead(i);
     Serial.print(" - doCacheStatusRead : ");
-    printLocalPacket();
+    Serial.println(data,HEX);
+    
+    y++;
+    delay(50);
+  }
 
+  // CLEAR
+  delay(50);
+}
+
+void CacheDataTest(void)
+{
+  uint8_t data;
+
+  clearBUS();
+  delay(50);
+
+  uint8_t y = 0x00;
+  for (uint16_t i = 0; i < 0x10; i++)
+  {
+    Serial.print("doCacheDataWrite : ");
+    Serial.print(y,HEX);
+    Serial.print(",");
+    Serial.print(i,HEX);
+    doCacheDataWrite(y, i);
+
+    data = doCacheDataRead(i);
+    Serial.print(" - doCacheDataRead : ");
+    Serial.println(data,HEX);
+    
     y++;
     delay(50);
   }
@@ -165,7 +194,8 @@ void loop()
     delay(1000);
   */
 
-  ESP_Bus_test();
+  CacheStatusTest();
+  CacheDataTest();
 
   // Z80_ROMMemory_Test();
   // Z80_IORQ_Test();
