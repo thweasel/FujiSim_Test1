@@ -6,7 +6,7 @@ Platform IO should be used within Visual Code to compile the project which is ba
 
 ## SimulIDE simulation settings
 
-** SimulIDE Version0.4.15SR10**
+**SimulIDE Version0.4.15SR10**
 
 To accurately simulate the SPI timing the properties of the simulation need to be edited before running "Simu Step ns" needs to be set to 10. If this is not set then the ESP simulation will see bits missing when reading the Shift registers as the Clock and data signalling slips.
 
