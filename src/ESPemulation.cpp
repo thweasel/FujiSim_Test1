@@ -64,7 +64,17 @@ void sendPULSE(void)
   return;
 }
 
+bool setESPHardlock(void)
+{  // This should check for the Z80 lock, then block or return false
+  digitalWrite(ESP_HARDLOCK,ENABLE_LOW);
+  return true;
+}
 
+bool resetESPHardlock(void)
+{
+  digitalWrite(ESP_HARDLOCK,DISABLE_HIGH);
+  return true;
+}
 
 // SPI Write ESPout
 void writeSPI(void)
@@ -82,6 +92,9 @@ void writeSPI(void)
   
   // Enable the Output from the 595s
   digitalWrite(SBUS_OE_out, ENABLE_LOW);
+
+  delay(10);
+
   return;
 }
 
@@ -100,7 +113,10 @@ void readSPI(void)
   SPI.transfer(SPIpacketRX,4);  
   SPI.endTransaction();
 
+  delay(10);
+
   digitalWrite(SBUS_OE_out,DISABLE_HIGH);  // Remove Control & Address  
+  
 }
 
 

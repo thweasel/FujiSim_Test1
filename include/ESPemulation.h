@@ -55,6 +55,9 @@ void selectROMbank(uint8_t rom);
 
 void sendPULSE(void);
 
+bool setESPHardlock(void);
+bool resetESPHardlock(void);
+
 void writeSPI(void);
 void readSPI(void);
 

@@ -106,39 +106,49 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
 // ESP accessing Cache chip
 uint8_t doCacheDataRead(uint16_t Address) // A16-0
 {
+    setESPHardlock();
+
     enableLocalControlBus();
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHEDATA_RD);
 
     clearBUS();
+    resetESPHardlock();
     return BUSbytesPTR[3];
 }
 
 void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 {
+    setESPHardlock();
     enableLocalControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_CACHEDATA_WR);
 
     clearBUS();
+    resetESPHardlock();
 }
 
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
+    setESPHardlock();
+
     enableLocalControlBus();
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHESTATUS_RD);
 
     digitalWrite(CONTROL_Local, HIGH);
 
     clearBUS();
+    resetESPHardlock();
     return BUSbytesPTR[3];
 }
 
 void doCacheStatusWrite(uint8_t Data, uint16_t Address) // A16-1
 {
+    setESPHardlock();
+
     enableLocalControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
     
     clearBUS();
-
+    resetESPHardlock();
 }
