@@ -256,7 +256,7 @@ void loop()
   ESP_CacheStatusTest();
   ESP_CacheData_Test();
   ESP_ROM_Test();
-  //ESP_IOd_Test();
+  ESP_IOd_Test();
   
 
 

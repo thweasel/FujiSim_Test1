@@ -37,23 +37,28 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 // These methods are for programming the IOd configuration bytes
 uint8_t doIOdRead(uint16_t Address) // A16-1
 {
+    setESPHardlock();
+
     enableZ80ControlBus();
     // connect Z80Data and ROM/IOdbus
 
-    doBUSRead(Address, CONTROLBYTE_IORQ_RD);
+    BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_IORQ_RD);
 
     clearBUS();
-    return 0;
+    resetESPHardlock();
+    return BUSbytesPTR[3];
 }
 
 void doIOdWrite(uint8_t Data, uint16_t Address) // A16-1
 {
+    setESPHardlock();
     enableZ80ControlBus();
     // connect Z80Data and ROM/IOdbus
 
     doBUSWrite(Data, Address, CONTROLBYTE_IORQ_WR);
 
     clearBUS();
+    resetESPHardlock();
 }
 
 // ESP controlling the system in place of the Z80
@@ -62,10 +67,10 @@ uint8_t doZ80MEMRead(uint16_t Address)
 {
     enableZ80ControlBus();
 
-    doBUSRead(Address, CONTROLBYTE_MEMRQ_RD);
+    BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_MEMRQ_RD);
 
     clearBUS();
-    return 0;
+    return BUSbytesPTR[3];
 }
 
 void doZ80MEMWrite(uint8_t Data, uint16_t Address)
@@ -83,10 +88,10 @@ uint8_t doZ80IORead(uint16_t Address)
 {
     enableZ80ControlBus();
 
-    doBUSRead(Address, CONTROLBYTE_IORQ_RD);
+    BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_IORQ_RD);
 
     clearBUS();
-    return 0;
+    return BUSbytesPTR[3];
 }
 
 void doZ80IOWrite(uint8_t Data, uint16_t Address)
