@@ -149,7 +149,7 @@ uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
   setSPIpacketTX(0x0, Control, Address);
   writeSPI(); // Set Control and Address lines
   
-  clearSPIpacketRX();
+  //clearSPIpacketRX();
   readSPI();
   //clearBUS();
   return SPIpacketRX;
