@@ -7,10 +7,18 @@ uint8_t *BUSbytesPTR;
 //  BUSbyte [1] = loAddr;
 //  BUSbyte [0] = hiAddr;
 
+
+//
+//  Z80 BUS Interactions
+//
+
+// Everything in here should be done under a BUSRQ which disables the Z80
+
 // ESP accessing the ROM/IOd chip VIA Z80 Bus
 // Uses these to read/write ROMs into the IOd chip
 uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 {
+    doBUSRQ();
     enableZ80ControlBus();
     selectROMbank(ROMbank);
     // Z80 CE
@@ -25,6 +33,7 @@ uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 
 void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 {
+    doBUSRQ();
     enableZ80ControlBus();
     selectROMbank(ROMbank);
     //connectZ80Bus();
@@ -37,6 +46,7 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 // These methods are for programming the IOd configuration bytes
 uint8_t doIOdRead(uint16_t Address) // A16-1
 {
+    doBUSRQ();
     setESPHardlock();
 
     enableZ80ControlBus();
@@ -51,6 +61,7 @@ uint8_t doIOdRead(uint16_t Address) // A16-1
 
 void doIOdWrite(uint8_t Data, uint16_t Address) // A16-1
 {
+    doBUSRQ();
     setESPHardlock();
     enableZ80ControlBus();
     // connect Z80Data and ROM/IOdbus
@@ -65,6 +76,7 @@ void doIOdWrite(uint8_t Data, uint16_t Address) // A16-1
 // Direct access to the host system memory
 uint8_t doZ80MEMRead(uint16_t Address)
 {
+    doBUSRQ();
     enableZ80ControlBus();
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_MEMRQ_RD);
@@ -75,6 +87,7 @@ uint8_t doZ80MEMRead(uint16_t Address)
 
 void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 {
+    doBUSRQ();
     enableZ80ControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_MEMRQ_WR);
@@ -86,6 +99,7 @@ void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 // Probably will not be much use for interacting with actual hardware (does not create true bus timings)
 uint8_t doZ80IORead(uint16_t Address)
 {
+    doBUSRQ();
     enableZ80ControlBus();
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_IORQ_RD);
@@ -96,6 +110,7 @@ uint8_t doZ80IORead(uint16_t Address)
 
 void doZ80IOWrite(uint8_t Data, uint16_t Address)
 {
+    doBUSRQ();
     enableZ80ControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_IORQ_WR);
@@ -105,8 +120,11 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
 
 
 //
-//  LOCAL BUS CONNECTED DEVICES
+//  LOCAL BUS Interactions
 //
+
+// All actions here should be done under ESP-HARDLOCK conditions
+// The Z80 (Host) will not be able to lock or use the system while ESP is accessing it
 
 // ESP accessing Cache chip
 uint8_t doCacheDataRead(uint16_t Address) // A16-0

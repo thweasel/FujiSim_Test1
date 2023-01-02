@@ -67,6 +67,11 @@ void sendPULSE(void)
 bool setESPHardlock(void)
 {  // This should check for the Z80 lock, then block or return false
   digitalWrite(ESP_HARDLOCK,ENABLE_LOW);
+  while(digitalRead(1 == Z80_HARDLOCK))
+  {
+    delay(1); // wait -- block
+  }
+  
   return true;
 }
 
@@ -75,6 +80,9 @@ bool resetESPHardlock(void)
   digitalWrite(ESP_HARDLOCK,DISABLE_HIGH);
   return true;
 }
+
+
+
 
 // SPI Write ESPout
 void writeSPI(void)
@@ -119,7 +127,6 @@ void readSPI(void)
   
 }
 
-
 // ESP Parallel BUS Functions
 void enableLocalControlBus()
 {
@@ -158,6 +165,23 @@ void clearBUS()
   disconnectZ80Bus();
   
   digitalWrite(SBUS_OE_out,HIGH);  // disconnect S-Regs from BUS
+}
+
+
+bool doBUSRQ(void)
+{
+  setSPIpacketTX(0xFF,CONTROLBYTE_BUSRQ,0xFFFF);
+  writeSPI();
+  // WAIT HERE FOR THE BUSACK signal
+  delay(10);
+  
+  return true;
+}
+
+bool resetBUSRQ(void)
+{
+  // Clear BUS will do it.
+  return true;
 }
 
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control)

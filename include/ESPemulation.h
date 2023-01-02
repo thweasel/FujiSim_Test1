@@ -26,12 +26,14 @@ Z80 control
                        //76543210
 #define CONTROLBYTE_CLEAR           B11111111
 // Z80 BUS
-#define CONTROLBYTE_CEROMRQ_RD      B10010110
-#define CONTROLBYTE_CEROMRQ_WR      B10010101
-#define CONTROLBYTE_MEMRQ_RD        B11110110
-#define CONTROLBYTE_MEMRQ_WR        B11110101
-#define CONTROLBYTE_IORQ_RD         B11111110
-#define CONTROLBYTE_IORQ_WR         B11111101
+#define CONTROLBYTE_CEROMRQ_RD      B10100110
+#define CONTROLBYTE_CEROMRQ_WR      B10100101
+#define CONTROLBYTE_MEMRQ_RD        B11100110
+#define CONTROLBYTE_MEMRQ_WR        B11100101
+#define CONTROLBYTE_IORQ_RD         B11101110
+#define CONTROLBYTE_IORQ_WR         B11101101
+#define CONTROLBYTE_BUSRQ           B11101111
+
 
 // Local BUS
 #define CONTROLBYTE_CACHEDATA_RD    B11111010
@@ -71,6 +73,8 @@ void connectZ80Bus();
 void disconnectZ80Bus();
 
 void clearBUS();
+
+bool doBUSRQ(void);
 
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control);
 
