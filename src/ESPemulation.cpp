@@ -67,7 +67,7 @@ void sendPULSE(void)
 bool setESPHardlock(void)
 {  // This should check for the Z80 lock, then block or return false
   digitalWrite(ESP_HARDLOCK,ENABLE_LOW);
-  while(digitalRead(1 == Z80_HARDLOCK))
+  while(1 == digitalRead(Z80_HARDLOCK))
   {
     delay(1); // wait -- block
   }
