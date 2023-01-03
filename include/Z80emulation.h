@@ -24,11 +24,13 @@
 #define Z80_ROMCS  15
 #define Z80_NMI    14
 
+void clear_Z80_ADDR();
+void set_Z80_ADDR(uint16_t Address);
+uint16_t get_Z80_ADDR();
+
+void clear_Z80_DATA();
+void send_Z80_Data(uint8_t Data);
+uint8_t read_Z80_DATA();
 
 void Z80_IDLE();
 
-void do_Z80_IOWR(uint16_t Address, uint8_t Data);
-uint8_t do_Z80_IORD(uint16_t Address);
-
-void do_Z80_MEMWR(uint16_t Address, uint8_t Data);
-uint8_t do_Z80_MEMRD(uint16_t Address);

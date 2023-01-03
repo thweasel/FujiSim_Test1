@@ -3,7 +3,9 @@
 
 #include <ESPemulation.h>
 #include <ESPSystemInterface.h>
+
 #include <Z80emulation.h>
+#include <Z80SystemInterface.h>
 
 /*
   PORT A -- Z80 DATA
