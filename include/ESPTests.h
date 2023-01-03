@@ -1,4 +1,4 @@
-#include <ESPSystemInterface.h>
+#include <ESPHardwareInterface.h>
 
 
 void ESP_CacheStatusTest(void);

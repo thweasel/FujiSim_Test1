@@ -53,6 +53,8 @@ Z80 control
 
 uint8_t * setSPIpacketTX (uint8_t Data, uint8_t Control, uint16_t Address);
 
+void ESPHardware_setup(void);
+
 void selectROMbank(uint8_t rom);
 
 void sendPULSE(void);

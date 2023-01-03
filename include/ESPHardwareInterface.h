@@ -1,9 +1,6 @@
-#include <Arduino.h>
-#include <SPI.h>
+#include <ESPHardware_emulation.h>
 
-
-
-void ESPsetup(void);
+void ESP_setup(void);
 
 // ROM/IOd CHIP
 uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank); //A16-0

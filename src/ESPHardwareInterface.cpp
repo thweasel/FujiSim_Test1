@@ -1,5 +1,4 @@
-
-#include "ESPemulation.h"
+#include <ESPHardwareInterface.h>
 
 uint8_t *BUSbytesPTR;
 //  BUSbyte [3] = Data;
@@ -8,35 +7,15 @@ uint8_t *BUSbytesPTR;
 //  BUSbyte [0] = hiAddr;
 
 
-void ESPsetup(void)
+void ESP_setup(void)
 {
-  // ESP pin Config
-  pinMode(ESPout_STC, OUTPUT);
-  pinMode(ESPout_OE, OUTPUT);
-  pinMode(ESP_PULSE, OUTPUT);
-  pinMode(ESPin_PL, OUTPUT);
-  pinMode(ESP_ROMSELECT0, OUTPUT);
-  pinMode(ESP_ROMSELECT1, OUTPUT);
-  pinMode(ESP_espHARDLOCK, OUTPUT);
-  pinMode(ESP_z80HARDLOCK, INPUT);
-  pinMode(CONNECT_Z80, OUTPUT);
-
-  // ESP pin State
-  digitalWrite(ESPout_STC, HIGH);
-  digitalWrite(ESPout_OE, HIGH);
-  digitalWrite(ESP_PULSE, HIGH);
-  digitalWrite(ESPin_PL, HIGH);
-  digitalWrite(ESP_ROMSELECT0, LOW);
-  digitalWrite(ESP_ROMSELECT1, LOW);
-  digitalWrite(ESP_espHARDLOCK, HIGH); // Lock set LOW
-  digitalWrite(ESP_z80HARDLOCK, HIGH); // Lock set LOW
-  digitalWrite(CONNECT_Z80, HIGH);  // Connect on LOW (may be buffer with NOT?)
-
-
+  ESPHardware_setup();
   // ESP Warm up -- FUJI setup will be needed here at somepoint
   clearBUS();
   resetESPHardlock();
   // Program the IOd & ROMs
+
+  return;
 }
 
 
