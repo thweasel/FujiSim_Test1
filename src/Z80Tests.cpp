@@ -22,14 +22,19 @@ Serial.println("Z80_ROMMemory_Test : END ");
 
 void Z80_IORQ_Test(void)
 {
+  uint8_t data = 0;
   Serial.println("Z80_IORQ_Test : START ");  
   // do_Z80_IOWR(1,99);
 
   Serial.println("WRITE to Device 1-3-5");  
+  data = do_Z80_IORD(0);
+  Serial.print("Status:  ");
+  Serial.println(data,HEX);
+
   do_Z80_IORD(1);
-  do_Z80_IOWR(3, 1);
-  do_Z80_IOWR(3, 2);
-  do_Z80_IOWR(3, 4);
+  do_Z80_IOWR(3,0x0f);
+  do_Z80_IOWR(3,0x0e);
+  do_Z80_IOWR(3,0x0d);
   do_Z80_IORD(5);
 
 

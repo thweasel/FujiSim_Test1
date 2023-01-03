@@ -116,3 +116,18 @@ void ESP_IOd_Test(void)
   delay(50);
 }
 
+void ESP_FillCacheStatus (uint8_t data)
+{
+  for (uint16_t i = 0x0000; i != 0x000F; i++)  // 0xFFFF takes ages!
+  {
+    doCacheStatusWrite(data, i);
+  }
+      
+}
+
+void ESP_test_configIOd(void)
+{
+  doIOdWrite(IODCONFIG_STATUS,1);
+  doIOdWrite(IODCONFIG_CACHE0,3);
+  doIOdWrite(IODCONFIG_IOEND,5);
+}

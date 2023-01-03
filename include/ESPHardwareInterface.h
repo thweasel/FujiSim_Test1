@@ -1,5 +1,28 @@
 #include <ESPHardware_emulation.h>
 
+/*
+    IOd CONFIG Byte
+
+    0 - CACHE select 0 [1]
+    1 - CACHE select 1 [1]
+    2 - CACHE select 2 [1]
+    3 - CACHE select 3 [1]
+    4 - CACHE data[0]/status[1]
+    5 - WAIT_IO [0]
+    6 - SET Z80HARDLOCK [1]
+    7 - RESET Z80HARDLOCK [1]
+*/
+
+                        //76543210
+#define IODCONFIG_STATUS B01110000
+#define IODCONFIG_CACHE0 B00100001
+#define IODCONFIG_CACHE1 B00100010
+#define IODCONFIG_CACHE2 B00100100
+#define IODCONFIG_CACHE3 B00101000
+#define IODCONFIG_IOEND  B10100000
+#define IODCONFIG_WAIT   B00000000
+
+
 void ESP_setup(void);
 
 // ROM/IOd CHIP
