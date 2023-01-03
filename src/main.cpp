@@ -1,8 +1,10 @@
 #include <Arduino.h>
 #include <SPI.h>
 
-#include <ESPemulation.h>
-#include <ESPSystemInterface.h>
+//#include <ESPemulation.h>
+//#include <ESPSystemInterface.h>
+
+#include <ESPTests.h>
 
 #include <Z80emulation.h>
 #include <Z80SystemInterface.h>
@@ -62,121 +64,6 @@ void Z80_IORQ_Test(void)
   return;
 }
 
-void ESP_CacheStatusTest(void)
-{
-  uint8_t data;
-
-  clearBUS();
-  delay(50);
-
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
-  {
-    Serial.print("doCacheStatusWrite : ");
-    Serial.print(y,HEX);
-    Serial.print(",");
-    Serial.print(i,HEX);
-    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doCacheStatusWrite(y, i);
-    
-    data = doCacheStatusRead(i);
-    Serial.print(" - doCacheStatusRead : ");
-    Serial.println(data,HEX);
-    
-    y++;
-    delay(50);
-  }
-
-  // CLEAR
-  delay(50);
-}
-
-void ESP_CacheData_Test(void)
-{
-  uint8_t data;
-
-  clearBUS();
-  delay(50);
-
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
-  {
-    Serial.print("doCacheDataWrite : ");
-    Serial.print(y,HEX);
-    Serial.print(",");
-    Serial.print(i,HEX);
-    doCacheDataWrite(y, i);
-
-    data = doCacheDataRead(i);
-    Serial.print(" - doCacheDataRead : ");
-    Serial.println(data,HEX);
-    
-    y++;
-    delay(50);
-  }
-
-  // CLEAR
-  delay(50);
-}
-
-void ESP_ROM_Test(void)
-{
-  uint8_t data;
-
-  clearBUS();
-  delay(50);
-
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
-  {
-    Serial.print("doROMWrite : ");
-    Serial.print(y,HEX);
-    Serial.print(",");
-    Serial.print(i,HEX);
-    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doCEROMWrite(y, i, 0);
-    
-    data = doCEROMRead(i, 0);
-    Serial.print(" - doROMRead : ");
-    Serial.println(data,HEX);
-    
-    y++;
-    delay(50);
-  }
-
-  // CLEAR
-  delay(50);
-}
-
-void ESP_IOd_Test(void)
-{
-  uint8_t data;
-
-  clearBUS();
-  delay(50);
-
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
-  {
-    Serial.print("doIOdWrite : ");
-    Serial.print(y,HEX);
-    Serial.print(",");
-    Serial.print(i,HEX);
-    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doIOdWrite(y, i);
-    
-    data = doIOdRead(i);
-    Serial.print(" - doIOdRead : ");
-    Serial.println(data,HEX);
-    
-    y++;
-    delay(50);
-  }
-
-  // CLEAR
-  delay(50);
-}
-
 
 void setup()
 {
@@ -189,31 +76,10 @@ void setup()
 
   // Set pin start-up states
 
-  // ESP
-  // ESP pin Config
+  // ESP SPI
   SPI.begin();
-  pinMode(ESPout_STC, OUTPUT);
-  pinMode(ESPout_OE, OUTPUT);
-  pinMode(ESP_PULSE, OUTPUT);
-  pinMode(ESPin_PL, OUTPUT);
-  pinMode(ESP_ROMSELECT0, OUTPUT);
-  pinMode(ESP_ROMSELECT1, OUTPUT);
-  pinMode(ESP_espHARDLOCK, OUTPUT);
-  pinMode(ESP_z80HARDLOCK, INPUT);
-  pinMode(CONNECT_Z80, OUTPUT);
-
-  // ESP pin State
-  digitalWrite(ESPout_STC, HIGH);
-  digitalWrite(ESPout_OE, HIGH);
-  digitalWrite(ESP_PULSE, HIGH);
-  digitalWrite(ESPin_PL, HIGH);
-  digitalWrite(ESP_ROMSELECT0, LOW);
-  digitalWrite(ESP_ROMSELECT1, LOW);
-  digitalWrite(ESP_espHARDLOCK, HIGH); // Lock set LOW
-  digitalWrite(ESP_z80HARDLOCK, HIGH); // Lock set LOW
-  digitalWrite(CONNECT_Z80, HIGH);  // Connect on LOW (may be buffer with NOT?)
-
-  clearBUS();
+  ESPsetup();
+  
 
   // Z80
 
@@ -263,7 +129,7 @@ void loop()
   ESP_IOd_Test();
   
 
-  resetESPHardlock();
+  //resetESPHardlock();
 
   Z80_ROMMemory_Test();
   Z80_IORQ_Test();

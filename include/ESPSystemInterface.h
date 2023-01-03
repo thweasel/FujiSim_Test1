@@ -3,6 +3,8 @@
 
 
 
+void ESPsetup(void);
+
 // ROM/IOd CHIP
 uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank); //A16-0
 void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank); //A16-0
