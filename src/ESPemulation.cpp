@@ -130,11 +130,7 @@ void readSPI(void)
 // ESP Parallel BUS Functions
 
 void clearBUS()
-{ 
-  disableLocalControlBus();
-  disableZ80ControlBus();
-  disconnectZ80Bus();
-  
+{  
   digitalWrite(ESPout_OE,HIGH);  // disconnect S-Regs from BUS
 }
 

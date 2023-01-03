@@ -94,7 +94,6 @@ void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 uint8_t doZ80IORead(uint16_t Address)
 {
     doBUSRQ();
-    enableZ80ControlBus();
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_IORQ_RD);
 
