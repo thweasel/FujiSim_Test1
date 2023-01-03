@@ -25,7 +25,7 @@ void Z80Hardware_setup(void)
   Z80_ADDR_L_DDR = PORT_DDR_OUTPUT;
   Z80_ADDR_H_DDR = PORT_DDR_OUTPUT;
   // Z80 Port State
-  Z80_DATA = 255;
+  Z80_DATA_out = 255;
   Z80_ADDR_L = 255;
   Z80_ADDR_H = 255;
   return;
@@ -60,7 +60,7 @@ uint16_t get_Z80_ADDR()
     Z80_ADDR_L_DDR = PORT_DDR_INPUT;
     Z80_ADDR_H_DDR = PORT_DDR_INPUT;
 
-    uint16_t address;
+    uint16_t address = 0;
     address = Z80_ADDR_H;
     address = address << 8;
     address = address | Z80_ADDR_L;
@@ -71,18 +71,18 @@ uint16_t get_Z80_ADDR()
 
 void clear_Z80_DATA()
 { // Default float data High?
-    Z80_DATA = 0;
-    Z80_DATA = 255;
+    Z80_DATA_out = 0;
+    Z80_DATA_out = 255;
     Z80_DATA_DDR = PORT_DDR_OUTPUT;
     
 
     return;
 }
 
-void send_Z80_Data(uint8_t Data)
+void send_Z80_DATA(uint8_t Data)
 {
-    //Z80_DATA_DDR = PORT_DDR_OUTPUT;
-    Z80_DATA = Data;
+    Z80_DATA_DDR = PORT_DDR_OUTPUT;
+    Z80_DATA_out = Data;
     digitalWrite(Z80_WR, LOW);
     digitalWrite(Z80_WR, HIGH);
     
@@ -93,12 +93,12 @@ void send_Z80_Data(uint8_t Data)
 uint8_t read_Z80_DATA()
 {
     Z80_DATA_DDR = PORT_DDR_INPUT;
-    uint8_t data;
+    uint8_t data = 0;
 
     digitalWrite(Z80_RD, LOW);
-    data = Z80_DATA;
+    data = Z80_DATA_in;
     digitalWrite(Z80_RD, HIGH);
-    //clear_Z80_DATA();
+    
     return data;
 }
 

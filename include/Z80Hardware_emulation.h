@@ -4,7 +4,8 @@
 #define PORT_DDR_INPUT 0
 
 // Z80 Emulation
-#define Z80_DATA PORTA
+#define Z80_DATA_out PORTA
+#define Z80_DATA_in  PINA
 #define Z80_DATA_DDR DDRA
 
 #define Z80_ADDR_L PORTF
@@ -31,7 +32,7 @@ void set_Z80_ADDR(uint16_t Address);
 uint16_t get_Z80_ADDR();
 
 void clear_Z80_DATA();
-void send_Z80_Data(uint8_t Data);
+void send_Z80_DATA(uint8_t Data);
 uint8_t read_Z80_DATA();
 
 void Z80_IDLE();

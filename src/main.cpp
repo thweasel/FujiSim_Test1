@@ -1,12 +1,8 @@
 #include <Arduino.h>
 #include <SPI.h>
 
-//#include <ESPemulation.h>
-//#include <ESPSystemInterface.h>
-
 #include <ESPTests.h>
-
-#include <Z80HardwareInterface.h>
+#include <Z80Tests.h>
 
 /*
   PORT A -- Z80 DATA
@@ -32,36 +28,7 @@ void printLocalPacket()
   Serial.println("]");
 }
 
-void Z80_ROMMemory_Test(void)
-{
-  do_Z80_MEMWR(1, 16);
-  do_Z80_MEMWR(2, 32);
-  do_Z80_MEMWR(3, 64);
 
-  do_Z80_MEMRD(1);
-  do_Z80_MEMRD(2);
-  do_Z80_MEMRD(3);
-
-  return;
-}
-
-void Z80_IORQ_Test(void)
-{
-  // do_Z80_IOWR(1,99);
-  do_Z80_IORD(1);
-  do_Z80_IOWR(3, 1);
-  do_Z80_IOWR(3, 2);
-  do_Z80_IOWR(3, 4);
-  do_Z80_IORD(5);
-
-  do_Z80_IORD(1);
-  do_Z80_IORD(3);
-  do_Z80_IORD(3);
-  do_Z80_IORD(3);
-  do_Z80_IORD(5);
-
-  return;
-}
 
 
 void setup()
@@ -98,14 +65,14 @@ void loop()
     delay(1000);
   */
 
-  ESP_CacheStatusTest();
-  ESP_CacheData_Test();
-  ESP_ROM_Test();
-  ESP_IOd_Test();
+  //ESP_CacheStatusTest();
+  //ESP_CacheData_Test();
+  //ESP_ROM_Test();
+  //ESP_IOd_Test();
   
 
   //resetESPHardlock();
 
   Z80_ROMMemory_Test();
-  Z80_IORQ_Test();
+  //Z80_IORQ_Test();
 }
