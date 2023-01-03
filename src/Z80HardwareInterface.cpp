@@ -1,5 +1,9 @@
-#include "Z80SystemInterface.h"
+#include "Z80HardwareInterface.h"
 
+void Z80_setup(void)
+{
+    Z80Hardware_setup();
+}
 
 void do_Z80_IOWR(uint16_t Address, uint8_t Data)
 {

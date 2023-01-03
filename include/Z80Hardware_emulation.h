@@ -24,6 +24,8 @@
 #define Z80_ROMCS  15
 #define Z80_NMI    14
 
+void Z80Hardware_setup(void);
+
 void clear_Z80_ADDR();
 void set_Z80_ADDR(uint16_t Address);
 uint16_t get_Z80_ADDR();
