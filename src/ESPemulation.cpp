@@ -66,8 +66,8 @@ void sendPULSE(void)
 
 bool setESPHardlock(void)
 {  // This should check for the Z80 lock, then block or return false
-  digitalWrite(ESP_HARDLOCK,ENABLE_LOW);
-  while(1 == digitalRead(Z80_HARDLOCK))
+  digitalWrite(ESP_espHARDLOCK,ENABLE_LOW);
+  while(1 == digitalRead(ESP_z80HARDLOCK))
   {
     delay(1); // wait -- block
   }
@@ -77,7 +77,7 @@ bool setESPHardlock(void)
 
 bool resetESPHardlock(void)
 {
-  digitalWrite(ESP_HARDLOCK,DISABLE_HIGH);
+  digitalWrite(ESP_espHARDLOCK,DISABLE_HIGH);
   return true;
 }
 
@@ -95,11 +95,11 @@ void writeSPI(void)
   SPI.endTransaction();
 
   // LATCH the Shift Regs to Storage (pulse)
-  digitalWrite(SBUS_STC_out, HIGH); // Move shift to storage
-  digitalWrite(SBUS_STC_out, LOW);
+  digitalWrite(ESPout_STC, HIGH); // Move shift to storage
+  digitalWrite(ESPout_STC, LOW);
   
   // Enable the Output from the 595s
-  digitalWrite(SBUS_OE_out, ENABLE_LOW);
+  digitalWrite(ESPout_OE, ENABLE_LOW);
 
   delay(10);
 
@@ -123,7 +123,7 @@ void readSPI(void)
 
   delay(10);
 
-  digitalWrite(SBUS_OE_out,DISABLE_HIGH);  // Remove Control & Address  
+  digitalWrite(ESPout_OE,DISABLE_HIGH);  // Remove Control & Address  
   
 }
 
@@ -164,7 +164,7 @@ void clearBUS()
   disableZ80ControlBus();
   disconnectZ80Bus();
   
-  digitalWrite(SBUS_OE_out,HIGH);  // disconnect S-Regs from BUS
+  digitalWrite(ESPout_OE,HIGH);  // disconnect S-Regs from BUS
 }
 
 

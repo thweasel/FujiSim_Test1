@@ -1,14 +1,14 @@
 #include <Arduino.h>
 #include <SPI.h>
 
-#define SBUS_STC_out 49
-#define SBUS_OE_out 48
+#define ESPout_STC 49
+#define ESPout_OE 48
 #define ESP_PULSE 47
 #define ESPin_PL 46
 #define CONTROL_Local 12
 #define CONTROL_Z80 11
-#define ESP_HARDLOCK 10
-#define Z80_HARDLOCK 9
+#define ESP_espHARDLOCK 10
+#define ESP_z80HARDLOCK 9
 #define CONNECT_Z80 8
 #define Z80_ROMCS 15
 

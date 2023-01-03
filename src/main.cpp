@@ -190,25 +190,25 @@ void setup()
   // ESP
   // ESP pin Config
   SPI.begin();
-  pinMode(SBUS_STC_out, OUTPUT);
-  pinMode(SBUS_OE_out, OUTPUT);
+  pinMode(ESPout_STC, OUTPUT);
+  pinMode(ESPout_OE, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
   pinMode(ESPin_PL, OUTPUT);
   pinMode(CONTROL_Local, OUTPUT);
   pinMode(CONTROL_Z80, OUTPUT);
-  pinMode(ESP_HARDLOCK, OUTPUT);
-  pinMode(Z80_HARDLOCK, INPUT);
+  pinMode(ESP_espHARDLOCK, OUTPUT);
+  pinMode(ESP_z80HARDLOCK, INPUT);
   pinMode(CONNECT_Z80, OUTPUT);
 
   // ESP pin State
-  digitalWrite(SBUS_STC_out, HIGH);
-  digitalWrite(SBUS_OE_out, HIGH);
+  digitalWrite(ESPout_STC, HIGH);
+  digitalWrite(ESPout_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);
   digitalWrite(ESPin_PL, HIGH);
   digitalWrite(CONTROL_Local, HIGH);
   digitalWrite(CONTROL_Z80, HIGH);
-  digitalWrite(ESP_HARDLOCK, HIGH); // Lock set LOW
-  digitalWrite(Z80_HARDLOCK, HIGH); // Lock set LOW
+  digitalWrite(ESP_espHARDLOCK, HIGH); // Lock set LOW
+  digitalWrite(ESP_z80HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(CONNECT_Z80, HIGH);  // Connect on LOW (may be buffer with NOT?)
 
   clearBUS();
