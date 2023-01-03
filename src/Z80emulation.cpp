@@ -50,13 +50,9 @@ void send_Z80_Data(uint8_t Data)
 {
     //Z80_DATA_DDR = PORT_DDR_OUTPUT;
     Z80_DATA = Data;
-    delay(500);
     digitalWrite(Z80_WR, LOW);
-    //_delay_us;
-    delay(500);
     digitalWrite(Z80_WR, HIGH);
     
-
     //clear_Z80_DATA();
     return;
 }
@@ -65,15 +61,10 @@ uint8_t read_Z80_DATA()
 {
     Z80_DATA_DDR = PORT_DDR_INPUT;
     uint8_t data;
-    delay(500);
+
     digitalWrite(Z80_RD, LOW);
-    //_delay_us;
-    delay(500);
     data = Z80_DATA;
-    //Z80_DATA = 0; // Clear the register
-
     digitalWrite(Z80_RD, HIGH);
-
     //clear_Z80_DATA();
     return data;
 }

@@ -263,7 +263,8 @@ void loop()
   ESP_IOd_Test();
   
 
+  resetESPHardlock();
 
-  //Z80_ROMMemory_Test();
-  //Z80_IORQ_Test();
+  Z80_ROMMemory_Test();
+  Z80_IORQ_Test();
 }
