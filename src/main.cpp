@@ -71,10 +71,9 @@ void loop()
   //ESP_IOd_Test();
   
 
-  //resetESPHardlock();
-
   //Z80_ROMMemory_Test();
 
+  
   ESP_FillCacheStatus(0x0f);
   ESP_test_configIOd();
   while(1)
@@ -82,4 +81,5 @@ void loop()
     Z80_IORQ_Test();
   }
   
+
 }

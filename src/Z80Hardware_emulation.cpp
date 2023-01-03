@@ -1,6 +1,7 @@
 #include <Z80Hardware_emulation.h>
 
 # define SLOW true
+# define SLOWRATE 500
 
 
 void Z80Hardware_setup(void)
@@ -87,7 +88,7 @@ void send_Z80_DATA(uint8_t Data)
     Z80_DATA_DDR = PORT_DDR_OUTPUT;
     Z80_DATA_out = Data;
     digitalWrite(Z80_WR, LOW);
-    if (SLOW) {delay(1000);}
+    if (SLOW) {delay(SLOWRATE);}
     digitalWrite(Z80_WR, HIGH);
     
     //clear_Z80_DATA();
@@ -101,7 +102,7 @@ uint8_t read_Z80_DATA()
 
     digitalWrite(Z80_RD, LOW);
     data = Z80_DATA_in;
-    if (SLOW) {delay(1000);}
+    if (SLOW) {delay(SLOWRATE);}
     digitalWrite(Z80_RD, HIGH);
     
     return data;
