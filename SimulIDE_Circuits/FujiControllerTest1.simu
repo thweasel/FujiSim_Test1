@@ -876,10 +876,6 @@ Unique  Id: Tunnel-39786:
 Circuit Id: Z80_NMI
 <item Uid="" id="Z80_NMI" x="-1032" circRot="8.900601013234755e-307" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="204" circPos="0,0" valLabely="0" Name="Z80_NMI" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="-90" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-39786"/>
 
-Unique  Id: Tunnel-39770: 
-Circuit Id: CONNECT_Z80
-<item Uid="" id="CONNECT_Z80" x="132" circRot="1.1126102664850085e-306" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-340" circPos="0,0" valLabely="0" Name="CONNECT_Z80" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="-90" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-39770"/>
-
 Unique  Id: Tunnel-33725: 
 Circuit Id: ESP_z80HARDLOCK
 <item Uid="" id="ESP_z80HARDLOCK" x="196" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-412" circPos="0,0" valLabely="0" Name="ESP_z80HARDLOCK" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-33725"/>
@@ -937,20 +933,12 @@ Circuit Id: Bus-4808
 <item id="Bus-4808" x="868" circRot="1.0079480008404e-311" itemtype="Bus" mainComp="false" boardPos="-1e+06,-1e+06" Num_Bits="8" y="-52" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" labelx="-16" hflip="-1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" labely="-24" objectName="Bus-21782" Start_Bit="0"/>
 
 Unique  Id: Tunnel-16366: 
-Circuit Id: CONTROL_Local
-<item Uid="" id="CONTROL_Local" x="-1264" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="24" circPos="0,0" valLabely="0" Name="CONTROL_Local" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-16366"/>
+Circuit Id: ESPout_CONTROL_Local
+<item Uid="" id="ESPout_CONTROL_Local" x="-1264" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="24" circPos="0,0" valLabely="0" Name="ESPout_CONTROL_Local" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-16366"/>
 
 Unique  Id: Tunnel-16365: 
-Circuit Id: CONTROL_Z80
-<item Uid="" id="CONTROL_Z80" x="-1264" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="40" circPos="0,0" valLabely="0" Name="CONTROL_Z80" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-16365"/>
-
-Unique  Id: Tunnel-16364: 
-Circuit Id: CONTROL_Z80
-<item Uid="" id="CONTROL_Z80" x="228" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-340" circPos="0,0" valLabely="0" Name="CONTROL_Z80" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="-90" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-16364"/>
-
-Unique  Id: Tunnel-16363: 
-Circuit Id: CONTROL_Local
-<item Uid="" id="CONTROL_Local" x="260" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-340" circPos="0,0" valLabely="0" Name="CONTROL_Local" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="-90" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-16363"/>
+Circuit Id: ESPout_CONTROL_Z80
+<item Uid="" id="ESPout_CONTROL_Z80" x="-1264" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="40" circPos="0,0" valLabely="0" Name="ESPout_CONTROL_Z80" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-16365"/>
 
 Unique  Id: Tunnel-16346: 
 Circuit Id: ESPout_OE
