@@ -128,35 +128,6 @@ void readSPI(void)
 }
 
 // ESP Parallel BUS Functions
-void enableLocalControlBus()
-{
-  digitalWrite(CONTROL_Local,ENABLE_LOW);
-}
-
-void disableLocalControlBus()
-{
-  digitalWrite(CONTROL_Local,DISABLE_HIGH);
-}
-
-void enableZ80ControlBus()
-{
-  digitalWrite(CONTROL_Z80,ENABLE_LOW);
-}
-
-void disableZ80ControlBus()
-{
-  digitalWrite(CONTROL_Z80,DISABLE_HIGH);
-}
-
-void connectZ80Bus()
-{
-  digitalWrite(CONNECT_Z80, ENABLE_LOW);
-}
-
-void disconnectZ80Bus()
-{
-  digitalWrite(CONNECT_Z80, DISABLE_HIGH);
-}
 
 void clearBUS()
 { 

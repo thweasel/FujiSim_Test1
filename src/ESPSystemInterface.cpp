@@ -19,7 +19,6 @@ uint8_t *BUSbytesPTR;
 uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 {
     doBUSRQ();
-    enableZ80ControlBus();
     selectROMbank(ROMbank);
     // Z80 CE
     //connectZ80Bus();
@@ -34,7 +33,6 @@ uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 {
     doBUSRQ();
-    enableZ80ControlBus();
     selectROMbank(ROMbank);
     //connectZ80Bus();
 
@@ -49,7 +47,6 @@ uint8_t doIOdRead(uint16_t Address) // A16-1
     doBUSRQ();
     setESPHardlock();
 
-    enableZ80ControlBus();
     // connect Z80Data and ROM/IOdbus
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_IORQ_RD);
@@ -63,7 +60,6 @@ void doIOdWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     doBUSRQ();
     setESPHardlock();
-    enableZ80ControlBus();
     // connect Z80Data and ROM/IOdbus
 
     doBUSWrite(Data, Address, CONTROLBYTE_IORQ_WR);
@@ -77,7 +73,6 @@ void doIOdWrite(uint8_t Data, uint16_t Address) // A16-1
 uint8_t doZ80MEMRead(uint16_t Address)
 {
     doBUSRQ();
-    enableZ80ControlBus();
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_MEMRQ_RD);
 
@@ -88,7 +83,6 @@ uint8_t doZ80MEMRead(uint16_t Address)
 void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 {
     doBUSRQ();
-    enableZ80ControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_MEMRQ_WR);
 
@@ -111,7 +105,6 @@ uint8_t doZ80IORead(uint16_t Address)
 void doZ80IOWrite(uint8_t Data, uint16_t Address)
 {
     doBUSRQ();
-    enableZ80ControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_IORQ_WR);
 
@@ -131,7 +124,6 @@ uint8_t doCacheDataRead(uint16_t Address) // A16-0
 {
     setESPHardlock();
 
-    enableLocalControlBus();
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHEDATA_RD);
 
     clearBUS();
@@ -142,7 +134,6 @@ uint8_t doCacheDataRead(uint16_t Address) // A16-0
 void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 {
     setESPHardlock();
-    enableLocalControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_CACHEDATA_WR);
 
@@ -154,10 +145,9 @@ uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
     setESPHardlock();
 
-    enableLocalControlBus();
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHESTATUS_RD);
 
-    digitalWrite(CONTROL_Local, HIGH);
+    digitalWrite(ESP_ROMSELECT0, HIGH);
 
     clearBUS();
     resetESPHardlock();
@@ -167,8 +157,6 @@ uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 void doCacheStatusWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     setESPHardlock();
-
-    enableLocalControlBus();
 
     doBUSWrite(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
     

@@ -5,8 +5,8 @@
 #define ESPout_OE 48
 #define ESP_PULSE 47
 #define ESPin_PL 46
-#define CONTROL_Local 12
-#define CONTROL_Z80 11
+#define ESP_ROMSELECT1 12
+#define ESP_ROMSELECT0 11
 #define ESP_espHARDLOCK 10
 #define ESP_z80HARDLOCK 9
 #define CONNECT_Z80 8
@@ -62,15 +62,6 @@ bool resetESPHardlock(void);
 
 void writeSPI(void);
 void readSPI(void);
-
-void enableLocalControlBus();
-void disableLocalControlBus();
-
-void enableZ80ControlBus();
-void disableZ80ControlBus();
-
-void connectZ80Bus();
-void disconnectZ80Bus();
 
 void clearBUS();
 

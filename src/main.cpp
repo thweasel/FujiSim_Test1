@@ -194,8 +194,8 @@ void setup()
   pinMode(ESPout_OE, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
   pinMode(ESPin_PL, OUTPUT);
-  pinMode(CONTROL_Local, OUTPUT);
-  pinMode(CONTROL_Z80, OUTPUT);
+  pinMode(ESP_ROMSELECT0, OUTPUT);
+  pinMode(ESP_ROMSELECT1, OUTPUT);
   pinMode(ESP_espHARDLOCK, OUTPUT);
   pinMode(ESP_z80HARDLOCK, INPUT);
   pinMode(CONNECT_Z80, OUTPUT);
@@ -205,8 +205,8 @@ void setup()
   digitalWrite(ESPout_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);
   digitalWrite(ESPin_PL, HIGH);
-  digitalWrite(CONTROL_Local, HIGH);
-  digitalWrite(CONTROL_Z80, HIGH);
+  digitalWrite(ESP_ROMSELECT0, LOW);
+  digitalWrite(ESP_ROMSELECT1, LOW);
   digitalWrite(ESP_espHARDLOCK, HIGH); // Lock set LOW
   digitalWrite(ESP_z80HARDLOCK, HIGH); // Lock set LOW
   digitalWrite(CONNECT_Z80, HIGH);  // Connect on LOW (may be buffer with NOT?)

@@ -1,5 +1,21 @@
 <circuit Speed_per="50" reactStep="50" noLinAcc="10" Simu_Step_nS="10" Speed_sps="50000000" animate="1" type="simulide_0.4">
 
+Unique  Id: Tunnel-314168: 
+Circuit Id: ESP_ROMSELECT0
+<item Uid="" id="ESP_ROMSELECT0" x="416" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="152" circPos="0,0" valLabely="0" Name="ESP_ROMSELECT0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-314168"/>
+
+Unique  Id: Tunnel-314167: 
+Circuit Id: ESP_ROMSELECT1
+<item Uid="" id="ESP_ROMSELECT1" x="416" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="168" circPos="0,0" valLabely="0" Name="ESP_ROMSELECT1" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-314167"/>
+
+Unique  Id: Tunnel-314164: 
+Circuit Id: ESP_ROMSELECT1
+<item Uid="" id="ESP_ROMSELECT1" x="256" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-360" circPos="0,0" valLabely="0" Name="ESP_ROMSELECT1" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-314164"/>
+
+Unique  Id: Tunnel-314163: 
+Circuit Id: ESP_ROMSELECT0
+<item Uid="" id="ESP_ROMSELECT0" x="256" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-376" circPos="0,0" valLabely="0" Name="ESP_ROMSELECT0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-314163"/>
+
 Unique  Id: Node-314157: 
 Circuit Id: Node-314157
 <item id="Node-314157" x="-1204" circRot="1.354837486e-315" itemtype="Node" mainComp="false" boardPos="-1e+06,-1e+06" y="40" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" labely="-24" objectName="Node-314157"/>
@@ -784,10 +800,6 @@ Unique  Id: Ground-104724:
 Circuit Id: Ground-104724
 <item id="Ground-104724" x="-84" circRot="2.37e-322" itemtype="Ground" mainComp="false" boardPos="-1e+06,-1e+06" y="676" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" labely="8" objectName="Ground-104724"/>
 
-Unique  Id: Ground-91054: 
-Circuit Id: Ground-25209
-<item id="Ground-25209" x="104" circRot="nan" itemtype="Ground" mainComp="false" boardPos="-1e+06,-1e+06" y="-352" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" labely="8" objectName="Ground-91054"/>
-
 Unique  Id: Or Gate-83566: 
 Circuit Id: Or Gate-80172
 <item id="Or Gate-80172" x="-108" circRot="3.9147942071941423e+77" itemtype="Or Gate" mainComp="false" Out_Imped="40" Inverted="false" boardPos="-1e+06,-1e+06" y="548" circPos="0,0" Open_Collector="false" valLabely="0" labelrot="0" Input_Imped="1e+14" valLabelx="0" labelx="-16" hflip="1" Out_High_V="5" valLabRot="0" Out_Low_V="0" Num_Inputs="2" boardRot="-1e+06" Input_High_V="2.5" Show_id="false" Input_Low_V="2.5" rotation="0" vflip="1" labely="-24" objectName="Or Gate-83566"/>
@@ -1416,22 +1428,6 @@ Unique  Id: Node-87317:
 Circuit Id: Node-87317
 <item id="Node-87317" x="676" circRot="4e-322" itemtype="Node" mainComp="false" boardPos="-1e+06,-1e+06" y="200" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" labely="-24" objectName="Node-87317"/>
 
-Unique  Id: Tunnel-87320: 
-Circuit Id: ROM_select-0
-<item Uid="" id="ROM_select-0" x="416" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="156" circPos="0,0" valLabely="0" Name="ROM_select-0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-87320"/>
-
-Unique  Id: Tunnel-87321: 
-Circuit Id: ROM_select-1
-<item Uid="" id="ROM_select-1" x="416" circRot="4e-322" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="172" circPos="0,0" valLabely="0" Name="ROM_select-1" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-87321"/>
-
-Unique  Id: Tunnel-87327: 
-Circuit Id: ROM_select-1
-<item Uid="" id="ROM_select-1" x="88" circRot="4e-322" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-376" circPos="0,0" valLabely="0" Name="ROM_select-1" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-87327"/>
-
-Unique  Id: Tunnel-87328: 
-Circuit Id: ROM_select-0
-<item Uid="" id="ROM_select-0" x="88" circRot="0" itemtype="Tunnel" mainComp="false" boardPos="-1e+06,-1e+06" y="-392" circPos="0,0" valLabely="0" Name="ROM_select-0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" Rotated="false" labely="-24" objectName="Tunnel-87328"/>
-
 Unique  Id: TextComponent-87339: 
 Circuit Id: TextComponent-5201
 <item Font="Helvetica [Cronyx]" id="TextComponent-5201" Font_Size="10" x="-1492" circRot="6.94320763935784e-310" itemtype="TextComponent" mainComp="false" boardPos="-1e+06,-1e+06" y="-1000" circPos="0,0" valLabely="0" labelrot="0" Border="1" Margin="5" valLabelx="0" labelx="-16" hflip="1" Fixed_Width="true" valLabRot="0" boardRot="-1e+06" Show_id="false" Opacity="1" Text="LOCAL Address Display" rotation="0" vflip="1" labely="-24" objectName="TextComponent-87339"/>
@@ -1475,10 +1471,6 @@ Circuit Id: PERMITTED_Z80_IORQ
 Unique  Id: And Gate-87813: 
 Circuit Id: And Gate-87813
 <item id="And Gate-87813" x="156" circRot="2.13159366e-316" itemtype="And Gate" mainComp="false" Out_Imped="40" Inverted="false" boardPos="-1e+06,-1e+06" y="-4" circPos="0,0" Open_Collector="false" valLabely="0" labelrot="0" Input_Imped="1e+14" valLabelx="0" labelx="-16" hflip="1" Out_High_V="5" valLabRot="0" Out_Low_V="0" Num_Inputs="2" boardRot="-1e+06" Input_High_V="2.5" Show_id="false" Input_Low_V="2.5" rotation="0" vflip="1" labely="-24" objectName="And Gate-87813"/>
-
-Unique  Id: Node-94337: 
-Circuit Id: Node-94337
-<item id="Node-94337" x="104" circRot="nan" itemtype="Node" mainComp="false" boardPos="-1e+06,-1e+06" y="-376" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" labely="-24" objectName="Node-94337"/>
 
 Unique  Id: Tunnel-94339: 
 Circuit Id: CONNECT_Z80_address
@@ -3564,14 +3556,6 @@ Unique  Id: Connector-87318:
 Circuit Id: Connector-87318
 <item id="Connector-87318" x="676" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="200" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Node-87317-2" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="676,200,676,184" labely="-24" objectName="Connector-87318" endpinid="And Gate-18708-in1" enodeid="Circ_eNode-313863"/>
 
-Unique  Id: Connector-87322: 
-Circuit Id: Connector-87322
-<item id="Connector-87322" x="508" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="80" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="74XX244-87245-2A1" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="508,80,468,80,468,156,416,156" labely="-24" objectName="Connector-87322" endpinid="Tunnel-87320-pin" enodeid="Circ_eNode-313864"/>
-
-Unique  Id: Connector-87323: 
-Circuit Id: Connector-87323
-<item id="Connector-87323" x="416" circRot="5.6e-322" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="172" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-87321-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="416,172,472,172,472,88,508,88" labely="-24" objectName="Connector-87323" endpinid="74XX244-87245-2A2" enodeid="Circ_eNode-313864"/>
-
 Unique  Id: Connector-60831: 
 Circuit Id: Connector-60831
 <item id="Connector-60831" x="268" circRot="3.16e-322" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-56" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="74HC245-5274-B7" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="268,-56,284,-56" labely="-24" objectName="Connector-60831" endpinid="Bus-5532-ePin8" enodeid="enode-314126-eNode-7"/>
@@ -3583,10 +3567,6 @@ Circuit Id: Connector-87539
 Unique  Id: Connector-87816: 
 Circuit Id: Connector-87816
 <item id="Connector-87816" x="140" circRot="3.16e-322" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="0" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="And Gate-87813-in1" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="140,0,60,0" labely="-24" objectName="Connector-87816" endpinid="Node-279499-0" enodeid="Circ_eNode-313866"/>
-
-Unique  Id: Connector-94338: 
-Circuit Id: Connector-94338
-<item id="Connector-94338" x="104" circRot="nan" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-376" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Node-94337-2" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="104,-376,104,-368" labely="-24" objectName="Connector-94338" endpinid="Ground-91054-Gnd" enodeid="Circ_eNode-313864"/>
 
 Unique  Id: Connector-94557: 
 Circuit Id: Connector-94557
@@ -3951,10 +3931,6 @@ Circuit Id: Connector-143219
 Unique  Id: Connector-143221: 
 Circuit Id: Connector-143221
 <item id="Connector-143221" x="852" circRot="3.1534139e-316" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="316" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-143220-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="852,316,888,316" labely="-24" objectName="Connector-143221" endpinid="74HC245-142995-!OE" enodeid="Circ_eNode-313866"/>
-
-Unique  Id: Connector-94336: 
-Circuit Id: Connector-94336
-<item id="Connector-94336" x="88" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-392" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-87328-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="88,-392,104,-392,104,-376" labely="-24" objectName="Connector-94336" endpinid="Node-94337-1" enodeid="Circ_eNode-313864"/>
 
 Unique  Id: Connector-146208: 
 Circuit Id: Connector-146208
@@ -4883,10 +4859,6 @@ Circuit Id: Connector-45707
 Unique  Id: Connector-45714: 
 Circuit Id: Connector-45714
 <item id="Connector-45714" x="420" circRot="2.37e-322" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-708" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-16333-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="420,-708,420,-700,444,-700,444,-596" labely="-24" objectName="Connector-45714" endpinid="Arduino Mega-45635-PL0" enodeid="Circ_eNode-313909"/>
-
-Unique  Id: Connector-94335: 
-Circuit Id: Connector-94335
-<item id="Connector-94335" x="88" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-376" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-87327-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="88,-376,104,-376" labely="-24" objectName="Connector-94335" endpinid="Node-94337-0" enodeid="Circ_eNode-313864"/>
 
 Unique  Id: Connector-187868: 
 Circuit Id: Connector-187868
@@ -7262,7 +7234,7 @@ Circuit Id: Connector-314141
 
 Unique  Id: Connector-51634: 
 Circuit Id: Connector-51634
-<item id="Connector-51634" x="196" circRot="2.61371003e-316" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-396" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-33351-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="196,-396,196,-404,332,-404" labely="-24" objectName="Connector-51634" endpinid="Arduino Mega-45635-PB4" enodeid="enode-314151"/>
+<item id="Connector-51634" x="196" circRot="2.61371003e-316" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-396" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-33351-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="196,-396,204,-396,204,-404,332,-404" labely="-24" objectName="Connector-51634" endpinid="Arduino Mega-45635-PB4" enodeid="enode-314151"/>
 
 Unique  Id: Connector-314151: 
 Circuit Id: Connector-314151
@@ -7283,5 +7255,21 @@ Circuit Id: Connector-314156
 Unique  Id: Connector-314158: 
 Circuit Id: Connector-314158
 <item id="Connector-314158" x="-1204" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="40" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Node-314157-2" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="-1204,40,-1264,40" labely="-24" objectName="Connector-314158" endpinid="Tunnel-16365-pin" enodeid="Circ_eNode-313991-eNode-4"/>
+
+Unique  Id: Connector-314165: 
+Circuit Id: Connector-314165
+<item id="Connector-314165" x="256" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-360" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-314164-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="256,-360,296,-360,296,-388,332,-388" labely="-24" objectName="Connector-314165" endpinid="Arduino Mega-45635-PB6" enodeid="enode-314172"/>
+
+Unique  Id: Connector-314166: 
+Circuit Id: Connector-314166
+<item id="Connector-314166" x="332" circRot="1.081534244e-314" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="-396" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Arduino Mega-45635-PB5" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="332,-396,284,-396,284,-376,256,-376" labely="-24" objectName="Connector-314166" endpinid="Tunnel-314163-pin" enodeid="enode-87322"/>
+
+Unique  Id: Connector-87322: 
+Circuit Id: Connector-87322
+<item id="Connector-87322" x="508" circRot="0" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="80" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="74XX244-87245-2A1" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="508,80,468,80,468,152,416,152" labely="-24" objectName="Connector-87322" endpinid="Tunnel-314168-pin" enodeid="enode-87322"/>
+
+Unique  Id: Connector-314172: 
+Circuit Id: Connector-314172
+<item id="Connector-314172" x="416" circRot="2.10013314e-316" itemtype="Connector" mainComp="false" boardPos="-1e+06,-1e+06" y="168" circPos="0,0" valLabely="0" labelrot="0" valLabelx="0" startpinid="Tunnel-314167-pin" labelx="-16" hflip="1" valLabRot="0" boardRot="-1e+06" Show_id="false" rotation="0" vflip="1" pointList="416,168,472,168,472,88,508,88" labely="-24" objectName="Connector-314172" endpinid="74XX244-87245-2A2" enodeid="enode-314172"/>
  
 </circuit>
