@@ -216,6 +216,7 @@ void setup()
   // Z80
 
   // Z80 pin Config
+  pinMode(Z80_BUSACK, OUTPUT);
   pinMode(Z80_RD, OUTPUT);
   pinMode(Z80_WR, OUTPUT);
   pinMode(Z80_IORQ, OUTPUT);
@@ -224,6 +225,7 @@ void setup()
   pinMode(Z80_ROMCS, INPUT);
   pinMode(Z80_NMI, INPUT);
   // Z80 pin State
+  digitalWrite(Z80_BUSACK, HIGH);
   digitalWrite(Z80_RD, HIGH);
   digitalWrite(Z80_WR, HIGH);
   digitalWrite(Z80_IORQ, HIGH);
