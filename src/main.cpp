@@ -74,7 +74,7 @@ void loop()
   //Z80_ROMMemory_Test();
 
   
-  ESP_FillCacheStatus(0x11);
+  ESP_FillCacheStatus(0xf0);
   
   //while(1)  {ESP_test_configIOd();}
   ESP_test_configIOd();

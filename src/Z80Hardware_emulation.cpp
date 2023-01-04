@@ -24,14 +24,26 @@ void Z80Hardware_setup(void)
   digitalWrite(Z80_WAIT, HIGH);
   digitalWrite(Z80_ROMCS, HIGH);
   digitalWrite(Z80_NMI, HIGH);
-  // Z80 Port Config
-  Z80_DATA_DDR = PORT_DDR_OUTPUT;
-  Z80_ADDR_L_DDR = PORT_DDR_OUTPUT;
-  Z80_ADDR_H_DDR = PORT_DDR_OUTPUT;
-  // Z80 Port State
+  
+  // TURN OFF PULL-UP RESISTORS
+  Z80_DATA_DDR = PORT_DDR_INPUT;
+  Z80_ADDR_L_DDR = PORT_DDR_INPUT;
+  Z80_ADDR_H_DDR = PORT_DDR_INPUT;
   Z80_DATA_out = 255;
   Z80_ADDR_L = 255;
   Z80_ADDR_H = 255;
+  
+  
+  // Z80 Port Config (OUTPUT)
+  Z80_DATA_DDR = PORT_DDR_OUTPUT;
+  Z80_ADDR_L_DDR = PORT_DDR_OUTPUT;
+  Z80_ADDR_H_DDR = PORT_DDR_OUTPUT;
+  
+  // Z80 Port State (Default HIGH)
+  Z80_DATA_out = 255;
+  Z80_ADDR_L = 255;
+  Z80_ADDR_H = 255;
+  
   return;
 }
 

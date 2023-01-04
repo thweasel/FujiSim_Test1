@@ -27,21 +27,21 @@ void Z80_IORQ_Test(void)
   // do_Z80_IOWR(1,99);
 
   Serial.println("WRITE to Device 1-3-5");  
-  data = do_Z80_IORD(0);
+  data = do_Z80_IORD(1);
   Serial.print("Status:  ");
   Serial.println(data,HEX);
 
-  do_Z80_IOWR(3,0x0f);
+  do_Z80_IOWR(3,0x01);
   Serial.print("Write 0:  ");
-  Serial.println(0x0f,HEX);
+  Serial.println(0x01,HEX);
   
-  do_Z80_IOWR(3,0x0e);
+  do_Z80_IOWR(3,0x02);
   Serial.print("Write 1:  ");
-  Serial.println(0x0e,HEX);
+  Serial.println(0x02,HEX);
 
-  do_Z80_IOWR(3,0x0d);
+  do_Z80_IOWR(3,0x03);
   Serial.print("Write 2:  ");
-  Serial.println(0x0d,HEX);
+  Serial.println(0x03,HEX);
   
   do_Z80_IORD(5);
   Serial.print("Write End:  ");
@@ -55,15 +55,15 @@ void Z80_IORQ_Test(void)
   
   data = do_Z80_IORD(3);
   Serial.print("Read 0:  ");
-  Serial.println(0x0f,HEX);
+  Serial.println(data,HEX);
   
   data = do_Z80_IORD(3);
   Serial.print("Read 1:  ");
-  Serial.println(0x0f,HEX);
+  Serial.println(data,HEX);
   
   data = do_Z80_IORD(3);
   Serial.print("Read 2:  ");
-  Serial.println(0x0f,HEX);
+  Serial.println(data,HEX);
   
   data = do_Z80_IORD(5);
   Serial.print("Read End:  ");
