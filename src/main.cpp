@@ -65,20 +65,18 @@ void loop()
     delay(1000);
   */
 
-  //ESP_CacheStatusTest();
-  //ESP_CacheData_Test();
-  //ESP_ROM_Test();
-  //ESP_IOd_Test();
+  ESP_CacheStatusTest();
+  ESP_CacheData_Test();
+  ESP_ROM_Test();
+  ESP_IOd_Test();
   
 
-  //Z80_ROMMemory_Test();
+  Z80_ROMMemory_Test();
 
-  
+  // IOD TEST
   ESP_FillCacheStatus(0xf0);
-  
-  //while(1)  {ESP_test_configIOd();}
   ESP_test_configIOd();
-  while(1) {    Z80_IORQ_Test();  }
+  Z80_IORQ_Test();
   
 
 }

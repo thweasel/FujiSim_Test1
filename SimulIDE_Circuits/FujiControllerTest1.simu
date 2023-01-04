@@ -1,4 +1,4 @@
-<circuit Speed_sps="10000000" Speed_per="10" reactStep="50" noLinAcc="10" type="simulide_0.4" Simu_Step_nS="10" animate="1">
+<circuit Speed_sps="100000000" Speed_per="100" reactStep="50" noLinAcc="10" type="simulide_0.4" Simu_Step_nS="10" animate="1">
 
 Unique  Id: Node-381681: 
 Circuit Id: Node-381681
@@ -459,10 +459,6 @@ Circuit Id: Bus-4808
 Unique  Id: And Gate-267616: 
 Circuit Id: And Gate-87813
 <item Out_High_V="5" boardPos="-1e+06,-1e+06" Open_Collector="false" x="-592" hflip="1" Show_id="false" labelx="-16" vflip="1" circRot="2.13159366e-316" valLabelx="0" Out_Imped="40" labelrot="0" Input_Imped="1e+14" Input_Low_V="2.5" valLabely="0" boardRot="-1e+06" mainComp="false" y="-264" id="And Gate-87813" objectName="And Gate-267616" Inverted="false" Num_Inputs="2" valLabRot="0" circPos="0,0" rotation="0" Out_Low_V="0" labely="-24" itemtype="And Gate" Input_High_V="2.5"/>
-
-Unique  Id: Tunnel-251556: 
-Circuit Id: ESPin_SCK
-<item Name="ESPin_SCK" boardPos="-1e+06,-1e+06" x="-388" Rotated="false" hflip="1" Show_id="false" labelx="-16" vflip="1" circRot="0" valLabelx="0" labelrot="0" valLabely="0" boardRot="-1e+06" mainComp="false" y="-1232" id="ESPin_SCK" objectName="Tunnel-251556" Uid="" valLabRot="0" circPos="0,0" rotation="0" labely="-24" itemtype="Tunnel"/>
 
 Unique  Id: Tunnel-231117: 
 Circuit Id: DS>ESPin_Data
@@ -2122,7 +2118,7 @@ Circuit Id: Node-162198
 
 Unique  Id: TextComponent-169592: 
 Circuit Id: TextComponent-169592
-<item boardPos="-1e+06,-1e+06" Fixed_Width="false" x="616" hflip="1" Show_id="false" Text="WAIT Lock&#xa;..here.." labelx="-16" vflip="1" Border="1" circRot="2.37e-322" valLabelx="0" labelrot="0" Font_Size="10" valLabely="0" boardRot="-1e+06" mainComp="false" y="736" Font="Helvetica [Cronyx]" id="TextComponent-169592" objectName="TextComponent-169592" valLabRot="0" Margin="5" circPos="0,0" rotation="0" labely="-24" itemtype="TextComponent" Opacity="1"/>
+<item boardPos="-1e+06,-1e+06" Fixed_Width="false" x="892" hflip="1" Show_id="false" Text="WAIT Lock&#xa;..here.." labelx="-16" vflip="1" Border="1" circRot="2.37e-322" valLabelx="0" labelrot="0" Font_Size="10" valLabely="0" boardRot="-1e+06" mainComp="false" y="820" Font="Helvetica [Cronyx]" id="TextComponent-169592" objectName="TextComponent-169592" valLabRot="0" Margin="5" circPos="0,0" rotation="0" labely="-24" itemtype="TextComponent" Opacity="1"/>
 
 Unique  Id: TextComponent-169941: 
 Circuit Id: TextComponent-5201
@@ -2454,7 +2450,7 @@ Circuit Id: Node-299500
 
 Unique  Id: Oscope-299562: 
 Circuit Id: Oscope-299562
-<item boardPos="-1e+06,-1e+06" Tracks="4" x="1200" Basic_Y="135" hflip="1" Show_id="false" VolPos="0,0,-4.98008e-15,-2.5" labelx="-90" vflip="1" circRot="8.34419689452996e-309" valLabelx="0" Tunnels="ESPHLOCK,Z80HLOCK,Z80HLset,Z80HLreset" labelrot="0" TimPos="163000,163000,0,0" valLabely="0" boardRot="-1e+06" mainComp="false" Trigger="3" VolDiv="1,1,9.96016e-16,0.5" y="604" id="Oscope-299562" objectName="Oscope-299562" hTick="10385768" valLabRot="0" circPos="0,0" rotation="0" AutoSC="3" labely="-100" Filter="0" HideCh="false,false,false,false" itemtype="Oscope" Basic_X="135"/>
+<item boardPos="-1e+06,-1e+06" Tracks="4" x="1200" Basic_Y="135" hflip="1" Show_id="false" VolPos="0,0,-4.98008e-15,-2.5" labelx="-90" vflip="1" circRot="8.34419689452996e-309" valLabelx="0" Tunnels="ESPHLOCK,Z80HLOCK,Z80HLset,Z80HLreset" labelrot="0" TimPos="163000,163000,0,0" valLabely="0" boardRot="-1e+06" mainComp="false" Trigger="3" VolDiv="1,1,9.96016e-16,0.5" y="604" id="Oscope-299562" objectName="Oscope-299562" hTick="5170" valLabRot="0" circPos="0,0" rotation="0" AutoSC="3" labely="-100" Filter="0" HideCh="false,false,false,false" itemtype="Oscope" Basic_X="135"/>
 
 Unique  Id: And Gate-299578: 
 Circuit Id: And Gate-299578
@@ -2811,10 +2807,6 @@ Circuit Id: Node-376879
 Unique  Id: Node-376882: 
 Circuit Id: Node-376882
 <item boardPos="-1e+06,-1e+06" x="-1160" hflip="1" Show_id="false" labelx="-16" vflip="1" circRot="6.9382539914994e-310" valLabelx="0" labelrot="0" valLabely="0" boardRot="-1e+06" mainComp="false" y="-804" id="Node-376882" objectName="Node-376882" valLabRot="0" circPos="0,0" rotation="0" labely="-24" itemtype="Node"/>
-
-Unique  Id: SerialTerm-381656: 
-Circuit Id: SerialTerm-381656
-<item boardPos="-1e+06,-1e+06" x="324" hflip="1" Show_id="false" posx="287" labelx="-16" vflip="1" circRot="8.202597809639418e-301" valLabelx="0" labelrot="0" Mcu_Id="Arduino Mega-45635" valLabely="0" Mcu_Uart="1" posy="132" sizex="720" boardRot="-1e+06" mainComp="false" y="-612" id="SerialTerm-381656" objectName="SerialTerm-381656" valLabRot="0" circPos="0,0" rotation="0" labely="-24" sizey="257" itemtype="SerialTerm"/>
 
 Unique  Id: Connector-607: 
 Circuit Id: Connector-607

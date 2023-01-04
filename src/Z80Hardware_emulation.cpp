@@ -1,6 +1,6 @@
 #include <Z80Hardware_emulation.h>
 
-# define SLOW true
+# define SLOW false
 # define SLOWRATE 50
 
 
