@@ -24,7 +24,7 @@ void ESP_CacheStatusTest(void)
     Serial.println(data,HEX);
     
     y++;
-    delay(50);
+    //delay(50);
   }
 
   // CLEAR
@@ -53,7 +53,7 @@ void ESP_CacheData_Test(void)
     Serial.println(data,HEX);
     
     y++;
-    delay(50);
+    //delay(50);
   }
 
   // CLEAR
@@ -83,7 +83,7 @@ void ESP_ROM_Test(void)
     Serial.println(data,HEX);
     
     y++;
-    delay(50);
+    //delay(50);
   }
 
   // CLEAR
@@ -113,7 +113,7 @@ void ESP_IOd_Test(void)
     Serial.println(data,HEX);
     
     y++;
-    delay(50);
+    //delay(50);
   }
 
   // CLEAR
