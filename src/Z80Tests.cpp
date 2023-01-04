@@ -2,9 +2,9 @@
 
 void Z80_ROMMemory_Test(void)
 {
-Serial.println("Z80_ROMMemory_Test : START ");  
+Serial.println("\nZ80_ROMMemory_Test");  
     uint8_t data = 0;
-Serial.println("Z80 Memory WRITE ROM");
+Serial.println("Z80 Memory WRITE ROM (0xF1,0xE2,0xD3)");
   do_Z80_MEMWR(1, 0xF1);
   do_Z80_MEMWR(2, 0xE2);
   do_Z80_MEMWR(3, 0xD3);
@@ -16,14 +16,13 @@ Serial.println("Z80 Memory READ ROM");
   Serial.println(data,HEX);
   data = do_Z80_MEMRD(3);
   Serial.println(data,HEX);
-Serial.println("Z80_ROMMemory_Test : END ");  
   return;
 }
 
 void Z80_IORQ_Test(void)
 {
   uint8_t data = 0;
-  Serial.println("Z80_IORQ_Test : START ");  
+  Serial.println("\nZ80_IORQ_Test");  
   // do_Z80_IOWR(1,99);
 
   Serial.println("WRITE to Device 1-3-5");  
@@ -68,8 +67,6 @@ void Z80_IORQ_Test(void)
   data = do_Z80_IORD(5);
   Serial.print("Read End:  ");
   Serial.println(data,HEX);
-
-  Serial.println("Z80_IORQ_Test : END ");  
 
   return;
 }

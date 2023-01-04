@@ -3,6 +3,7 @@
 
 void ESP_CacheStatusTest(void)
 {
+  Serial.println("\nESP_CacheStatusTest");
   uint8_t data;
 
   //clearBUS();
@@ -32,6 +33,7 @@ void ESP_CacheStatusTest(void)
 
 void ESP_CacheData_Test(void)
 {
+  Serial.println("\nESP_CacheData_Test");
   uint8_t data;
 
   //clearBUS();
@@ -60,6 +62,7 @@ void ESP_CacheData_Test(void)
 
 void ESP_ROM_Test(void)
 {
+  Serial.println("\nESP_ROM_Test");
   uint8_t data;
 
   //clearBUS();
@@ -89,6 +92,7 @@ void ESP_ROM_Test(void)
 
 void ESP_IOd_Test(void)
 {
+  Serial.println("\nESP_IOd_Test");
   uint8_t data;
 
   //clearBUS();
@@ -118,6 +122,9 @@ void ESP_IOd_Test(void)
 
 void ESP_FillCacheStatus (uint8_t data)
 {
+  Serial.println("\nESP_FillCacheStatus");
+  Serial.print(data,HEX);
+
   for (uint16_t i = 0x0000; i != 0x000F; i++)  // 0xFFFF takes ages!
   {
     doCacheStatusWrite(data, i);
@@ -127,6 +134,7 @@ void ESP_FillCacheStatus (uint8_t data)
 
 void ESP_test_configIOd(void)
 {
+  Serial.println("\nESP_test_configIOd");
   doIOdWrite(IODCONFIG_STATUS,1);
   doIOdWrite(IODCONFIG_CACHE0,3);
   doIOdWrite(IODCONFIG_IOEND,5);
