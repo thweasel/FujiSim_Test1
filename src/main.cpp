@@ -74,12 +74,11 @@ void loop()
   //Z80_ROMMemory_Test();
 
   
-  ESP_FillCacheStatus(0x0f);
+  ESP_FillCacheStatus(0x11);
+  
+  //while(1)  {ESP_test_configIOd();}
   ESP_test_configIOd();
-  while(1)
-  {
-    Z80_IORQ_Test();
-  }
+  while(1) {    Z80_IORQ_Test();  }
   
 
 }
