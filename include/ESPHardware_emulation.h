@@ -33,6 +33,8 @@ Z80 control
 #define CONTROLBYTE_IORQ_RD         B11101110
 #define CONTROLBYTE_IORQ_WR         B11101101
 #define CONTROLBYTE_BUSRQ           B11101111
+#define CONTROLBYTE_ROMCS_ENABLE    B10111111
+#define CONTROLBYTE_ROMCS_DISABLE   B10111111
 
 
 // Local BUS
@@ -72,3 +74,6 @@ bool doBUSRQ(void);
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control);
 
 void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control);
+
+void setROMCS(void);
+void resetROMCS(void);

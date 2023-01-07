@@ -53,6 +53,17 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
     clearBUS();
 }
 
+void enableROM(uint8_t ROMbank)
+{
+    selectROMbank(ROMbank);
+    setROMCS();
+}
+
+void disableROM(void)
+{
+    resetROMCS();
+}
+
 // These methods are for programming the IOd configuration bytes
 uint8_t doIOdRead(uint16_t Address) // A16-1
 {
@@ -121,6 +132,8 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
 
     clearBUS();
 }
+
+
 
 
 //

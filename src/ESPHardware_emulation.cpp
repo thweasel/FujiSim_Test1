@@ -71,13 +71,28 @@ uint8_t * setSPIpacketTX (uint8_t Data, uint8_t Control, uint16_t Address)
 // ROM Select
 void selectROMbank(uint8_t rom)
 {
-  if (rom < 4)
+  switch (rom)
   {
-    // set rom selection pins
-  }
-  else
-  {
-    // error condition here
+  case 0:
+    digitalWrite(ESP_ROMSELECT0,0);
+    digitalWrite(ESP_ROMSELECT1,0);
+    break;
+  case 1:
+    digitalWrite(ESP_ROMSELECT0,1);
+    digitalWrite(ESP_ROMSELECT1,0);
+    break;
+  case 2:
+    digitalWrite(ESP_ROMSELECT0,0);
+    digitalWrite(ESP_ROMSELECT1,1);
+    break;
+  case 3:
+    digitalWrite(ESP_ROMSELECT0,1);
+    digitalWrite(ESP_ROMSELECT1,1);
+    break;
+  default:
+    digitalWrite(ESP_ROMSELECT0,0);
+    digitalWrite(ESP_ROMSELECT1,0);
+    break;
   }
 
   return;
@@ -107,7 +122,6 @@ bool resetESPHardlock(void)
   digitalWrite(ESP_espHARDLOCK,DISABLE_LOW);
   return true;
 }
-
 
 
 
@@ -199,7 +213,17 @@ void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
 }
 
 
+void setROMCS(void)
+{
+  setSPIpacketTX(0xff,CONTROLBYTE_ROMCS_ENABLE,0xFFFF);
+  writeSPI();
+}
 
+void resetROMCS(void)
+{
+  setSPIpacketTX(0xff,CONTROLBYTE_ROMCS_DISABLE,0xFFFF);
+  writeSPI();
+}
 
 
 

@@ -52,3 +52,6 @@ void doZ80MEMWrite(uint8_t Data, uint16_t Address);
 
 uint8_t doZ80IORead(uint16_t Address);
 void doZ80IOWrite(uint8_t Data, uint16_t Address);
+
+void enableROM(uint8_t ROMbank);
+void disableROM(void);
