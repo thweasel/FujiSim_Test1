@@ -57,13 +57,13 @@ void loop()
 {
   // put your main code here, to run repeatedly:
 
-  /*
+  
     // Blinky code for enable to test if running
     digitalWrite(LED_BUILTIN, HIGH);
     delay(1000);
     digitalWrite(LED_BUILTIN, LOW);
-    delay(1000);
-  */
+    //delay(1000);
+  
 
   /*
   ESP_CacheStatusTest();
@@ -72,17 +72,24 @@ void loop()
   ESP_IOd_Test();
   */
 
+  /*
   enableROM(0);
   Z80_ROMMemory_Test();
   enableROM(1);
   Z80_ROMMemory_Test();
   disableROM();
+  enableROM(2);
+  Z80_ROMMemory_Test();
+  enableROM(3);
+  Z80_ROMMemory_Test();
+  disableROM();
+  */
+
   
-  /*
   // IOD TEST
   ESP_FillCacheStatus(0xf0);
   ESP_test_configIOd();
   Z80_IORQ_Test();
-  */
+  
 
 }
