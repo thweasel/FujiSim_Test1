@@ -65,14 +65,14 @@ void loop()
     //delay(1000);
   
 
-  /*
+  
   ESP_CacheStatusTest();
   ESP_CacheData_Test();
   ESP_ROM_Test();
   ESP_IOd_Test();
-  */
+  
 
-  /*
+  
   enableROM(0);
   Z80_ROMMemory_Test();
   enableROM(1);
@@ -83,7 +83,7 @@ void loop()
   enableROM(3);
   Z80_ROMMemory_Test();
   disableROM();
-  */
+  
 
   
   // IOD TEST
