@@ -170,15 +170,9 @@ void readSPI(void)
 
 // ESP Parallel BUS Functions
 
-void clearBUS()
-{  
-  digitalWrite(ESPout_OE,HIGH);  // disconnect S-Regs from BUS
-}
-
-
 bool doBUSRQ(void)
 {
-  setSPIpacketTX(0xFF,CONTROLBYTE_BUSRQ,0xFFFF);
+  setSPIpacketTX(0xFF,CONTROLBYTE_BUSRQ_ENABLE,0xFFFF);
   writeSPI();
   // WAIT HERE FOR THE BUSACK signal
   delay(10);
@@ -188,8 +182,18 @@ bool doBUSRQ(void)
 
 bool resetBUSRQ(void)
 {
-  // Clear BUS will do it.
+  setSPIpacketTX(0xFF,CONTROLBYTE_BUSRQ_DISABLE,0xFFFF);
+  writeSPI();
+  // WAIT HERE FOR THE BUSACK signal
+  delay(10);
+  
   return true;
+}
+
+void clearBUS()
+{ 
+  resetBUSRQ(); 
+  digitalWrite(ESPout_OE,HIGH);  // disconnect S-Regs from BUS
 }
 
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
