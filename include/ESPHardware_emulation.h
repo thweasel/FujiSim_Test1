@@ -1,6 +1,12 @@
 #include <Arduino.h>
 #include <SPI.h>
 
+// ARDUINO PINS
+// SPI SS   53
+// SPI SCK  52
+// SPI MOSI 51
+// SPI MISO 50
+
 #define ESPout_STC 49
 #define ESPout_OE 48
 #define ESP_PULSE 47
