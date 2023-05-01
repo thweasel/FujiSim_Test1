@@ -19,6 +19,27 @@ Serial.println("Z80 Memory READ ROM");
   return;
 }
 
+void Z80_IO_Test(void) 
+{
+  // Basic IO space WR/RD test
+  Serial.println("\nZ80_IO_Test");  
+  uint8_t data = 0;
+  Serial.println("Z80 IO space WRITE (0xF1,0xE2,0xD3)");
+  do_Z80_IOWR(1, 0xF1);
+  do_Z80_IOWR(2, 0xE2);
+  do_Z80_IOWR(3, 0xD3);
+
+  Serial.println("Z80 IO space READ");  
+  data = do_Z80_IORD(1);
+  Serial.println(data,HEX);
+  data = do_Z80_IORD(2);
+  Serial.println(data,HEX);
+  data = do_Z80_IORD(3);
+  Serial.println(data,HEX);
+  return;
+
+}
+
 void Z80_IORQ_Test(void)
 {
   uint8_t data = 0;
