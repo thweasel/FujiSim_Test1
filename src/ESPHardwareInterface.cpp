@@ -1,5 +1,8 @@
 #include <ESPHardwareInterface.h>
 
+boolean RUNSLOW = true;
+int SPEED = 200;
+
 uint8_t *BUSbytesPTR;
 //  BUSbyte [3] = Data;
 //  BUSbyte [2] = Control;
@@ -50,6 +53,7 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 
     doBUSWrite(Data, Address, CONTROLBYTE_CEROMRQ_WR);
 
+    if(RUNSLOW) delay(SPEED);
     clearBUS();
 }
 

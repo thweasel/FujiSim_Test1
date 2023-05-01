@@ -1,7 +1,10 @@
 #include <ESPHardware_emulation.h>
 
-SPISettings mySpiSettings_write (40000,MSBFIRST,SPI_MODE0);
-SPISettings mySpiSettings_read (40000,MSBFIRST,SPI_MODE0);
+#define RUNSLOW true
+#define SLOWTIME 100
+
+SPISettings mySpiSettings_write (4000000,MSBFIRST,SPI_MODE0);
+SPISettings mySpiSettings_read (4000000,MSBFIRST,SPI_MODE0);
 
 //SPISettings mySpiSettings_write (500000,MSBFIRST,SPI_MODE1);
 //SPISettings mySpiSettings_read (500000,MSBFIRST,SPI_MODE3);
@@ -68,6 +71,20 @@ uint8_t * setSPIpacketTX (uint8_t Data, uint8_t Control, uint16_t Address)
   return SPIpacketTX;
 }
 
+uint8_t * setSPIpacketRX (uint8_t Data, uint8_t Control, uint16_t Address)
+{
+
+  uint8_t loAddr = (uint8_t)(Address);
+  uint8_t hiAddr = (uint8_t)(Address >> 8);
+
+  SPIpacketRX[3] = Data;
+  SPIpacketRX[2] = Control;
+  SPIpacketRX[1] = loAddr;
+  SPIpacketRX[0] = hiAddr;
+
+  return SPIpacketTX;
+}
+
 // ROM Select
 void selectROMbank(uint8_t rom)
 {
@@ -102,6 +119,8 @@ void selectROMbank(uint8_t rom)
 void sendPULSE(void)
 {
   digitalWrite(ESP_PULSE,ENABLE_LOW);
+  delay(10);
+  if(RUNSLOW) delay(SLOWTIME);
   digitalWrite(ESP_PULSE,DISABLE_HIGH);
   return;
 }
@@ -109,9 +128,11 @@ void sendPULSE(void)
 bool setESPHardlock(void)
 {  // This should check for the Z80 lock, then block or return false
   digitalWrite(ESP_espHARDLOCK,ENABLE_HIGH);
+  
   while(1 == digitalRead(ESP_z80HARDLOCK))
   {
     delay(1); // wait -- block
+    Serial.print("\n!! Z80_Hardlock !!\n");
   }
   
   return true;
@@ -143,6 +164,8 @@ void writeSPI(void)
   digitalWrite(ESPout_OE, ENABLE_LOW);
 
   delay(10);
+  
+  if(RUNSLOW) delay(SLOWTIME);
 
   return;
 }
@@ -154,7 +177,7 @@ void readSPI(void)
 
   // LATCH data into the Shift Regs (pulse)
   digitalWrite(ESPin_PL, LOW);  // Parallel Load
-  
+  delay(2);
   // Unload the Shift Reg to RXPacket
   digitalWrite(ESPin_PL, HIGH); // Serial Shift
   
@@ -163,6 +186,7 @@ void readSPI(void)
   SPI.endTransaction();
 
   delay(10);
+  if(RUNSLOW) delay(SLOWTIME);
 
   digitalWrite(ESPout_OE,DISABLE_HIGH);  // Remove Control & Address  
   
@@ -176,7 +200,7 @@ bool doBUSRQ(void)
   writeSPI();
   // WAIT HERE FOR THE BUSACK signal
   delay(10);
-  
+  if(RUNSLOW) delay(SLOWTIME);
   return true;
 }
 
@@ -186,7 +210,7 @@ bool resetBUSRQ(void)
   writeSPI();
   // WAIT HERE FOR THE BUSACK signal
   delay(10);
-  
+  if(RUNSLOW) delay(SLOWTIME);
   return true;
 }
 
@@ -194,6 +218,8 @@ void clearBUS()
 { 
   resetBUSRQ(); 
   digitalWrite(ESPout_OE,HIGH);  // disconnect S-Regs from BUS
+  if(RUNSLOW) delay(SLOWTIME);
+
 }
 
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
@@ -203,6 +229,7 @@ uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
   
   //clearSPIpacketRX();
   readSPI();
+  
   //clearBUS();
   return SPIpacketRX;
 }
@@ -221,12 +248,16 @@ void setROMCS(void)
 {
   setSPIpacketTX(0xff,CONTROLBYTE_ROMCS_ENABLE,0xFFFF);
   writeSPI();
+  if(RUNSLOW) delay(SLOWTIME);
+
 }
 
 void resetROMCS(void)
 {
   setSPIpacketTX(0xff,CONTROLBYTE_ROMCS_DISABLE,0xFFFF);
   writeSPI();
+  if(RUNSLOW) delay(SLOWTIME);
+
 }
 
 
