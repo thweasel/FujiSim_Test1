@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name Z80ESP-eagle-import)(type Legacy)(uri /media/ReadyNAS03/RAID1_7K1TB1/Owen_data/Electronics/FujiNet/Z80ESP/Z80ESP-eagle-import.lib)(options "")(descr ""))
+  (lib (name Z80Decoder-eagle-import)(type Legacy)(uri /media/ReadyNAS03/RAID1_7K1TB1/Owen_data/Electronics/FujiNet/Z80Decoder/Z80Decoder-eagle-import.lib)(options "")(descr ""))
+  (lib (name esp32-wrover)(type Legacy)(uri ${KIPRJMOD}/esp32-wrover-kicad-master/esp32-wrover.lib)(options "")(descr ""))
+)

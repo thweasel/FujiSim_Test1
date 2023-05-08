@@ -1,0 +1,731 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	3200 2400 2050 2400
+Text Label 2050 2400 0    70   ~ 0
+Z80_RD
+Wire Wire Line
+	3200 1950 2050 1950
+Text Label 2050 1950 0    70   ~ 0
+Z80_WR
+Wire Wire Line
+	3200 2850 2050 2850
+Text Label 2050 2850 0    70   ~ 0
+PERM_Z80_IORQ
+Wire Wire Line
+	3200 1500 2050 1500
+Text Label 2050 1500 0    70   ~ 0
+CACHE_DATASTATUS
+Wire Wire Line
+	7800 3250 7050 3250
+Text Label 7050 3250 0    70   ~ 0
+LOCAL_ADD_0
+Wire Wire Line
+	7800 3150 7050 3150
+Text Label 7050 3150 0    70   ~ 0
+LOCAL_ADD_1
+Wire Wire Line
+	7800 3050 7050 3050
+Text Label 7050 3050 0    70   ~ 0
+LOCAL_ADD_2
+Wire Wire Line
+	7800 2950 7050 2950
+Text Label 7050 2950 0    70   ~ 0
+LOCAL_ADD_3
+Wire Wire Line
+	7800 2850 7050 2850
+Text Label 7050 2850 0    70   ~ 0
+LOCAL_ADD_4
+Wire Wire Line
+	7800 2750 7050 2750
+Text Label 7050 2750 0    70   ~ 0
+LOCAL_ADD_5
+Wire Wire Line
+	7800 2650 7050 2650
+Text Label 7050 2650 0    70   ~ 0
+LOCAL_ADD_6
+Wire Wire Line
+	7800 2550 7050 2550
+Text Label 7050 2550 0    70   ~ 0
+LOCAL_ADD_7
+Text Label 9550 2650 2    70   ~ 0
+LOCAL_ADD_8
+Text Label 9550 2750 2    70   ~ 0
+LOCAL_ADD_9
+Text Label 9550 3050 2    70   ~ 0
+LOCAL_ADD_10
+Text Label 9550 2850 2    70   ~ 0
+LOCAL_ADD_11
+Wire Wire Line
+	7800 2450 7050 2450
+Text Label 7050 2450 0    70   ~ 0
+LOCAL_ADD_12
+Text Label 9550 2550 2    70   ~ 0
+LOCAL_ADD_13
+Wire Wire Line
+	7800 2350 7050 2350
+Text Label 7050 2350 0    70   ~ 0
+LOCAL_ADD_14
+Text Label 9550 2250 2    70   ~ 0
+LOCAL_ADD_15
+Text Label 6900 3350 0    70   ~ 0
+LOCAL_DATA_0
+Text Label 6900 3450 0    70   ~ 0
+LOCAL_DATA_1
+Text Label 6900 3550 0    70   ~ 0
+LOCAL_DATA_2
+Wire Wire Line
+	8800 3650 9550 3650
+Text Label 9550 3650 2    70   ~ 0
+LOCAL_DATA_3
+Wire Wire Line
+	8800 3550 9550 3550
+Text Label 9550 3550 2    70   ~ 0
+LOCAL_DATA_4
+Wire Wire Line
+	8800 3450 9550 3450
+Text Label 9550 3450 2    70   ~ 0
+LOCAL_DATA_5
+Wire Wire Line
+	8800 3350 9550 3350
+Text Label 9550 3350 2    70   ~ 0
+LOCAL_DATA_6
+Wire Wire Line
+	8800 3250 9550 3250
+Text Label 9550 3250 2    70   ~ 0
+LOCAL_DATA_7
+Wire Wire Line
+	3200 1700 2050 1700
+Text Label 2050 1700 0    70   ~ 0
+LOCAL_IORQ
+Wire Wire Line
+	3200 3050 2050 3050
+Text Label 2050 3050 0    70   ~ 0
+LOCAL_MEMRQ
+Wire Wire Line
+	3200 2600 2050 2600
+Text Label 2050 2600 0    70   ~ 0
+LOCAL_RD
+Wire Wire Line
+	3200 2150 2050 2150
+Text Label 2050 2150 0    70   ~ 0
+LOCAL_WR
+Wire Wire Line
+	7800 2250 7050 2250
+Text Label 7050 2250 0    70   ~ 0
+LOCAL_ADD_16
+Wire Wire Line
+	3800 1600 5100 1600
+Text Label 5100 1600 2    70   ~ 0
+LOCAL_ADD_16
+Text Label 9550 3150 2    70   ~ 0
+CACHE_CS
+Wire Wire Line
+	3800 2950 5100 2950
+Text Label 5050 2950 2    70   ~ 0
+CACHE_CS
+Text Label 9550 2950 2    70   ~ 0
+CACHE_OE
+Wire Wire Line
+	3800 2500 5100 2500
+Text Label 5050 2500 2    70   ~ 0
+CACHE_OE
+Text Label 9550 2450 2    70   ~ 0
+CACHE_WE
+Wire Wire Line
+	3800 2050 5100 2050
+Text Label 5100 2050 2    70   ~ 0
+CACHE_WE
+Entry Wire Line
+	1950 2300 2050 2400
+Entry Wire Line
+	1950 1850 2050 1950
+Entry Wire Line
+	6800 3450 6900 3550
+Entry Wire Line
+	1950 2750 2050 2850
+Entry Wire Line
+	1950 1400 2050 1500
+Entry Wire Line
+	6950 3150 7050 3250
+Entry Wire Line
+	6950 3050 7050 3150
+Entry Wire Line
+	6950 2950 7050 3050
+Entry Wire Line
+	6950 2850 7050 2950
+Entry Wire Line
+	6950 2750 7050 2850
+Entry Wire Line
+	6950 2650 7050 2750
+Entry Wire Line
+	6950 2550 7050 2650
+Entry Wire Line
+	6950 2450 7050 2550
+Entry Wire Line
+	6950 2350 7050 2450
+Entry Wire Line
+	6950 2250 7050 2350
+Entry Wire Line
+	6800 3250 6900 3350
+Entry Wire Line
+	6800 3350 6900 3450
+Entry Wire Line
+	1950 1600 2050 1700
+Entry Wire Line
+	1950 2950 2050 3050
+Entry Wire Line
+	1950 2500 2050 2600
+Entry Wire Line
+	1950 2050 2050 2150
+Entry Wire Line
+	6950 2150 7050 2250
+Entry Wire Line
+	9550 3150 9650 3050
+Entry Wire Line
+	9550 2650 9650 2550
+Entry Wire Line
+	9550 2550 9650 2450
+Entry Wire Line
+	9550 2250 9650 2150
+Entry Wire Line
+	9550 2850 9650 2750
+Entry Wire Line
+	9550 2750 9650 2650
+Entry Wire Line
+	9550 3050 9650 2950
+Entry Wire Line
+	9550 3650 9650 3750
+Entry Wire Line
+	9550 3550 9650 3650
+Entry Wire Line
+	9550 3450 9650 3550
+Entry Wire Line
+	9550 3350 9650 3450
+Entry Wire Line
+	9550 3250 9650 3350
+Entry Wire Line
+	5100 1600 5200 1700
+Entry Wire Line
+	5100 2950 5200 3050
+Entry Wire Line
+	5100 2500 5200 2600
+Entry Wire Line
+	9550 2450 9650 2350
+Entry Wire Line
+	5100 2050 5200 2150
+$Comp
+L Z80Decoder-eagle-import:7408N IC?
+U 1 1 AE34464A
+P 3500 1600
+AR Path="/AE34464A" Ref="IC?"  Part="1" 
+AR Path="/AE2CBB6B/AE34464A" Ref="IC15"  Part="1" 
+F 0 "IC15" H 3600 1750 59  0000 L BNN
+F 1 "7408N" H 3600 1400 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3500 1600 50  0001 C CNN
+F 3 "" H 3500 1600 50  0001 C CNN
+	1    3500 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Z80Decoder-eagle-import:7408N IC?
+U 2 1 AE344650
+P 3500 2050
+AR Path="/AE344650" Ref="IC?"  Part="2" 
+AR Path="/AE2CBB6B/AE344650" Ref="IC15"  Part="2" 
+F 0 "IC15" H 3600 2200 59  0000 L BNN
+F 1 "7408N" H 3600 1850 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3500 2050 50  0001 C CNN
+F 3 "" H 3500 2050 50  0001 C CNN
+	2    3500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Z80Decoder-eagle-import:7408N IC?
+U 3 1 AE344656
+P 3500 2500
+AR Path="/AE344656" Ref="IC?"  Part="3" 
+AR Path="/AE2CBB6B/AE344656" Ref="IC15"  Part="3" 
+F 0 "IC15" H 3600 2650 59  0000 L BNN
+F 1 "7408N" H 3600 2300 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3500 2500 50  0001 C CNN
+F 3 "" H 3500 2500 50  0001 C CNN
+	3    3500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Z80Decoder-eagle-import:7408N IC?
+U 4 1 AE34465C
+P 3500 2950
+AR Path="/AE34465C" Ref="IC?"  Part="4" 
+AR Path="/AE2CBB6B/AE34465C" Ref="IC15"  Part="4" 
+F 0 "IC15" H 3600 3100 59  0000 L BNN
+F 1 "7408N" H 3600 2750 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3500 2950 50  0001 C CNN
+F 3 "" H 3500 2950 50  0001 C CNN
+	4    3500 2950
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	9550 2950 9650 2850
+Text Label 9550 2350 2    67   ~ 0
+CACHE_CE2
+Text Label 5400 5050 2    70   ~ 0
+LOCAL_ADD_8
+Text Label 5400 5150 2    70   ~ 0
+LOCAL_ADD_9
+Text Label 5400 5250 2    70   ~ 0
+LOCAL_ADD_10
+Text Label 5400 5350 2    70   ~ 0
+LOCAL_ADD_11
+Wire Wire Line
+	3650 5150 3450 5150
+Wire Wire Line
+	3350 5250 3350 4050
+Text Label 2350 4050 0    59   ~ 0
+Z80_HARDLOCK
+Wire Wire Line
+	3250 5050 3250 4900
+Wire Wire Line
+	3250 4900 4650 4900
+Wire Wire Line
+	3250 5050 3650 5050
+Wire Wire Line
+	3650 5450 3250 5450
+Wire Wire Line
+	3250 5450 3250 5050
+Connection ~ 3250 5050
+Entry Wire Line
+	2250 3950 2350 4050
+Entry Wire Line
+	5400 3850 5500 3950
+Entry Wire Line
+	5400 3950 5500 4050
+Entry Wire Line
+	5400 4050 5500 4150
+Entry Wire Line
+	5400 4150 5500 4250
+Entry Wire Line
+	5400 4250 5500 4350
+Entry Wire Line
+	5400 4350 5500 4450
+Entry Wire Line
+	5400 4450 5500 4550
+Entry Wire Line
+	5400 4550 5500 4650
+Entry Wire Line
+	5400 5050 5500 5150
+Entry Wire Line
+	5400 5150 5500 5250
+Entry Wire Line
+	5400 5250 5500 5350
+Entry Wire Line
+	5400 5350 5500 5450
+$Comp
+L Z80ESP-eagle-import:74590N IC7
+U 1 1 6476BB48
+P 4150 5450
+F 0 "IC7" H 4125 5425 59  0000 L BNN
+F 1 "74590N" H 3850 4750 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4150 5450 50  0001 C CNN
+F 3 "" H 4150 5450 50  0001 C CNN
+	1    4150 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4050 3350 4050
+Wire Wire Line
+	3450 5150 3450 5950
+Wire Wire Line
+	3450 5950 3650 5950
+Connection ~ 3450 5150
+Wire Wire Line
+	3350 5250 3650 5250
+Text Label 2350 3950 0    59   ~ 0
+CACHE_DATASTATUS
+Entry Wire Line
+	2250 3850 2350 3950
+Entry Wire Line
+	2250 3600 2350 3700
+Text Label 2350 3700 0    59   ~ 0
+CACHE_DATASTATUS+PERM_Z80_IORQ
+Connection ~ 3450 4750
+Wire Wire Line
+	3450 5150 3450 4750
+Wire Wire Line
+	3550 4250 3550 3850
+Wire Wire Line
+	3450 4750 3450 3950
+Wire Wire Line
+	3450 4750 3650 4750
+$Comp
+L Z80ESP-eagle-import:74590N IC?
+U 1 1 6476BB5E
+P 4150 4250
+AR Path="/6476BB5E" Ref="IC?"  Part="1" 
+AR Path="/AE2CBB6B/6476BB5E" Ref="IC6"  Part="1" 
+F 0 "IC6" H 4125 4225 59  0000 L BNN
+F 1 "74590N" H 3850 3550 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4150 4250 50  0001 C CNN
+F 3 "" H 4150 4250 50  0001 C CNN
+	1    4150 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4250 3550 4250
+Wire Wire Line
+	4650 4900 4650 4750
+Wire Wire Line
+	3650 4050 3350 4050
+Wire Wire Line
+	3450 3950 3650 3950
+Text Label 5400 4550 2    70   ~ 0
+LOCAL_ADD_7
+Wire Wire Line
+	4650 4550 5400 4550
+Text Label 5400 4450 2    70   ~ 0
+LOCAL_ADD_6
+Wire Wire Line
+	4650 4450 5400 4450
+Text Label 5400 4350 2    70   ~ 0
+LOCAL_ADD_5
+Wire Wire Line
+	4650 4350 5400 4350
+Text Label 5400 4250 2    70   ~ 0
+LOCAL_ADD_4
+Wire Wire Line
+	4650 4250 5400 4250
+Text Label 5400 4150 2    70   ~ 0
+LOCAL_ADD_3
+Wire Wire Line
+	4650 4150 5400 4150
+Text Label 5400 4050 2    70   ~ 0
+LOCAL_ADD_2
+Wire Wire Line
+	4650 4050 5400 4050
+Text Label 5400 3950 2    70   ~ 0
+LOCAL_ADD_1
+Wire Wire Line
+	4650 3950 5400 3950
+Text Label 5400 3850 2    70   ~ 0
+LOCAL_ADD_0
+Wire Wire Line
+	4650 3850 5400 3850
+Wire Wire Line
+	4650 5050 5400 5050
+Wire Wire Line
+	5400 5150 4650 5150
+Wire Wire Line
+	4650 5250 5400 5250
+Wire Wire Line
+	5400 5350 4650 5350
+Wire Wire Line
+	2350 3950 3450 3950
+Wire Wire Line
+	2350 3700 3550 3700
+Wire Wire Line
+	3650 3850 3550 3850
+Connection ~ 3550 3850
+Wire Wire Line
+	3550 3850 3550 3700
+Connection ~ 3350 4050
+Connection ~ 3450 3950
+$Comp
+L Z80Decoder-eagle-import:AS6C1008-55PCN CACHE?
+U 1 1 AE34463E
+P 7800 2150
+AR Path="/AE34463E" Ref="CACHE?"  Part="1" 
+AR Path="/AE2CBB6B/AE34463E" Ref="CACHE1"  Part="1" 
+F 0 "CACHE1" V 8300 650 59  0000 L CNN
+F 1 "AS6C1008-55PCN" V 8300 1350 59  0000 L CNN
+F 2 "Package_DIP:DIP-32_W15.24mm_Socket" H 7800 2150 50  0001 C CNN
+F 3 "" H 7800 2150 50  0001 C CNN
+	1    7800 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1250 2850 1250
+Text Label 2050 1250 0    59   ~ 0
+PERM_Z80_IORQ
+Text Label 2050 1050 0    59   ~ 0
+CACHE_DATASTATUS
+Entry Wire Line
+	1950 1150 2050 1250
+Entry Wire Line
+	1950 950  2050 1050
+$Comp
+L Z80ESP-eagle-import:7432N IC?
+U 2 1 65282CF6
+P 3150 1150
+AR Path="/65282CF6" Ref="IC?"  Part="2" 
+AR Path="/AE2CBB6B/65282CF6" Ref="IC13"  Part="2" 
+F 0 "IC13" H 3250 950 59  0000 L BNN
+F 1 "7432N" H 3250 950 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3150 1150 50  0001 C CNN
+F 3 "" H 3150 1150 50  0001 C CNN
+	2    3150 1150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2050 1050 2850 1050
+Text Label 5100 1150 2    59   ~ 0
+CACHE_DATASTATUS+PERM_Z80_IORQ
+Entry Wire Line
+	5100 1150 5200 1250
+Wire Wire Line
+	5100 1150 3450 1150
+Text HLabel 1350 1000 0    50   Input ~ 0
+PERM_Z80_IORQ
+Text HLabel 5500 3650 2    79   BiDi ~ 0
+LOCAL_ADD_[0..16]
+Text HLabel 1350 800  0    50   Input ~ 0
+Z80_RD
+Text HLabel 1350 900  0    50   Input ~ 0
+Z80_WR
+Text HLabel 1350 1400 0    50   Input ~ 0
+LOCAL_MEMRQ
+Text HLabel 1350 1100 0    50   Input ~ 0
+LOCAL_RD
+Text HLabel 1350 1200 0    50   Input ~ 0
+LOCAL_WR
+Text HLabel 1350 1300 0    50   Input ~ 0
+LOCAL_IORQ
+Text HLabel 6900 4250 2    79   BiDi ~ 0
+LOCAL_DATA_[0..7]
+Text Label 2350 6150 0    59   ~ 0
+CACHE_SEL_0
+Text Label 2350 6250 0    59   ~ 0
+CACHE_SEL_1
+Text Label 2350 6350 0    59   ~ 0
+CACHE_SEL_2
+Text Label 2350 6450 0    59   ~ 0
+CACHE_SEL_3
+Text Label 5400 6450 2    50   ~ 0
+LOCAL_ADD_16
+Text Label 5400 6350 2    50   ~ 0
+LOCAL_ADD_15
+Text Label 5400 6250 2    50   ~ 0
+LOCAL_ADD_14
+Text Label 5400 6150 2    50   ~ 0
+LOCAL_ADD_13
+Entry Wire Line
+	5400 6150 5500 6250
+Entry Wire Line
+	5400 6250 5500 6350
+Entry Wire Line
+	5400 6350 5500 6450
+Entry Wire Line
+	5400 6450 5500 6550
+Entry Wire Line
+	2250 6050 2350 6150
+Entry Wire Line
+	2250 6150 2350 6250
+Entry Wire Line
+	2250 6250 2350 6350
+Entry Wire Line
+	2250 6350 2350 6450
+Wire Wire Line
+	2350 6150 5400 6150
+Wire Wire Line
+	2350 6250 5400 6250
+Wire Wire Line
+	2350 6350 5400 6350
+Wire Wire Line
+	2350 6450 5400 6450
+Text Label 9650 1600 2    67   ~ 0
+CACHE_CE2
+Entry Wire Line
+	9650 1600 9750 1700
+$Comp
+L Device:R R10
+U 1 1 657D5C0D
+P 8050 1600
+F 0 "R10" V 7843 1600 50  0000 C CNN
+F 1 "10K" V 7934 1600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7980 1600 50  0001 C CNN
+F 3 "~" H 8050 1600 50  0001 C CNN
+	1    8050 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8800 3050 9550 3050
+Entry Wire Line
+	9550 2350 9650 2250
+Wire Wire Line
+	8800 2550 9550 2550
+Wire Wire Line
+	8800 2650 9550 2650
+Wire Wire Line
+	8800 2750 9550 2750
+Wire Wire Line
+	8800 2850 9550 2850
+Wire Wire Line
+	8800 2950 9550 2950
+Wire Wire Line
+	8800 3150 9550 3150
+Wire Wire Line
+	8800 2450 9550 2450
+Wire Wire Line
+	8200 1600 9650 1600
+Wire Wire Line
+	8800 2350 9550 2350
+Wire Wire Line
+	9550 2250 8800 2250
+Wire Bus Line
+	9650 2950 9950 2950
+Wire Bus Line
+	9650 2150 9950 2150
+Wire Bus Line
+	9950 2150 9950 2450
+Connection ~ 9950 2950
+Wire Bus Line
+	9650 2450 9950 2450
+Connection ~ 9950 2450
+Wire Bus Line
+	9950 2450 9950 2550
+Wire Bus Line
+	9650 2550 9950 2550
+Connection ~ 9950 2550
+Wire Bus Line
+	9950 2550 9950 2650
+Wire Bus Line
+	9650 2650 9950 2650
+Connection ~ 9950 2650
+Wire Bus Line
+	9950 2650 9950 2750
+Wire Bus Line
+	9650 2750 9950 2750
+Connection ~ 9950 2750
+Wire Bus Line
+	9950 2750 9950 2950
+Wire Bus Line
+	9650 3050 9750 3050
+Wire Bus Line
+	9750 3050 9750 2850
+Wire Bus Line
+	9650 2250 9750 2250
+Connection ~ 9750 2250
+Wire Bus Line
+	9650 2350 9750 2350
+Connection ~ 9750 2350
+Wire Bus Line
+	9750 2350 9750 2250
+Wire Bus Line
+	9650 2850 9750 2850
+Connection ~ 9750 2850
+Wire Bus Line
+	9750 2850 9750 2350
+Text HLabel 9650 3900 0    79   BiDi ~ 0
+LOCAL_DATA_[0..7]
+Text HLabel 6950 1950 2    79   BiDi ~ 0
+LOCAL_ADD_[0..16]
+Text HLabel 9950 4250 0    79   BiDi ~ 0
+LOCAL_ADD_[0..16]
+Wire Wire Line
+	6900 3350 7800 3350
+Wire Wire Line
+	6900 3450 7800 3450
+Wire Wire Line
+	6900 3550 7800 3550
+NoConn ~ 4650 5450
+NoConn ~ 4650 5550
+NoConn ~ 4650 5650
+NoConn ~ 4650 5750
+NoConn ~ 4650 5950
+Text HLabel 1350 1550 0    50   Input ~ 0
+Z80_HARDLOCK
+$Comp
+L power:GND #PWR0108
+U 1 1 69C1778F
+P 7300 3650
+F 0 "#PWR0108" H 7300 3400 50  0001 C CNN
+F 1 "GND" H 7305 3477 50  0000 C CNN
+F 2 "" H 7300 3650 50  0001 C CNN
+F 3 "" H 7300 3650 50  0001 C CNN
+	1    7300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3650 7800 3650
+Wire Bus Line
+	1350 700  1950 700 
+Connection ~ 1950 700 
+Wire Bus Line
+	1950 700  5200 700 
+Connection ~ 5200 700 
+Wire Bus Line
+	9950 2950 9950 4250
+Wire Bus Line
+	6900 4250 6800 4250
+$Comp
+L power:VCC #PWR0111
+U 1 1 6A10C8E7
+P 7450 1600
+F 0 "#PWR0111" H 7450 1450 50  0001 C CNN
+F 1 "VCC" H 7465 1773 50  0000 C CNN
+F 2 "" H 7450 1600 50  0001 C CNN
+F 3 "" H 7450 1600 50  0001 C CNN
+	1    7450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 1600 7900 1600
+Wire Bus Line
+	5200 700  9750 700 
+Text HLabel 1350 2350 0    50   Input ~ 0
+CACHE_DATASTATUS
+Text HLabel 1350 1950 0    50   Input ~ 0
+CACHE_SEL_0
+Text HLabel 1350 2050 0    50   Input ~ 0
+CACHE_SEL_1
+Text HLabel 1350 2150 0    50   Input ~ 0
+CACHE_SEL_2
+Text HLabel 1350 2250 0    50   Input ~ 0
+CACHE_SEL_3
+Wire Bus Line
+	1350 700  1350 2450
+Wire Bus Line
+	1950 3200 2250 3200
+$Comp
+L power:VCC #PWR0116
+U 1 1 6A389EB0
+P 8800 2000
+F 0 "#PWR0116" H 8800 1850 50  0001 C CNN
+F 1 "VCC" H 8815 2173 50  0000 C CNN
+F 2 "" H 8800 2000 50  0001 C CNN
+F 3 "" H 8800 2000 50  0001 C CNN
+	1    8800 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 2000 8800 2150
+Wire Bus Line
+	9750 700  9750 2250
+Wire Bus Line
+	6800 3250 6800 4250
+Wire Bus Line
+	9650 3350 9650 3900
+Wire Bus Line
+	5200 700  5200 3150
+Wire Bus Line
+	1950 700  1950 3200
+Wire Bus Line
+	2250 3200 2250 6550
+Wire Bus Line
+	6950 1950 6950 3150
+Wire Bus Line
+	5500 3650 5500 6550
+$EndSCHEMATC
