@@ -48,13 +48,7 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -1287,7 +1281,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "specctra_dsn": "FujiNet_Z80Bus_Reference_V2.dsn",
+      "specctra_dsn": "FujiNet_Z80Bus_Reference.dsn",
       "step": "",
       "vrml": ""
     },
