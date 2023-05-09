@@ -1011,8 +1011,6 @@ Wire Bus Line
 	7700 550  9200 550 
 Wire Bus Line
 	10000 550  10000 2250
-Wire Bus Line
-	7000 550  7000 6500
 Connection ~ 7700 550 
 Wire Bus Line
 	10000 550  11100 550 
@@ -1036,12 +1034,376 @@ Wire Wire Line
 Wire Wire Line
 	5600 650  5600 750 
 NoConn ~ 2700 7150
+$Comp
+L Connector:Conn_01x08_Female J3
+U 1 1 645CDDFA
+P 8500 5000
+F 0 "J3" H 8350 5450 50  0000 L CNN
+F 1 "DIAG-Z80_CONTROL" V 8550 4550 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8500 5000 50  0001 C CNN
+F 3 "~" H 8500 5000 50  0001 C CNN
+	1    8500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J4
+U 1 1 645CEBFB
+P 8500 5950
+F 0 "J4" H 8350 6400 50  0000 L CNN
+F 1 "DIAG-ESP_CONTROL" V 8550 5500 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8500 5950 50  0001 C CNN
+F 3 "~" H 8500 5950 50  0001 C CNN
+	1    8500 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J7
+U 1 1 645CF702
+P 10250 3850
+F 0 "J7" H 10100 4300 50  0000 L CNN
+F 1 "DIAG-LOCAL_DATA" V 10300 3400 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 10250 3850 50  0001 C CNN
+F 3 "~" H 10250 3850 50  0001 C CNN
+	1    10250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J6
+U 1 1 645D0F1A
+P 10200 5050
+F 0 "J6" H 10050 5500 50  0000 L CNN
+F 1 "DIAG-LOCAL_ADD_LOW" V 10250 4600 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 10200 5050 50  0001 C CNN
+F 3 "~" H 10200 5050 50  0001 C CNN
+	1    10200 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J5
+U 1 1 645D385F
+P 10200 6050
+F 0 "J5" H 10050 6500 50  0000 L CNN
+F 1 "DIAG-LOCAL_ADD_HIGH" V 10250 5600 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 10200 6050 50  0001 C CNN
+F 3 "~" H 10200 6050 50  0001 C CNN
+	1    10200 6050
+	1    0    0    -1  
+$EndComp
+Text Label 7100 5300 0    70   ~ 0
+Z80_BUSACK
+Text Label 7100 5200 0    70   ~ 0
+Z80_WAIT
+Text Label 7100 5400 0    70   ~ 0
+Z80_NMI
+Text Label 7100 4900 0    70   ~ 0
+Z80_IORQ
+Text Label 7100 5000 0    70   ~ 0
+Z80_MEMRQ
+Text Label 7100 4700 0    70   ~ 0
+Z80_RD
+Text Label 7100 4800 0    70   ~ 0
+Z80_WR
+Text Label 7100 5100 0    70   ~ 0
+Z80_BUSRQ
+Wire Wire Line
+	8300 5100 7100 5100
+Wire Wire Line
+	8300 4800 7100 4800
+Wire Wire Line
+	8300 4700 7100 4700
+Wire Wire Line
+	8300 5000 7100 5000
+Wire Wire Line
+	8300 4900 7100 4900
+Wire Wire Line
+	8300 5400 7100 5400
+Wire Wire Line
+	8300 5200 7100 5200
+Wire Wire Line
+	8300 5300 7100 5300
+Entry Wire Line
+	7000 5000 7100 5100
+Entry Wire Line
+	7000 4700 7100 4800
+Entry Wire Line
+	7000 4600 7100 4700
+Entry Wire Line
+	7000 4900 7100 5000
+Entry Wire Line
+	7000 4800 7100 4900
+Entry Wire Line
+	7000 5300 7100 5400
+Entry Wire Line
+	7000 5100 7100 5200
+Entry Wire Line
+	7000 5200 7100 5300
+Text Label 7100 5650 0    70   ~ 0
+ESP_CONTROL_RD
+Text Label 7100 5750 0    70   ~ 0
+ESP_CONTROL_WR
+Text Label 7100 5850 0    70   ~ 0
+ESP_CONTROL_IORQ
+Text Label 7100 5950 0    70   ~ 0
+ESP_CONTROL_MEMRQ
+Text Label 7100 6050 0    70   ~ 0
+ESP_CONTROL_BUSRQ
+Text Label 7100 6150 0    70   ~ 0
+ESP_CONTROL_WAIT
+Text Label 7100 6250 0    70   ~ 0
+ESP_CONTROL_ROMCS
+Text Label 7100 6350 0    70   ~ 0
+ESP_CONTROL_NMI
+Wire Wire Line
+	8300 6350 7100 6350
+Wire Wire Line
+	8300 6250 7100 6250
+Wire Wire Line
+	8300 6150 7100 6150
+Wire Wire Line
+	8300 5950 7100 5950
+Wire Wire Line
+	7100 5650 8300 5650
+Wire Wire Line
+	8300 6050 7100 6050
+Wire Wire Line
+	7100 5750 8300 5750
+Wire Wire Line
+	7100 5850 8300 5850
+Entry Wire Line
+	7100 5650 7000 5550
+Entry Wire Line
+	7100 5750 7000 5650
+Entry Wire Line
+	7100 5850 7000 5750
+Entry Wire Line
+	7100 6050 7000 5950
+Entry Wire Line
+	7100 6350 7000 6250
+Entry Wire Line
+	7100 5950 7000 5850
+Entry Wire Line
+	7100 6250 7000 6150
+Entry Wire Line
+	7100 6150 7000 6050
+Text HLabel 9150 3250 2    79   BiDi ~ 0
+LOCAL_DATA_[0..7]
+Entry Wire Line
+	9250 3550 9150 3450
+Entry Wire Line
+	9250 3650 9150 3550
+Entry Wire Line
+	9250 3750 9150 3650
+Entry Wire Line
+	9250 3850 9150 3750
+Entry Wire Line
+	9250 3950 9150 3850
+Entry Wire Line
+	9250 4050 9150 3950
+Entry Wire Line
+	9250 4150 9150 4050
+Entry Wire Line
+	9250 4250 9150 4150
+Text Label 9250 4250 0    70   ~ 0
+LOCAL_DATA_7
+Wire Wire Line
+	10050 4250 9250 4250
+Text Label 9250 4150 0    70   ~ 0
+LOCAL_DATA_6
+Wire Wire Line
+	10050 4150 9250 4150
+Text Label 9250 4050 0    70   ~ 0
+LOCAL_DATA_5
+Wire Wire Line
+	10050 4050 9250 4050
+Text Label 9250 3950 0    70   ~ 0
+LOCAL_DATA_4
+Wire Wire Line
+	10050 3950 9250 3950
+Text Label 9250 3850 0    70   ~ 0
+LOCAL_DATA_3
+Wire Wire Line
+	10050 3850 9250 3850
+Text Label 9250 3750 0    70   ~ 0
+LOCAL_DATA_2
+Wire Wire Line
+	10050 3750 9250 3750
+Text Label 9250 3650 0    70   ~ 0
+LOCAL_DATA_1
+Wire Wire Line
+	10050 3650 9250 3650
+Text Label 9250 3550 0    70   ~ 0
+LOCAL_DATA_0
+Wire Wire Line
+	10050 3550 9250 3550
+Text Label 9200 6450 0    70   ~ 0
+LOCAL_ADD_15
+Text Label 9200 6350 0    70   ~ 0
+LOCAL_ADD_14
+Text Label 9200 6250 0    70   ~ 0
+LOCAL_ADD_13
+Text Label 9200 6150 0    70   ~ 0
+LOCAL_ADD_12
+Text Label 9200 6050 0    70   ~ 0
+LOCAL_ADD_11
+Text Label 9200 5950 0    70   ~ 0
+LOCAL_ADD_10
+Text Label 9200 5850 0    70   ~ 0
+LOCAL_ADD_9
+Text Label 9200 5750 0    70   ~ 0
+LOCAL_ADD_8
+Entry Wire Line
+	9200 4750 9100 4650
+Entry Wire Line
+	9200 4850 9100 4750
+Entry Wire Line
+	9200 4950 9100 4850
+Entry Wire Line
+	9200 5050 9100 4950
+Entry Wire Line
+	9200 5150 9100 5050
+Entry Wire Line
+	9200 5250 9100 5150
+Entry Wire Line
+	9200 5350 9100 5250
+Entry Wire Line
+	9200 5450 9100 5350
+Text Label 9200 5450 0    70   ~ 0
+LOCAL_ADD_7
+Text Label 9200 5350 0    70   ~ 0
+LOCAL_ADD_6
+Text Label 9200 5250 0    70   ~ 0
+LOCAL_ADD_5
+Text Label 9200 5150 0    70   ~ 0
+LOCAL_ADD_4
+Text Label 9200 5050 0    70   ~ 0
+LOCAL_ADD_3
+Text Label 9200 4950 0    70   ~ 0
+LOCAL_ADD_2
+Text Label 9200 4850 0    70   ~ 0
+LOCAL_ADD_1
+Text Label 9200 4750 0    70   ~ 0
+LOCAL_ADD_0
+Wire Wire Line
+	10000 4750 9200 4750
+Wire Wire Line
+	10000 4850 9200 4850
+Wire Wire Line
+	10000 4950 9200 4950
+Wire Wire Line
+	10000 5050 9200 5050
+Wire Wire Line
+	10000 5150 9200 5150
+Wire Wire Line
+	10000 5250 9200 5250
+Wire Wire Line
+	10000 5350 9200 5350
+Wire Wire Line
+	10000 5450 9200 5450
+Entry Wire Line
+	9200 6350 9100 6250
+Entry Wire Line
+	9200 6250 9100 6150
+Entry Wire Line
+	9200 6150 9100 6050
+Entry Wire Line
+	9200 6050 9100 5950
+Entry Wire Line
+	9200 5950 9100 5850
+Entry Wire Line
+	9200 5850 9100 5750
+Entry Wire Line
+	9200 5750 9100 5650
+Entry Wire Line
+	9200 6450 9100 6350
+Wire Wire Line
+	9200 5750 10000 5750
+Wire Wire Line
+	9200 5950 10000 5950
+Wire Wire Line
+	10000 5850 9200 5850
+Wire Wire Line
+	10000 6050 9200 6050
+Wire Wire Line
+	9200 6150 10000 6150
+Wire Wire Line
+	10000 6250 9200 6250
+Wire Wire Line
+	9200 6350 10000 6350
+Wire Wire Line
+	10000 6450 9200 6450
+Text HLabel 9100 4500 2    79   BiDi ~ 0
+LOCAL_ADD_[0..15]
+Wire Wire Line
+	8050 3900 7100 3900
+Text Label 7100 3900 0    70   ~ 0
+ESP_SPI.OE
+Wire Wire Line
+	8050 3500 7100 3500
+Text Label 7100 3500 0    70   ~ 0
+ESP_SPI.MOSI
+Text Label 7100 3700 0    70   ~ 0
+ESP_SPI.STC
+Entry Wire Line
+	7000 3800 7100 3900
+Entry Wire Line
+	7000 3400 7100 3500
+Entry Wire Line
+	7000 3700 7100 3800
+Wire Wire Line
+	7100 3800 8050 3800
+Text Label 7100 4000 0    70   ~ 0
+ESP_SPI.SCK
+Text Label 7100 4200 0    70   ~ 0
+ESP_SPI.PL
+Text Label 7100 4100 0    70   ~ 0
+ESP_SPI.CE
+Wire Wire Line
+	7100 4100 8050 4100
+Wire Wire Line
+	7100 4200 8050 4200
+Wire Wire Line
+	7100 4000 8050 4000
+Entry Wire Line
+	7000 4000 7100 4100
+Entry Wire Line
+	7000 4100 7100 4200
+Entry Wire Line
+	7000 3900 7100 4000
+Text Label 7100 3600 0    70   ~ 0
+ESP_SPI.MISO
+Entry Wire Line
+	7100 3600 7000 3500
+Wire Wire Line
+	8050 3600 7100 3600
+Wire Wire Line
+	7100 3700 8050 3700
+Entry Wire Line
+	7000 3600 7100 3700
+Text Label 7100 3800 0    70   ~ 0
+ESP_CONTROL_WR
+$Comp
+L Connector:Conn_01x08_Female J2
+U 1 1 64A9FBAA
+P 8250 3800
+F 0 "J2" H 8100 4250 50  0000 L CNN
+F 1 "DIAG-ESP_SPI" V 8300 3400 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8250 3800 50  0001 C CNN
+F 3 "~" H 8250 3800 50  0001 C CNN
+	1    8250 3800
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	9200 550  9200 1950
 Wire Bus Line
 	7700 550  7700 2300
 Wire Bus Line
 	4200 4800 4200 7550
+Wire Bus Line
+	9150 3250 9150 4150
+Wire Bus Line
+	9100 4500 9100 6350
+Wire Bus Line
+	7000 550  7000 6500
 Wire Bus Line
 	3600 4850 3600 7450
 Wire Bus Line
