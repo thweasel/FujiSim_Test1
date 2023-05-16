@@ -1429,7 +1429,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x40_Top_Bottom") (at 170.815 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f7d0adda-c7af-40a1-833d-ef18513d680e)
-    (property "Reference" "J9" (at 172.085 48.26 0)
+    (property "Reference" "J?" (at 172.085 48.26 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Logic core connector" (at 172.085 50.8 0)
@@ -1524,13 +1524,13 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
-          (reference "J9") (unit 1)
+          (reference "J?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/ce04eea7-0307-4c59-b09a-22507b1c89a7"
-          (reference "J9") (unit 1)
+          (reference "J10") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/15e820a2-e197-4611-93bc-baa539eede01"
-          (reference "J10") (unit 1)
+          (reference "J9") (unit 1)
         )
       )
       (project "Logic core"

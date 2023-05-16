@@ -694,7 +694,6 @@
 
   (bus_alias "ESP_SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
   (bus_alias "ESP_CONTROL" (members "ESP_CONTROL.RD" "ESP_CONTROL.WR" "ESP_CONTROL.IORQ" "ESP_CONTROL.MEMRQ" "ESP_CONTROL.BUSRQ" "ESP_CONTROL.WAIT" "ESP_CONTROL.ROMCS" "ESP_CONTROL.NMI"))
-
   (junction (at 38.1 76.2) (diameter 0) (color 0 0 0 0)
     (uuid 26e6c31b-81b1-4f3c-9d64-4c410f42e694)
   )
@@ -3579,7 +3578,7 @@
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "R5") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -3651,7 +3650,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "D10") (unit 1)
+          (reference "D11") (unit 1)
         )
       )
     )
@@ -3680,7 +3679,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "D11") (unit 1)
+          (reference "D12") (unit 1)
         )
       )
     )
@@ -3689,7 +3688,7 @@
   (symbol (lib_id "power:+5V") (at 102.87 43.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ffc3b00-0aba-4373-af83-031c36c127f0)
-    (property "Reference" "#PWR017" (at 102.87 46.99 0)
+    (property "Reference" "#PWR014" (at 102.87 46.99 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 102.87 39.37 0)
@@ -3705,7 +3704,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -3714,7 +3713,7 @@
   (symbol (lib_id "power:GND") (at 170.18 15.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 458113ab-c917-431c-846c-47481a2521a5)
-    (property "Reference" "#PWR019" (at 170.18 21.59 0)
+    (property "Reference" "#PWR016" (at 170.18 21.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 170.18 20.32 0)
@@ -3730,7 +3729,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -3739,7 +3738,7 @@
   (symbol (lib_id "power:+5V") (at 102.87 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bfb89d83-aa08-410b-acce-9e41f7947c46)
-    (property "Reference" "#PWR018" (at 102.87 96.52 0)
+    (property "Reference" "#PWR015" (at 102.87 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 102.87 88.9 0)
@@ -3755,7 +3754,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -3764,7 +3763,7 @@
   (symbol (lib_id "power:+5V") (at 19.05 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c3fc8cc9-fad2-4070-a6dc-ff37439f89c4)
-    (property "Reference" "#PWR016" (at 19.05 55.88 0)
+    (property "Reference" "#PWR013" (at 19.05 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 19.05 48.26 0)
@@ -3780,7 +3779,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )

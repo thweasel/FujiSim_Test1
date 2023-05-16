@@ -1202,7 +1202,6 @@
   )
 
   (bus_alias "Z80_BUS_CONTROL" (members "Z80_BUS_CONTROL.Z80_DATA_DIR" "Z80_BUS_CONTROL.Z80_DATA_OE" "Z80_BUS_CONTROL.Z80_ADD_DIR" "Z80_BUS_CONTROL.Z80_ADD_OE"))
-
   (junction (at 80.01 22.86) (diameter 0) (color 0 0 0 0)
     (uuid 41fe1017-5aa4-45f3-91d9-ccee052277c4)
   )
@@ -3318,7 +3317,7 @@
   (symbol (lib_id "power:GND") (at 144.78 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c54f8f3-cb91-42bc-a557-2f871f06d958)
-    (property "Reference" "#PWR021" (at 144.78 143.51 0)
+    (property "Reference" "#PWR018" (at 144.78 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 144.78 142.24 0)
@@ -3334,7 +3333,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -3343,7 +3342,7 @@
   (symbol (lib_id "power:GND") (at 78.74 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 514eca61-fdc5-45d2-aae9-89ad62dd72e5)
-    (property "Reference" "#PWR020" (at 78.74 87.63 0)
+    (property "Reference" "#PWR017" (at 78.74 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 78.74 86.36 0)
@@ -3359,7 +3358,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
