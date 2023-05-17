@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ESP32_Wrover")(type "Legacy")(uri "/home/owen/Code/PlatformIO/FujiSim_Test1/KiCad7/FujiNet_Z80Bus_ReferenceDesign/esp32-wrover-kicad-master/esp32-wrover.lib")(options "")(descr ""))
+)
