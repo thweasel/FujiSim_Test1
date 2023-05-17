@@ -1318,12 +1318,6 @@
   (junction (at 121.285 62.23) (diameter 0) (color 0 0 0 0)
     (uuid 9cda86bd-d8c0-4426-b849-6e1fea006eaf)
   )
-  (junction (at 28.448 147.828) (diameter 0) (color 0 0 0 0)
-    (uuid c645ee91-7912-4b00-9749-18b61736a0a9)
-  )
-  (junction (at 28.448 122.428) (diameter 0) (color 0 0 0 0)
-    (uuid d9e0f9f7-77a7-4588-98f6-f8ff50503d72)
-  )
   (junction (at 120.65 118.872) (diameter 0) (color 0 0 0 0)
     (uuid d9f80143-01c9-40fc-8436-4242e9ebbc1f)
   )
@@ -1560,10 +1554,6 @@
     (stroke (width 0) (type default))
     (uuid 7b5eb6cd-e9ca-4c32-bc57-a76ddaa9db39)
   )
-  (wire (pts (xy 28.448 122.428) (xy 19.05 122.428))
-    (stroke (width 0) (type default))
-    (uuid 7ce210bc-f9b7-4f48-968d-7e138f46a9c6)
-  )
   (wire (pts (xy 217.17 83.82) (xy 223.52 83.82))
     (stroke (width 0) (type default))
     (uuid 7d6ea7fb-f2d5-4e0f-b89f-250a612e7265)
@@ -1587,10 +1577,6 @@
   (wire (pts (xy 15.748 87.757) (xy 46.228 87.757))
     (stroke (width 0) (type default))
     (uuid 8a2d893c-bd05-4a7e-97fb-29f672123f31)
-  )
-  (wire (pts (xy 39.37 147.828) (xy 28.448 147.828))
-    (stroke (width 0) (type default))
-    (uuid 8cfb0043-18dd-433d-b6ee-ef8c132f6c97)
   )
   (wire (pts (xy 15.748 97.917) (xy 46.228 97.917))
     (stroke (width 0) (type default))
@@ -1717,7 +1703,7 @@
     (stroke (width 0) (type default))
     (uuid c3b137dc-a491-44e9-a5e0-9880fc6810d4)
   )
-  (wire (pts (xy 28.448 147.828) (xy 19.558 147.828))
+  (wire (pts (xy 19.558 147.828) (xy 39.37 147.828))
     (stroke (width 0) (type default))
     (uuid c7e8c192-ab7d-49f6-9c5a-bac70a3aa22d)
   )
@@ -1737,7 +1723,7 @@
     (stroke (width 0) (type default))
     (uuid cea04f28-6ccb-4646-8465-0cc543539e1e)
   )
-  (wire (pts (xy 39.37 122.428) (xy 28.448 122.428))
+  (wire (pts (xy 19.05 122.428) (xy 39.37 122.428))
     (stroke (width 0) (type default))
     (uuid d0bbe8a8-54df-4c10-b602-bde1a647efa4)
   )
@@ -2248,7 +2234,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC1") (unit 1)
+          (reference "IC1") (unit 7)
         )
       )
     )
@@ -2330,7 +2316,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2465,7 +2451,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC5") (unit 1)
+          (reference "IC6") (unit 1)
         )
       )
     )
@@ -2517,7 +2503,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC2") (unit 4)
+          (reference "IC3") (unit 4)
         )
       )
     )
@@ -2566,7 +2552,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC3") (unit 2)
+          (reference "IC4") (unit 2)
         )
       )
     )
@@ -2615,7 +2601,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC4") (unit 1)
+          (reference "IC2") (unit 5)
         )
       )
     )
@@ -2767,7 +2753,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -2800,7 +2786,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -2849,7 +2835,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC3") (unit 1)
+          (reference "IC4") (unit 1)
         )
       )
     )
@@ -2956,7 +2942,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "#PWR03") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -2980,17 +2966,17 @@
     (pin "1" (uuid 41c70621-fcef-41f1-ba60-bfa7293e5bfe))
     (pin "2" (uuid 34b0460f-3ab7-41a7-8446-1866067f3379))
     (pin "3" (uuid fe6b74f5-a777-42f8-bc25-1c4b4a8dc835))
-    (pin "4" (uuid c33754dc-ae34-4e19-9bf8-472667f527cc))
-    (pin "5" (uuid c958174e-d6f3-4b6f-b942-1be24001e571))
-    (pin "6" (uuid 54c4440c-fdaf-4ea9-a653-e57e4cd6a8dd))
-    (pin "10" (uuid 3e28ae6e-d802-4dae-9a51-49ea1432aa20))
-    (pin "8" (uuid b8d366d1-fb12-461a-8cdc-5dd9fcc73e97))
-    (pin "9" (uuid a5ab2eeb-97aa-4bca-947e-b603188d7ab5))
-    (pin "11" (uuid c351e300-72a1-4b13-8b6c-c33d402b9f39))
-    (pin "12" (uuid 1b1fe8a7-e036-40ea-9ca1-e65d281e37e8))
-    (pin "13" (uuid 0b2c7b30-c071-419b-bfbe-abfc6dada83f))
-    (pin "14" (uuid 4416d620-e139-456c-bf97-5838b3e20de2))
-    (pin "7" (uuid 414dbd22-3945-4ccb-af4a-2d4f50f0000d))
+    (pin "4" (uuid c33754dc-ae34-4e19-9bf8-472667f527cd))
+    (pin "5" (uuid c958174e-d6f3-4b6f-b942-1be24001e572))
+    (pin "6" (uuid 54c4440c-fdaf-4ea9-a653-e57e4cd6a8de))
+    (pin "10" (uuid 3e28ae6e-d802-4dae-9a51-49ea1432aa21))
+    (pin "8" (uuid b8d366d1-fb12-461a-8cdc-5dd9fcc73e98))
+    (pin "9" (uuid a5ab2eeb-97aa-4bca-947e-b603188d7ab6))
+    (pin "11" (uuid c351e300-72a1-4b13-8b6c-c33d402b9f3a))
+    (pin "12" (uuid 1b1fe8a7-e036-40ea-9ca1-e65d281e37e9))
+    (pin "13" (uuid 0b2c7b30-c071-419b-bfbe-abfc6dada840))
+    (pin "14" (uuid 4416d620-e139-456c-bf97-5838b3e20de3))
+    (pin "7" (uuid 414dbd22-3945-4ccb-af4a-2d4f50f0000e))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
@@ -3005,7 +2991,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC4") (unit 1)
+          (reference "IC5") (unit 1)
         )
       )
     )
@@ -3038,7 +3024,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -3127,7 +3113,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5"
-          (reference "IC2") (unit 3)
+          (reference "IC3") (unit 3)
         )
       )
     )

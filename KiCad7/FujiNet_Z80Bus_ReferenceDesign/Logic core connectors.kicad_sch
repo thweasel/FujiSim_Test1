@@ -1047,6 +1047,11 @@
           (reference "#PWR040") (unit 1)
         )
       )
+      (project "Logic core"
+        (path "/648e0b91-567a-4972-a379-57b42123c6d5/38b7d772-cf38-4194-8e0b-ce11c179768d"
+          (reference "#PWR012") (unit 1)
+        )
+      )
     )
   )
 
@@ -1073,6 +1078,11 @@
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/15e820a2-e197-4611-93bc-baa539eede01"
           (reference "#PWR038") (unit 1)
+        )
+      )
+      (project "Logic core"
+        (path "/648e0b91-567a-4972-a379-57b42123c6d5/38b7d772-cf38-4194-8e0b-ce11c179768d"
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1156,7 +1166,7 @@
         )
       )
       (project "Logic core"
-        (path "/648e0b91-567a-4972-a379-57b42123c6d5/ce04eea7-0307-4c59-b09a-22507b1c89a7"
+        (path "/648e0b91-567a-4972-a379-57b42123c6d5/38b7d772-cf38-4194-8e0b-ce11c179768d"
           (reference "J1") (unit 1)
         )
       )

@@ -1017,7 +1017,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC10") (unit 4)
+          (reference "IC11") (unit 4)
         )
       )
     )
@@ -1069,7 +1069,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC10") (unit 3)
+          (reference "IC11") (unit 3)
         )
       )
     )
@@ -1121,7 +1121,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC4") (unit 2)
+          (reference "IC5") (unit 2)
         )
       )
     )
@@ -1173,7 +1173,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC10") (unit 1)
+          (reference "IC11") (unit 1)
         )
       )
     )
@@ -1225,7 +1225,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC10") (unit 2)
+          (reference "IC11") (unit 2)
         )
       )
     )

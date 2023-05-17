@@ -1090,7 +1090,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC6") (unit 3)
+          (reference "IC7") (unit 3)
         )
       )
       (project "Logic_core"
@@ -1128,7 +1128,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -1164,7 +1164,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1216,7 +1216,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC6") (unit 2)
+          (reference "IC7") (unit 2)
         )
       )
       (project "Logic_core"
@@ -1273,7 +1273,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC6") (unit 1)
+          (reference "IC7") (unit 1)
         )
       )
       (project "Logic_core"
@@ -1373,7 +1373,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC7") (unit 4)
+          (reference "IC8") (unit 4)
         )
       )
       (project "Logic_core"
@@ -1551,7 +1551,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC7") (unit 3)
+          (reference "IC8") (unit 3)
         )
       )
       (project "Logic_core"
@@ -1642,7 +1642,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC7") (unit 1)
+          (reference "IC8") (unit 1)
         )
       )
       (project "Logic_core"
@@ -1683,7 +1683,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -1735,7 +1735,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC7") (unit 2)
+          (reference "IC8") (unit 2)
         )
       )
       (project "Logic_core"
@@ -1816,7 +1816,7 @@
       )
       (project "Logic core"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR09") (unit 1)
         )
       )
     )
