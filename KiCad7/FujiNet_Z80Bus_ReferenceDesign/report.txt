@@ -1,0 +1,1 @@
+Change symbols J? J10 J9 J10 J1 from 'Connector_Generic:Conn_02x25_Top_Bottom' to 'Connector_Generic:Conn_02x25_Top_Bottom': OK

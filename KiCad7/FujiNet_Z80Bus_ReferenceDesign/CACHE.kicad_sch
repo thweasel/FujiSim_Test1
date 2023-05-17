@@ -448,6 +448,7 @@
   )
 
   (bus_alias "CACHE_CONTROL" (members "CACHE_CONTROL.A16" "CACHE_CONTROL.WE" "CACHE_CONTROL.OE" "CACHE_CONTROL.CS" "CACHE_CONTROL.DATASTATUS+PERM_Z80_IORQ"))
+
   (junction (at 182.88 99.06) (diameter 0) (color 0 0 0 0)
     (uuid 2b1487cd-a7c8-4cc5-a7b6-c21cd82be9fb)
   )
