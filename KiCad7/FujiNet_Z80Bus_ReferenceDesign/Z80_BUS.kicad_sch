@@ -1202,7 +1202,6 @@
   )
 
   (bus_alias "Z80_BUS_CONTROL" (members "Z80_BUS_CONTROL.Z80_DATA_DIR" "Z80_BUS_CONTROL.Z80_DATA_OE" "Z80_BUS_CONTROL.Z80_ADD_DIR" "Z80_BUS_CONTROL.Z80_ADD_OE"))
-
   (junction (at 80.01 22.86) (diameter 0) (color 0 0 0 0)
     (uuid 41fe1017-5aa4-45f3-91d9-ccee052277c4)
   )

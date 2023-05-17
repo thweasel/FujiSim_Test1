@@ -1106,7 +1106,6 @@
     )
   )
 
-
   (junction (at 121.285 62.23) (diameter 0) (color 0 0 0 0)
     (uuid 9cda86bd-d8c0-4426-b849-6e1fea006eaf)
   )
@@ -2782,7 +2781,7 @@
     (property "Sheetname" "Logic core connectors2" (at 48.895 18.9734 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "Logic core connectors.kicad_sch" (at 48.895 108.5346 0)
+    (property "Sheetfile" "../Logic core connectors.kicad_sch" (at 48.895 108.5346 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (pin "PERM_Z80_IORQ" bidirectional (at 48.895 53.34 180)
