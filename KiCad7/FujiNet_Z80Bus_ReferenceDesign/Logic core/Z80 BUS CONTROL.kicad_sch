@@ -687,7 +687,6 @@
     )
   )
 
-
   (junction (at 91.44 33.02) (diameter 0) (color 0 0 0 0)
     (uuid 2ec2d876-d594-43a7-8945-e88a41d022cf)
   )
@@ -1086,7 +1085,7 @@
           (reference "IC6") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/6bcd45ec-1810-4278-8058-96e26ec9b5f3"
-          (reference "IC12") (unit 3)
+          (reference "IC12") (unit 1)
         )
       )
       (project "Logic core"
