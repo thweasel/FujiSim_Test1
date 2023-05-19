@@ -1329,6 +1329,7 @@
   )
 
   (bus_alias "LOCAL_CONTROL" (members "LOCAL_CONTROL.RD" "LOCAL_CONTROL.WR" "LOCAL_CONTROL.IORQ" "LOCAL_CONTROL.MEMRQ"))
+
   (junction (at 92.71 77.47) (diameter 0) (color 0 0 0 0)
     (uuid 0b01da44-92be-4d51-b863-832c75a3788b)
   )
