@@ -1235,7 +1235,7 @@
     (property "Reference" "IC3" (at 111.125 117.475 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
-    (property "Value" "74590N" (at 104.14 134.62 0)
+    (property "Value" "74HC590N" (at 104.14 134.62 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom) hide)
     )
     (property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket" (at 111.76 115.57 0)
@@ -1275,7 +1275,7 @@
     (property "Reference" "IC2" (at 111.125 70.485 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
-    (property "Value" "74590N" (at 104.14 87.63 0)
+    (property "Value" "74HC590N" (at 104.14 87.63 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom) hide)
     )
     (property "Footprint" "Package_DIP:DIP-16_W7.62mm_Socket" (at 111.76 68.58 0)
@@ -1416,7 +1416,7 @@
   (symbol (lib_id "FujiNet_Memory_RAM:AS6C1008-55PCN") (at 214.63 83.185 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8ae2f06a-0b42-4885-b60a-bfea5052ef01)
-    (property "Reference" "U3" (at 216.5859 53.34 0)
+    (property "Reference" "CACHE3" (at 216.5859 53.34 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "AS6C1008-55PCN" (at 216.5859 55.88 0)
@@ -1463,7 +1463,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "U3") (unit 1)
+          (reference "CACHE3") (unit 1)
         )
       )
     )

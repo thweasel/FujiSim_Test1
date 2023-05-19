@@ -1,4 +1,4 @@
-21697283111651386
+21693914763929987
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -90194,17 +90194,3 @@ varistor
 0
 2
 2
-esp32-wrover
-ESP32-WROVER
-
-
-0
-64
-39
-esp32-wrover
-FREENOVE_ESP32-WROVER-DEV
-
-
-0
-42
-42

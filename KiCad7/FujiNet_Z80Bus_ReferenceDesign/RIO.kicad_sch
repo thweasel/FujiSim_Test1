@@ -438,7 +438,6 @@
   )
 
   (bus_alias "RIO_CONTROL" (members "RIO_CONTROL.A16" "RIO_CONTROL.A15" "RIO_CONTROL.A14" "RIO_CONTROL.A13" "RIO_CONTROL.WE" "RIO_CONTROL.CE" "RIO_CONTROL.OE" "RIO_CONTROL.ROM_RDY"))
-
   (junction (at 95.885 94.615) (diameter 0) (color 0 0 0 0)
     (uuid 4b1c1d6f-ad83-4737-901b-bd039fab76fb)
   )
@@ -1513,7 +1512,7 @@
     (property "Reference" "RIO_DECODER1" (at 191.135 136.525 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
-    (property "Value" "74245N" (at 183.515 144.145 0)
+    (property "Value" "74HC245N" (at 183.515 144.145 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom) hide)
     )
     (property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket" (at 191.135 126.365 0)
@@ -1592,7 +1591,7 @@
     (property "Reference" "Z80-RIO_DATA1" (at 140.335 130.175 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
-    (property "Value" "74245N" (at 131.445 139.065 0)
+    (property "Value" "74HC245N" (at 131.445 139.065 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom) hide)
     )
     (property "Footprint" "Package_DIP:DIP-20_W7.62mm_Socket" (at 139.065 121.285 0)
