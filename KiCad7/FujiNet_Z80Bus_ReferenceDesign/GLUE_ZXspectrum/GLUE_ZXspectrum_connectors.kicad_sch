@@ -1041,7 +1041,7 @@
   (symbol (lib_id "power:+5V") (at 223.52 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0e2b3d42-ebf9-490e-b77b-1b07b381c076)
-    (property "Reference" "#PWR077" (at 223.52 107.95 0)
+    (property "Reference" "#PWR075" (at 223.52 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 223.52 100.965 0)
@@ -1056,16 +1056,16 @@
     (pin "1" (uuid aed02f9a-add9-4201-b1a7-ab12de4c227b))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/38b7d772-cf38-4194-8e0b-ce11c179768d"
-          (reference "#PWR077") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/15e820a2-e197-4611-93bc-baa539eede01"
           (reference "#PWR075") (unit 1)
         )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/38b7d772-cf38-4194-8e0b-ce11c179768d"
+          (reference "#PWR077") (unit 1)
+        )
       )
-      (project "Logic core"
+      (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/38b7d772-cf38-4194-8e0b-ce11c179768d"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR077") (unit 1)
         )
       )
     )
@@ -1074,7 +1074,7 @@
   (symbol (lib_id "power:GND") (at 223.52 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 95495171-79bb-4520-9cd3-dcbc35f752ae)
-    (property "Reference" "#PWR078" (at 223.52 113.03 0)
+    (property "Reference" "#PWR076" (at 223.52 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 223.52 111.125 0)
@@ -1089,16 +1089,16 @@
     (pin "1" (uuid d6f93502-d7eb-4fc3-beb3-05e1daf73e47))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/38b7d772-cf38-4194-8e0b-ce11c179768d"
-          (reference "#PWR078") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/15e820a2-e197-4611-93bc-baa539eede01"
           (reference "#PWR076") (unit 1)
         )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/38b7d772-cf38-4194-8e0b-ce11c179768d"
+          (reference "#PWR078") (unit 1)
+        )
       )
-      (project "Logic core"
+      (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/38b7d772-cf38-4194-8e0b-ce11c179768d"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR078") (unit 1)
         )
       )
     )
@@ -1181,9 +1181,9 @@
           (reference "J4") (unit 1)
         )
       )
-      (project "Logic core"
+      (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/38b7d772-cf38-4194-8e0b-ce11c179768d"
-          (reference "J1") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )

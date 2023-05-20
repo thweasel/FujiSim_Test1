@@ -1341,7 +1341,7 @@
   (symbol (lib_id "power:+5V") (at 111.76 52.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5e59fda7-fccc-4d42-a888-5e1c80244d0a)
-    (property "Reference" "#PWR056" (at 111.76 55.88 0)
+    (property "Reference" "#PWR055" (at 111.76 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 111.76 48.26 0)
@@ -1357,7 +1357,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR056") (unit 1)
+          (reference "#PWR055") (unit 1)
         )
       )
     )
@@ -1366,7 +1366,7 @@
   (symbol (lib_id "power:GND") (at 111.76 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6395d47c-7203-497e-bd10-7177d4fd5ec6)
-    (property "Reference" "#PWR0117" (at 111.76 138.43 0)
+    (property "Reference" "#PWR058" (at 111.76 138.43 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 111.887 136.4742 0)
@@ -1382,7 +1382,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR0117") (unit 1)
+          (reference "#PWR058") (unit 1)
         )
       )
     )
@@ -1391,7 +1391,7 @@
   (symbol (lib_id "power:+5V") (at 111.76 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7b83c3e8-f613-4fa2-b810-29b6a4b65587)
-    (property "Reference" "#PWR0118" (at 111.76 102.87 0)
+    (property "Reference" "#PWR057" (at 111.76 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 111.76 95.25 0)
@@ -1407,7 +1407,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR0118") (unit 1)
+          (reference "#PWR057") (unit 1)
         )
       )
     )
@@ -1472,7 +1472,7 @@
   (symbol (lib_id "power:GND") (at 111.76 85.09 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8ee198bf-d18b-41dd-bd5c-2700943709d1)
-    (property "Reference" "#PWR057" (at 111.76 91.44 0)
+    (property "Reference" "#PWR056" (at 111.76 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 111.887 89.4842 0)
@@ -1488,7 +1488,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR057") (unit 1)
+          (reference "#PWR056") (unit 1)
         )
       )
     )
@@ -1497,7 +1497,7 @@
   (symbol (lib_id "power:+5V") (at 214.63 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a3fd219a-c4ac-4945-bda3-7ac22fba86ef)
-    (property "Reference" "#PWR025" (at 214.63 59.69 0)
+    (property "Reference" "#PWR060" (at 214.63 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 214.63 52.07 0)
@@ -1513,7 +1513,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR060") (unit 1)
         )
       )
     )
@@ -1522,7 +1522,7 @@
   (symbol (lib_id "power:+5V") (at 187.96 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid abe7a394-5b23-45cc-a00b-e8f52de59203)
-    (property "Reference" "#PWR026" (at 187.96 116.84 0)
+    (property "Reference" "#PWR059" (at 187.96 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 187.96 109.22 0)
@@ -1538,7 +1538,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR059") (unit 1)
         )
       )
     )
@@ -1547,7 +1547,7 @@
   (symbol (lib_id "power:GND") (at 214.63 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe7c9d6c-420b-42be-9745-b9e8920a57a3)
-    (property "Reference" "#PWR024" (at 214.63 118.11 0)
+    (property "Reference" "#PWR061" (at 214.63 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 214.757 116.1542 0)
@@ -1563,7 +1563,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR061") (unit 1)
         )
       )
     )
