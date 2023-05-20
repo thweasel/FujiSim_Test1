@@ -1272,7 +1272,7 @@
   (symbol (lib_id "74xx:74HC590") (at 111.76 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00006476bb5e)
-    (property "Reference" "IC2" (at 111.125 70.485 0)
+    (property "Reference" "IC?" (at 111.125 70.485 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC590N" (at 104.14 87.63 0)
@@ -1302,11 +1302,11 @@
     (pin "9" (uuid 984576ce-1c4d-4097-81f9-f5e7fff02f18))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "IC2") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "IC2") (unit 1)
         )
       )
     )

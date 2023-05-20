@@ -1509,7 +1509,7 @@
   (symbol (lib_id "74xx:74HC245") (at 191.77 127 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000069c5a2d3)
-    (property "Reference" "RIO_DECODER1" (at 191.77 137.16 90)
+    (property "Reference" "RIO_DECODER?" (at 191.77 137.16 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC245N" (at 184.15 144.78 0)
@@ -1543,14 +1543,14 @@
     (pin "9" (uuid ed73403a-777f-4a16-a17f-8167e136396c))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "RIO_DECODER1") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "RIO_DECODER?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "RIO_DECODER?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "RIO_DECODER1") (unit 1)
         )
       )
     )
@@ -1559,7 +1559,7 @@
   (symbol (lib_id "Device:R") (at 171.45 137.16 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 00000000-0000-0000-0000-000069c5a2fa)
-    (property "Reference" "R7" (at 171.45 134.62 90)
+    (property "Reference" "R?" (at 171.45 134.62 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10K" (at 171.45 137.16 90)
@@ -1575,11 +1575,11 @@
     (pin "2" (uuid e0fe4a58-8f18-4343-81e8-81a26f5c9e2f))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "R7") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "R?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "R7") (unit 1)
         )
       )
     )
@@ -1588,7 +1588,7 @@
   (symbol (lib_id "74xx:74HC245") (at 139.7 121.92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000ad7e23d1)
-    (property "Reference" "Z80-RIO_DATA1" (at 140.97 130.81 90)
+    (property "Reference" "Z80-RIO_DATA?" (at 140.97 130.81 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC245N" (at 132.08 139.7 0)
@@ -1622,11 +1622,11 @@
     (pin "9" (uuid c9e69434-32f9-4a58-9e64-52747ae338c9))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "Z80-RIO_DATA1") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80-RIO_DATA?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "Z80-RIO_DATA1") (unit 1)
         )
       )
     )
@@ -1685,7 +1685,7 @@
   (symbol (lib_id "power:+5V") (at 191.77 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1ff97868-3889-4ef0-b42a-2cf3614f45cd)
-    (property "Reference" "#PWR055" (at 191.77 110.49 0)
+    (property "Reference" "#PWR025" (at 191.77 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 191.77 102.87 0)
@@ -1700,11 +1700,11 @@
     (pin "1" (uuid f260c29d-efb0-4946-b464-32127e814f3c))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR055") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "#PWR025") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR055") (unit 1)
         )
       )
     )
@@ -1794,7 +1794,7 @@
   (symbol (lib_id "power:+5V") (at 139.7 101.6 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9b1239e8-334e-48a1-aea6-09da61374a3a)
-    (property "Reference" "#PWR060" (at 139.7 105.41 0)
+    (property "Reference" "#PWR025" (at 139.7 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 139.7 97.79 0)
@@ -1809,11 +1809,11 @@
     (pin "1" (uuid e9e6ee89-5fa2-430b-a215-6ecb521e11fb))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR060") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "#PWR025") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR060") (unit 1)
         )
       )
     )
@@ -1847,7 +1847,7 @@
   (symbol (lib_id "Device:R") (at 208.28 106.68 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9fac08f5-ae09-47d5-9dd4-2c9ab9883c5e)
-    (property "Reference" "R8" (at 205.74 106.045 0)
+    (property "Reference" "R?" (at 205.74 106.045 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10K" (at 205.74 108.585 0)
@@ -1863,14 +1863,14 @@
     (pin "2" (uuid 8a6e5aac-e1fe-4786-92ad-0d107afa9937))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "R8") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "R6") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "R8") (unit 1)
         )
       )
     )
@@ -1879,7 +1879,7 @@
   (symbol (lib_id "power:+5V") (at 208.28 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b114acae-b5ac-4b8c-9e77-5bac57ea749a)
-    (property "Reference" "#PWR022" (at 208.28 104.14 0)
+    (property "Reference" "#PWR025" (at 208.28 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 208.28 96.52 0)
@@ -1894,11 +1894,11 @@
     (pin "1" (uuid 42321ac8-d8c2-4a04-919c-d05d071ba62c))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR022") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "#PWR025") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR022") (unit 1)
         )
       )
     )
