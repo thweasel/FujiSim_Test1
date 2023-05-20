@@ -9,6 +9,9 @@
     (date "2023-05-13")
     (rev "0.1")
     (company "FujiNet")
+    (comment 2 "each bytes address relates to a Z80 IO address")
+    (comment 3 "RIO has 64K of RAM which is programmed with an IO configuration byte")
+    (comment 4 "RIO emulates a ROM (4K@0000h) and Decodes IO address")
   )
 
   (lib_symbols
@@ -1744,7 +1747,7 @@
     (property "Value" "AS6C1008-55PCN" (at 125.1459 31.75 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DIP:DIP-32_W15.24mm" (at 123.19 55.88 0)
+    (property "Footprint" "Package_DIP:DIP-32_W15.24mm_Socket" (at 123.19 55.88 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1008.pdf" (at 123.19 55.88 0)

@@ -9,6 +9,9 @@
     (date "2023-05-13")
     (rev "0.1")
     (company "FujiNet")
+    (comment 1 "64K status bytes (which are mapped 1:1 with Z80 IO addresses)")
+    (comment 2 "16x4K caches that can be allocated to any IO address (Rio config)")
+    (comment 3 "IOCache is devided into 2x64K blocks")
   )
 
   (lib_symbols
@@ -1422,7 +1425,7 @@
     (property "Value" "AS6C1008-55PCN" (at 216.5859 56.515 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DIP:DIP-32_W15.24mm" (at 214.63 81.28 0)
+    (property "Footprint" "Package_DIP:DIP-32_W15.24mm_Socket" (at 214.63 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1008.pdf" (at 214.63 81.28 0)

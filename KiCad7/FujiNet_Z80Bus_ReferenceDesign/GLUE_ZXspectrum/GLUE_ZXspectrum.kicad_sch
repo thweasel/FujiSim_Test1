@@ -4,6 +4,10 @@
 
   (paper "A4")
 
+  (title_block
+    (comment 1 "This is a 74 series logic implemenation of the GLUE logic for a ZXspectrum FujiNet")
+  )
+
   (lib_symbols
     (symbol "74xx:74HC04" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 1.27 0)
