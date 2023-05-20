@@ -819,8 +819,8 @@
     )
   )
 
-  (bus_alias "ESP_SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
   (bus_alias "ESP_CONTROL" (members "ESP_CONTROL.RD" "ESP_CONTROL.WR" "ESP_CONTROL.IORQ" "ESP_CONTROL.MEMRQ" "ESP_CONTROL.BUSRQ" "ESP_CONTROL.WAIT" "ESP_CONTROL.ROMCS" "ESP_CONTROL.NMI"))
+  (bus_alias "ESP_SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
   (junction (at 29.21 177.8) (diameter 0) (color 0 0 0 0)
     (uuid d830996c-07bd-45e3-a0be-64e869780f5b)
   )
@@ -3645,7 +3645,7 @@
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "R4") (unit 1)
+          (reference "R5") (unit 1)
         )
       )
     )
@@ -3717,7 +3717,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "D11") (unit 1)
+          (reference "D13") (unit 1)
         )
       )
     )
@@ -3746,7 +3746,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
-          (reference "D12") (unit 1)
+          (reference "D14") (unit 1)
         )
       )
     )

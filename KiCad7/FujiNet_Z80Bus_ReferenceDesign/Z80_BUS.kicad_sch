@@ -3099,7 +3099,7 @@
   (symbol (lib_id "Connector:Conn_01x40_Socket") (at 100.33 147.32 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000064b825b9)
-    (property "Reference" "J8" (at 152.4 149.86 0)
+    (property "Reference" "J1" (at 152.4 149.86 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DIAG-HOST_SYSTEM_BUS" (at 100.33 144.78 90)
@@ -3154,7 +3154,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "J8") (unit 1)
+          (reference "J1") (unit 1)
         )
       )
     )
@@ -3163,7 +3163,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x20_Counter_Clockwise") (at 231.14 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000067bd4005)
-    (property "Reference" "J7" (at 232.41 45.2882 0)
+    (property "Reference" "J2" (at 232.41 45.2882 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "HOST SYSTEM HEADER" (at 232.41 47.5996 0)
@@ -3218,7 +3218,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "J7") (unit 1)
+          (reference "J2") (unit 1)
         )
       )
     )

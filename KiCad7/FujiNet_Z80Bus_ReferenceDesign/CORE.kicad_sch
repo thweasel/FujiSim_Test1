@@ -1329,6 +1329,7 @@
   )
 
   (bus_alias "LOCAL_CONTROL" (members "LOCAL_CONTROL.RD" "LOCAL_CONTROL.WR" "LOCAL_CONTROL.IORQ" "LOCAL_CONTROL.MEMRQ"))
+
   (junction (at 92.71 77.47) (diameter 0) (color 0 0 0 0)
     (uuid 0b01da44-92be-4d51-b863-832c75a3788b)
   )
@@ -2531,7 +2532,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D2") (unit 1)
+          (reference "D4") (unit 1)
         )
       )
     )
@@ -2627,7 +2628,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D5") (unit 1)
+          (reference "D7") (unit 1)
         )
       )
     )
@@ -2656,7 +2657,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D4") (unit 1)
+          (reference "D6") (unit 1)
         )
       )
     )
@@ -2685,7 +2686,7 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D3") (unit 1)
+          (reference "D5") (unit 1)
         )
       )
     )
@@ -2714,7 +2715,7 @@
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "R3") (unit 1)
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -2743,7 +2744,7 @@
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "R2") (unit 1)
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -2791,7 +2792,7 @@
   (symbol (lib_id "Device:D") (at 220.98 41.91 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000690097f2)
-    (property "Reference" "D10" (at 217.17 40.64 0)
+    (property "Reference" "D12" (at 217.17 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N4148" (at 220.98 44.45 0)
@@ -2808,7 +2809,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D10") (unit 1)
+          (reference "D12") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9/00000000-0000-0000-0000-000068fd7452"
           (reference "D?") (unit 1)
@@ -2951,7 +2952,7 @@
           (reference "D15") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D9") (unit 1)
+          (reference "D11") (unit 1)
         )
       )
     )
@@ -3029,7 +3030,7 @@
   (symbol (lib_id "Device:R") (at 50.8 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1eeb8b43-315e-4dfc-9c1b-6d9f66389819)
-    (property "Reference" "R15" (at 53.086 135.255 0)
+    (property "Reference" "R2" (at 53.086 135.255 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "R10K" (at 53.086 137.795 0)
@@ -3046,7 +3047,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "R15") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -3225,7 +3226,7 @@
           (reference "D14") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D8") (unit 1)
+          (reference "D10") (unit 1)
         )
       )
     )
@@ -3254,7 +3255,7 @@
           (reference "D12") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D6") (unit 1)
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -3283,7 +3284,7 @@
           (reference "D13") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D7") (unit 1)
+          (reference "D9") (unit 1)
         )
       )
     )
@@ -3292,7 +3293,7 @@
   (symbol (lib_id "Device:D") (at 44.45 129.54 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a24593ff-f147-4ebd-a3b6-3014539889d0)
-    (property "Reference" "D18" (at 44.45 124.206 0)
+    (property "Reference" "D3" (at 44.45 124.206 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N4148" (at 44.45 126.746 0)
@@ -3315,7 +3316,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D18") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -3462,7 +3463,7 @@
   (symbol (lib_id "Device:D") (at 44.45 119.38 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c01eb026-320b-4277-9894-7221a89f534c)
-    (property "Reference" "D17" (at 44.45 114.046 0)
+    (property "Reference" "D2" (at 44.45 114.046 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1N4148" (at 44.45 116.586 0)
@@ -3485,7 +3486,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D17") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
