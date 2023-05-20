@@ -2677,8 +2677,8 @@
     (property "Datasheet" "" (at 105.41 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3ad9d3fb-abe6-49ca-a0ec-2004312a5a6c))
-    (pin "2" (uuid 78a05e9f-7d94-4a56-87fd-f72b8b905585))
+    (pin "1" (uuid 2f71c297-e7c0-4602-8a09-a81f278c3d40))
+    (pin "2" (uuid df07fc00-54c4-4493-ad0c-d6b1d7a3960a))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
