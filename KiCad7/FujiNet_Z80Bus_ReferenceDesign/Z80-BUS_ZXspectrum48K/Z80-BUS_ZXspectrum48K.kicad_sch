@@ -3227,7 +3227,7 @@
   (symbol (lib_id "74xx:74HC245") (at 57.15 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000ade94d56)
-    (property "Reference" "Z80-LOCAL_DATA1" (at 66.04 44.45 90)
+    (property "Reference" "Z80-LOCAL_DATA?" (at 66.04 44.45 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC245N" (at 74.93 53.34 0)
@@ -3261,11 +3261,11 @@
     (pin "9" (uuid 7db4d177-3fc8-45ee-9ca0-01a8424d7b4c))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "Z80-LOCAL_DATA1") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80-LOCAL_DATA?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+          (reference "Z80-LOCAL_DATA1") (unit 1)
         )
       )
     )
@@ -3274,7 +3274,7 @@
   (symbol (lib_id "74xx:74HC245") (at 148.59 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000ade94d74)
-    (property "Reference" "Z80_ADDRHIGH1" (at 157.48 44.45 90)
+    (property "Reference" "Z80_ADDRHIGH?" (at 157.48 44.45 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC245N" (at 166.37 53.34 0)
@@ -3308,11 +3308,11 @@
     (pin "9" (uuid 251e07f1-41dc-4528-815f-e92005e654da))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "Z80_ADDRHIGH1") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80_ADDRHIGH?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+          (reference "Z80_ADDRHIGH1") (unit 1)
         )
       )
     )
@@ -3321,7 +3321,7 @@
   (symbol (lib_id "74xx:74HC245") (at 102.87 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000ade94d7a)
-    (property "Reference" "Z80_ADDRLOW1" (at 110.49 45.72 90)
+    (property "Reference" "Z80_ADDRLOW?" (at 110.49 45.72 90)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC245N" (at 120.65 53.34 0)
@@ -3355,11 +3355,11 @@
     (pin "9" (uuid dcc7a1b0-4999-47a7-a2f5-0ff4ecc5bc3c))
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "Z80_ADDRLOW1") (unit 1)
-        )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80_ADDRLOW?") (unit 1)
+        )
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+          (reference "Z80_ADDRLOW1") (unit 1)
         )
       )
     )
