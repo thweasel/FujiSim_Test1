@@ -1012,7 +1012,7 @@
           (reference "IC10") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC12") (unit 4)
+          (reference "IC13") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1064,7 +1064,7 @@
           (reference "IC10") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC12") (unit 3)
+          (reference "IC13") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1116,7 +1116,7 @@
           (reference "IC1") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC13") (unit 2)
+          (reference "IC14") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1168,7 +1168,7 @@
           (reference "IC10") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC12") (unit 1)
+          (reference "IC13") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1220,7 +1220,7 @@
           (reference "IC10") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC12") (unit 2)
+          (reference "IC13") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
