@@ -1006,6 +1006,11 @@
     (pin "14" (uuid 66516838-38bb-4a93-ba8a-de03e0129892))
     (pin "7" (uuid 4bfe0400-95c0-42fe-bd03-def41ac10f73))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
+          (reference "IC10") (unit 4)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "IC10") (unit 4)
@@ -1017,7 +1022,7 @@
           (reference "IC10") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC13") (unit 4)
+          (reference "IC?") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1058,6 +1063,11 @@
     (pin "14" (uuid d4437855-c06d-4f29-a5b1-8053de39b364))
     (pin "7" (uuid ebaf763e-ac63-443c-a13c-412ad80d9b6a))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
+          (reference "IC10") (unit 3)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "IC10") (unit 3)
@@ -1069,7 +1079,7 @@
           (reference "IC10") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC13") (unit 3)
+          (reference "IC?") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1110,6 +1120,11 @@
     (pin "14" (uuid 6e0d2f63-dbe0-4e09-b0ef-0ed317cac574))
     (pin "7" (uuid 2ad10e31-65b8-4b99-b7dd-c1ec71076efc))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
+          (reference "IC1") (unit 2)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "IC1") (unit 2)
@@ -1121,7 +1136,7 @@
           (reference "IC1") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC14") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1162,6 +1177,11 @@
     (pin "14" (uuid 7da27feb-cb85-40de-8b88-1799070345e8))
     (pin "7" (uuid 8f6b854d-c270-4ade-859f-ba021a8f4405))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
+          (reference "IC10") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "IC10") (unit 1)
@@ -1173,7 +1193,7 @@
           (reference "IC10") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC13") (unit 1)
+          (reference "IC?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1214,6 +1234,11 @@
     (pin "14" (uuid 567985b7-afc6-44ed-89b5-b3afaf405edc))
     (pin "7" (uuid b97017a0-4d87-4c00-b1f7-f91bf71acb58))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
+          (reference "IC10") (unit 2)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "IC10") (unit 2)
@@ -1225,7 +1250,7 @@
           (reference "IC10") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC13") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"

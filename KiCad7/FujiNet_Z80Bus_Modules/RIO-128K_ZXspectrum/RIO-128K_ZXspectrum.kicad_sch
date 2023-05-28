@@ -1476,6 +1476,11 @@
     (pin "1" (uuid 55319682-a475-48f5-b07d-5db1e7c9c4ec))
     (pin "2" (uuid 0f3baa70-6f46-4e7d-9d28-fe1f584bd7d6))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "R5") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "R5") (unit 1)
@@ -1501,6 +1506,11 @@
     )
     (pin "1" (uuid c72985b2-8594-4e95-85ec-deb202ca3c92))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR044") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "#PWR044") (unit 1)
@@ -1545,6 +1555,11 @@
     (pin "8" (uuid de5e222d-c63a-4297-b54f-c9bff1db4367))
     (pin "9" (uuid ed73403a-777f-4a16-a17f-8167e136396c))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "RIO_DECODER?") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "RIO_DECODER?") (unit 1)
@@ -1577,6 +1592,11 @@
     (pin "1" (uuid d48eca0d-e744-4e2e-81f3-6e4295c73130))
     (pin "2" (uuid e0fe4a58-8f18-4343-81e8-81a26f5c9e2f))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "R?") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "R?") (unit 1)
@@ -1624,6 +1644,11 @@
     (pin "8" (uuid 38d76dff-f82b-43e1-8b96-60d44d2957f8))
     (pin "9" (uuid c9e69434-32f9-4a58-9e64-52747ae338c9))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "Z80-RIO_DATA?") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80-RIO_DATA?") (unit 1)
@@ -1652,6 +1677,11 @@
     )
     (pin "1" (uuid 8e8c782c-7193-468b-a416-5efaf18ea77e))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR047") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "#PWR047") (unit 1)
@@ -1677,6 +1707,11 @@
     )
     (pin "1" (uuid 1d771cfe-b06e-45aa-b0a4-162cc1f2cc82))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR043") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "#PWR043") (unit 1)
@@ -1702,6 +1737,11 @@
     )
     (pin "1" (uuid f260c29d-efb0-4946-b464-32127e814f3c))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR025") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "#PWR025") (unit 1)
@@ -1730,6 +1770,11 @@
     )
     (pin "1" (uuid f88a0cb4-1761-4cb3-a2e2-74b3b283ebfc))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR049") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "#PWR049") (unit 1)
@@ -1786,6 +1831,11 @@
     (pin "8" (uuid d5b3b0a3-b965-4df2-85ea-008e36e421fc))
     (pin "9" (uuid bfb9d989-ab86-4f34-b677-53fc79395751))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "RIO1") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "RIO1") (unit 1)
@@ -1811,6 +1861,11 @@
     )
     (pin "1" (uuid e9e6ee89-5fa2-430b-a215-6ecb521e11fb))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR025") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "#PWR025") (unit 1)
@@ -1839,6 +1894,11 @@
     )
     (pin "1" (uuid 3e20ebca-3edb-4af9-8634-b19ab6669240))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR042") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "#PWR042") (unit 1)
@@ -1865,6 +1925,11 @@
     (pin "1" (uuid bd4e353e-d0a9-4737-a285-e34e2de7fa2e))
     (pin "2" (uuid 8a6e5aac-e1fe-4786-92ad-0d107afa9937))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "R?") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "R?") (unit 1)
@@ -1896,6 +1961,11 @@
     )
     (pin "1" (uuid 42321ac8-d8c2-4a04-919c-d05d071ba62c))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR025") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
           (reference "#PWR025") (unit 1)
@@ -1924,6 +1994,11 @@
     )
     (pin "1" (uuid 0dac9e5d-1ba8-4ee9-9a7a-2ae8debd491f))
     (instances
+      (project "FujiNet_Z80Bus_Basic"
+        (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/b62306ae-701c-4aca-883e-7292197a6c9b"
+          (reference "#PWR046") (unit 1)
+        )
+      )
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "#PWR046") (unit 1)

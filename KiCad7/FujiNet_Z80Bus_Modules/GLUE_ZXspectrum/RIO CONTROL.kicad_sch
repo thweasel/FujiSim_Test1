@@ -2022,7 +2022,7 @@
           (reference "IC4") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC8") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2071,7 +2071,7 @@
           (reference "IC9") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC5") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2107,7 +2107,7 @@
           (reference "#PWR022") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2156,7 +2156,7 @@
           (reference "IC2") (unit 5)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC11") (unit 5)
+          (reference "IC?") (unit 5)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2205,7 +2205,7 @@
           (reference "IC8") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC7") (unit 1)
+          (reference "IC?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2254,7 +2254,7 @@
           (reference "IC9") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC8") (unit 1)
+          (reference "IC?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2303,7 +2303,7 @@
           (reference "IC9") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC8") (unit 3)
+          (reference "IC?") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2317,7 +2317,7 @@
   (symbol (lib_id "power:GND") (at 214.63 152.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 82b8f4b8-3926-4598-8b59-d5bf6aa389d9)
-    (property "Reference" "#PWR065" (at 214.63 158.75 0)
+    (property "Reference" "#PWR?" (at 214.63 158.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 214.63 157.48 0)
@@ -2333,7 +2333,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -2364,7 +2364,7 @@
           (reference "#PWR022") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2413,7 +2413,7 @@
           (reference "IC8") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC7") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2462,7 +2462,7 @@
           (reference "IC1") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC12") (unit 3)
+          (reference "IC?") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2511,7 +2511,7 @@
           (reference "IC8") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC12") (unit 4)
+          (reference "IC?") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2555,7 +2555,7 @@
           (reference "RN1") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "RN4") (unit 1)
+          (reference "RN?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2592,7 +2592,7 @@
           (reference "D16") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "D14") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2606,7 +2606,7 @@
   (symbol (lib_id "74xx:74HC244") (at 214.63 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e829edb2-fb5c-4087-b601-1acd71fcf9b5)
-    (property "Reference" "U1" (at 216.5859 113.03 0)
+    (property "Reference" "U?" (at 216.5859 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74HC244N" (at 216.5859 115.57 0)
@@ -2641,7 +2641,7 @@
     (instances
       (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "U1") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2690,7 +2690,7 @@
           (reference "IC8") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC9") (unit 3)
+          (reference "IC?") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2739,7 +2739,7 @@
           (reference "IC9") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC8") (unit 4)
+          (reference "IC?") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
