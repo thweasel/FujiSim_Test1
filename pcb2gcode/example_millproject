@@ -1,0 +1,90 @@
+# This is an example config file for pcb2gcode.
+# Rename this file "millproject" and place it in the same directory as your
+# gerber files to save typing
+# <option>=false is implicit, it is present just for clearness
+
+# You may want to uncomment and change those in local project files (or you
+# can specify them directly as command line arguments)
+
+front=../"KiCad project"-F_Cu.gbr
+back=../"KiCad project"-B_Cu.gbr
+outline=../"KiCad project"-Edge_Cuts.gbr
+drill=../"KiCad project"-PTH.drl
+#preamble=preamble.ngc
+#preamble-text=preamble_text.txt
+#postamble=postamble.ngc
+
+# Naming output files
+#basename=
+
+# Common options
+metric=true
+metricoutput=true
+#mirror-axis=31.475mm
+mirror-axis=0
+zero-start=false
+zsafe=5.0000
+zchange=10.0000
+
+nog64=true
+
+# Duplicate on same stock
+tile-x=1
+tile-y=1
+
+# Optimisations
+#optimise=100
+vectorial=true
+eulerian-paths=true
+tsp-2opt=false
+path-finding-limit=50000
+#backtrack=0
+
+
+# Mill options
+voronoi=false
+mill-diameters=0.5000
+isolation-width=0.5000
+extra-passes=0
+mill-feed=60
+mill-vertfeed=30
+mill-speed=8000
+mill-infeed=0.1000
+mill-feed-direction=climb
+offset=0.1000
+#offset=20  # Uncomment (and comment the previous line) for voronoi regions
+zwork=-0.1500
+tolerance=0.1000
+
+
+# Drill options
+drill-feed=30
+drill-side=front
+drill-speed=600
+zdrill=-2.0000
+milldrill=false
+onedrill=false
+nog81=true
+nog91-1=true
+nom6=true
+
+# Outline options
+bridges=0.5000
+bridgesnum=2
+cut-feed=600
+cut-side=auto
+cut-infeed=10.0000
+cut-speed=8000
+cutter-diameter=3.127
+fill-outline=true
+zbridges=-0.6000
+zcut=-2.0000
+
+# Autoleveller options
+al-back=false
+al-front=false
+al-probefeed=100
+al-x=15.0000
+al-y=15.0000
+software=custom
+
