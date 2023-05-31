@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "FujiNet_ESP32Wrover")(type "KiCad")(uri "/home/owen/Code/PlatformIO/FujiSim_Test1/KiCad7/FujiNet_KiCadLibs/esp32-wrover-kicad-master/esp32-wrover.pretty")(options "")(descr ""))
-)

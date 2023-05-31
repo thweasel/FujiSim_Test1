@@ -1063,12 +1063,12 @@
           (reference "D?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "D?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D2") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -1135,12 +1135,12 @@
           (reference "U?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "U?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "ESP1") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -1169,12 +1169,12 @@
           (reference "D?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "D?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D5") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "D4") (unit 1)
         )
       )
     )
@@ -1203,12 +1203,12 @@
           (reference "D?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "D?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D4") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -1237,12 +1237,12 @@
           (reference "D?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "D?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "D3") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -1271,12 +1271,12 @@
           (reference "R?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "R?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "R3") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1305,12 +1305,12 @@
           (reference "R?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "R?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
-          (reference "R2") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -1343,11 +1343,11 @@
           (reference "EX_SPI?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "CORE_ESP32-WROVER_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "EX_SPI?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "EX_SPI1") (unit 1)
         )
       )
@@ -1376,8 +1376,8 @@
           (reference "#PWR05") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "#PWR05") (unit 1)
         )
       )
@@ -1406,8 +1406,8 @@
           (reference "#PWR07") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "#PWR07") (unit 1)
         )
       )
@@ -1436,8 +1436,8 @@
           (reference "#PWR09") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "#PWR09") (unit 1)
         )
       )
@@ -1466,8 +1466,8 @@
           (reference "#PWR08") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "#PWR08") (unit 1)
         )
       )
@@ -1496,8 +1496,8 @@
           (reference "#PWR04") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "#PWR04") (unit 1)
         )
       )
@@ -1526,8 +1526,8 @@
           (reference "#PWR06") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-000068f578e9"
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/a9fe9d68-be96-4c0b-b148-f082d97c035b"
           (reference "#PWR06") (unit 1)
         )
       )

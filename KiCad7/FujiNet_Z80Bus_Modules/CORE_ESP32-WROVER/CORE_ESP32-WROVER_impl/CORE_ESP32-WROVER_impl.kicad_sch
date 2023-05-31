@@ -1,0 +1,39 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 532c0392-800e-45cc-8170-6d32f2390e83)
+
+  (paper "A4")
+
+  (title_block
+    (title "FujiNet Z80Bus reference design")
+    (date "2023-05-13")
+    (rev "0.1")
+    (company "FujiNet")
+  )
+
+  (lib_symbols
+  )
+
+  (bus_alias "Z80_CONTROL" (members "Z80_CONTROL.RD" "Z80_CONTROL.WR" "Z80_CONTROL.IORQ" "Z80_CONTROL.MEMRQ" "Z80_CONTROL.BUSRQ" "Z80_CONTROL.WAIT" "Z80_CONTROL.ROMCS" "Z80_CONTROL.BUSACK" "Z80_CONTROL.NMI" "Z80_CONTROL.RESET"))
+
+  (sheet (at 82.55 40.64) (size 73.66 66.04) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid a9fe9d68-be96-4c0b-b148-f082d97c035b)
+    (property "Sheetname" "CORE_ESP32-WROVER" (at 82.55 39.9284 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "../CORE_ESP32-WROVER.kicad_sch" (at 82.55 107.2646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "CORE_ESP32-WROVER_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

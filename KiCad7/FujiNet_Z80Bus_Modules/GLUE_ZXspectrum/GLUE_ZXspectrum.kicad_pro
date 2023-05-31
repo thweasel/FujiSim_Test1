@@ -3,7 +3,7 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
-        "board_outline_line_width": 0.09999999999999999,
+        "board_outline_line_width": 0.049999999999999996,
         "copper_line_width": 0.19999999999999998,
         "copper_text_italic": false,
         "copper_text_size_h": 1.5,
@@ -27,7 +27,7 @@
         "fab_text_size_v": 1.0,
         "fab_text_thickness": 0.15,
         "fab_text_upright": false,
-        "other_line_width": 0.15,
+        "other_line_width": 0.09999999999999999,
         "other_text_italic": false,
         "other_text_size_h": 1.0,
         "other_text_size_v": 1.0,
@@ -38,14 +38,14 @@
           "height": 1.524,
           "width": 1.524
         },
-        "silk_line_width": 0.15,
+        "silk_line_width": 0.12,
         "silk_text_italic": false,
         "silk_text_size_h": 1.0,
         "silk_text_size_v": 1.0,
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.508
         }
       },
       "diff_pair_dimensions": [
@@ -57,6 +57,7 @@
       ],
       "drc_exclusions": [],
       "meta": {
+        "filename": "board_design_settings.json",
         "version": 2
       },
       "rule_severities": {
@@ -109,25 +110,25 @@
         "via_dangling": "warning",
         "zones_intersect": "error"
       },
+      "rule_severitieslegacy_courtyards_overlap": true,
+      "rule_severitieslegacy_no_courtyard_defined": false,
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
-        "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
-        "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
-        "min_microvia_diameter": 0.19999999999999998,
-        "min_microvia_drill": 0.09999999999999999,
+        "min_clearance": 0.39999999999999997,
+        "min_connection": 0.39999999999999997,
+        "min_copper_edge_clearance": 2.0,
+        "min_hole_clearance": 0.5,
+        "min_hole_to_hole": 0.5,
+        "min_microvia_diameter": 1.0,
+        "min_microvia_drill": 0.5,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
-        "min_via_annular_width": 0.09999999999999999,
-        "min_via_diameter": 0.5,
-        "solder_mask_clearance": 0.0,
-        "solder_mask_min_width": 0.0,
+        "min_through_hole_diameter": 0.5,
+        "min_track_width": 0.6,
+        "min_via_annular_width": 0.5,
+        "min_via_diameter": 1.0,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -173,7 +174,7 @@
       ],
       "track_widths": [
         0.0,
-        1.0
+        0.4
       ],
       "via_dimensions": [
         {
@@ -395,10 +396,10 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
-      "simulation_model_issue": "error",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -417,19 +418,155 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.5,
-        "diff_pair_gap": 0.25,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.5,
         "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 1.0,
+        "track_width": 0.4,
         "via_diameter": 1.0,
-        "via_drill": 0.4,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 0,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "ESP_CONTROL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(24, 133, 229)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 0,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "ESP_SPI_INTERNAL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(255, 141, 34)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 0,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "LOCAL_ADDRESS",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(89, 183, 65)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 2,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "LOCAL_CONTROL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(31, 0, 226)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 0,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "LOCAL_DATA",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(255, 42, 80)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 1,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "Z80_ADDRESS",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(16, 128, 62)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 1,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "Z80_CONTROL",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(6, 0, 135)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.6,
+        "diff_pair_gap": 0.5,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.5,
+        "line_style": 1,
+        "microvia_diameter": 1.0,
+        "microvia_drill": 0.5,
+        "name": "Z80_DATA",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(255, 0, 58)",
+        "track_width": 0.4,
+        "via_diameter": 1.0,
+        "via_drill": 0.5,
         "wire_width": 6
       }
     ],
@@ -438,14 +575,879 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "/!CACHE_DATASTATUS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/!Z80_HARDLOCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/CACHE_CE2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/CACHE_CS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/CACHE_DATASTATUS+PERM_Z80_IORQ"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/CACHE_OE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/CACHE_WE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_ADD_9"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE/LOCAL_DATA_7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE_DATASTATUS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE_SEL_0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE_SEL_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE_SEL_2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CACHE_SEL_3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/!ESP_HARDLOCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/CLR_Z80_HARDLOCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_CONTROL_Z80"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_HARDLOCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_INT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_PULSE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.CE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.MISO"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.MOSI"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.OE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.PL"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.SCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_SPI.STC"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/ESP_WAIT_RESET"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/EX_MISO"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/EX_MOSI"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/EX_SCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/EX_SS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/IORQ_FILTER_BIT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/PRE_Z80_HARDLOCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/SD_CARD_SS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/SPIBUS/ESP_SPI.MR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/Z80_ADD_CONNECT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/CORE/Z80_DATA_CONNECT"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_BUSRQ"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_IORQ"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_MEMRQ"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_NMI"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_RD"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_ROMCS"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_WAIT"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL_WR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/ESP_IOD_CONFIG"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/ESP_ROMSEL_0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/ESP_ROMSEL_1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/LOCAL_IORQ"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/LOCAL_MEMRQ"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/LOCAL_RD"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/LOCAL_WR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/PERM_Z80_IORQ"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/DEC14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/DEC15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/DEC16"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/DEC_CE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/DEC_OE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/DEC_WE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ESP_IOD_CONFIG+Z80_WR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/RIO_CE2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_D_RDY"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/ROM_WR_PROTECT+Z80_WR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_A9"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_D7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/RIO/Z80_RD+ESP_IOD_CONFIG+PERM_Z80_IORQ"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/ROM_WR_PROTECT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/WAIT_IO"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80 BUS/Z80_ADD_DIR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80 BUS/Z80_ADD_OE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80 BUS/Z80_DATA_DIR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80 BUS/Z80_DATA_OE"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80_A0"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_BUSACK"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_BUSRQ"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80_HARDLOCK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80_HARDLOCK_RESET"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80_HARDLOCK_SET"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_IORQ"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_MEMRQ"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_NMI"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_RD"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_RESET"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_ROMCS"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_WAIT"
+      },
+      {
+        "netclass": "Z80_CONTROL",
+        "pattern": "/Z80_WR"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(C2-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(CACHE1-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D1-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D13-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D14-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D15-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D16-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D4-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(D5-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC1-Pad13)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC10-Pad14)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC10-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC11-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC12-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC12-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC12-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC13-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC13-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC14-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC16-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC16-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC17-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC19-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC2-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC2-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC2-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC2-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC20-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC21-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC21-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC21-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC3-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC3-Pad12)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC3-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC3-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC3-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC6-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC7-Pad4)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC7-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC7-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC7-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC7-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(IC8-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad17)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad18)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad19)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J8-Pad36)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J8-Pad37)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J8-Pad38)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J8-Pad39)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J8-Pad40)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(Q1-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(R8-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(RIO1-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(RN1-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(RN4-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(RN4-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(RN4-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(RN4-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad16)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad17)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad27)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad29)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad30)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad36)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad37)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "VCC"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_CONTROL"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/ESP_SPI.MOSI"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "/Z80_ADD_CONNECT"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Z80 BUS/Z80_ADD_CONNECT"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "ESP_CONTROL.MEMRQ"
+      },
+      {
+        "netclass": "ESP_CONTROL",
+        "pattern": "ESP_CONTROL.RD"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
-      "specctra_dsn": "Logic core.dsn",
+      "netlist": "FujiNet_Z80Bus_Reference.net",
+      "specctra_dsn": "FujiNet_Z80Bus_Reference.dsn",
       "step": "",
       "vrml": ""
     },
@@ -465,18 +1467,27 @@
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
-      "label_size_ratio": 0.375,
-      "pin_symbol_size": 25.0,
-      "text_offset_ratio": 0.15
+      "label_size_ratio": 0.25,
+      "pin_symbol_size": 0.0,
+      "text_offset_ratio": 0.08
     },
     "legacy_lib_dir": "",
     "legacy_lib_list": [],
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
+    "net_format_name": "KiCad",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 0,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -487,24 +1498,8 @@
   },
   "sheets": [
     [
-      "648e0b91-567a-4972-a379-57b42123c6d5",
+      "532c0392-800e-45cc-8170-6d32f2390e83",
       ""
-    ],
-    [
-      "6bcd45ec-1810-4278-8058-96e26ec9b5f3",
-      "Z80 BUS CONTROL"
-    ],
-    [
-      "470a76e9-5ba5-4732-b286-3d7fc5c85df9",
-      "RIO CONTROL"
-    ],
-    [
-      "93c14a9e-4a71-4950-b006-2a9affe18130",
-      "CACHE CONTROL"
-    ],
-    [
-      "38b7d772-cf38-4194-8e0b-ce11c179768d",
-      "GLUE_ZXspectrum_connectors"
     ]
   ],
   "text_variables": {}
