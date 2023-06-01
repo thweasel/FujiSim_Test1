@@ -1498,8 +1498,12 @@
   },
   "sheets": [
     [
-      "532c0392-800e-45cc-8170-6d32f2390e83",
+      "884c7ad2-5794-4c2b-8afa-8e07fcecd42b",
       ""
+    ],
+    [
+      "f9303533-0d3f-4609-9fa9-076efff1786c",
+      "IOCACHE-128K_ZXspectrum_connectors"
     ]
   ],
   "text_variables": {}

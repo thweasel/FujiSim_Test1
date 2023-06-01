@@ -1447,7 +1447,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "FujiNet_Z80Bus_Reference.net",
-      "specctra_dsn": "FujiNet_Z80Bus_Reference.dsn",
+      "specctra_dsn": "IOCACHE-128k_ZXspectrum_impl.dsn",
       "step": "",
       "vrml": ""
     },
@@ -1500,6 +1500,14 @@
     [
       "532c0392-800e-45cc-8170-6d32f2390e83",
       ""
+    ],
+    [
+      "08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd",
+      "IOCACHE-128K_ZXspectrum"
+    ],
+    [
+      "f9303533-0d3f-4609-9fa9-076efff1786c",
+      "IOCACHE-128K_ZXspectrum_connectors"
     ]
   ],
   "text_variables": {}
