@@ -16,6 +16,23 @@
 
   (bus_alias "Z80_CONTROL" (members "Z80_CONTROL.RD" "Z80_CONTROL.WR" "Z80_CONTROL.IORQ" "Z80_CONTROL.MEMRQ" "Z80_CONTROL.BUSRQ" "Z80_CONTROL.WAIT" "Z80_CONTROL.ROMCS" "Z80_CONTROL.BUSACK" "Z80_CONTROL.NMI" "Z80_CONTROL.RESET"))
 
+  (sheet (at 99.06 33.02) (size 50.8 60.96) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 6c4c7762-a89c-4208-ab7a-060b74bdaf3f)
+    (property "Sheetname" "RIO-128K_ZXspectrum" (at 99.06 32.3084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "../RIO-128K_ZXspectrum.kicad_sch" (at 99.06 94.5646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83" (page "2"))
+      )
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )

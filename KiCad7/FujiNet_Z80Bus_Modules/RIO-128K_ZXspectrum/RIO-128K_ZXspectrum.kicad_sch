@@ -440,7 +440,7 @@
     )
   )
 
-  (bus_alias "RIO_CONTROL" (members "RIO_CONTROL.A16" "RIO_CONTROL.A15" "RIO_CONTROL.A14" "RIO_CONTROL.A13" "RIO_CONTROL.WE" "RIO_CONTROL.CE" "RIO_CONTROL.OE" "RIO_CONTROL.ROM_RDY"))
+  (bus_alias "RIO_CONTROL" (members "RIO_CONTROL.A16" "RIO_CONTROL.A15" "RIO_CONTROL.A14" "RIO_CONTROL.WE" "RIO_CONTROL.CE" "RIO_CONTROL.OE" "RIO_CONTROL.ROM_RDY"))
   (junction (at 96.52 95.25) (diameter 0) (color 0 0 0 0)
     (uuid 4b1c1d6f-ad83-4737-901b-bd039fab76fb)
   )
@@ -680,6 +680,10 @@
     (stroke (width 0) (type default))
     (uuid 05a55008-59e3-4d57-bcca-72066cbe9723)
   )
+  (bus (pts (xy 55.88 149.86) (xy 62.23 149.86))
+    (stroke (width 0) (type default))
+    (uuid 05c3ccf9-2d02-4180-8050-a7ed34ffaa4f)
+  )
   (bus (pts (xy 113.03 109.22) (xy 113.03 111.76))
     (stroke (width 0) (type default))
     (uuid 072749cb-1a6b-4f0e-b05a-42f874a675aa)
@@ -710,6 +714,10 @@
   (wire (pts (xy 152.4 121.92) (xy 163.83 121.92))
     (stroke (width 0) (type default))
     (uuid 16f5a6c9-236f-4c72-8bef-60bf313ce71d)
+  )
+  (wire (pts (xy 55.88 121.92) (xy 62.23 121.92))
+    (stroke (width 0) (type default))
+    (uuid 17ecb579-a265-4d70-a413-0acac7dee86a)
   )
   (bus (pts (xy 166.37 53.34) (xy 166.37 55.88))
     (stroke (width 0) (type default))
@@ -855,6 +863,10 @@
     (stroke (width 0) (type default))
     (uuid 53f3f77b-ea25-40cc-90d8-3260868b0721)
   )
+  (wire (pts (xy 55.88 134.62) (xy 62.23 134.62))
+    (stroke (width 0) (type default))
+    (uuid 55cd21e9-5d3c-4fdf-abf2-94452a780570)
+  )
   (bus (pts (xy 96.52 129.54) (xy 96.52 132.08))
     (stroke (width 0) (type default))
     (uuid 573f7d3c-b928-4472-a2ab-c9a0a6389a5c)
@@ -884,6 +896,10 @@
   (wire (pts (xy 135.89 63.5) (xy 154.94 63.5))
     (stroke (width 0) (type default))
     (uuid 67451938-8181-4355-8d60-a42240130808)
+  )
+  (wire (pts (xy 55.88 142.24) (xy 62.23 142.24))
+    (stroke (width 0) (type default))
+    (uuid 681aff8e-f116-47ec-ac8d-645cf9864f5f)
   )
   (bus (pts (xy 87.63 63.5) (xy 87.63 66.04))
     (stroke (width 0) (type default))
@@ -928,6 +944,10 @@
     (uuid 83d1aeef-1c38-4ca1-8095-0eda2b0be0bf)
   )
 
+  (wire (pts (xy 55.88 127) (xy 62.23 127))
+    (stroke (width 0) (type default))
+    (uuid 851ece6f-b58b-4175-b58b-28b711600b7c)
+  )
   (wire (pts (xy 127 114.3) (xy 115.57 114.3))
     (stroke (width 0) (type default))
     (uuid 87fb786c-ee4e-42bd-bf99-93f8014b6b3e)
@@ -967,6 +987,10 @@
   (wire (pts (xy 110.49 48.26) (xy 90.17 48.26))
     (stroke (width 0) (type default))
     (uuid 958cf628-0b2d-4be6-b8d5-3e401af48fb8)
+  )
+  (wire (pts (xy 55.88 132.08) (xy 62.23 132.08))
+    (stroke (width 0) (type default))
+    (uuid 96d5ebcf-854f-46a8-a05c-2d6778aa2354)
   )
   (wire (pts (xy 110.49 35.56) (xy 90.17 35.56))
     (stroke (width 0) (type default))
@@ -1013,6 +1037,11 @@
     (stroke (width 0) (type default))
     (uuid b0a59920-94eb-4e24-b93f-af7ef178c23d)
   )
+
+  (wire (pts (xy 55.88 129.54) (xy 62.23 129.54))
+    (stroke (width 0) (type default))
+    (uuid b182dc70-382c-44e3-ab8b-63b65bad578b)
+  )
   (bus (pts (xy 166.37 119.38) (xy 166.37 121.92))
     (stroke (width 0) (type default))
     (uuid b1d6eb02-ac54-479f-99be-0d56eb3f0337)
@@ -1029,6 +1058,11 @@
   (bus (pts (xy 166.37 127) (xy 166.37 129.54))
     (stroke (width 0) (type default))
     (uuid b9263ff2-6962-4bca-b32a-4d88bbd27769)
+  )
+
+  (wire (pts (xy 55.88 137.16) (xy 62.23 137.16))
+    (stroke (width 0) (type default))
+    (uuid b99de784-16a2-4afd-94cc-0a6f6af131fa)
   )
   (bus (pts (xy 80.01 95.25) (xy 96.52 95.25))
     (stroke (width 0) (type default))
@@ -1052,6 +1086,11 @@
     (stroke (width 0) (type default))
     (uuid c256eb1a-f05d-43ee-9c3a-9b1c242a3b41)
   )
+  (bus (pts (xy 55.88 147.32) (xy 62.23 147.32))
+    (stroke (width 0) (type default))
+    (uuid c5a32848-10d1-4708-80ff-f16c5a093d9e)
+  )
+
   (wire (pts (xy 152.4 109.22) (xy 163.83 109.22))
     (stroke (width 0) (type default))
     (uuid c5b43e6c-45d4-43e8-9050-be1c18f7fd99)
@@ -1112,6 +1151,10 @@
     (uuid d41fb501-4fdf-4373-a1c6-e31c722c6c87)
   )
 
+  (wire (pts (xy 55.88 139.7) (xy 62.23 139.7))
+    (stroke (width 0) (type default))
+    (uuid d5a97ea2-844f-4bde-9c01-6bdcfdfc1297)
+  )
   (wire (pts (xy 127 109.22) (xy 115.57 109.22))
     (stroke (width 0) (type default))
     (uuid d61be84f-1e74-4fcf-ad0d-e2c0c642b8d2)
@@ -1146,6 +1189,10 @@
     (uuid e042776e-4aa2-4360-9416-a5daa951291f)
   )
 
+  (wire (pts (xy 55.88 124.46) (xy 62.23 124.46))
+    (stroke (width 0) (type default))
+    (uuid e0e444a8-bf1c-4919-9334-d21666030a10)
+  )
   (wire (pts (xy 135.89 60.96) (xy 154.94 60.96))
     (stroke (width 0) (type default))
     (uuid e211bf51-a388-42db-97ca-f15cafd4fdc2)
@@ -1153,6 +1200,10 @@
   (wire (pts (xy 175.26 137.16) (xy 179.07 137.16))
     (stroke (width 0) (type default))
     (uuid e472e3d8-2d4c-4948-b68f-ad0989182a33)
+  )
+  (bus (pts (xy 55.88 152.4) (xy 62.23 152.4))
+    (stroke (width 0) (type default))
+    (uuid ef3cb006-9cdd-49c2-9f8b-87c543f76ee7)
   )
   (bus (pts (xy 87.63 58.42) (xy 87.63 60.96))
     (stroke (width 0) (type default))
@@ -1417,6 +1468,10 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 2d131562-ea36-417c-b67b-2b2ba81c0c28)
   )
+  (hierarchical_label "Z80_D[0..7]" (shape bidirectional) (at 62.23 149.86 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 2ec0a25d-0525-4055-9e5b-9f027586c51b)
+  )
   (hierarchical_label "Z80_D[0..7]" (shape bidirectional) (at 113.03 104.14 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 418f200b-0e1e-4b3b-8550-a0fb552544a1)
@@ -1425,9 +1480,33 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 462415d4-7e3c-4dc7-a153-3a2c61d734ee)
   )
+  (hierarchical_label "Z80_A[0..15]" (shape input) (at 62.23 152.4 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 4d2720af-a89f-42a8-8b06-8f5040a9cf1a)
+  )
+  (hierarchical_label "Z80_HARDLOCK_RESET" (shape output) (at 62.23 137.16 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 63ed6485-a2a9-482d-a841-810f3c23071c)
+  )
   (hierarchical_label "Z80_A[0..15]" (shape input) (at 87.63 30.48 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 64f8e450-b3d4-43cb-a44d-476a413f5efe)
+  )
+  (hierarchical_label "CACHE_SEL_0" (shape output) (at 62.23 121.92 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 68192aa6-d221-415c-b784-821b27e97850)
+  )
+  (hierarchical_label "Z80_HARDLOCK_SET" (shape output) (at 62.23 139.7 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 78e053e8-2e09-464b-b7c1-a0a11ca2ade7)
+  )
+  (hierarchical_label "CACHE_SEL_1" (shape output) (at 62.23 124.46 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 7bb19761-344e-491a-9300-ce71a1f2449a)
+  )
+  (hierarchical_label "PERM_Z80_IORQ" (shape input) (at 62.23 142.24 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 8ef88552-efe9-4787-a22d-1cbe3ebb5848)
   )
   (hierarchical_label "Z80_HARDLOCK_RESET" (shape output) (at 210.82 129.54 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
@@ -1449,6 +1528,14 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid c48f3b7e-f78b-48b9-a788-f4420b63de18)
   )
+  (hierarchical_label "CACHE_SEL_2" (shape output) (at 62.23 127 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c8f1885f-6144-4f2f-a52a-fb70f3c2720d)
+  )
+  (hierarchical_label "CACHE_SEL_3" (shape output) (at 62.23 129.54 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c92e993c-381f-441e-9f1c-cbece2c97e5f)
+  )
   (hierarchical_label "CACHE_SEL_1" (shape output) (at 210.82 116.84 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid caf2ba01-9080-4ebd-b1df-f30413db4a1b)
@@ -1456,6 +1543,18 @@
   (hierarchical_label "WAIT_IO" (shape output) (at 210.82 127 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid eed15726-5e54-4563-ad70-cc421475f8cf)
+  )
+  (hierarchical_label "CACHE_DATASTATUS" (shape output) (at 62.23 132.08 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid f0d99dcc-5f3b-4c0e-b6db-f810d37de34c)
+  )
+  (hierarchical_label "{RIO_CONTROL}" (shape input) (at 62.23 147.32 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid fefb173a-adee-48a3-81b6-ac8cf494b904)
+  )
+  (hierarchical_label "WAIT_IO" (shape output) (at 62.23 134.62 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid ffe0a986-6726-471f-8f98-e8e8641faeec)
   )
 
   (symbol (lib_id "Device:R") (at 104.14 85.09 0) (mirror x) (unit 1)
@@ -1481,9 +1580,14 @@
           (reference "R5") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "R5") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "R1") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -1511,9 +1615,14 @@
           (reference "#PWR044") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR044") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR03") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -1560,14 +1669,16 @@
           (reference "RIO_DECODER?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "RIO-128K_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "RIO_DECODER?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "RIO_DECODER?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "RIO_DECODER1") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
           (reference "RIO_DECODER1") (unit 1)
         )
       )
@@ -1597,12 +1708,14 @@
           (reference "R?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "R?") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "R2") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "R6") (unit 1)
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1649,11 +1762,16 @@
           (reference "Z80-RIO_DATA?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "RIO-128K_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80-RIO_DATA?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "Z80-RIO_DATA1") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
           (reference "Z80-RIO_DATA1") (unit 1)
         )
       )
@@ -1682,9 +1800,14 @@
           (reference "#PWR047") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR047") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -1712,9 +1835,14 @@
           (reference "#PWR043") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR043") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR02") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR02") (unit 1)
         )
       )
     )
@@ -1742,12 +1870,14 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "#PWR025") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR07") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR048") (unit 1)
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1775,9 +1905,14 @@
           (reference "#PWR049") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR049") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR08") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -1836,8 +1971,13 @@
           (reference "RIO1") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "RIO1") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
           (reference "RIO1") (unit 1)
         )
       )
@@ -1866,12 +2006,14 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "#PWR025") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR04") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR045") (unit 1)
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -1899,9 +2041,14 @@
           (reference "#PWR042") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR042") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR01") (unit 1)
+        )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR01") (unit 1)
         )
       )
     )
@@ -1930,15 +2077,14 @@
           (reference "R?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
-          (reference "R?") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "R3") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "R6") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "R7") (unit 1)
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -1966,12 +2112,14 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "#PWR025") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR09") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR050") (unit 1)
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1999,10 +2147,83 @@
           (reference "#PWR046") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR046") (unit 1)
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+          (reference "#PWR05") (unit 1)
         )
+      )
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (sheet (at 31.75 118.11) (size 24.13 48.26) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 45e8b7e1-b3fc-453c-b7ce-421d4c8eb212)
+    (property "Sheetname" "RIO-128K_ZXspectrum_connector" (at 31.75 117.3984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "RIO-128K_ZXspectrum_connector.kicad_sch" (at 31.75 166.9546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (pin "CACHE_SEL_0" output (at 55.88 121.92 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 218188d5-b06f-4d76-9c96-8465ffdce3c4)
+    )
+    (pin "CACHE_SEL_2" output (at 55.88 127 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 25c0dc1d-21a2-4a56-bf3f-518fafba6c6d)
+    )
+    (pin "CACHE_SEL_1" output (at 55.88 124.46 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 2573c4e5-a22c-40bc-9467-17c82f003cb9)
+    )
+    (pin "{RIO_CONTROL}" input (at 55.88 147.32 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 16b0b7b5-5523-43c0-8b4f-48cd0c46df10)
+    )
+    (pin "CACHE_DATASTATUS" output (at 55.88 132.08 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid bbdd5640-6464-4018-895e-d3e7eae28691)
+    )
+    (pin "Z80_HARDLOCK_RESET" output (at 55.88 137.16 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid f5cd6247-6e97-4c27-96f2-79d24cfb465c)
+    )
+    (pin "Z80_HARDLOCK_SET" output (at 55.88 139.7 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid a3b4e9fa-5585-4f66-a200-748cdeabaef7)
+    )
+    (pin "CACHE_SEL_3" output (at 55.88 129.54 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 8cc411a8-83c7-4c1c-91c1-bd4e0a7171d3)
+    )
+    (pin "WAIT_IO" output (at 55.88 134.62 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid c1abc866-6229-4052-a7da-b1747875a1c4)
+    )
+    (pin "PERM_Z80_IORQ" input (at 55.88 142.24 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 507f95bc-3e75-4f5d-b7c5-193f4ee7be37)
+    )
+    (pin "Z80_D[0..7]" bidirectional (at 55.88 149.86 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 4c4955e9-a82c-4ee2-a3be-7b7959c53885)
+    )
+    (pin "Z80_A[0..15]" input (at 55.88 152.4 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 817fcb7a-6f7d-4a5f-9026-c801d7bcc039)
+    )
+    (instances
+      (project "RIO-128K_ZXspectrum"
+        (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af" (page "2"))
+      )
+      (project "RIO-128K_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f" (page "3"))
       )
     )
   )
