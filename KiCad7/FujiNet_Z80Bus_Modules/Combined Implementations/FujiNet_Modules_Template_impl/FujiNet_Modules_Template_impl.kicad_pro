@@ -411,7 +411,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "IOCACHE-128K_ZXspectrum.kicad_pro",
+    "filename": "FujiNet_Modules_Template_impl.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -1498,7 +1498,7 @@
   },
   "sheets": [
     [
-      "884c7ad2-5794-4c2b-8afa-8e07fcecd42b",
+      "532c0392-800e-45cc-8170-6d32f2390e83",
       ""
     ]
   ],

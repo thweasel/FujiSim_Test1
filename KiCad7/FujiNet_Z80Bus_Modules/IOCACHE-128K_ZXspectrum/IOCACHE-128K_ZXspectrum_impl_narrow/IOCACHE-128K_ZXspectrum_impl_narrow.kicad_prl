@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 45,
+    "active_layer": 40,
     "active_layer_preset": "All Layers",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -68,7 +68,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "RIO-128K_ZXspectrum_impl.kicad_prl",
+    "filename": "IOCACHE-128K_ZXspectrum_impl_narrow.kicad_prl",
     "version": 3
   },
   "project": {

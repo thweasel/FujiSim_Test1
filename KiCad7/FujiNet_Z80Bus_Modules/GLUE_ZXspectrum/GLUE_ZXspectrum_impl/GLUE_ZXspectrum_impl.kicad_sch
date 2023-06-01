@@ -2469,7 +2469,7 @@
     (property "Sheetname" "GLUE_ZXspectrum_connectors" (at 196.85 23.4184 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "../GLUE_ZXspectrum_connectors.kicad_sch" (at 196.85 132.6646 0)
+    (property "Sheetfile" "GLUE_ZXspectrum_connectors.kicad_sch" (at 196.85 132.6646 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (pin "PERM_Z80_IORQ" bidirectional (at 196.85 58.42 180)

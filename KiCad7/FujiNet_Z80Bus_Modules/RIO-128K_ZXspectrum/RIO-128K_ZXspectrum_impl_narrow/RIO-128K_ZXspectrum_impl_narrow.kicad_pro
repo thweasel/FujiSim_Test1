@@ -411,7 +411,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "IOCACHE-128K_ZXspectrum.kicad_pro",
+    "filename": "RIO-128K_ZXspectrum_impl_narrow.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -1447,7 +1447,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "FujiNet_Z80Bus_Reference.net",
-      "specctra_dsn": "FujiNet_Z80Bus_Reference.dsn",
+      "specctra_dsn": "RIO-128K_ZXspectrum_impl_narrow.dsn",
       "step": "",
       "vrml": ""
     },
@@ -1498,8 +1498,16 @@
   },
   "sheets": [
     [
-      "884c7ad2-5794-4c2b-8afa-8e07fcecd42b",
+      "532c0392-800e-45cc-8170-6d32f2390e83",
       ""
+    ],
+    [
+      "6c4c7762-a89c-4208-ab7a-060b74bdaf3f",
+      "RIO-128K_ZXspectrum"
+    ],
+    [
+      "0743bfea-26dd-4d80-befa-1700e82e454d",
+      "RIO-128K_ZXspectrum_connector"
     ]
   ],
   "text_variables": {}
