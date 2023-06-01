@@ -575,7 +575,14 @@
     },
     "net_colors": null,
     "netclass_assignments": {
-      "/ESP_SPI_INTERNAL": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.CE": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.MISO": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.MOSI": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.MR": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.OE": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.PL": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.SCK": "ESP_SPI_INTERNAL",
+      "/ESP_SPI_INT.STC": "ESP_SPI_INTERNAL",
       "/{ESP_SPI_INTERNAL}": "ESP_SPI_INTERNAL"
     },
     "netclass_patterns": [
@@ -1501,7 +1508,7 @@
   },
   "sheets": [
     [
-      "532c0392-800e-45cc-8170-6d32f2390e83",
+      "305950fb-ad82-4307-a4f5-bd7099e734b4",
       ""
     ]
   ],

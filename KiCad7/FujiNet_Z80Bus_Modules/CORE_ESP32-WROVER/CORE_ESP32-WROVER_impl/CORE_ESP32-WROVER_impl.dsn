@@ -1,0 +1,517 @@
+(pcb "/home/owen/Code/PlatformIO/FujiSim_Test1/KiCad7/FujiNet_Z80Bus_Modules/CORE_ESP32-WROVER/CORE_ESP32-WROVER_impl/CORE_ESP32-WROVER_impl.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "7.0.2")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  220000 -130000  120000 -130000  120000 -60000  220000 -60000
+            220000 -130000)
+    )
+    (keepout "" (polygon F.Cu 0  120000 -60000  220000 -60000  220000 -62000  120000 -62000
+            120000 -60000))
+    (keepout "" (polygon B.Cu 0  120000 -60000  220000 -60000  220000 -62000  120000 -62000
+            120000 -60000))
+    (keepout "" (polygon F.Cu 0  120000 -128000  220000 -128000  220000 -130000  120000 -130000
+            120000 -128000))
+    (keepout "" (polygon B.Cu 0  120000 -128000  220000 -128000  220000 -130000  120000 -130000
+            120000 -128000))
+    (keepout "" (polygon F.Cu 0  120000 -128000  120000 -62000  122000 -62000  122000 -128000
+            120000 -128000))
+    (keepout "" (polygon B.Cu 0  120000 -128000  120000 -62000  122000 -62000  122000 -128000
+            120000 -128000))
+    (keepout "" (polygon F.Cu 0  218000 -128000  218000 -62000  220000 -62000  220000 -128000
+            218000 -128000))
+    (keepout "" (polygon B.Cu 0  218000 -128000  218000 -62000  220000 -62000  220000 -128000
+            218000 -128000))
+    (via "Via[0-1]_1000:500_um")
+    (rule
+      (width 400)
+      (clearance 600.1)
+      (clearance 600.1 (type default_smd))
+      (clearance 150 (type smd_smd))
+    )
+  )
+  (placement
+    (component Connector_PinSocket_2.54mm:PinSocket_2x12_P2.54mm_Vertical
+      (place J1 209000.000000 -79460.000000 front 0.000000 (PN Conn_02x12_Counter_Clockwise))
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
+      (place R1 187000.000000 -117000.000000 front 180.000000 (PN 22K))
+      (place R2 176600.000000 -112000.000000 front 0.000000 (PN 22K))
+    )
+    (component Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical
+      (place EX_SPI1 129000.000000 -97920.000000 front 0.000000 (PN PinSocket_2.54mm))
+    )
+    (component "Diode_THT:D_T-1_P5.08mm_Horizontal"
+      (place D1 186460.000000 -84000.000000 front 0.000000 (PN 1N4148))
+      (place D4 192000.000000 -99000.000000 front 180.000000 (PN 1N4148))
+      (place D3 192000.000000 -105000.000000 front 180.000000 (PN 1N4148))
+      (place D2 192000.000000 -93000.000000 front 180.000000 (PN 1N4148))
+    )
+    (component "esp32-wrover:FREENOVE_ESP32-WROVER-DEV"
+      (place U1 153500.000000 -87970.000000 front 0.000000 (PN "FREENOVE_ESP32-WROVER-DEV"))
+    )
+  )
+  (library
+    (image Connector_PinSocket_2.54mm:PinSocket_2x12_P2.54mm_Vertical
+      (outline (path signal 100  -3810 1270  270 1270))
+      (outline (path signal 100  1270 -29210  -3810 -29210))
+      (outline (path signal 100  -3810 -29210  -3810 1270))
+      (outline (path signal 100  1270 270  1270 -29210))
+      (outline (path signal 100  270 1270  1270 270))
+      (outline (path signal 50  1760 1800  1760 -29700))
+      (outline (path signal 50  -4340 1800  1760 1800))
+      (outline (path signal 50  -4340 -29700  -4340 1800))
+      (outline (path signal 50  1760 -29700  -4340 -29700))
+      (outline (path signal 120  -1270 -1270  1330 -1270))
+      (outline (path signal 120  -3870 -29270  1330 -29270))
+      (outline (path signal 120  1330 -1270  1330 -29270))
+      (outline (path signal 120  -3870 1330  -3870 -29270))
+      (outline (path signal 120  0 1330  1330 1330))
+      (outline (path signal 120  -3870 1330  -1270 1330))
+      (outline (path signal 120  1330 1330  1330 0))
+      (outline (path signal 120  -1270 1330  -1270 -1270))
+      (pin Oval[A]Pad_1700x1700_um 24 -2540 -27940)
+      (pin Oval[A]Pad_1700x1700_um 23 0 -27940)
+      (pin Oval[A]Pad_1700x1700_um 22 -2540 -25400)
+      (pin Oval[A]Pad_1700x1700_um 21 0 -25400)
+      (pin Oval[A]Pad_1700x1700_um 20 -2540 -22860)
+      (pin Oval[A]Pad_1700x1700_um 19 0 -22860)
+      (pin Oval[A]Pad_1700x1700_um 18 -2540 -20320)
+      (pin Oval[A]Pad_1700x1700_um 17 0 -20320)
+      (pin Oval[A]Pad_1700x1700_um 16 -2540 -17780)
+      (pin Oval[A]Pad_1700x1700_um 15 0 -17780)
+      (pin Oval[A]Pad_1700x1700_um 14 -2540 -15240)
+      (pin Oval[A]Pad_1700x1700_um 13 0 -15240)
+      (pin Oval[A]Pad_1700x1700_um 12 -2540 -12700)
+      (pin Oval[A]Pad_1700x1700_um 11 0 -12700)
+      (pin Oval[A]Pad_1700x1700_um 10 -2540 -10160)
+      (pin Oval[A]Pad_1700x1700_um 9 0 -10160)
+      (pin Oval[A]Pad_1700x1700_um 8 -2540 -7620)
+      (pin Oval[A]Pad_1700x1700_um 7 0 -7620)
+      (pin Oval[A]Pad_1700x1700_um 6 -2540 -5080)
+      (pin Oval[A]Pad_1700x1700_um 5 0 -5080)
+      (pin Oval[A]Pad_1700x1700_um 4 -2540 -2540)
+      (pin Oval[A]Pad_1700x1700_um 3 0 -2540)
+      (pin Oval[A]Pad_1700x1700_um 2 -2540 0)
+      (pin Rect[A]Pad_1700x1700_um 1 0 0)
+    )
+    (image Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
+      (outline (path signal 100  10160 0  8230 0))
+      (outline (path signal 100  8230 -1250  8230 1250))
+      (outline (path signal 100  8230 1250  1930 1250))
+      (outline (path signal 100  1930 -1250  8230 -1250))
+      (outline (path signal 100  1930 1250  1930 -1250))
+      (outline (path signal 100  0 0  1930 0))
+      (outline (path signal 50  11210 -1500  11210 1500))
+      (outline (path signal 50  11210 1500  -1050 1500))
+      (outline (path signal 50  -1050 -1500  11210 -1500))
+      (outline (path signal 50  -1050 1500  -1050 -1500))
+      (outline (path signal 120  9120 0  8350 0))
+      (outline (path signal 120  8350 -1370  8350 1370))
+      (outline (path signal 120  8350 1370  1810 1370))
+      (outline (path signal 120  1810 -1370  8350 -1370))
+      (outline (path signal 120  1810 1370  1810 -1370))
+      (outline (path signal 120  1040 0  1810 0))
+      (pin Oval[A]Pad_1600x1600_um 2 10160 0)
+      (pin Round[A]Pad_1600_um 1 0 0)
+    )
+    (image Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical
+      (outline (path signal 120  -1330 -1270  -1330 -14030))
+      (outline (path signal 120  -1330 -1270  1330 -1270))
+      (outline (path signal 120  -1330 -14030  1330 -14030))
+      (outline (path signal 120  0 1330  1330 1330))
+      (outline (path signal 120  1330 1330  1330 0))
+      (outline (path signal 120  1330 -1270  1330 -14030))
+      (outline (path signal 50  -1800 1800  1750 1800))
+      (outline (path signal 50  -1800 -14450  -1800 1800))
+      (outline (path signal 50  1750 1800  1750 -14450))
+      (outline (path signal 50  1750 -14450  -1800 -14450))
+      (outline (path signal 100  -1270 1270  635 1270))
+      (outline (path signal 100  -1270 -13970  -1270 1270))
+      (outline (path signal 100  635 1270  1270 635))
+      (outline (path signal 100  1270 635  1270 -13970))
+      (outline (path signal 100  1270 -13970  -1270 -13970))
+      (pin Rect[A]Pad_1700x1700_um 1 0 0)
+      (pin Oval[A]Pad_1700x1700_um 2 0 -2540)
+      (pin Oval[A]Pad_1700x1700_um 3 0 -5080)
+      (pin Oval[A]Pad_1700x1700_um 4 0 -7620)
+      (pin Oval[A]Pad_1700x1700_um 5 0 -10160)
+      (pin Oval[A]Pad_1700x1700_um 6 0 -12700)
+    )
+    (image "Diode_THT:D_T-1_P5.08mm_Horizontal"
+      (outline (path signal 100  5080 0  4140 0))
+      (outline (path signal 100  4140 -1300  4140 1300))
+      (outline (path signal 100  4140 1300  940 1300))
+      (outline (path signal 100  1520 1300  1520 -1300))
+      (outline (path signal 100  1420 1300  1420 -1300))
+      (outline (path signal 100  1320 1300  1320 -1300))
+      (outline (path signal 100  940 -1300  4140 -1300))
+      (outline (path signal 100  940 1300  940 -1300))
+      (outline (path signal 100  0 0  940 0))
+      (outline (path signal 50  6330 -1550  6330 1550))
+      (outline (path signal 50  6330 1550  -1250 1550))
+      (outline (path signal 50  -1250 -1550  6330 -1550))
+      (outline (path signal 50  -1250 1550  -1250 -1550))
+      (outline (path signal 120  4260 -1420  4260 -1240))
+      (outline (path signal 120  4260 1420  4260 1240))
+      (outline (path signal 120  1540 1420  1540 -1420))
+      (outline (path signal 120  1420 1420  1420 -1420))
+      (outline (path signal 120  1300 1420  1300 -1420))
+      (outline (path signal 120  820 -1420  4260 -1420))
+      (outline (path signal 120  820 -1240  820 -1420))
+      (outline (path signal 120  820 1240  820 1420))
+      (outline (path signal 120  820 1420  4260 1420))
+      (pin Oval[A]Pad_2000x2000_um 2 5080 0)
+      (pin Rect[A]Pad_2000x2000_um 1 0 0)
+    )
+    (image "esp32-wrover:FREENOVE_ESP32-WROVER-DEV"
+      (outline (path signal 50  13950 -27820  -13950 -27820))
+      (outline (path signal 50  13950 25280  13950 -27820))
+      (outline (path signal 50  -13950 -27820  -13950 25280))
+      (outline (path signal 50  -13950 25280  13950 25280))
+      (outline (path signal 120  14200 25530  4733.33 25530))
+      (outline (path signal 120  14200 -28070  14200 25530))
+      (outline (path signal 120  4733.33 25170  -4733.33 25170))
+      (outline (path signal 120  4733.33 25530  4733.33 25170))
+      (outline (path signal 120  -4733.33 25170  -4733.33 25530))
+      (outline (path signal 120  -4733.33 25530  -14200 25530))
+      (outline (path signal 120  -14200 25530  -14200 -28070))
+      (outline (path signal 120  -14200 -28070  14200 -28070))
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 42 12500 24130)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 41 12500 21590)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 40 12500 19050)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 39 12500 16510)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 38 12500 13970)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 37 12500 11430)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 36 12500 8890)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 35 12500 6350)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 34 12500 3810)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 33 12500 1270)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 32 12500 -1270)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 31 12500 -3810)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 30 12500 -6350)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 29 12500 -8890)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 28 12500 -11430)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 27 12500 -13970)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 26 12500 -16510)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 25 12500 -19050)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 24 12500 -21590)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 23 12500 -24130)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 22 12500 -26670)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 21 -12500 -26670)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 20 -12500 -24130)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 19 -12500 -21590)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 18 -12500 -19050)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 17 -12500 -16510)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 16 -12500 -13970)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 15 -12500 -11430)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 14 -12500 -8890)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 13 -12500 -6350)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 12 -12500 -3810)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 11 -12500 -1270)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 10 -12500 1270)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 9 -12500 3810)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 8 -12500 6350)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 7 -12500 8890)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 6 -12500 11430)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 5 -12500 13970)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 4 -12500 16510)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 3 -12500 19050)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 2 -12500 21590)
+      (pin Oval[A]Pad_1800x2400_um (rotate 270) 1 -12500 24130)
+    )
+    (padstack Round[A]Pad_1600_um
+      (shape (circle F.Cu 1600))
+      (shape (circle B.Cu 1600))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1600x1600_um
+      (shape (path F.Cu 1600  0 0  0 0))
+      (shape (path B.Cu 1600  0 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1700x1700_um
+      (shape (path F.Cu 1700  0 0  0 0))
+      (shape (path B.Cu 1700  0 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1800x2400_um
+      (shape (path F.Cu 1800  0 -300  0 300))
+      (shape (path B.Cu 1800  0 -300  0 300))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2000x2000_um
+      (shape (path F.Cu 2000  0 0  0 0))
+      (shape (path B.Cu 2000  0 0  0 0))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_2000x2000_um
+      (shape (rect F.Cu -1000 -1000 1000 1000))
+      (shape (rect B.Cu -1000 -1000 1000 1000))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1700x1700_um
+      (shape (rect F.Cu -850 -850 850 850))
+      (shape (rect B.Cu -850 -850 850 850))
+      (attach off)
+    )
+    (padstack "Via[0-1]_1000:500_um"
+      (shape (circle F.Cu 1000))
+      (shape (circle B.Cu 1000))
+      (attach off)
+    )
+  )
+  (network
+    (net "Net-(D1-K)"
+      (pins D1-1 U1-35)
+    )
+    (net "/CORE_ESP32-WROVER/Z80_CONTROL.RESET"
+      (pins J1-4 D1-2)
+    )
+    (net "/CORE_ESP32-WROVER/Z80_CONTROL.WAIT"
+      (pins J1-3 D2-1)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_INT"
+      (pins R1-1 R2-2 D4-2 U1-3 D3-2 D2-2)
+    )
+    (net "/CORE_ESP32-WROVER/Z80_HARDLOCK_RESET"
+      (pins J1-22 D3-1)
+    )
+    (net "/CORE_ESP32-WROVER/Z80_CONTROL.BUSACK"
+      (pins J1-5 D4-1)
+    )
+    (net "/CORE_ESP32-WROVER/EX_SS"
+      (pins EX_SPI1-1 U1-25)
+    )
+    (net "/CORE_ESP32-WROVER/EX_SCK"
+      (pins EX_SPI1-2 U1-12)
+    )
+    (net "/CORE_ESP32-WROVER/EX_MISO"
+      (pins EX_SPI1-3 U1-13)
+    )
+    (net "/CORE_ESP32-WROVER/EX_MOSI"
+      (pins EX_SPI1-4 U1-15)
+    )
+    (net +5V
+      (pins J1-1 R1-2 EX_SPI1-5 U1-20)
+    )
+    (net GND
+      (pins J1-24 EX_SPI1-6 R2-1 U1-40 U1-34 U1-21)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_ROMSEL_1"
+      (pins J1-7 U1-22)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_ROMSEL_0"
+      (pins J1-8 U1-23)
+    )
+    (net "unconnected-(U1-+5v-Pad19)"
+      (pins U1-19)
+    )
+    (net "/CORE_ESP32-WROVER/SD_CARD_SS"
+      (pins U1-38 U1-24)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_WAIT_RESET"
+      (pins J1-2 U1-18)
+    )
+    (net "unconnected-(U1-GPIO10-Pad17)"
+      (pins U1-17)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_HARDLOCK"
+      (pins J1-21 U1-26)
+    )
+    (net "unconnected-(U1-GPIO9-Pad16)"
+      (pins U1-16)
+    )
+    (net "unconnected-(U1-GPIO0-Pad27)"
+      (pins U1-27)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_ROM_WR_PROTECT"
+      (pins J1-9 U1-28)
+    )
+    (net "unconnected-(U1-GND-Pad14)"
+      (pins U1-14)
+    )
+    (net "unconnected-(U1-GND-Pad29)"
+      (pins U1-29)
+    )
+    (net "unconnected-(U1-GND-Pad30)"
+      (pins U1-30)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.CE"
+      (pins J1-16 U1-31)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_PULSE"
+      (pins J1-6 U1-11)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.SCK"
+      (pins J1-19 U1-32)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.STC"
+      (pins J1-17 U1-10)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.MISO"
+      (pins J1-14 U1-33)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.PL"
+      (pins J1-15 U1-9)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.OE"
+      (pins J1-13 U1-8)
+    )
+    (net "unconnected-(U1-GPIO32-Pad7)"
+      (pins U1-7)
+    )
+    (net "unconnected-(U1-RX_GPIO3-Pad36)"
+      (pins U1-36)
+    )
+    (net "unconnected-(U1-GPIO35-Pad6)"
+      (pins U1-6)
+    )
+    (net "unconnected-(U1-TX_GPIO1-Pad37)"
+      (pins U1-37)
+    )
+    (net "unconnected-(U1-GPIO34-Pad5)"
+      (pins U1-5)
+    )
+    (net "/CORE_ESP32-WROVER/Z80_HARDLOCK"
+      (pins J1-23 U1-4)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.MOSI"
+      (pins J1-20 U1-39)
+    )
+    (net "unconnected-(U1-EN-Pad2)"
+      (pins U1-2)
+    )
+    (net "unconnected-(U1-3V3-Pad1)"
+      (pins U1-1)
+    )
+    (net "unconnected-(J1-Pin_10-Pad10)"
+      (pins J1-10)
+    )
+    (net "unconnected-(J1-Pin_11-Pad11)"
+      (pins J1-11)
+    )
+    (net "unconnected-(J1-Pin_12-Pad12)"
+      (pins J1-12)
+    )
+    (net "/CORE_ESP32-WROVER/ESP_SPI_INT.MR"
+      (pins J1-18)
+    )
+    (class kicad_default "" +5V "/CORE_ESP32-WROVER/ESP_HARDLOCK" "/CORE_ESP32-WROVER/ESP_INT"
+      "/CORE_ESP32-WROVER/ESP_PULSE" "/CORE_ESP32-WROVER/ESP_ROMSEL_0" "/CORE_ESP32-WROVER/ESP_ROMSEL_1"
+      "/CORE_ESP32-WROVER/ESP_ROM_WR_PROTECT" "/CORE_ESP32-WROVER/ESP_WAIT_RESET"
+      "/CORE_ESP32-WROVER/EX_MISO" "/CORE_ESP32-WROVER/EX_MOSI" "/CORE_ESP32-WROVER/EX_SCK"
+      "/CORE_ESP32-WROVER/EX_SS" "/CORE_ESP32-WROVER/SD_CARD_SS" "/CORE_ESP32-WROVER/Z80_CONTROL.BUSACK"
+      "/CORE_ESP32-WROVER/Z80_CONTROL.RESET" "/CORE_ESP32-WROVER/Z80_CONTROL.WAIT"
+      "/CORE_ESP32-WROVER/Z80_HARDLOCK" "/CORE_ESP32-WROVER/Z80_HARDLOCK_RESET"
+      GND "Net-(D1-K)" "unconnected-(J1-Pin_10-Pad10)" "unconnected-(J1-Pin_11-Pad11)"
+      "unconnected-(J1-Pin_12-Pad12)" "unconnected-(U1-+5v-Pad19)" "unconnected-(U1-3V3-Pad1)"
+      "unconnected-(U1-EN-Pad2)" "unconnected-(U1-GND-Pad14)" "unconnected-(U1-GND-Pad29)"
+      "unconnected-(U1-GND-Pad30)" "unconnected-(U1-GPIO0-Pad27)" "unconnected-(U1-GPIO10-Pad17)"
+      "unconnected-(U1-GPIO32-Pad7)" "unconnected-(U1-GPIO34-Pad5)" "unconnected-(U1-GPIO35-Pad6)"
+      "unconnected-(U1-GPIO9-Pad16)" "unconnected-(U1-RX_GPIO3-Pad36)" "unconnected-(U1-TX_GPIO1-Pad37)"
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class ESP_CONTROL
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class ESP_SPI_INTERNAL "/CORE_ESP32-WROVER/ESP_SPI_INT.CE" "/CORE_ESP32-WROVER/ESP_SPI_INT.MISO"
+      "/CORE_ESP32-WROVER/ESP_SPI_INT.MOSI" "/CORE_ESP32-WROVER/ESP_SPI_INT.MR"
+      "/CORE_ESP32-WROVER/ESP_SPI_INT.OE" "/CORE_ESP32-WROVER/ESP_SPI_INT.PL"
+      "/CORE_ESP32-WROVER/ESP_SPI_INT.SCK" "/CORE_ESP32-WROVER/ESP_SPI_INT.STC"
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class LOCAL_ADDRESS
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class LOCAL_CONTROL
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class LOCAL_DATA
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class Z80_ADDRESS
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class Z80_CONTROL
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+    (class Z80_DATA
+      (circuit
+        (use_via Via[0-1]_1000:500_um)
+      )
+      (rule
+        (width 400)
+        (clearance 600.1)
+      )
+    )
+  )
+  (wiring
+  )
+)
