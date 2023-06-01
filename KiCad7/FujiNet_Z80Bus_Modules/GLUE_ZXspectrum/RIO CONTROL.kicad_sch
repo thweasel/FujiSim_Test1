@@ -1503,6 +1503,7 @@
     )
   )
 
+
   (junction (at 232.41 121.92) (diameter 0) (color 0 0 0 0)
     (uuid 0bdca476-652b-4e7a-b060-1b85566682c2)
   )
@@ -1792,6 +1793,10 @@
     (stroke (width 0) (type default))
     (uuid e31e3644-76f8-493e-b03f-577202094307)
   )
+  (wire (pts (xy 214.63 152.4) (xy 214.63 155.575))
+    (stroke (width 0) (type default))
+    (uuid e3d083f6-6dda-4ac7-8b28-7e8887c0ecbe)
+  )
   (wire (pts (xy 91.44 72.39) (xy 134.62 72.39))
     (stroke (width 0) (type default))
     (uuid ed84e6b6-4276-4e11-93f9-0ebe5c27d929)
@@ -1823,6 +1828,10 @@
   (wire (pts (xy 134.62 152.4) (xy 92.71 152.4))
     (stroke (width 0) (type default))
     (uuid f9eb2c8e-549c-485c-ae50-e2a873a6599f)
+  )
+  (wire (pts (xy 214.63 109.22) (xy 214.63 111.76))
+    (stroke (width 0) (type default))
+    (uuid fd58518a-b326-4c9b-856f-f2274cda496d)
   )
 
   (text "There is room to improve on this decoding circuit" (at 40.64 24.13 0)
@@ -1987,7 +1996,7 @@
   (symbol (lib_id "74xx:74LS08") (at 73.66 46.99 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 087fe1d3-008b-4572-a776-64b2f4ab41ad)
-    (property "Reference" "IC4" (at 76.2 43.18 0)
+    (property "Reference" "IC9" (at 76.2 43.18 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 76.2 52.07 0)
@@ -2014,20 +2023,14 @@
     (pin "14" (uuid ed130823-5415-47f1-b62b-2838b76dae98))
     (pin "7" (uuid fd9dc1fe-0dda-4f67-8b1d-cb12dfca043b))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC4") (unit 2)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC4") (unit 2)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 2)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC9") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC6") (unit 2)
+          (reference "IC5") (unit 2)
         )
       )
     )
@@ -2036,7 +2039,7 @@
   (symbol (lib_id "74xx:74LS08") (at 69.85 152.4 0) (mirror x) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0a5033eb-a012-4795-b528-baaed629044f)
-    (property "Reference" "IC9" (at 72.39 147.32 0)
+    (property "Reference" "IC1" (at 72.39 147.32 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 72.39 147.32 0)
@@ -2063,56 +2066,44 @@
     (pin "14" (uuid dd256bde-4dfa-4153-8286-c3b56c689601))
     (pin "7" (uuid 55526ebd-68a2-4033-8e87-686f46c0a685))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC9") (unit 2)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC9") (unit 2)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 2)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC1") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC10") (unit 2)
+          (reference "IC4") (unit 2)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 214.63 111.76 0) (unit 1)
+  (symbol (lib_id "power:+5V") (at 214.63 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14cd0ce6-c906-4f55-9a1f-96927b1ae98c)
-    (property "Reference" "#PWR022" (at 214.63 115.57 0)
+    (property "Reference" "#PWR09" (at 214.63 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 214.63 107.95 0)
+    (property "Value" "+5V" (at 214.63 105.41 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 214.63 111.76 0)
+    (property "Footprint" "" (at 214.63 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 214.63 111.76 0)
+    (property "Datasheet" "" (at 214.63 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 54a62d2d-6fee-42cd-94a7-ba9278bc3bfc))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "#PWR09") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -2121,7 +2112,7 @@
   (symbol (lib_id "74xx:74HC04") (at 88.9 49.53 0) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5c2e4717-ca91-45d6-acb8-b82c0d3e60e0)
-    (property "Reference" "IC2" (at 92.71 46.99 0)
+    (property "Reference" "IC13" (at 92.71 46.99 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "7404N" (at 91.44 54.61 0)
@@ -2148,20 +2139,14 @@
     (pin "14" (uuid 7589ebd7-2668-4a4b-a479-0c207c8a5ace))
     (pin "7" (uuid 8d9fe9e6-6574-4f07-8a3a-66ef851ac7dc))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC2") (unit 5)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC2") (unit 5)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 5)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC13") (unit 5)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC1") (unit 5)
+          (reference "IC6") (unit 5)
         )
       )
     )
@@ -2170,7 +2155,7 @@
   (symbol (lib_id "74xx:74LS32") (at 83.82 72.39 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 68c0f558-a16b-4a30-a0e0-1b458fcf4469)
-    (property "Reference" "IC8" (at 87.63 68.58 0)
+    (property "Reference" "IC2" (at 87.63 68.58 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC32N" (at 86.36 67.31 0)
@@ -2197,20 +2182,14 @@
     (pin "14" (uuid ee53a770-85e8-4c0b-af83-221a2f2031be))
     (pin "7" (uuid 5b35208b-ce3e-423a-80e5-54abd41e5e6c))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC8") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC8") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC2") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC9") (unit 1)
+          (reference "IC3") (unit 1)
         )
       )
     )
@@ -2219,7 +2198,7 @@
   (symbol (lib_id "74xx:74LS08") (at 83.82 91.44 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6b4bf49f-8215-41d3-aa09-7904f0d6a382)
-    (property "Reference" "IC9" (at 87.63 86.36 0)
+    (property "Reference" "IC1" (at 87.63 86.36 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 86.36 86.36 0)
@@ -2246,20 +2225,14 @@
     (pin "14" (uuid db03457f-9639-4256-9876-ad6126a6aadb))
     (pin "7" (uuid fe97697a-ff60-4b5b-8132-25974d11464e))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC9") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC9") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC1") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC10") (unit 1)
+          (reference "IC4") (unit 1)
         )
       )
     )
@@ -2268,7 +2241,7 @@
   (symbol (lib_id "74xx:74LS08") (at 100.33 144.78 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7dd3f7f6-b863-4160-bf38-74912d323ca8)
-    (property "Reference" "IC9" (at 102.87 141.605 0)
+    (property "Reference" "IC1" (at 102.87 141.605 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 102.87 149.86 0)
@@ -2295,45 +2268,44 @@
     (pin "14" (uuid cf60726a-32f3-483f-a260-814ccf561f57))
     (pin "7" (uuid c035201a-46e5-422b-b606-33c1a585daec))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC9") (unit 3)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC9") (unit 3)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 3)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC1") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC10") (unit 3)
+          (reference "IC4") (unit 3)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 214.63 152.4 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 214.63 155.575 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 82b8f4b8-3926-4598-8b59-d5bf6aa389d9)
-    (property "Reference" "#PWR?" (at 214.63 158.75 0)
+    (property "Reference" "#PWR010" (at 214.63 161.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 214.63 157.48 0)
+    (property "Value" "GND" (at 214.63 160.655 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 214.63 152.4 0)
+    (property "Footprint" "" (at 214.63 155.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 214.63 152.4 0)
+    (property "Datasheet" "" (at 214.63 155.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid acd7fc90-c0c9-4d44-ad0a-0cb45fae2a94))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "#PWR010") (unit 1)
+        )
+      )
+      (project "GLUE_ZXspectrum"
+        (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -2342,7 +2314,7 @@
   (symbol (lib_id "power:+5V") (at 237.49 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8c640977-fb14-42a5-bc47-c5f43376e2a6)
-    (property "Reference" "#PWR022" (at 237.49 90.17 0)
+    (property "Reference" "#PWR011" (at 237.49 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 237.49 82.55 0)
@@ -2356,20 +2328,14 @@
     )
     (pin "1" (uuid cef015da-3f46-424a-a87b-ab5cb35ca8ba))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "#PWR022") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "#PWR011") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -2378,7 +2344,7 @@
   (symbol (lib_id "74xx:74LS32") (at 68.58 86.36 0) (mirror x) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a25e921a-cfe0-4e24-a73e-e1de69bf16e1)
-    (property "Reference" "IC8" (at 72.39 82.55 0)
+    (property "Reference" "IC2" (at 72.39 82.55 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC32N" (at 71.12 81.28 0)
@@ -2405,20 +2371,14 @@
     (pin "14" (uuid b0a221bd-511d-4d1e-8acf-5a9dc61b3d65))
     (pin "7" (uuid ffe8de75-a45a-4a19-a24f-1cff71607cc1))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC8") (unit 2)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC8") (unit 2)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 2)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC2") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC9") (unit 2)
+          (reference "IC3") (unit 2)
         )
       )
     )
@@ -2427,7 +2387,7 @@
   (symbol (lib_id "74xx:74LS32") (at 105.41 52.07 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bacbefd6-90c0-4903-b73a-b3bc2c93af40)
-    (property "Reference" "IC1" (at 107.95 46.99 0)
+    (property "Reference" "IC14" (at 107.95 46.99 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC32N" (at 107.95 57.15 0)
@@ -2454,20 +2414,14 @@
     (pin "14" (uuid ccfb2eff-e4f6-47b4-80f3-a8c91c5c12ca))
     (pin "7" (uuid 9db76692-a558-4d95-b34b-4f6d5cea4052))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC1") (unit 3)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC1") (unit 3)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 3)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC14") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC5") (unit 3)
+          (reference "IC7") (unit 3)
         )
       )
     )
@@ -2476,7 +2430,7 @@
   (symbol (lib_id "74xx:74LS32") (at 69.85 113.03 0) (mirror x) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bfb1fed5-6a0a-4557-91a2-608a73576211)
-    (property "Reference" "IC8" (at 72.39 107.95 0)
+    (property "Reference" "IC2" (at 72.39 107.95 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC32N" (at 72.39 107.95 0)
@@ -2503,20 +2457,14 @@
     (pin "14" (uuid 86f10d7d-013a-485f-8004-a8971305563d))
     (pin "7" (uuid 7d42fdf6-2766-4ef0-9f55-214c3723990b))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC8") (unit 4)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC8") (unit 4)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 4)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC2") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC9") (unit 4)
+          (reference "IC3") (unit 4)
         )
       )
     )
@@ -2547,15 +2495,9 @@
     (pin "8" (uuid b7906085-d56e-40ec-aa7b-8a24c31097c1))
     (pin "9" (uuid 555d682f-6380-4539-83aa-65c13fe1e1e6))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "RN1") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "RN1") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "RN?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2569,7 +2511,7 @@
   (symbol (lib_id "Device:D") (at 237.49 92.71 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d5da6867-a570-4f80-bbfe-7d9dd9faa758)
-    (property "Reference" "D16" (at 240.03 92.075 90)
+    (property "Reference" "D2" (at 240.03 92.075 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148" (at 240.03 94.615 90)
@@ -2584,20 +2526,14 @@
     (pin "1" (uuid c6043746-07d4-4656-afc9-0db484f3316f))
     (pin "2" (uuid 28feab97-c1d1-46db-9f69-a34a566e152b))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "D16") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "D16") (unit 1)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "D?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "D2") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "D4") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -2606,7 +2542,7 @@
   (symbol (lib_id "74xx:74HC244") (at 214.63 132.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e829edb2-fb5c-4087-b601-1acd71fcf9b5)
-    (property "Reference" "U?" (at 216.5859 113.03 0)
+    (property "Reference" "U1" (at 216.5859 113.03 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "74HC244N" (at 216.5859 115.57 0)
@@ -2639,9 +2575,9 @@
     (pin "8" (uuid 63a8fc5b-fe43-4e03-81b2-0a3ec1f4ba2a))
     (pin "9" (uuid 08ed14f7-f839-4f70-8797-828f2887f87a))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "U?") (unit 1)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "U1") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2655,7 +2591,7 @@
   (symbol (lib_id "74xx:74LS32") (at 69.85 132.08 0) (mirror x) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f2fbb162-ac18-4b98-a332-130f017f58a3)
-    (property "Reference" "IC8" (at 72.39 127 0)
+    (property "Reference" "IC2" (at 72.39 127 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC32N" (at 62.23 124.46 0)
@@ -2682,20 +2618,14 @@
     (pin "14" (uuid fa8ec880-edbe-467d-937d-2cfab62ad53b))
     (pin "7" (uuid fd9da449-06c3-4257-8600-7d25247c5dc5))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC8") (unit 3)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC8") (unit 3)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 3)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC2") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC9") (unit 3)
+          (reference "IC3") (unit 3)
         )
       )
     )
@@ -2704,7 +2634,7 @@
   (symbol (lib_id "74xx:74LS08") (at 85.09 139.7 0) (mirror x) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fbcc4aea-90d7-40db-8658-da022635fd15)
-    (property "Reference" "IC9" (at 87.63 134.62 0)
+    (property "Reference" "IC1" (at 87.63 134.62 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 87.63 134.62 0)
@@ -2731,20 +2661,14 @@
     (pin "14" (uuid e4f74601-e340-4f41-a7c4-a61fa9cb00aa))
     (pin "7" (uuid 4fe8bf43-50e9-476b-b66e-77b9980df981))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
-          (reference "IC9") (unit 4)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC9") (unit 4)
-        )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC?") (unit 4)
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+          (reference "IC1") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
-          (reference "IC10") (unit 4)
+          (reference "IC4") (unit 4)
         )
       )
     )
