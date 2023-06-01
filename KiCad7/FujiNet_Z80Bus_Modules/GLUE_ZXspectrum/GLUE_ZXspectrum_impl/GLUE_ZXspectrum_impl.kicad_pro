@@ -1447,7 +1447,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "FujiNet_Z80Bus_Reference.net",
-      "specctra_dsn": "FujiNet_Z80Bus_Reference.dsn",
+      "specctra_dsn": "GLUE_ZXspectrum_impl.dsn",
       "step": "",
       "vrml": ""
     },
@@ -1506,7 +1506,7 @@
       "GLUE_ZXspectrum"
     ],
     [
-      "38b7d772-cf38-4194-8e0b-ce11c179768d",
+      "7f8e656d-6a36-4e57-9118-6f179e2ce328",
       "GLUE_ZXspectrum_connectors"
     ],
     [

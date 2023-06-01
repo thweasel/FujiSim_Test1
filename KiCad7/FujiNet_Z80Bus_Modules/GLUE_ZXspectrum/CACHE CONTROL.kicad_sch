@@ -979,7 +979,7 @@
   (symbol (lib_id "74xx:74LS08") (at 147.32 115.57 0) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 166f9b1f-0557-4f3c-9820-ecf0483a07dc)
-    (property "Reference" "IC10" (at 149.86 111.76 0)
+    (property "Reference" "IC?" (at 149.86 111.76 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 149.86 120.65 0)
@@ -1008,7 +1008,7 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
-          (reference "IC10") (unit 4)
+          (reference "IC?") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum_impl"
@@ -1016,12 +1016,12 @@
           (reference "IC?") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC4") (unit 4)
+          (reference "IC8") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC8") (unit 4)
+          (reference "IC?") (unit 4)
         )
       )
     )
@@ -1030,7 +1030,7 @@
   (symbol (lib_id "74xx:74LS08") (at 147.32 104.14 0) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 293c6473-a32c-4bbd-8e1d-8afbadc1f321)
-    (property "Reference" "IC10" (at 149.86 100.33 0)
+    (property "Reference" "IC?" (at 149.86 100.33 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 149.86 109.22 0)
@@ -1059,7 +1059,7 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
-          (reference "IC10") (unit 3)
+          (reference "IC?") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum_impl"
@@ -1067,12 +1067,12 @@
           (reference "IC?") (unit 3)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC4") (unit 3)
+          (reference "IC8") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC8") (unit 3)
+          (reference "IC?") (unit 3)
         )
       )
     )
@@ -1081,7 +1081,7 @@
   (symbol (lib_id "74xx:74LS32") (at 147.32 69.85 0) (mirror x) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid cd0f5e80-6e4c-404a-afdd-e96d8b3f8213)
-    (property "Reference" "IC1" (at 149.86 64.77 0)
+    (property "Reference" "IC?" (at 149.86 64.77 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC32N" (at 149.86 64.77 0)
@@ -1110,7 +1110,7 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
-          (reference "IC1") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum_impl"
@@ -1118,12 +1118,12 @@
           (reference "IC?") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC14") (unit 2)
+          (reference "IC5") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC7") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
     )
@@ -1132,7 +1132,7 @@
   (symbol (lib_id "74xx:74LS08") (at 147.32 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f58317c1-1da2-4ce0-8722-028b63e1146a)
-    (property "Reference" "IC10" (at 149.86 77.47 0)
+    (property "Reference" "IC?" (at 149.86 77.47 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 149.86 86.36 0)
@@ -1161,7 +1161,7 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
-          (reference "IC10") (unit 1)
+          (reference "IC?") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum_impl"
@@ -1169,12 +1169,12 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC4") (unit 1)
+          (reference "IC8") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC8") (unit 1)
+          (reference "IC?") (unit 1)
         )
       )
     )
@@ -1183,7 +1183,7 @@
   (symbol (lib_id "74xx:74LS08") (at 147.32 92.71 0) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f7d88db1-d8c8-44ca-807b-a341f04bf8f1)
-    (property "Reference" "IC10" (at 149.86 88.9 0)
+    (property "Reference" "IC?" (at 149.86 88.9 0)
       (effects (font (size 1.4986 1.4986)) (justify left bottom))
     )
     (property "Value" "74HC08N" (at 149.86 97.79 0)
@@ -1212,7 +1212,7 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/344f9fe5-9c02-46d6-8016-81558291d94c"
-          (reference "IC10") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum_impl"
@@ -1220,12 +1220,12 @@
           (reference "IC?") (unit 2)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC4") (unit 2)
+          (reference "IC8") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5/93c14a9e-4a71-4950-b006-2a9affe18130"
-          (reference "IC8") (unit 2)
+          (reference "IC?") (unit 2)
         )
       )
     )
