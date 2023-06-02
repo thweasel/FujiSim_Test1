@@ -1464,7 +1464,7 @@
   (symbol (lib_id "power:+5V") (at 160.02 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ffc7539-debd-4725-885e-14330e4f3df6)
-    (property "Reference" "#PWR010" (at 160.02 34.29 0)
+    (property "Reference" "#PWR039" (at 160.02 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 160.02 26.67 0)
@@ -1478,9 +1478,9 @@
     )
     (pin "1" (uuid 3f1b483e-fa7d-4e9a-b734-e28cd1d3f745))
     (instances
-      (project "RIO-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0743bfea-26dd-4d80-befa-1700e82e454d"
-          (reference "#PWR010") (unit 1)
+      (project "ZXspectrum_Concept"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
+          (reference "#PWR039") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1494,7 +1494,7 @@
   (symbol (lib_id "power:GND") (at 160.02 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5cd3a560-78b5-4262-864d-967ec420e628)
-    (property "Reference" "#PWR011" (at 160.02 86.36 0)
+    (property "Reference" "#PWR040" (at 160.02 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 85.09 0)
@@ -1508,9 +1508,9 @@
     )
     (pin "1" (uuid 688de6bb-1c9f-4f08-b8c3-1af822e0fa09))
     (instances
-      (project "RIO-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0743bfea-26dd-4d80-befa-1700e82e454d"
-          (reference "#PWR011") (unit 1)
+      (project "ZXspectrum_Concept"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
+          (reference "#PWR040") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1524,11 +1524,11 @@
   (symbol (lib_id "Connector:Conn_01x18_Socket") (at 151.13 54.61 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6fa93c22-d625-4eed-9097-2b0443df13aa)
-    (property "Reference" "J2" (at 149.86 55.245 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+    (property "Reference" "RIO2" (at 151.765 30.48 0)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x18_Socket" (at 149.86 57.785 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+    (property "Value" "Conn_01x18_Socket" (at 151.765 33.02 0)
+      (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x18_P2.54mm_Vertical" (at 151.13 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1555,9 +1555,9 @@
     (pin "8" (uuid db9a0427-cdc9-4777-9978-2b8be9e587e5))
     (pin "9" (uuid 8a8418fb-35c2-4c9c-9e5f-30eebc1d9e5d))
     (instances
-      (project "RIO-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0743bfea-26dd-4d80-befa-1700e82e454d"
-          (reference "J2") (unit 1)
+      (project "ZXspectrum_Concept"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
+          (reference "RIO2") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1571,7 +1571,7 @@
   (symbol (lib_id "Connector:Conn_01x24_Socket") (at 90.17 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea1be596-9ede-4b73-a0ff-4c6e6dbeb30b)
-    (property "Reference" "J1" (at 91.44 64.135 0)
+    (property "Reference" "RIO1" (at 91.44 64.135 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x24_Socket" (at 91.44 66.675 0)
@@ -1608,9 +1608,9 @@
     (pin "8" (uuid 7cf8f96d-85b6-4363-b6e8-648db5e90fc9))
     (pin "9" (uuid 68b3e2df-5318-4541-9d6b-9e44cb7d44d6))
     (instances
-      (project "RIO-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0743bfea-26dd-4d80-befa-1700e82e454d"
-          (reference "J1") (unit 1)
+      (project "ZXspectrum_Concept"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
+          (reference "RIO1") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
