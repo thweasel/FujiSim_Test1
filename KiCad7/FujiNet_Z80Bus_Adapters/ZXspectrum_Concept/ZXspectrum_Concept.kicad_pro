@@ -601,7 +601,6 @@
       "/CACHE connector/LOCAL_D6": "LOCAL_DATA",
       "/CACHE connector/LOCAL_D7": "LOCAL_DATA",
       "/CACHE connector/LOCAL_D[0..7]": "LOCAL_DATA",
-      "/CORE/<NO NET>": "ESP_SPI_INTERNAL",
       "/CORE/ESP_SPI_INT.CE": "ESP_SPI_INTERNAL",
       "/CORE/ESP_SPI_INT.MISO": "ESP_SPI_INTERNAL",
       "/CORE/ESP_SPI_INT.MOSI": "ESP_SPI_INTERNAL",

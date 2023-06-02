@@ -1336,7 +1336,7 @@
     )
   )
 
-  (bus_alias "ESP_SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
+  (bus_alias "SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
   (bus_alias "ESP_CONTROL" (members "ESP_CONTROL.RD" "ESP_CONTROL.WR" "ESP_CONTROL.IORQ" "ESP_CONTROL.MEMRQ" "ESP_CONTROL.BUSRQ" "ESP_CONTROL.WAIT" "ESP_CONTROL.ROMCS" "ESP_CONTROL.NMI"))
   (junction (at 168.91 128.27) (diameter 0) (color 0 0 0 0)
     (uuid 045ed54d-c711-4f00-b83f-931a3b481372)
@@ -4102,7 +4102,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid b5793797-94d2-4809-9e8f-281d6d953c8c)
   )
-  (hierarchical_label "{ESP_SPI_INTERNAL}" (shape input) (at 100.33 191.77 90) (fields_autoplaced)
+  (hierarchical_label "{SPI_INTERNAL}" (shape input) (at 100.33 191.77 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid bf00ed1c-c53d-40d6-8ca0-72545eaec2fd)
   )
@@ -4426,7 +4426,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC4") (unit 1)
+          (reference "Local_data.out1") (unit 1)
         )
       )
     )
@@ -4435,7 +4435,7 @@
   (symbol (lib_id "74xx:74HC595") (at 212.09 134.62 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000ac0a99d9)
-    (property "Reference" "IC?" (at 215.9 133.35 90)
+    (property "Reference" "IC?" (at 213.36 133.35 90)
       (effects (font (size 1.4986 1.4986)))
     )
     (property "Value" "74595N" (at 229.87 142.24 0)
@@ -4474,7 +4474,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC9") (unit 1)
+          (reference "Local_addr_l.out1") (unit 1)
         )
       )
     )
@@ -4483,7 +4483,7 @@
   (symbol (lib_id "74xx:74HC595") (at 252.73 134.62 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-0000ac0a99df)
-    (property "Reference" "IC?" (at 255.27 133.35 90)
+    (property "Reference" "IC?" (at 254 133.35 90)
       (effects (font (size 1.4986 1.4986)))
     )
     (property "Value" "74595N" (at 270.51 142.24 0)
@@ -4522,7 +4522,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC10") (unit 1)
+          (reference "Local_addr_h.out1") (unit 1)
         )
       )
     )
@@ -4570,7 +4570,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC1") (unit 1)
+          (reference "Local_data.in1") (unit 1)
         )
       )
     )
@@ -4618,7 +4618,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC3") (unit 1)
+          (reference "Z80_control.in1") (unit 1)
         )
       )
     )
@@ -4666,7 +4666,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC5") (unit 1)
+          (reference "Local_addr-l.in1") (unit 1)
         )
       )
     )
@@ -4714,7 +4714,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC8") (unit 1)
+          (reference "Local_addr-h.in1") (unit 1)
         )
       )
     )
@@ -4762,7 +4762,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC6") (unit 1)
+          (reference "ESP_Control1") (unit 1)
         )
       )
     )
@@ -4812,7 +4812,7 @@
   (symbol (lib_id "74xx:74HC244") (at 58.42 144.78 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 14bd3044-098e-4a9c-95f1-cdbb43e1c400)
-    (property "Reference" "IC?" (at 64.77 147.32 90)
+    (property "Reference" "IC?" (at 58.42 146.05 90)
       (effects (font (size 1.4986 1.4986)))
     )
     (property "Value" "74HC244N" (at 45.72 137.16 0)
@@ -4855,7 +4855,7 @@
           (reference "IC?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC2") (unit 1)
+          (reference "Control_selection1") (unit 1)
         )
       )
     )
@@ -4932,7 +4932,7 @@
           (reference "IC?") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC7") (unit 1)
+          (reference "IC1") (unit 1)
         )
       )
     )
@@ -5098,7 +5098,7 @@
           (reference "IC?") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC7") (unit 2)
+          (reference "IC1") (unit 2)
         )
       )
     )
@@ -5467,7 +5467,7 @@
           (reference "IC?") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC7") (unit 4)
+          (reference "IC1") (unit 4)
         )
       )
     )
@@ -5603,7 +5603,7 @@
           (reference "IC?") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC7") (unit 3)
+          (reference "IC1") (unit 3)
         )
       )
     )
@@ -5649,7 +5649,7 @@
           (reference "IC?") (unit 4)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/114594a1-f6a8-44ff-8b97-ba4e59160a11"
-          (reference "IC7") (unit 5)
+          (reference "IC1") (unit 5)
         )
       )
     )
