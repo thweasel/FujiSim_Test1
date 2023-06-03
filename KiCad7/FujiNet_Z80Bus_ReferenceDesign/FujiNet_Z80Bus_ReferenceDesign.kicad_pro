@@ -575,7 +575,6 @@
     },
     "net_colors": null,
     "netclass_assignments": {
-      "/CORE_ESP32-WROVER/<NO NET>": "ESP_SPI_INTERNAL",
       "/CORE_ESP32-WROVER/ESP_SPI_INT.CE": "ESP_SPI_INTERNAL",
       "/CORE_ESP32-WROVER/ESP_SPI_INT.MISO": "ESP_SPI_INTERNAL",
       "/CORE_ESP32-WROVER/ESP_SPI_INT.MOSI": "ESP_SPI_INTERNAL",
@@ -1614,24 +1613,24 @@
       "GLUE_ZXspectrum"
     ],
     [
-      "470a76e9-5ba5-4732-b286-3d7fc5c85df9",
-      "RIO CONTROL"
+      "71c374ed-cd87-4870-ac09-67731302cbf8",
+      "SPI-Z080-BUS_write"
     ],
     [
-      "6bcd45ec-1810-4278-8058-96e26ec9b5f3",
-      "Z80 BUS CONTROL"
+      "28782bf7-67b4-4359-a03a-a82310c7ca9d",
+      "SPI-Z080-BUS_read"
+    ],
+    [
+      "470a76e9-5ba5-4732-b286-3d7fc5c85df9",
+      "RIO CONTROL"
     ],
     [
       "93c14a9e-4a71-4950-b006-2a9affe18130",
       "CACHE CONTROL"
     ],
     [
-      "15e820a2-e197-4611-93bc-baa539eede01",
-      "GLUE_ZXspectrum_connectors"
-    ],
-    [
-      "38b7d772-cf38-4194-8e0b-ce11c179768d",
-      "GLUE_ZXspectrum_connectors"
+      "6bcd45ec-1810-4278-8058-96e26ec9b5f3",
+      "Z80 BUS CONTROL"
     ]
   ],
   "text_variables": {}

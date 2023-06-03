@@ -1263,9 +1263,9 @@
           (reference "IC4") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "IC2") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "IC4") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1313,12 +1313,12 @@
           (reference "IC?") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "IC1") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "IC?") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1352,9 +1352,9 @@
           (reference "R8") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "R1") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "R8") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1387,9 +1387,9 @@
           (reference "#PWR051") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR01") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR051") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1422,9 +1422,9 @@
           (reference "#PWR054") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR04") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR054") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1457,9 +1457,9 @@
           (reference "#PWR053") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR03") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR053") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1523,8 +1523,8 @@
           (reference "CACHE1") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
           (reference "CACHE1") (unit 1)
         )
       )
@@ -1558,9 +1558,9 @@
           (reference "#PWR052") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR02") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR052") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1593,9 +1593,9 @@
           (reference "#PWR056") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR06") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR056") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1628,9 +1628,9 @@
           (reference "#PWR055") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR05") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR055") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
@@ -1663,9 +1663,9 @@
           (reference "#PWR057") (unit 1)
         )
       )
-      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/08bc53b1-14e5-4b8e-bfd9-c5fcedeb25dd"
-          (reference "#PWR07") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ae2cbb6b"
+          (reference "#PWR057") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"

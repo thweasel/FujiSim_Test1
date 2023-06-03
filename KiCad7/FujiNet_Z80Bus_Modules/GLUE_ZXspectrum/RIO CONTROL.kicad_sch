@@ -2048,8 +2048,8 @@
     (pin "14" (uuid ed130823-5415-47f1-b62b-2838b76dae98))
     (pin "7" (uuid fd9dc1fe-0dda-4f67-8b1d-cb12dfca043b))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC6") (unit 2)
         )
       )
@@ -2091,8 +2091,8 @@
     (pin "14" (uuid dd256bde-4dfa-4153-8286-c3b56c689601))
     (pin "7" (uuid 55526ebd-68a2-4033-8e87-686f46c0a685))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC4") (unit 2)
         )
       )
@@ -2121,8 +2121,8 @@
     )
     (pin "1" (uuid 54a62d2d-6fee-42cd-94a7-ba9278bc3bfc))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "#PWR0104") (unit 1)
         )
       )
@@ -2164,8 +2164,8 @@
     (pin "14" (uuid 7589ebd7-2668-4a4b-a479-0c207c8a5ace))
     (pin "7" (uuid 8d9fe9e6-6574-4f07-8a3a-66ef851ac7dc))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC1") (unit 6)
         )
       )
@@ -2207,8 +2207,8 @@
     (pin "14" (uuid ee53a770-85e8-4c0b-af83-221a2f2031be))
     (pin "7" (uuid 5b35208b-ce3e-423a-80e5-54abd41e5e6c))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC5") (unit 1)
         )
       )
@@ -2250,8 +2250,8 @@
     (pin "14" (uuid db03457f-9639-4256-9876-ad6126a6aadb))
     (pin "7" (uuid fe97697a-ff60-4b5b-8132-25974d11464e))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC6") (unit 1)
         )
       )
@@ -2293,8 +2293,8 @@
     (pin "14" (uuid cf60726a-32f3-483f-a260-814ccf561f57))
     (pin "7" (uuid c035201a-46e5-422b-b606-33c1a585daec))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC4") (unit 3)
         )
       )
@@ -2323,8 +2323,8 @@
     )
     (pin "1" (uuid acd7fc90-c0c9-4d44-ad0a-0cb45fae2a94))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "#PWR0105") (unit 1)
         )
       )
@@ -2353,8 +2353,8 @@
     )
     (pin "1" (uuid cef015da-3f46-424a-a87b-ab5cb35ca8ba))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "#PWR0103") (unit 1)
         )
       )
@@ -2396,8 +2396,8 @@
     (pin "14" (uuid b0a221bd-511d-4d1e-8acf-5a9dc61b3d65))
     (pin "7" (uuid ffe8de75-a45a-4a19-a24f-1cff71607cc1))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC2") (unit 4)
         )
       )
@@ -2439,8 +2439,8 @@
     (pin "14" (uuid ccfb2eff-e4f6-47b4-80f3-a8c91c5c12ca))
     (pin "7" (uuid 9db76692-a558-4d95-b34b-4f6d5cea4052))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC7") (unit 3)
         )
       )
@@ -2482,8 +2482,8 @@
     (pin "14" (uuid 86f10d7d-013a-485f-8004-a8971305563d))
     (pin "7" (uuid 7d42fdf6-2766-4ef0-9f55-214c3723990b))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC5") (unit 4)
         )
       )
@@ -2520,8 +2520,8 @@
     (pin "8" (uuid b7906085-d56e-40ec-aa7b-8a24c31097c1))
     (pin "9" (uuid 555d682f-6380-4539-83aa-65c13fe1e1e6))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "RN1") (unit 1)
         )
       )
@@ -2551,8 +2551,8 @@
     (pin "1" (uuid c6043746-07d4-4656-afc9-0db484f3316f))
     (pin "2" (uuid 28feab97-c1d1-46db-9f69-a34a566e152b))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "D2") (unit 1)
         )
       )
@@ -2600,8 +2600,8 @@
     (pin "8" (uuid 63a8fc5b-fe43-4e03-81b2-0a3ec1f4ba2a))
     (pin "9" (uuid 08ed14f7-f839-4f70-8797-828f2887f87a))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "U1") (unit 1)
         )
       )
@@ -2643,8 +2643,8 @@
     (pin "14" (uuid fa8ec880-edbe-467d-937d-2cfab62ad53b))
     (pin "7" (uuid fd9da449-06c3-4257-8600-7d25247c5dc5))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC5") (unit 3)
         )
       )
@@ -2686,8 +2686,8 @@
     (pin "14" (uuid e4f74601-e340-4f41-a7c4-a61fa9cb00aa))
     (pin "7" (uuid 4fe8bf43-50e9-476b-b66e-77b9980df981))
     (instances
-      (project "GLUE_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407/470a76e9-5ba5-4732-b286-3d7fc5c85df9"
           (reference "IC4") (unit 4)
         )
       )

@@ -1481,9 +1481,9 @@
           (reference "R5") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "R1") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "R5") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1516,9 +1516,9 @@
           (reference "#PWR044") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR03") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR044") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1570,12 +1570,12 @@
           (reference "RIO_DECODER?") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "RIO_DECODER?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "RIO_DECODER1") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "RIO_DECODER?") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1609,9 +1609,9 @@
           (reference "R?") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "R2") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "R?") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1663,12 +1663,12 @@
           (reference "Z80-RIO_DATA?") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80-RIO_DATA?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "Z80-RIO_DATA1") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "Z80-RIO_DATA?") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1701,9 +1701,9 @@
           (reference "#PWR047") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR06") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR047") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1736,9 +1736,9 @@
           (reference "#PWR043") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR02") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR043") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1771,9 +1771,9 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR07") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1806,9 +1806,9 @@
           (reference "#PWR049") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR08") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR049") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1872,8 +1872,8 @@
           (reference "RIO1") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
           (reference "RIO1") (unit 1)
         )
       )
@@ -1907,9 +1907,9 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR04") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1942,9 +1942,9 @@
           (reference "#PWR042") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR01") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR042") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1978,9 +1978,9 @@
           (reference "R?") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "R3") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "R?") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -2013,9 +2013,9 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR09") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR025") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -2048,9 +2048,9 @@
           (reference "#PWR046") (unit 1)
         )
       )
-      (project "RIO-128K_ZXspectrum_impl"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6c4c7762-a89c-4208-ab7a-060b74bdaf3f"
-          (reference "#PWR05") (unit 1)
+      (project "FujiNet_Z80Bus_ReferenceDesign"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ad721c5e"
+          (reference "#PWR046") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
