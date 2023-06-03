@@ -1464,7 +1464,7 @@
   (symbol (lib_id "power:+5V") (at 160.02 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ffc7539-debd-4725-885e-14330e4f3df6)
-    (property "Reference" "#PWR039" (at 160.02 34.29 0)
+    (property "Reference" "#PWR0102" (at 160.02 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 160.02 26.67 0)
@@ -1478,9 +1478,9 @@
     )
     (pin "1" (uuid 3f1b483e-fa7d-4e9a-b734-e28cd1d3f745))
     (instances
-      (project "ZXspectrum_Concept"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1494,7 +1494,7 @@
   (symbol (lib_id "power:GND") (at 160.02 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5cd3a560-78b5-4262-864d-967ec420e628)
-    (property "Reference" "#PWR040" (at 160.02 86.36 0)
+    (property "Reference" "#PWR0101" (at 160.02 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 85.09 0)
@@ -1508,9 +1508,9 @@
     )
     (pin "1" (uuid 688de6bb-1c9f-4f08-b8c3-1af822e0fa09))
     (instances
-      (project "ZXspectrum_Concept"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
@@ -1555,7 +1555,7 @@
     (pin "8" (uuid db9a0427-cdc9-4777-9978-2b8be9e587e5))
     (pin "9" (uuid 8a8418fb-35c2-4c9c-9e5f-30eebc1d9e5d))
     (instances
-      (project "ZXspectrum_Concept"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
           (reference "RIO2") (unit 1)
         )
@@ -1608,7 +1608,7 @@
     (pin "8" (uuid 7cf8f96d-85b6-4363-b6e8-648db5e90fc9))
     (pin "9" (uuid 68b3e2df-5318-4541-9d6b-9e44cb7d44d6))
     (instances
-      (project "ZXspectrum_Concept"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
           (reference "RIO1") (unit 1)
         )

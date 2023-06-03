@@ -1325,8 +1325,8 @@
   )
 
   (bus_alias "Z80_BUS_CONTROL" (members "Z80_BUS_CONTROL.Z80_DATA_DIR" "Z80_BUS_CONTROL.Z80_DATA_OE" "Z80_BUS_CONTROL.Z80_ADD_DIR" "Z80_BUS_CONTROL.Z80_ADD_OE"))
-  (bus_alias "CACHE_CONTROL" (members "CACHE_CONTROL.A16" "CACHE_CONTROL.WE" "CACHE_CONTROL.OE" "CACHE_CONTROL.CS" "CACHE_CONTROL.DATASTATUS+PERM_Z80_IORQ"))
   (bus_alias "RIO_CONTROL" (members "RIO_CONTROL.A16" "RIO_CONTROL.A15" "RIO_CONTROL.A14" "RIO_CONTROL.WE" "RIO_CONTROL.CE" "RIO_CONTROL.OE" "RIO_CONTROL.ROM_RDY"))
+  (bus_alias "CACHE_CONTROL" (members "CACHE_CONTROL.A16" "CACHE_CONTROL.WE" "CACHE_CONTROL.OE" "CACHE_CONTROL.CS" "CACHE_CONTROL.DATASTATUS+PERM_Z80_IORQ"))
   (junction (at 120.65 124.46) (diameter 0) (color 0 0 0 0)
     (uuid 5e192ff2-9030-4c6f-93ce-6d0fdb18e4e2)
   )
@@ -1912,12 +1912,12 @@
     (pin "14" (uuid 4db9fe00-8f09-4a52-93a9-ec71f2160170))
     (pin "7" (uuid bb909ea1-36a5-4e1d-a3d0-cb60a4242bcb))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 2)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 2)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC1") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1958,12 +1958,12 @@
     (pin "14" (uuid 78fd4612-e1de-406a-a133-85837a78be59))
     (pin "7" (uuid cddd6ce7-81a0-4bde-a172-80cfeb4b4dcc))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC1") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -1991,8 +1991,8 @@
     )
     (pin "1" (uuid 3801075d-5498-452b-b1bc-b7e7f4b8b9ea))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
           (reference "#PWR02") (unit 1)
         )
       )
@@ -2022,12 +2022,12 @@
     (pin "1" (uuid eaf609dc-ed2b-4c9c-8389-16d0ef485c2b))
     (pin "2" (uuid 7e3c35b7-fdfa-4654-8832-cd18e657f716))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "R?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "R?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "R4") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2068,12 +2068,12 @@
     (pin "14" (uuid b06f78dd-9d91-4400-b795-dbc949b39bed))
     (pin "7" (uuid 9824d8a9-2e28-477d-8e85-aea1a557e4c7))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 4)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 4)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC1") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2114,12 +2114,12 @@
     (pin "14" (uuid 58d45af9-0884-4cd4-beae-a920d31cb083))
     (pin "7" (uuid d200c9d5-d28c-4076-919a-bd37f9e12583))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC4") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2160,12 +2160,12 @@
     (pin "14" (uuid f4857b08-d595-4daf-ba6c-af9ab3fd4532))
     (pin "7" (uuid a5dbd340-d967-431f-a4a4-efeff1704d51))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 4)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 4)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC2") (unit 4)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2206,12 +2206,12 @@
     (pin "14" (uuid 2092312e-0a01-4536-8d77-32302846a065))
     (pin "7" (uuid 6e973a47-5cc8-454e-896c-6ab206023fa9))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 2)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 2)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC3") (unit 2)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2252,12 +2252,12 @@
     (pin "14" (uuid 9ec5846a-cc58-4a8e-b1f1-782ce7493b60))
     (pin "7" (uuid 0d6f0756-c333-4a87-8515-e068b91608eb))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 3)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 3)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC1") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2286,12 +2286,12 @@
     (pin "1" (uuid caa33a4e-29c2-4994-a074-51d4fbe9bb9f))
     (pin "2" (uuid df027f32-2c3f-416e-9763-a7151ec2e21c))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "C?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "C?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "C1") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2305,7 +2305,7 @@
   (symbol (lib_id "power:GND") (at 113.03 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f452685-1d71-4526-a93d-243b0b53970e)
-    (property "Reference" "#PWR04" (at 113.03 87.63 0)
+    (property "Reference" "#PWR010" (at 113.03 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 113.157 85.6742 0)
@@ -2319,9 +2319,9 @@
     )
     (pin "1" (uuid 8d0a34de-93cc-49a2-9120-146d407abe0a))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "#PWR04") (unit 1)
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "#PWR010") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2362,12 +2362,12 @@
     (pin "14" (uuid dda5de1a-8112-4462-a450-9af7cd1ef706))
     (pin "7" (uuid 7774b44a-57a1-45ed-a735-7c359ecebc76))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC3") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2396,12 +2396,12 @@
     (pin "1" (uuid 6c99757a-3bc0-4135-b8bb-299d169dbcc8))
     (pin "2" (uuid a1e9ab85-0070-431f-b943-b5edd1fef1af))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "C?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "C?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "C2") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2430,12 +2430,12 @@
     (pin "1" (uuid dfaa6b6b-0d5f-41a6-af32-d7dc1f790a8c))
     (pin "2" (uuid 363193d6-2d57-4d34-8677-c4d59e923a09))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "R?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "R?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "R3") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2463,8 +2463,8 @@
     )
     (pin "1" (uuid 496f126b-529f-4ad1-8d09-0d1080b07817))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
           (reference "#PWR03") (unit 1)
         )
       )
@@ -2506,12 +2506,12 @@
     (pin "14" (uuid 2abfb277-92c2-4c0d-b2d8-dc7060ebca24))
     (pin "7" (uuid c5ecb0ba-e305-4a66-a6bc-24de6f5ad727))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC2") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2539,8 +2539,8 @@
     )
     (pin "1" (uuid fdae2573-9c2b-4ace-a80e-5f540f700f8f))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
           (reference "#PWR01") (unit 1)
         )
       )
@@ -2570,12 +2570,12 @@
     (pin "1" (uuid 17231ee1-a9cb-4b2d-972a-0ee5b75f3c87))
     (pin "2" (uuid 90877443-95ce-4e95-95c7-5f668ddf7c1f))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "D?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "D?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "D2") (unit 1)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2616,12 +2616,12 @@
     (pin "14" (uuid 918992aa-87c2-4f43-955d-f75ad1795707))
     (pin "7" (uuid fceeca6e-9c04-406d-b5c0-4772291e795f))
     (instances
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 3)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/6a1fd481-1635-4a64-b244-c204161ad407"
-          (reference "IC?") (unit 3)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf"
+          (reference "IC2") (unit 3)
         )
       )
       (project "GLUE_ZXspectrum"
@@ -2709,6 +2709,9 @@
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5" (page "3"))
       )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf" (page "7"))
+      )
     )
   )
 
@@ -2757,6 +2760,9 @@
     (instances
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5" (page "2"))
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf" (page "9"))
       )
     )
   )
@@ -2810,6 +2816,9 @@
     (instances
       (project "GLUE_ZXspectrum"
         (path "/648e0b91-567a-4972-a379-57b42123c6d5" (page "4"))
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf" (page "8"))
       )
     )
   )

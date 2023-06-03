@@ -1258,7 +1258,6 @@
     )
   )
 
-  (bus_alias "Z80_BUS_CONTROL" (members "Z80_BUS_CONTROL.Z80_DATA_DIR" "Z80_BUS_CONTROL.Z80_DATA_OE" "Z80_BUS_CONTROL.Z80_ADD_DIR" "Z80_BUS_CONTROL.Z80_ADD_OE"))
   (junction (at 254 40.64) (diameter 0) (color 0 0 0 0)
     (uuid 41fe1017-5aa4-45f3-91d9-ccee052277c4)
   )
@@ -3123,7 +3122,7 @@
   (symbol (lib_id "Connector:Conn_01x40_Socket") (at 100.33 147.32 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000064b825b9)
-    (property "Reference" "J1" (at 152.4 149.86 0)
+    (property "Reference" "J1" (at 130.81 144.78 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DIAG-HOST_SYSTEM_BUS" (at 100.33 144.78 90)
@@ -3181,9 +3180,9 @@
           (reference "J1") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "J1") (unit 1)
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "DIAG-HOST_SYSTEM_BUS1") (unit 1)
         )
       )
     )
@@ -3250,8 +3249,8 @@
           (reference "J2") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "J2") (unit 1)
         )
       )
@@ -3299,12 +3298,12 @@
           (reference "Z80-LOCAL_DATA?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80-LOCAL_DATA?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "Z80-LOCAL_DATA?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "Z80-LOCAL_DATA1") (unit 1)
         )
       )
     )
@@ -3351,12 +3350,12 @@
           (reference "Z80_ADDRHIGH?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80_ADDRHIGH?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "Z80_ADDRHIGH?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "Z80_ADDRHIGH1") (unit 1)
         )
       )
     )
@@ -3403,12 +3402,12 @@
           (reference "Z80_ADDRLOW?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "Z80_ADDRLOW?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
-          (reference "Z80_ADDRLOW?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "Z80_ADDRLOW1") (unit 1)
         )
       )
     )
@@ -3436,8 +3435,8 @@
           (reference "#PWR035") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR035") (unit 1)
         )
       )
@@ -3466,8 +3465,8 @@
           (reference "#PWR036") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR036") (unit 1)
         )
       )
@@ -3496,8 +3495,8 @@
           (reference "#PWR041") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR041") (unit 1)
         )
       )
@@ -3526,8 +3525,8 @@
           (reference "#PWR040") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR040") (unit 1)
         )
       )
@@ -3556,8 +3555,8 @@
           (reference "#PWR034") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR034") (unit 1)
         )
       )
@@ -3586,8 +3585,8 @@
           (reference "#PWR037") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR037") (unit 1)
         )
       )
@@ -3616,8 +3615,8 @@
           (reference "#PWR039") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR039") (unit 1)
         )
       )
@@ -3646,8 +3645,8 @@
           (reference "#PWR038") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/00000000-0000-0000-0000-0000ade3baf4"
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
           (reference "#PWR038") (unit 1)
         )
       )
