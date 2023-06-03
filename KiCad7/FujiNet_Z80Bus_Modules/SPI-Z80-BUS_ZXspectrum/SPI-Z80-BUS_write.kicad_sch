@@ -1080,12 +1080,12 @@
           (reference "IC?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "LOCAL_ADDR-H.WR1") (unit 1)
         )
       )
     )
@@ -1136,12 +1136,12 @@
           (reference "IC?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "LOCAL_ADDR-L.WR1") (unit 1)
         )
       )
     )
@@ -1150,7 +1150,7 @@
   (symbol (lib_id "power:+5V") (at 68.58 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c72208f-a715-4758-b3ff-ffb129a59b12)
-    (property "Reference" "#PWR016" (at 68.58 91.44 0)
+    (property "Reference" "#PWR?" (at 68.58 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 69.85 83.82 0)
@@ -1166,7 +1166,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR04") (unit 1)
@@ -1177,9 +1177,9 @@
           (reference "#PWR016") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR016") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -1188,7 +1188,7 @@
   (symbol (lib_id "power:+5V") (at 207.01 87.63 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 14cfbcf4-1f6a-4a2f-8387-0cbd40ec24ac)
-    (property "Reference" "#PWR031" (at 207.01 91.44 0)
+    (property "Reference" "#PWR?" (at 207.01 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 207.01 84.074 0)
@@ -1204,7 +1204,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR031") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR019") (unit 1)
@@ -1215,9 +1215,9 @@
           (reference "#PWR031") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR031") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR09") (unit 1)
         )
       )
     )
@@ -1226,7 +1226,7 @@
   (symbol (lib_id "power:GND") (at 198.12 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 31a24525-dfe5-495b-8eab-05a02116f539)
-    (property "Reference" "#PWR029" (at 198.12 97.79 0)
+    (property "Reference" "#PWR?" (at 198.12 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 198.12 95.25 0)
@@ -1242,7 +1242,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR017") (unit 1)
@@ -1253,9 +1253,9 @@
           (reference "#PWR029") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR029") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR08") (unit 1)
         )
       )
     )
@@ -1264,7 +1264,7 @@
   (symbol (lib_id "power:+5V") (at 116.84 87.63 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3c482422-4b7e-49ff-9864-030c3ffcea20)
-    (property "Reference" "#PWR020" (at 116.84 91.44 0)
+    (property "Reference" "#PWR?" (at 116.84 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 118.11 83.82 0)
@@ -1280,7 +1280,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR010") (unit 1)
@@ -1291,9 +1291,9 @@
           (reference "#PWR020") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR020") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -1302,7 +1302,7 @@
   (symbol (lib_id "power:GND") (at 104.14 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 41396e4d-5b53-4ffc-82eb-ac3b1facda7f)
-    (property "Reference" "#PWR019" (at 104.14 97.79 0)
+    (property "Reference" "#PWR?" (at 104.14 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 104.14 95.25 0)
@@ -1318,7 +1318,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR07") (unit 1)
@@ -1329,9 +1329,9 @@
           (reference "#PWR019") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR019") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -1382,12 +1382,12 @@
           (reference "IC?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "ESP_CONTROL.WR1") (unit 1)
         )
       )
     )
@@ -1396,7 +1396,7 @@
   (symbol (lib_id "power:GND") (at 242.57 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 94b7de81-3102-40fe-a725-74c64c74bb0a)
-    (property "Reference" "#PWR029" (at 242.57 97.79 0)
+    (property "Reference" "#PWR?" (at 242.57 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 242.57 95.25 0)
@@ -1412,7 +1412,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR029") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR015") (unit 1)
@@ -1423,9 +1423,9 @@
           (reference "#PWR029") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR029") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR010") (unit 1)
         )
       )
     )
@@ -1434,7 +1434,7 @@
   (symbol (lib_id "power:+5V") (at 162.56 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dfefdc10-cff9-4dc4-814e-9beaef7bfba1)
-    (property "Reference" "#PWR027" (at 162.56 91.44 0)
+    (property "Reference" "#PWR?" (at 162.56 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 163.83 83.82 0)
@@ -1450,7 +1450,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR014") (unit 1)
@@ -1461,9 +1461,9 @@
           (reference "#PWR027") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR027") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1514,12 +1514,12 @@
           (reference "IC?") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "IC?") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "LOCAL_D.WR1") (unit 1)
         )
       )
     )
@@ -1528,7 +1528,7 @@
   (symbol (lib_id "power:GND") (at 152.4 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fbffe0c8-64f0-420d-88d7-0791871dbdb1)
-    (property "Reference" "#PWR025" (at 152.4 97.79 0)
+    (property "Reference" "#PWR?" (at 152.4 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 152.4 95.25 0)
@@ -1544,7 +1544,7 @@
     (instances
       (project "SPI-Z80-BUS_ZXspectrum"
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
         (path "/24d6fda8-98cb-41bc-854e-cbfcc3666d5f/71c374ed-cd87-4870-ac09-67731302cbf8"
           (reference "#PWR013") (unit 1)
@@ -1555,9 +1555,9 @@
           (reference "#PWR025") (unit 1)
         )
       )
-      (project "FujiNet_Z80Bus_ReferenceDesign"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/74ab85b2-bf39-4de3-9260-05b150bd9ba7/71c374ed-cd87-4870-ac09-67731302cbf8"
-          (reference "#PWR025") (unit 1)
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/71c374ed-cd87-4870-ac09-67731302cbf8"
+          (reference "#PWR06") (unit 1)
         )
       )
     )
