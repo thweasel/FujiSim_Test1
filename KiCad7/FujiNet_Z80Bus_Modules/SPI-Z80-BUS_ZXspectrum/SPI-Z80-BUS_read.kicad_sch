@@ -1000,7 +1000,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -1038,7 +1038,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR014") (unit 1)
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1132,7 +1132,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR015") (unit 1)
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -1170,7 +1170,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR018") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -1208,7 +1208,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR013") (unit 1)
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -1302,7 +1302,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR012") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -1396,7 +1396,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR016") (unit 1)
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -1490,7 +1490,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR017") (unit 1)
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -1528,7 +1528,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51/28782bf7-67b4-4359-a03a-a82310c7ca9d"
-          (reference "#PWR019") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )

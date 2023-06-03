@@ -989,10 +989,9 @@
     )
   )
 
+  (bus_alias "ESP_SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
   (bus_alias "LOCAL_CONTROL" (members "LOCAL_CONTROL.RD" "LOCAL_CONTROL.WR" "LOCAL_CONTROL.IORQ" "LOCAL_CONTROL.MEMRQ"))
   (bus_alias "ESP_CONTROL" (members "ESP_CONTROL.RD" "ESP_CONTROL.WR" "ESP_CONTROL.IORQ" "ESP_CONTROL.MEMRQ" "ESP_CONTROL.BUSRQ" "ESP_CONTROL.WAIT" "ESP_CONTROL.ROMCS" "ESP_CONTROL.NMI"))
-  (bus_alias "SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE" ""))
-
   (junction (at 99.06 55.88) (diameter 0) (color 0 0 0 0)
     (uuid 010b0203-9ead-4366-aafd-890d3e19a157)
   )
@@ -1510,7 +1509,7 @@
     (uuid 3aff17fe-87cb-45d7-b1b8-370fd8bacb66)
   )
 
-  (wire (pts (xy 45.72 49.53) (xy 41.91 49.53))
+  (wire (pts (xy 59.055 49.53) (xy 41.91 49.53))
     (stroke (width 0) (type default))
     (uuid 3b8d9905-83a2-4392-93bb-a3f612a9a54c)
   )
@@ -2274,6 +2273,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7b2c80e5-1d69-40de-a3e8-fa5b57d311e2)
   )
+  (label "ESP_CONTROL.WR" (at 59.055 49.53 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 83afd74a-3545-4621-ad5e-11c56143086d)
+  )
   (label "ESP_CONTROL.NMI" (at 147.32 120.65 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8a93bd79-da27-4ad4-a3cd-b852ef3f7cf9)
@@ -2363,17 +2366,13 @@
     (uuid fff47347-46f1-4641-8091-189a87cc9ae6)
   )
 
-  (hierarchical_label "{SPI_INTERNAL}" (shape input) (at 34.29 21.59 180) (fields_autoplaced)
+  (hierarchical_label "{ESP_SPI_INTERNAL}" (shape input) (at 34.29 21.59 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 23f001e8-14a4-4dae-bc22-00fec80bfa6e)
   )
   (hierarchical_label "{ESP_CONTROL}" (shape output) (at 76.2 163.83 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 2b66b8d4-0a11-4688-a8e1-f198193c070b)
-  )
-  (hierarchical_label "ESP_CONTROL.WR" (shape input) (at 45.72 49.53 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 5d00690a-e254-44dc-8bbf-7bde1fb69ba4)
   )
   (hierarchical_label "LOCAL_A[0..15]" (shape bidirectional) (at 69.85 163.83 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
@@ -2789,7 +2788,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51"
-          (reference "#PWR01") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2863,7 +2862,7 @@
       )
       (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/9a993edb-7f20-4cca-a657-2a2140304b51"
-          (reference "#PWR02") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
