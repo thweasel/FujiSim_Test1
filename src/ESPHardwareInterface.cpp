@@ -1,13 +1,29 @@
 #include <ESPHardwareInterface.h>
 
 boolean RUNSLOW = true;
-int SPEED = 200;
+int SPEED = 250;
 
 uint8_t *BUSbytesPTR;
 //  BUSbyte [3] = Data;
 //  BUSbyte [2] = Control;
 //  BUSbyte [1] = loAddr;
 //  BUSbyte [0] = hiAddr;
+
+void displayBUSPTR(uint8_t *BUSptr)
+{
+    Serial.print("\nBUSptr : ");
+    Serial.print(BUSptr[0],HEX);
+    Serial.print(" ah, ");
+    Serial.print(BUSptr[1],HEX);
+    Serial.print(" al, ");
+    Serial.print(BUSptr[2],BIN);
+    Serial.print(" c, ");
+    Serial.print(BUSptr[3],BIN); 
+    Serial.print(" ");
+    Serial.print(BUSptr[3],HEX);    
+    Serial.println(" d");
+    return;
+}
 
 
 void ESP_setup(void)
@@ -39,7 +55,7 @@ uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
     //connectZ80Bus();
 
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CEROMRQ_RD);
-
+    displayBUSPTR(BUSbytesPTR);
     clearBUS();
 
     return BUSbytesPTR[3];
@@ -172,13 +188,15 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
     setESPHardlock();
-
+    displayBUSPTR(BUSbytesPTR);
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHESTATUS_RD);
 
     digitalWrite(ESP_ROMSELECT0, HIGH);
 
     clearBUS();
     resetESPHardlock();
+
+    displayBUSPTR(BUSbytesPTR);
     return BUSbytesPTR[3];
 }
 

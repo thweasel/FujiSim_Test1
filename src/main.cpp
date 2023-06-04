@@ -35,7 +35,8 @@ void setup()
 {
   // put your setup code here, to run once:
 
-  Serial.begin(115000);
+  //Serial.begin(115000);
+  Serial.begin(9600);
   Serial.println("Running.");
 
   pinMode(LED_BUILTIN, OUTPUT);
@@ -66,13 +67,13 @@ void loop()
   
 
   
-  ESP_CacheStatusTest();
-  ESP_CacheData_Test();
+  //ESP_CacheStatusTest();
+  //ESP_CacheData_Test();
   ESP_ROM_Test();
-  ESP_IOd_Test();
+  //ESP_IOd_Test();
   
 
-  
+/*
   enableROM(0);
   Z80_ROMMemory_Test();
   enableROM(1);
@@ -83,13 +84,15 @@ void loop()
   enableROM(3);
   Z80_ROMMemory_Test();
   disableROM();
-  
+*/
 
+    
+  // IOD TEST#
   
-  // IOD TEST
+  /*
   ESP_FillCacheStatus(0xf0);
   ESP_test_configIOd();
   Z80_IORQ_Test();
-  
+  */
 
 }
