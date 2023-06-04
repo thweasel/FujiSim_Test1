@@ -76,7 +76,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "IOCACHE-128K_ZXspectrum_impl_narrow/")
+      (outputdirectory "IOCACHE-128K_ZXspectrum_impl_narrow-fab/")
     )
   )
 
