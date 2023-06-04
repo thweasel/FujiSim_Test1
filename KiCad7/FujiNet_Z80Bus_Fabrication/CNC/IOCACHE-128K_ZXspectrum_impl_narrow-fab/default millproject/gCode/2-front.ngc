@@ -9,7 +9,7 @@ G00 S8000 ( RPM spindle speed. )
 G01 F60.00000 ( Feedrate. )
 
 
-G53 G00 Z10.00000 (Retract to tool change height)
+G53 G00 Z0.00000 (Retract to tool change height)
 T1
 M5      (Spindle stop.)
 G04 P3.00000 (Wait for spindle to stop)
@@ -13351,7 +13351,7 @@ G01 X63.28143 Y-27.80939
 G01 X63.28143 Y-27.75059
 
 G04 P0 ( dwell for no time -- G64 should not smooth over this point )
-G53 G00 Z10.000000 ( retract )
+G53 G00 Z0.000000 ( retract )
 
 M5 ( Spindle off. )
 G04 P3.000000

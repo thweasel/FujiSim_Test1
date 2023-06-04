@@ -27,7 +27,8 @@ tolerance=0.1000
 zsafe=5.0000
 spinup-time=1
 spindown-time=3
-zchange=10.0000
+# Go to the machines "home" position for tool change (absolute coordinates)
+zchange=0.0000
 zchange-absolute=true
 # Duplicate on same stock
 x-offset=0

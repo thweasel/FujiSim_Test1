@@ -9,7 +9,7 @@ G21       (Units == Millimeters.)
 G90       (Absolute coordinates.)
 G00 S600     (RPM spindle speed.)
 
-G53 G00 Z10.00000 (Retract)
+G53 G00 Z0.00000 (Retract)
 T1
 M5      (Spindle stop.)
 G04 P3.00000
@@ -45,7 +45,7 @@ G0 X72.51300 Y-33.45600
 G1 Z-2.00000
 G1 Z5.00000
 
-G53 G00 Z10.00000 (Retract)
+G53 G00 Z0.00000 (Retract)
 T2
 M5      (Spindle stop.)
 G04 P3.00000
@@ -255,7 +255,7 @@ G0 X21.08000 Y-10.00000
 G1 Z-2.00000
 G1 Z5.00000
 
-G53 G00 Z10.00000 (Retract)
+G53 G00 Z0.00000 (Retract)
 T3
 M5      (Spindle stop.)
 G04 P3.00000
@@ -381,7 +381,7 @@ G0 X88.42000 Y-41.00000
 G1 Z-2.00000
 G1 Z5.00000
 
-G53 G00 Z10.000 ( All done -- retract )
+G53 G00 Z0.000 ( All done -- retract )
 
 M5      (Spindle off.)
 G04 P3.000000
