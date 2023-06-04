@@ -67,11 +67,13 @@ Auto routing (FreeRouting) ignores the Design Rules, it only seems to follow Net
 The process sets are:
 Configure Design Rules and Net Classes
 Draw an Edge box to the size of the PCB
-Set Origin (file/drill/sheet) in the top left of the Edge box
+Set Origin (file/drill/sheet) in the top left of the Edge box - place a *VIA on this spot
 Create Margin boxes (+2mm) on the edges (Rule Area)
 Layout components
 Route tracks
 Export Gerber and drill files (include the origins)
+
+*Directly placing a VIA on the Origin is blocked if it is in the margin. To get round this place the VIA outside the margin and move it to the Origin, this is permitted. Else you could adjust the shape of the marging and expose the corner.
 
 Your PCB should have an Edge box the size of the PCB (stock or cut out). Marked out margins for Freerouting, 2mm seems reasonable. The Origin for sheets and files needs to be set at the top left of the Edge box. Origin can be corrected in pcb2gcode and milling just saves effort to do it right. Export to Gerber (Fabrication output), make sure "Use drill/place file origin" is checked. Hit Plot and Generate Drill Files. If you want to be tidy, export only the F.Cu, B.CU, and Edge_Cuts. You have a PCB file set to run through pcb2gcode.
 

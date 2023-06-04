@@ -37,6 +37,7 @@
       8,
       9,
       10,
+      11,
       12,
       13,
       15,
@@ -67,7 +68,7 @@
     "zone_display_mode": 1
   },
   "meta": {
-    "filename": "RIO-128K_ZXspectrum_impl_narrow.kicad_prl",
+    "filename": "SPI-Z80-BUS_ZXspectrum.kicad_prl",
     "version": 3
   },
   "project": {
