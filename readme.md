@@ -72,6 +72,7 @@ Create Margin boxes (+2mm) on the edges (Rule Area)
 Layout components
 Route tracks
 Export Gerber and drill files (include the origins)
+Export SVG as a CNC reference. F.Cu, B.Cu, User.Drawings, Edge.Cuts, F.Fab, B.Fab
 
 *Directly placing a VIA on the Origin is blocked if it is in the margin. To get round this place the VIA outside the margin and move it to the Origin, this is permitted. Else you could adjust the shape of the marging and expose the corner.
 
