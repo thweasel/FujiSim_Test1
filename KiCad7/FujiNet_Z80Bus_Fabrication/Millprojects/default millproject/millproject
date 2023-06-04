@@ -68,6 +68,8 @@ nog81=true
 nog91-1=true
 nom6=true
 
+drill-output=1-drill.ngc
+
 
 # Mill options
 voronoi=false
@@ -85,10 +87,13 @@ mill-infeed=0.1000
 mill-speed=8000
 mill-feed-direction=climb
 
+front-output=2-front.ngc
+back-output=3-back.ngc
+
 # Outline options
 fill-outline=true
 
-cutter-diameter=3.127
+cutter-diameter=2.0000
 zcut=-2.0000
 cut-feed=600
 cut-vertfeed=30
@@ -100,5 +105,7 @@ cut-side=back
 bridges=0.5000
 zbridges=-0.6000
 bridgesnum=4
+
+outline-output=4-outline.ngc
 
 
