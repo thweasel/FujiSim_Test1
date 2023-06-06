@@ -5,7 +5,7 @@ G94 ( Millimeters per minute feed rate. )
 G21 ( Units == Millimeters. )
 
 G90 ( Absolute coordinates. )
-G00 S8000 ( RPM spindle speed. )
+G00 S800 ( RPM spindle speed. )
 G01 F600.00000 ( Feedrate. )
 
 

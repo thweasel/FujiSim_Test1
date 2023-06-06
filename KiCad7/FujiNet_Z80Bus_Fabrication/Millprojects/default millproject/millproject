@@ -98,7 +98,7 @@ cutter-diameter=2.0000
 zcut=-2.0000
 cut-feed=600
 cut-vertfeed=30
-cut-speed=8000
+cut-speed=800
 cut-infeed=0.5000
 
 cut-side=back
