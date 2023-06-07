@@ -24,7 +24,7 @@ tolerance=0.1000
 
 
 # Common/ options
-zsafe=5.0000
+zsafe=2.0000
 spinup-time=1
 spindown-time=3
 # Go to the machines "home" position for tool change (absolute coordinates)
@@ -57,7 +57,7 @@ milldrill=false
 #zmilldrill=0.2000
 
 # Drill
-zdrill=-2.0000
+zdrill=-2.5000
 drill-feed=30
 drill-speed=600
 drill-side=front
@@ -96,9 +96,9 @@ fill-outline=true
 
 cutter-diameter=2.0000
 zcut=-2.0000
-cut-feed=600
+cut-feed=300
 cut-vertfeed=30
-cut-speed=800
+cut-speed=600
 cut-infeed=0.5000
 
 cut-side=back
