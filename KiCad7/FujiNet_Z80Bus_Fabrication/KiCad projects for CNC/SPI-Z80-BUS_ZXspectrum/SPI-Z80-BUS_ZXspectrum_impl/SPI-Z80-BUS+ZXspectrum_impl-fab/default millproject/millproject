@@ -84,12 +84,12 @@ mill-diameters=0.5000
 milling-overlap=0%
 isolation-width=0.5000
 
-zwork=-0.0750
+zwork=-0.1500
 
 mill-feed=40
 mill-vertfeed=30
 mill-infeed=0.1000
-mill-speed=600
+mill-speed=700
 mill-feed-direction=climb
 
 
