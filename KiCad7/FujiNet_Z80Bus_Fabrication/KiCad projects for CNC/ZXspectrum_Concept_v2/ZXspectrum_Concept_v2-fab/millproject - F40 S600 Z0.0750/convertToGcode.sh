@@ -5,7 +5,7 @@ pushd ..
 project=$(basename "$(pwd)")
 popd
 gCodeFolder=gCode-$project
-svgFolder=svgs-$project
+svgFolder=$gCodeFolder/svgs
 
 mkdir $gCodeFolder
 

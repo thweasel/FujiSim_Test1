@@ -95,13 +95,15 @@ mill-feed-direction=climb
 
 
 # Outline options
+# X 300feed 600speed 
+
 fill-outline=true
 
 cutter-diameter=2.0000
 zcut=-2.0000
-cut-feed=300
+cut-feed=200
 cut-vertfeed=30
-cut-speed=600
+cut-speed=800
 cut-infeed=0.5000
 
 cut-side=back
