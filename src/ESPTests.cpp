@@ -95,9 +95,9 @@ void ESP_ROM_Test(void)
   delay(50);
 }
 
-void ESP_IOd_Test(void)
+void ESP_RIOconfig_Access_Test(void)
 {
-  Serial.println("\nESP_IOd_Test");
+  Serial.println("\nESP_RIOconfig_Test");
   uint8_t data;
 
   //clearBUS();
@@ -137,7 +137,7 @@ void ESP_FillCacheStatus (uint8_t data)
       
 }
 
-void ESP_test_configIOd(void)
+void ESP_RIOconfig_Cache0to0x0001(void)
 {
   Serial.println("\nESP_test_configIOd");
   doRIOconfigWrite(IODCONFIG_STATUS,1);
