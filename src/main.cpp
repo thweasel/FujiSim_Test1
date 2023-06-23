@@ -61,7 +61,7 @@ void loop()
   
     // Blinky code for enable to test if running
     digitalWrite(LED_BUILTIN, HIGH);
-    delay(1000);
+    delay(250);
     digitalWrite(LED_BUILTIN, LOW);
     //delay(1000);
   
@@ -69,7 +69,7 @@ void loop()
   
   
   //ESP_ROM_Test();
-  ESP_IOd_Test();
+  //ESP_RIOconfig_Access_Test();
   
   //ESP_CacheStatusTest();
   //ESP_CacheData_Test();
@@ -93,7 +93,7 @@ void loop()
   
   
   ESP_FillCacheStatus(0xf0);
-  ESP_test_configIOd();
+  ESP_RIOconfig_Cache0to0x0001();
   Z80_IORQ_Test();
   
 

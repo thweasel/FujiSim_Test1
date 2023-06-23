@@ -188,15 +188,12 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
     setESPHardlock();
-    displayBUSPTR(BUSbytesPTR);
+    //displayBUSPTR(BUSbytesPTR);
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHESTATUS_RD);
-
-    digitalWrite(ESP_ROMSELECT0, HIGH);
-
     clearBUS();
     resetESPHardlock();
 
-    displayBUSPTR(BUSbytesPTR);
+//    displayBUSPTR(BUSbytesPTR);
     return BUSbytesPTR[3];
 }
 

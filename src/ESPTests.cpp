@@ -130,9 +130,19 @@ void ESP_FillCacheStatus (uint8_t data)
   Serial.println("\nESP_FillCacheStatus");
   Serial.print(data,HEX);
 
+  uint8_t check = 0;
+
   for (uint16_t i = 0x0000; i != 0x000F; i++)  // 0xFFFF takes ages!
   {
     doCacheStatusWrite(data, i);
+    check = doCacheStatusRead(i);
+    if(check != data) {
+      Serial.print("\nESP_FillCacheStatus - Write error [");
+      Serial.print(check);
+      Serial.print('-');
+      Serial.print(data);
+      Serial.println(']');
+      }
   }
       
 }
