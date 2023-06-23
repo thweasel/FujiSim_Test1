@@ -1,7 +1,7 @@
 #include <ESPHardware_emulation.h>
 
-#define RUNSLOW false
-#define SLOWTIME 100
+#define RUNSLOW true
+#define SLOWTIME 200
 
 SPISettings mySpiSettings_write (1000000,MSBFIRST,SPI_MODE0);
 SPISettings mySpiSettings_read (1000000,MSBFIRST,SPI_MODE0);

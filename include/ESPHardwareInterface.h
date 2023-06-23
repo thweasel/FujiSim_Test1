@@ -34,8 +34,8 @@ void ESP_setup(void);
 uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank); //A16-0
 void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank); //A16-0
 
-uint8_t doIOdRead(uint16_t Address ); //A16-1
-void doIOdWrite(uint8_t Data, uint16_t Address); //A16-1
+uint8_t doRIOconfigRead(uint16_t Address ); //A16-1
+void doRIOconfigWrite(uint8_t Data, uint16_t Address); //A16-1
 
 // CACHE CHIP
 uint8_t doCacheDataRead(uint16_t Address);//A16-0

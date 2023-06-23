@@ -106,15 +106,15 @@ void ESP_IOd_Test(void)
   uint8_t y = 0x00;
   for (uint16_t i = 0; i < 0x10; i++)
   {
-    Serial.print("doIOdWrite : ");
+    Serial.print("doRIOconfigWrite : ");
     Serial.print(y,HEX);
     Serial.print(",");
     Serial.print(i,HEX);
     // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doIOdWrite(y, i);
+    doRIOconfigWrite(y, i);
     
-    data = doIOdRead(i);
-    Serial.print(" - doIOdRead : ");
+    data = doRIOconfigRead(i);
+    Serial.print(" - doRIOconfigRead : ");
     Serial.println(data,HEX);
     
     y++;
@@ -140,7 +140,7 @@ void ESP_FillCacheStatus (uint8_t data)
 void ESP_test_configIOd(void)
 {
   Serial.println("\nESP_test_configIOd");
-  doIOdWrite(IODCONFIG_STATUS,1);
-  doIOdWrite(IODCONFIG_CACHE0,3);
-  doIOdWrite(IODCONFIG_IOEND,5);
+  doRIOconfigWrite(IODCONFIG_STATUS,1);
+  doRIOconfigWrite(IODCONFIG_CACHE0,3);
+  doRIOconfigWrite(IODCONFIG_IOEND,5);
 }

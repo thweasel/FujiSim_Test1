@@ -1,6 +1,6 @@
 #include <ESPHardwareInterface.h>
 
-boolean RUNSLOW = true;
+boolean RUNSLOW = false;
 int SPEED = 250;
 
 uint8_t *BUSbytesPTR;
@@ -84,28 +84,28 @@ void disableROM(void)
     resetROMCS();
 }
 
-// These methods are for programming the IOd configuration bytes
-uint8_t doIOdRead(uint16_t Address) // A16-1
+// These methods are for programming the RIO configuration bytes
+uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 {
     doBUSRQ();
     setESPHardlock();
 
     // connect Z80Data and ROM/IOdbus
 
-    BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_IORQ_RD);
+    BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_RIOCONFIG_RD);
 
     clearBUS();
     resetESPHardlock();
     return BUSbytesPTR[3];
 }
 
-void doIOdWrite(uint8_t Data, uint16_t Address) // A16-1
+void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     doBUSRQ();
     setESPHardlock();
     // connect Z80Data and ROM/IOdbus
 
-    doBUSWrite(Data, Address, CONTROLBYTE_IORQ_WR);
+    doBUSWrite(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
 
     clearBUS();
     resetESPHardlock();

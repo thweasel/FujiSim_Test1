@@ -67,11 +67,13 @@ void loop()
   
 
   
+  
+  //ESP_ROM_Test();
+  ESP_IOd_Test();
+  
   //ESP_CacheStatusTest();
   //ESP_CacheData_Test();
-  ESP_ROM_Test();
-  //ESP_IOd_Test();
-  
+
 
 /*
   enableROM(0);
@@ -89,10 +91,10 @@ void loop()
     
   // IOD TEST#
   
-  /*
+  
   ESP_FillCacheStatus(0xf0);
   ESP_test_configIOd();
   Z80_IORQ_Test();
-  */
+  
 
 }
