@@ -88,27 +88,18 @@ void disableROM(void)
 uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 {
     doBUSRQ();
-    setESPHardlock();
-
     // connect Z80Data and ROM/IOdbus
-
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_RIOCONFIG_RD);
-
     clearBUS();
-    resetESPHardlock();
     return BUSbytesPTR[3];
 }
 
 void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     doBUSRQ();
-    setESPHardlock();
     // connect Z80Data and ROM/IOdbus
-
     doBUSWrite(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
-
     clearBUS();
-    resetESPHardlock();
 }
 
 // ESP controlling the system in place of the Z80
