@@ -536,7 +536,6 @@
   )
 
 
-
   (bus_entry (at 205.74 143.51) (size 2.54 2.54)
     (stroke (width 0) (type default))
     (uuid 0247478a-3499-4334-b84e-30a9d7db9e6a)
@@ -1503,8 +1502,8 @@
     )
     (pin "1" (uuid d04f885b-e6b2-4bfd-905b-a12ed93e2e75))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
           (reference "#PWR022") (unit 1)
         )
       )
@@ -1531,8 +1530,8 @@
     (pin "3" (uuid bb639fb7-d8dd-4310-8ded-e7d545891bc7))
     (pin "4" (uuid 2345cc0b-467f-4675-9eeb-559922e85c5e))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
           (reference "LOCAL_CONTROL1") (unit 1)
         )
       )
@@ -1573,12 +1572,12 @@
           (reference "J?") (unit 1)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "J1") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
-          (reference "J3") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
+          (reference "J2") (unit 1)
         )
       )
     )
@@ -1618,12 +1617,12 @@
           (reference "J?") (unit 1)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "J5") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
-          (reference "J6") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -1646,8 +1645,8 @@
     )
     (pin "1" (uuid 97b25254-1a93-473b-ab60-028b11677a27))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
           (reference "#PWR023") (unit 1)
         )
       )
@@ -1680,8 +1679,8 @@
     (pin "8" (uuid 6571ae25-e22e-4e9d-ab1a-fcee872b6064))
     (pin "9" (uuid 9c176fd2-5fe8-456b-adaf-a008c9b93d47))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
           (reference "J5") (unit 1)
         )
       )
@@ -1708,8 +1707,8 @@
     (pin "3" (uuid ecd731fc-0ac5-4151-a67b-7d2943d26b27))
     (pin "4" (uuid b24b7bb6-7712-40d4-a69c-fd2de005796a))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
           (reference "J1") (unit 1)
         )
       )
@@ -1750,12 +1749,12 @@
           (reference "J?") (unit 1)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "J2") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
-          (reference "J7") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
+          (reference "J6") (unit 1)
         )
       )
     )
@@ -1795,12 +1794,12 @@
           (reference "J?") (unit 1)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "J3") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
-          (reference "J8") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
+          (reference "J7") (unit 1)
         )
       )
     )
@@ -1840,12 +1839,12 @@
           (reference "J?") (unit 1)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "SPI-Z80-BUS_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "J5") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b7c2f5ca-596f-4d61-90ce-cb5d46d355fe"
-          (reference "J4") (unit 1)
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b89b8c67-29bd-4756-a3e4-fb2a9ccc934a"
+          (reference "J3") (unit 1)
         )
       )
     )

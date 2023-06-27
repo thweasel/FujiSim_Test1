@@ -1541,16 +1541,16 @@
   },
   "sheets": [
     [
-      "24d6fda8-98cb-41bc-854e-cbfcc3666d5f",
-      ""
-    ],
-    [
       "28782bf7-67b4-4359-a03a-a82310c7ca9d",
       "SPI-Z80-BUS_read"
     ],
     [
       "71c374ed-cd87-4870-ac09-67731302cbf8",
       "SPI-Z80-BUS_write"
+    ],
+    [
+      "24d6fda8-98cb-41bc-854e-cbfcc3666d5f",
+      ""
     ]
   ],
   "text_variables": {}
