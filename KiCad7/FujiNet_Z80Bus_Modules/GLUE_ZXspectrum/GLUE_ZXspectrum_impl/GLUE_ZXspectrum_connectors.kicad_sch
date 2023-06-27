@@ -1564,8 +1564,8 @@
     (pin "8" (uuid 9e32e456-7a96-49f4-ae9b-fba9c6ba677b))
     (pin "9" (uuid 2253326b-11f2-4c6b-af26-409409c41c02))
     (instances
-      (project "ZXspectrum_Concept"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b32c427b-f4bd-4352-b958-c899f45bbb83"
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/7f8e656d-6a36-4e57-9118-6f179e2ce328"
           (reference "GLUE1") (unit 1)
         )
       )
@@ -1594,8 +1594,8 @@
     )
     (pin "1" (uuid 792fa777-cdfe-4dfa-bfa0-6a571a5ac6c5))
     (instances
-      (project "ZXspectrum_Concept"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b32c427b-f4bd-4352-b958-c899f45bbb83"
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/7f8e656d-6a36-4e57-9118-6f179e2ce328"
           (reference "#PWR044") (unit 1)
         )
       )
@@ -1629,8 +1629,8 @@
     )
     (pin "1" (uuid 992b80a8-75bc-4f9e-b593-b852b801d635))
     (instances
-      (project "ZXspectrum_Concept"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b32c427b-f4bd-4352-b958-c899f45bbb83"
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/7f8e656d-6a36-4e57-9118-6f179e2ce328"
           (reference "#PWR043") (unit 1)
         )
       )
@@ -1687,8 +1687,8 @@
     (pin "8" (uuid 94530a18-98d3-47ef-8a27-2e6a378ff52e))
     (pin "9" (uuid dcdbf55b-e2c8-421b-934b-889da13f94db))
     (instances
-      (project "ZXspectrum_Concept"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/b32c427b-f4bd-4352-b958-c899f45bbb83"
+      (project "GLUE_ZXspectrum_impl"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/7f8e656d-6a36-4e57-9118-6f179e2ce328"
           (reference "GLUE2") (unit 1)
         )
       )

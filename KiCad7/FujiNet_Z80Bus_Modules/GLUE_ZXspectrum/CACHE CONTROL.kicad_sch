@@ -1011,11 +1011,11 @@
           (reference "IC?") (unit 4)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "GLUE_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 4)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf/93c14a9e-4a71-4950-b006-2a9affe18130"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
           (reference "IC8") (unit 4)
         )
       )
@@ -1062,11 +1062,11 @@
           (reference "IC?") (unit 3)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "GLUE_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 3)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf/93c14a9e-4a71-4950-b006-2a9affe18130"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
           (reference "IC8") (unit 3)
         )
       )
@@ -1113,11 +1113,11 @@
           (reference "IC?") (unit 2)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "GLUE_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 2)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf/93c14a9e-4a71-4950-b006-2a9affe18130"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
           (reference "IC2") (unit 2)
         )
       )
@@ -1164,11 +1164,11 @@
           (reference "IC?") (unit 1)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "GLUE_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 1)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf/93c14a9e-4a71-4950-b006-2a9affe18130"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
           (reference "IC8") (unit 1)
         )
       )
@@ -1215,11 +1215,11 @@
           (reference "IC?") (unit 2)
         )
       )
-      (project "ZXspectrum_Concept_v2.kicad_pro"
+      (project "GLUE_ZXspectrum_impl"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83"
           (reference "IC?") (unit 2)
         )
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/95233ba0-af33-48c6-a370-2e3f14ae4dcf/93c14a9e-4a71-4950-b006-2a9affe18130"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/0da5b4c6-619f-4cd1-829e-b9ad71c924a4/93c14a9e-4a71-4950-b006-2a9affe18130"
           (reference "IC8") (unit 2)
         )
       )
