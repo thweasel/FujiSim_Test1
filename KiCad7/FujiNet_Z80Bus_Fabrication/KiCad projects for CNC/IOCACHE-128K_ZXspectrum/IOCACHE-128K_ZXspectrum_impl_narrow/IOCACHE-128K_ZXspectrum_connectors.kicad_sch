@@ -1378,8 +1378,8 @@
     (pin "8" (uuid 6cd8dbff-be8e-4e4f-949d-95a2cd1c00b5))
     (pin "9" (uuid 71a51d58-b024-44e1-bb21-791b48cf9ec4))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/45c550e3-0330-4991-8fac-1c46e960e6c8"
+      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/84439c1e-570e-4c72-8fb1-44f7d27a07e5"
           (reference "CACHE1") (unit 1)
         )
       )
@@ -1421,8 +1421,8 @@
     (pin "8" (uuid d630ca83-49bc-408d-ad1e-dec6cc24cde1))
     (pin "9" (uuid 8df28ad7-21c8-4759-93d0-3db37be5c5f7))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/45c550e3-0330-4991-8fac-1c46e960e6c8"
+      (project "IOCACHE-128K_ZXspectrum_impl_narrow"
+        (path "/532c0392-800e-45cc-8170-6d32f2390e83/84439c1e-570e-4c72-8fb1-44f7d27a07e5"
           (reference "CACHE2") (unit 1)
         )
       )
@@ -1451,11 +1451,6 @@
     )
     (pin "1" (uuid dd891758-d7ac-4f23-a2e4-6ae8f310b969))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/45c550e3-0330-4991-8fac-1c46e960e6c8"
-          (reference "#PWR042") (unit 1)
-        )
-      )
       (project "IOCACHE-128K_ZXspectrum"
         (path "/884c7ad2-5794-4c2b-8afa-8e07fcecd42b/f9303533-0d3f-4609-9fa9-076efff1786c"
           (reference "#PWR09") (unit 1)
@@ -1481,11 +1476,6 @@
     )
     (pin "1" (uuid 88db7222-3889-4361-be2d-0db9ce09c96c))
     (instances
-      (project "ZXspectrum_Concept_v2.kicad_pro"
-        (path "/532c0392-800e-45cc-8170-6d32f2390e83/45c550e3-0330-4991-8fac-1c46e960e6c8"
-          (reference "#PWR0108") (unit 1)
-        )
-      )
       (project "IOCACHE-128K_ZXspectrum"
         (path "/884c7ad2-5794-4c2b-8afa-8e07fcecd42b/f9303533-0d3f-4609-9fa9-076efff1786c"
           (reference "#PWR08") (unit 1)

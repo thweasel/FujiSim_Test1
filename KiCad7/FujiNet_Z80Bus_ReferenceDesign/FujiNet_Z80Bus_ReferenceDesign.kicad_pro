@@ -575,6 +575,7 @@
     },
     "net_colors": null,
     "netclass_assignments": {
+      "/CORE_ESP32-WROVER/<NO NET>": "ESP_SPI_INTERNAL",
       "/CORE_ESP32-WROVER/ESP_SPI_INT.CE": "ESP_SPI_INTERNAL",
       "/CORE_ESP32-WROVER/ESP_SPI_INT.MISO": "ESP_SPI_INTERNAL",
       "/CORE_ESP32-WROVER/ESP_SPI_INT.MOSI": "ESP_SPI_INTERNAL",

@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "7.0.2"
     },
-    "CreationDate": "2023-06-04T12:35:09+01:00"
+    "CreationDate": "2023-06-27T23:28:26+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -40,6 +40,36 @@
       "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
+    },
+    {
+      "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-F_Paste.gbr",
+      "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-B_Paste.gbr",
+      "FileFunction": "SolderPaste,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-F_Silkscreen.gbr",
+      "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
     },
     {
       "Path": "IOCACHE-128K_ZXspectrum_impl_narrow-Edge_Cuts.gbr",
