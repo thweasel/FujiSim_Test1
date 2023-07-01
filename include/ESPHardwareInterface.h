@@ -53,9 +53,9 @@ uint8_t doZ80IORead(uint16_t Address);
 void doZ80IOWrite(uint8_t Data, uint16_t Address);
 
 // RIO PROTECTION CONTROL
-void doEnableRIOProtection(void);
-void doDisableRIOProtection(void);
+void enableRIOProtection(void);
+void disableRIOProtection(void);
 
 // RIO ROM CONTROL
-void enableROM(uint8_t ROMbank);
-void disableROM(void);
+void enableRIO_ROMRW(uint8_t ROMbank);
+void disableRIO_ROM(void);

@@ -1,7 +1,7 @@
 #include <ESPHardwareInterface.h>
 
 boolean RUNSLOW = false;
-int SPEED = 250;
+int SPEED = 100;
 
 uint8_t *BUSbytesPTR;
 //  BUSbyte [3] = Data;
@@ -57,7 +57,7 @@ uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
     if(RUNSLOW) delay(SPEED);
     //displayBUSPTR(BUSbytesPTR); // DEBUG
     
-    doDisableRIOProtection();    
+    disableRIOProtection();    
     clearBUS();
 
     return BUSbytesPTR[3];
@@ -67,25 +67,33 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 {
     doBUSRQ();
     selectROMbank(ROMbank);
-    doDisableRIOProtection();
+    disableRIOProtection();
     
     // ROMCE enabled in control byte
     doBUSWrite(Data, Address, CONTROLBYTE_CEROMRQ_WR);
     if(RUNSLOW) delay(SPEED);
     //displayBUSPTR(BUSbytesPTR); // DEBUG
 
-    doEnableRIOProtection();
+    enableRIOProtection();
     clearBUS();
 }
 
-void enableROM(uint8_t ROMbank)
+void enableRIO_ROMRW(uint8_t ROMbank)
+{
+    disableRIOProtection();
+    selectROMbank(ROMbank);
+    setROMCS();    
+}
+
+void enableRIO_ROMRD(uint8_t ROMbank)
 {
     selectROMbank(ROMbank);
     setROMCS();
 }
 
-void disableROM(void)
+void disableRIO_ROM(void)
 {
+    enableRIOProtection();
     resetROMCS();
 }
 
@@ -94,8 +102,10 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 {
     doBUSRQ();
     setESPHardlock();
+
     // connect Z80Data and ROM/IOdbus
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_RIOCONFIG_RD);
+
     resetESPHardlock();
     clearBUS();
     return BUSbytesPTR[3];
@@ -105,12 +115,12 @@ void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     doBUSRQ();
     setESPHardlock();    
-    doDisableRIOProtection();
+    disableRIOProtection();
 
     // connect Z80Data and ROM/IOdbus   
     doBUSWrite(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
     
-    doEnableRIOProtection();    
+    enableRIOProtection();    
     resetESPHardlock();    
     clearBUS();
 }
@@ -193,7 +203,9 @@ uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
     setESPHardlock();
     //displayBUSPTR(BUSbytesPTR);
+
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CACHESTATUS_RD);
+    
     clearBUS();
     resetESPHardlock();
 

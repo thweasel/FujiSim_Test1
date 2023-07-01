@@ -67,33 +67,34 @@ void loop()
   
 
   
-  Z80_IDLE();  // THIS SHOULD HAPPEN WHEN BUSREQ > BUSACK Handshake occurs
-  ESP_ROM_Test();
+  //setZ80_IDLEpassive();  // THIS SHOULD HAPPEN WHEN BUSREQ > BUSACK Handshake occurs
+  //ESP_ROM_Test();
   //ESP_RIOconfig_Access_Test();
   
   //ESP_CacheStatusTest();
   //ESP_CacheData_Test();
 
 
-/*
-  enableROM(0);
+
+  enableRIO_ROMRW(0);
   Z80_ROMMemory_Test();
-  enableROM(1);
+  disableRIO_ROM();
+  /*
+  enableRIO_ROMRW(1);
+  Z80_ROMMemory_Test();
+  enableRIO_ROMRW(2);
+  Z80_ROMMemory_Test();
+  enableRIO_ROMRW(3);
   Z80_ROMMemory_Test();
   disableROM();
-  enableROM(2);
-  Z80_ROMMemory_Test();
-  enableROM(3);
-  Z80_ROMMemory_Test();
-  disableROM();
-*/
+  */
 
     
   // IOD TEST#
   
   
 //  ESP_FillCacheStatus(0xf0);
-  ESP_RIOconfig_Cache0to0x0001();
+//  ESP_RIOconfig_Cache0to0x0001();
 //  Z80_IORQ_Test();
   
 

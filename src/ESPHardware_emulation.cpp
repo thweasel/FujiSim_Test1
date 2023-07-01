@@ -196,6 +196,10 @@ void readSPI(void)
 
 // ESP Parallel BUS Functions
 
+
+
+
+
 bool doBUSRQ(void)
 {
   setSPIpacketTX(0xFF,CONTROLBYTE_BUSRQ_ENABLE,0xFFFF);
@@ -218,10 +222,9 @@ bool resetBUSRQ(void)
 
 void clearBUS()
 { 
+  if(RUNSLOW) delay(SLOWTIME);
   resetBUSRQ(); 
   digitalWrite(ESPout_OE,HIGH);  // disconnect S-Regs from BUS
-  if(RUNSLOW) delay(SLOWTIME);
-
 }
 
 uint8_t * doBUSRead(uint16_t Address, uint8_t Control)
@@ -245,13 +248,13 @@ void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
   return;
 }
 
-void doEnableRIOProtection(void)
+void enableRIOProtection(void)
 {
   digitalWrite(ESP_RIO_PROTECT, HIGH);
   return;
 }
 
-void doDisableRIOProtection(void)
+void disableRIOProtection(void)
 {
   digitalWrite(ESP_RIO_PROTECT, LOW);
   return;
