@@ -11,6 +11,7 @@
 #define ESPout_OE 48
 #define ESP_PULSE 47
 #define ESPin_PL 46
+#define ESP_RIO_PROTECT 5
 #define ESP_ROMSELECT1 12
 #define ESP_ROMSELECT0 11
 #define ESP_espHARDLOCK 10

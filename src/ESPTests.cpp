@@ -150,7 +150,7 @@ void ESP_FillCacheStatus (uint8_t data)
 void ESP_RIOconfig_Cache0to0x0001(void)
 {
   Serial.println("\nESP_test_configIOd");
-  doRIOconfigWrite(IODCONFIG_STATUS,1);
-  doRIOconfigWrite(IODCONFIG_CACHE0,3);
-  doRIOconfigWrite(IODCONFIG_IOEND,5);
+  doRIOconfigWrite(IODCONFIG_STATUS,1); //0x90
+  doRIOconfigWrite(IODCONFIG_CACHE0,3); //0x80
+  doRIOconfigWrite(IODCONFIG_IOEND,5);  //0x50
 }

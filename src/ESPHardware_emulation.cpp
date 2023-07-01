@@ -3,8 +3,8 @@
 #define RUNSLOW true
 #define SLOWTIME 200
 
-SPISettings mySpiSettings_write (1000000,MSBFIRST,SPI_MODE0);
-SPISettings mySpiSettings_read (1000000,MSBFIRST,SPI_MODE0);
+SPISettings mySpiSettings_write (10000,MSBFIRST,SPI_MODE0);
+SPISettings mySpiSettings_read (10000,MSBFIRST,SPI_MODE0);
 
 //SPISettings mySpiSettings_write (500000,MSBFIRST,SPI_MODE1);
 //SPISettings mySpiSettings_read (500000,MSBFIRST,SPI_MODE3);
@@ -27,6 +27,7 @@ void ESPHardware_setup(void)
   pinMode(ESPout_OE, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
   pinMode(ESPin_PL, OUTPUT);
+  pinMode(ESP_RIO_PROTECT, OUTPUT);
   pinMode(ESP_ROMSELECT0, OUTPUT);
   pinMode(ESP_ROMSELECT1, OUTPUT);
   pinMode(ESP_espHARDLOCK, OUTPUT);
@@ -38,6 +39,7 @@ void ESPHardware_setup(void)
   digitalWrite(ESPout_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);
   digitalWrite(ESPin_PL, HIGH);
+  digitalWrite(ESP_RIO_PROTECT, HIGH); // WRITE ENABLE LOW
   digitalWrite(ESP_ROMSELECT0, LOW);
   digitalWrite(ESP_ROMSELECT1, LOW);
   digitalWrite(ESP_espHARDLOCK, HIGH); // Lock set LOW
@@ -243,6 +245,17 @@ void doBUSWrite(uint8_t Data, uint16_t Address, uint8_t Control)
   return;
 }
 
+void doEnableRIOProtection(void)
+{
+  digitalWrite(ESP_RIO_PROTECT, HIGH);
+  return;
+}
+
+void doDisableRIOProtection(void)
+{
+  digitalWrite(ESP_RIO_PROTECT, LOW);
+  return;
+}
 
 void setROMCS(void)
 {

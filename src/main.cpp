@@ -67,8 +67,8 @@ void loop()
   
 
   
-  
-  //ESP_ROM_Test();
+  Z80_IDLE();  // THIS SHOULD HAPPEN WHEN BUSREQ > BUSACK Handshake occurs
+  ESP_ROM_Test();
   //ESP_RIOconfig_Access_Test();
   
   //ESP_CacheStatusTest();
@@ -92,9 +92,9 @@ void loop()
   // IOD TEST#
   
   
-  ESP_FillCacheStatus(0xf0);
+//  ESP_FillCacheStatus(0xf0);
   ESP_RIOconfig_Cache0to0x0001();
-  Z80_IORQ_Test();
+//  Z80_IORQ_Test();
   
 
 }

@@ -14,18 +14,18 @@
 */
 
                         //76543210
-#define IODCONFIG_STATUS B10010000  // READ a status byte  -- Start IO
+#define IODCONFIG_STATUS B10010000 //(0x90) READ a status byte  -- Start IO 
 
 // DATA IO address
-#define IODCONFIG_CACHE0 B10000000
-#define IODCONFIG_CACHE1 B10000010
-#define IODCONFIG_CACHE2 B10000100
-#define IODCONFIG_CACHE3 B10001000
+#define IODCONFIG_CACHE0 B10000000 //(0x80)
+#define IODCONFIG_CACHE1 B10000010 //(0x82)
+#define IODCONFIG_CACHE2 B10000100 //(0x84)
+#define IODCONFIG_CACHE3 B10001000 //(0x88)
 
-#define IODCONFIG_IOEND  B01010000  // WRITE a status BYTE  -- End IO
+#define IODCONFIG_IOEND  B01010000 //(0x50) WRITE a status BYTE  -- End IO
 
 // WAIT based addresses
-#define IODCONFIG_WAIT   B00100000
+#define IODCONFIG_WAIT   B00100000 //(0x20)
 
 
 void ESP_setup(void);
@@ -49,9 +49,13 @@ void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
 uint8_t doZ80MEMRead(uint16_t Address);
 void doZ80MEMWrite(uint8_t Data, uint16_t Address);
 
-
 uint8_t doZ80IORead(uint16_t Address);
 void doZ80IOWrite(uint8_t Data, uint16_t Address);
 
+// RIO PROTECTION CONTROL
+void doEnableRIOProtection(void);
+void doDisableRIOProtection(void);
+
+// RIO ROM CONTROL
 void enableROM(uint8_t ROMbank);
 void disableROM(void);

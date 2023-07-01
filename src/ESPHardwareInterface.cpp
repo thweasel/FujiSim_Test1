@@ -51,11 +51,13 @@ uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 {
     doBUSRQ();
     selectROMbank(ROMbank);
-    // Z80 CE
-    //connectZ80Bus();
 
+    // ROMCE enabled in control byte
     BUSbytesPTR = doBUSRead(Address, CONTROLBYTE_CEROMRQ_RD);
-    displayBUSPTR(BUSbytesPTR);
+    if(RUNSLOW) delay(SPEED);
+    //displayBUSPTR(BUSbytesPTR); // DEBUG
+    
+    doDisableRIOProtection();    
     clearBUS();
 
     return BUSbytesPTR[3];
@@ -65,11 +67,14 @@ void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 {
     doBUSRQ();
     selectROMbank(ROMbank);
-    //connectZ80Bus();
-
+    doDisableRIOProtection();
+    
+    // ROMCE enabled in control byte
     doBUSWrite(Data, Address, CONTROLBYTE_CEROMRQ_WR);
-
     if(RUNSLOW) delay(SPEED);
+    //displayBUSPTR(BUSbytesPTR); // DEBUG
+
+    doEnableRIOProtection();
     clearBUS();
 }
 
@@ -99,10 +104,14 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     doBUSRQ();
-    setESPHardlock();
-    // connect Z80Data and ROM/IOdbus    
+    setESPHardlock();    
+    doDisableRIOProtection();
+
+    // connect Z80Data and ROM/IOdbus   
     doBUSWrite(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
-    resetESPHardlock();
+    
+    doEnableRIOProtection();    
+    resetESPHardlock();    
     clearBUS();
 }
 
