@@ -1,4 +1,5 @@
-#include <ESPHardware_emulation.h>
+#include <ESPHAL.h>
+
 
 /*
     IOd CONFIG Byte
@@ -52,10 +53,3 @@ void doZ80MEMWrite(uint8_t Data, uint16_t Address);
 uint8_t doZ80IORead(uint16_t Address);
 void doZ80IOWrite(uint8_t Data, uint16_t Address);
 
-// RIO PROTECTION CONTROL
-void enableRIOProtection(void);
-void disableRIOProtection(void);
-
-// RIO ROM CONTROL
-void enableRIO_ROMRW(uint8_t ROMbank);
-void disableRIO_ROM(void);

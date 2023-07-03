@@ -1,0 +1,111 @@
+// DO NOT MAKE THE HAL AVAILABLE HERE
+#include <Arduino.h>
+
+
+
+
+/*
+Z80 control
+0 - RD -- Z80_RD / Local_RD
+1 - WR -- Z80_WR / Local_WD
+2 - IORQ -- Z80_IORQ / [Local] Cache_Data/Status (0/1)
+3 - MEMRQ -- Z80_MEMRQ / Local_MEMRQ
+4 - BUSRQ -- Z80_BUSRQ
+5 - WAIT -- Z80_WAIT
+6 - ROMCE -- Z80_ROMCE // HostROM ENABLED LOW, DISABLE HIGHn ( ZX spectrum )
+7 - NMI -- Z80_NMI
+
+
+
+// Control OUTPUT [ NMI | ROMCE  | WAIT | BUSRQ | MEMRQ | IORQ | WE  | RD ]
+// Control INPUT  [ NMI | BUSACK | WAIT | BUSRQ | MEMRQ | IORQ | WE  | RD ]
+
+*/ 
+                                //   76543210
+#define CONTROLBYTE_CLEAR           B11111111
+
+// Z80 NATIVE BUS OPERATIONS
+// Memory access
+#define CONTROLBYTE_MEMRQ_RD        B10100110
+#define CONTROLBYTE_MEMRQ_WR        B10100101
+// IO access
+#define CONTROLBYTE_IORQ_RD         B10110110
+#define CONTROLBYTE_IORQ_WR         B10110101
+
+// Z80 FUJI OPERATIONS
+// RIO-ROM (Z80 or ESP under BUSRQ)
+#define CONTROLBYTE_CEROMRQ_RD      B10100110
+#define CONTROLBYTE_CEROMRQ_WR      B10100101
+
+// RIO-IODconfig (ESP under BUSRQ ONLY)
+#define CONTROLBYTE_RIOCONFIG_RD    B10101110
+#define CONTROLBYTE_RIOCONFIG_WR    B10101101
+
+
+// CONTROL BYTE MASKS
+#define CONTROLBYTE_BUSRQ_ENABLE    B10101111
+#define CONTROLBYTE_BUSRQ_DISABLE   B10111111
+
+#define CONTROLBYTE_HOSTROM_ENABLE    B10111111
+#define CONTROLBYTE_HOSTROM_DISABLE   B11111111
+
+
+// Local BUS
+// CACHE data access
+#define CONTROLBYTE_CACHEDATA_RD    B10110010
+#define CONTROLBYTE_CACHEDATA_WR    B10110001
+// CACHE status access
+#define CONTROLBYTE_CACHESTATUS_RD  B10110110
+#define CONTROLBYTE_CACHESTATUS_WR  B10110101
+
+
+// Signals
+//#define DISABLE_HIGH HIGH
+//#define ENABLE_LOW LOW
+
+//#define DISABLE_LOW LOW
+//#define ENABLE_HIGH HIGH
+
+//
+// INTERUPT CODES
+
+#define INT_NONE                0
+#define INT_Z80HARDLOCK_RESET   1
+#define INT_BUSACK              2
+#define INT_WAIT                3
+
+
+
+
+
+//
+// BASIC bus operations exposed to BUS interface
+
+uint8_t * doBUSReadOperation(uint16_t Address, uint8_t Control);
+
+void doBUSWriteOperation(uint8_t Data, uint16_t Address, uint8_t Control);
+
+void ESPHardware_setup(void);
+
+uint8_t pollINT(void);
+
+boolean establishESPHardlock(uint8_t waitus);
+
+bool sendBUSRQ(uint8_t waitus);
+
+bool sendBUSRQ(void);
+
+bool clearBUSRQ(void);
+
+
+
+//
+// RIO ROM
+void enableRIO_ROMRW(uint8_t ROMbank);
+void enableRIO_ROMRD(uint8_t ROMbank);
+void disableRIO_ROM(void);
+
+
+//
+// RIO IOdevice
+void enableRIO_IOdConfigWR(void);

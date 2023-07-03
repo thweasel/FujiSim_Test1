@@ -1,4 +1,4 @@
-#include <Z80Hardware_emulation.h>
+#include <Z80Hardware_emulator.h>
 
 # define SLOW true
 # define SLOWRATE 100
@@ -19,23 +19,23 @@
 #define Z80_ADDR_H_DDR  DDRK
 
 // Z80 Control Assignments
-#define Z80_BUSACK 30   // INPUT
-#define Z80_RD     21   // OUTPUT
-#define Z80_WR     20   // OUTPUT
-#define Z80_IORQ   19   // OUTPUT
-#define Z80_MEMRQ  18   // OUTPUT
-#define Z80_BUSRQ  17   // OUTPUT
-#define Z80_WAIT   16   // INPUT
-#define Z80_ROMCS  15   // OUTPUT (ROM access decoded Via ULA MEMRQ+A14+A15)
-#define Z80_NMI    14   // INPUT
+#define Z80_BUSACK 30   // OUTPUT -- Response to external devices BUSRQ
+#define Z80_RD     21   // OUTPUT -- Read operation
+#define Z80_WR     20   // OUTPUT -- Write operation (pulse)
+#define Z80_IORQ   19   // OUTPUT -- IO Access operation
+#define Z80_MEMRQ  18   // OUTPUT -- Memory Access operation
+#define Z80_BUSRQ  2    // INPUT  -- [INTERRUPT] External device requesting control of the BUS
+#define Z80_WAIT   16   // INPUT  -- Z80 enter WAIT mode
+#define Z80_ROMCS  15   // INPUT  -- ZX spectrum ROM access (ROM access decoded Via ULA MEMRQ+A14+A15)
+#define Z80_NMI    14   // INPUT  -- Z80 NMI trigger
 
 // OTHER Z80 CPU PINS
-//  M1      // OUTPUT
-//  RFSH    // OUTPUT
-//  HALT    // OUTPUT
-//  INT     // INPUT
-//  RESET   // INPUT
-//  CLK     // INPUT
+//  M1      // OUTPUT -- Extend T-State
+//  RFSH    // OUTPUT -- DRAM refresh?
+//  HALT    // OUTPUT -- LOW when Z80 executes HALT instructions, Z80 waiting (in a NOP loop) for NMI or INT to occur
+//  INT     // INPUT  -- Interupt request
+//  RESET   // INPUT  -- Reset the Z80
+//  CLK     // INPUT  -- Clock signal driving Z80
 
 
 //
@@ -237,8 +237,9 @@ void Z80_IDLE()
     setZ80_IDLEactive();    
 }
 
-void serviceBUSREQ (void) 
+void serviceBUSRQ (void) 
 {
+    Serial.println("BUSRQ service");
     if(checkBUSRQ())
     {
         setZ80_IDLEpassive();
@@ -249,6 +250,8 @@ void serviceBUSREQ (void)
         clearZ80_BUSACKactive();
         setZ80_IDLEactive();
     }
+    delay(1); // supress for bounce?
+    return;
 }
 
 void Z80Hardware_setup(void)
@@ -260,15 +263,19 @@ void Z80Hardware_setup(void)
     clearZ80_BUSACKactive();
 
     // Z80 INPUT pin Config
-    pinMode(Z80_WAIT, INPUT);
-    pinMode(Z80_ROMCS, INPUT);
-    pinMode(Z80_NMI, INPUT);
+    pinMode(Z80_WAIT, INPUT_PULLUP);
+    pinMode(Z80_ROMCS, INPUT_PULLUP);
+    pinMode(Z80_NMI, INPUT_PULLUP);
+    pinMode(Z80_BUSRQ, INPUT_PULLUP);
   
     // TURN OFF PULL-UP RESISTORS FOR BUS (Tri-state no Pull-up)
     disableZ80_ADDRpullups();
     disableZ80_DATApullups();
 
     Z80_IDLE();
+
+    // Interrupt pins
+    attachInterrupt(digitalPinToInterrupt(Z80_BUSRQ),serviceBUSRQ, CHANGE);
 
     return;
 }
