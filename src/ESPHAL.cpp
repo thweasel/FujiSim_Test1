@@ -15,20 +15,21 @@ uint8_t controlByte;  // Control bus state
 void IDLE_BUS(void)
 {
   // Default IDLE state for the system
+  stopBusSignals();
   return;
 }
 
-uint8_t * doBUSReadOperation(uint16_t Address, uint8_t Control)
+uint8_t doReadBUSData(uint16_t Address, uint8_t Control)
 {
-  uint8_t *result;
-  result = ReadBUSOperation(Control, Address);
+  uint8_t result;
+  result = ReadDataBUSOperation(Control, Address);
   IDLE_BUS();
   return result;
 }
 
-void doBUSWriteOperation(uint8_t Data, uint16_t Address, uint8_t Control)
+void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control)
 {
-  WriteBUSOperation(Data,Control,Address);
+  WriteDataBUSOperation(Data,Control,Address);
   IDLE_BUS();
   return;
 }
@@ -89,29 +90,40 @@ boolean establishESPHardlock (uint8_t waitus)
 
 bool sendBUSRQ(uint8_t waitus)
 {
-  WriteBUSOperation(0xFF, CONTROLBYTE_BUSRQ_ENABLE, 0xFFFF);
+  WriteDataBUSOperation(0xFF, CONTROLBYTE_BUSRQ_ENABLE, 0xFFFF);
   // WAIT HERE FOR THE BUSACK signal
 
-  uint8_t *busPacket = getBUSstate();
-  uint8_t control = !busPacket[2];
+  uint8_t *busPacket = NULL;
+  uint8_t control = 0;
   do
   {
-    if (control & B00000010) // BUSACK ?
+    
+    busPacket = getBUSstate();
+    control = ~busPacket[2];  // controlByte     
+    /*   
+    Serial.print("Waiting for BUSACK : control ");
+    Serial.print(CONTROL_MASK_BUSACK,BIN);
+    Serial.print(" & ");
+    Serial.print(control,BIN);
+    Serial.print(" = ");
+    Serial.println((control & CONTROL_MASK_BUSACK),BIN);
+    */
+    if ((control & CONTROL_MASK_BUSACK) == CONTROL_MASK_BUSACK) // BUSACK ?
     {
       // could add a check if we started the BUSRQ
-      Serial.println("BUSACK");
+      Serial.println("BUSACK -- OK");
       return true;
     }
     delay(1);
   } while (--waitus > 0);
-
-  return true; // test setup
-  // return false;
+  
+  //return true; // test setup
+  return false;
 }
 
 bool clearBUSRQ(void)
 {
-  WriteBUSOperation(0xFF,CONTROLBYTE_BUSRQ_DISABLE,0xFFFF);
+  WriteDataBUSOperation(0xFF,CONTROLBYTE_BUSRQ_DISABLE,0xFFFF);
   
   // WAIT HERE FOR THE BUSACK signal
   delay(10);
@@ -129,12 +141,12 @@ void selectROMbank(uint8_t ROMbank)
 
 void enableHostROM(void)
 {
-  WriteBUSOperation(0xff,CONTROLBYTE_HOSTROM_ENABLE,0xFFFF);
+  WriteDataBUSOperation(0xff,CONTROLBYTE_HOSTROM_ENABLE,0xFFFF);
 }
 
 void disableHostROM(void)
 {
-  WriteBUSOperation(0xff,CONTROLBYTE_HOSTROM_DISABLE,0xFFFF);
+  WriteDataBUSOperation(0xff,CONTROLBYTE_HOSTROM_DISABLE,0xFFFF);
 }
 
 // Public

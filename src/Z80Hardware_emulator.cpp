@@ -43,33 +43,45 @@
 //
 
 // SEND conditions should set pull-ups?
-void sendZ80_RD(void)               {   pinMode(Z80_RD, OUTPUT);    digitalWrite(Z80_RD, LOW);      }
-void clearZ80_RDactive(void)        {   pinMode(Z80_RD, OUTPUT);    digitalWrite(Z80_RD, HIGH);     }
-void clearZ80_RDpassive(void)       {   pinMode(Z80_RD, INPUT);     digitalWrite(Z80_RD, LOW);      }
+void sendZ80_RD(void)               {   pinMode(Z80_RD, OUTPUT);        digitalWrite(Z80_RD, LOW);      }
+void clearZ80_RDactive(void)        {   pinMode(Z80_RD, OUTPUT);        digitalWrite(Z80_RD, HIGH);     }
+void clearZ80_RDpassive(void)       {   pinMode(Z80_RD, INPUT);         digitalWrite(Z80_RD, LOW);      }
 
-void sendZ80_WR(void)               {   pinMode(Z80_WR, OUTPUT);    digitalWrite(Z80_WR, LOW); digitalWrite(Z80_WR, HIGH);      }
-void clearZ80_WRactive(void)        {   pinMode(Z80_WR, OUTPUT);    digitalWrite(Z80_WR, HIGH);     }
-void clearZ80_WRpassive(void)       {   pinMode(Z80_WR, INPUT);     digitalWrite(Z80_WR, LOW);      }
+void sendZ80_WR(void)               {   pinMode(Z80_WR, OUTPUT);        digitalWrite(Z80_WR, LOW); digitalWrite(Z80_WR, HIGH);      }
+void clearZ80_WRactive(void)        {   pinMode(Z80_WR, OUTPUT);        digitalWrite(Z80_WR, HIGH);     }
+void clearZ80_WRpassive(void)       {   pinMode(Z80_WR, INPUT);         digitalWrite(Z80_WR, LOW);      }
 
-void sendZ80_IORQ(void)             {   pinMode(Z80_IORQ, OUTPUT);  digitalWrite(Z80_IORQ, LOW);    }
-void clearZ80_IORQactive(void)      {   pinMode(Z80_IORQ, OUTPUT);  digitalWrite(Z80_IORQ, HIGH);   }
-void clearZ80_IORQpassive(void)     {   pinMode(Z80_IORQ, INPUT);   digitalWrite(Z80_IORQ, LOW);    }
+void sendZ80_IORQ(void)             {   pinMode(Z80_IORQ, OUTPUT);      digitalWrite(Z80_IORQ, LOW);    }
+void clearZ80_IORQactive(void)      {   pinMode(Z80_IORQ, OUTPUT);      digitalWrite(Z80_IORQ, HIGH);   }
+void clearZ80_IORQpassive(void)     {   pinMode(Z80_IORQ, INPUT);       digitalWrite(Z80_IORQ, LOW);    }
 
-void sendZ80_MEMRQ(void)            {   pinMode(Z80_MEMRQ, OUTPUT); digitalWrite(Z80_MEMRQ, LOW);    }
-void clearZ80_MEMRQactive(void)     {   pinMode(Z80_MEMRQ, OUTPUT); digitalWrite(Z80_MEMRQ, HIGH);   }
-void clearZ80_MEMRQpassive(void)    {   pinMode(Z80_MEMRQ, INPUT);  digitalWrite(Z80_MEMRQ, LOW);   }
+void sendZ80_MEMRQ(void)            {   pinMode(Z80_MEMRQ, OUTPUT);     digitalWrite(Z80_MEMRQ, LOW);   }
+void clearZ80_MEMRQactive(void)     {   pinMode(Z80_MEMRQ, OUTPUT);     digitalWrite(Z80_MEMRQ, HIGH);  }
+void clearZ80_MEMRQpassive(void)    {   pinMode(Z80_MEMRQ, INPUT);      digitalWrite(Z80_MEMRQ, LOW);   }
 
-void sendZ80_BUSACK(void)           {   pinMode(Z80_BUSACK, INPUT); digitalWrite(Z80_BUSACK, LOW);  }
-void clearZ80_BUSACKactive(void)    {   pinMode(Z80_BUSACK, INPUT); digitalWrite(Z80_BUSACK, HIGH); }
+void sendZ80_BUSACK(void)           {   pinMode(Z80_BUSACK, OUTPUT);    digitalWrite(Z80_BUSACK, LOW);  }
+void clearZ80_BUSACK(void)          {   pinMode(Z80_BUSACK, OUTPUT);    digitalWrite(Z80_BUSACK, HIGH); }
 
 
 //
 // Z80 INPUT Control line operations (Return TRUE if LOW)
-boolean checkWAIT(void)     {   return !digitalRead(Z80_WAIT);  }
+boolean isWAIT(void)     
+{
+    if(digitalRead(Z80_WAIT) == 1) { return true; }
+    else { return false; }
+}
 //boolean checkINT(void)      {   return !digitalRead(Z80_INT)    ;}
-boolean checkNMI(void)      {   return !digitalRead(Z80_NMI);   }
+boolean isNMI(void)      
+{   
+    if(digitalRead(Z80_NMI) == 1) { return true; }
+    else { return false; }
+}
 //boolean checkRESET(void)    {   return !digitalRead(Z80_RESET); }
-boolean checkBUSRQ(void)    {   return !digitalRead(Z80_BUSRQ); }
+boolean isBUSRQ(void)    
+{   
+     if(digitalRead(Z80_BUSRQ) == 1) { return true; }
+     else { return false; }
+}
   
 
 void enableZ80_ADDRpullups (void) 
@@ -147,8 +159,6 @@ void setZ80_IDLEactive(void)
 {
     // INPUT PINS UNCHANGED
     // Z80 OUTPUT pins HIGH
-    
-    if (SLOW) {delay(SLOWRATE);}
 
     // Z80 Control lines
     clearZ80_RDactive();
@@ -160,7 +170,6 @@ void setZ80_IDLEactive(void)
     clearZ80_ADDRpassive();
     clearZ80_DATApassive();
     
-    if (SLOW) {delay(SLOWRATE);}
     return;
 }
 
@@ -171,8 +180,6 @@ void setZ80_IDLEpassive(void)
     // INPUT PINS UNCHANGED
     // Z80 OUTPUT pins set to Tri-state INPUTS the pins with Pull-up OFF (passive the outputs)
 
-    if (SLOW) {delay(SLOWRATE);}
-
     // Z80 Control lines
     clearZ80_RDpassive();
     clearZ80_WRpassive();
@@ -182,9 +189,7 @@ void setZ80_IDLEpassive(void)
     // Z80 BUS
     clearZ80_ADDRpassive();
     clearZ80_DATApassive();
-    
-    //asm("nop; nop; nop; nop; nop; nop; nop; nop;");
-    if (SLOW) {delay(SLOWRATE);}
+
     return;
 }
 
@@ -234,23 +239,22 @@ uint8_t fetchZ80_DATA(void)
 void Z80_IDLE() 
 {
     // DEFAULT state between actions    
-    setZ80_IDLEactive();    
+    setZ80_IDLEactive(); 
+    if (SLOW) {delay(SLOWRATE);}   
 }
 
 void serviceBUSRQ (void) 
 {
-    Serial.println("BUSRQ service");
-    if(checkBUSRQ())
+    if(isBUSRQ())
     {
         setZ80_IDLEpassive();
         sendZ80_BUSACK();
     } 
     else 
     {
-        clearZ80_BUSACKactive();
+        clearZ80_BUSACK();
         setZ80_IDLEactive();
     }
-    delay(1); // supress for bounce?
     return;
 }
 
@@ -260,7 +264,7 @@ void Z80Hardware_setup(void)
     clearZ80_WRactive();
     clearZ80_IORQactive();
     clearZ80_MEMRQactive();
-    clearZ80_BUSACKactive();
+    clearZ80_BUSACK();
 
     // Z80 INPUT pin Config
     pinMode(Z80_WAIT, INPUT_PULLUP);

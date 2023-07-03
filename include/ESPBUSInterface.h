@@ -32,8 +32,8 @@
 void ESP_setup(void);
 
 // ROM/IOd CHIP
-uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank); //A16-0
-void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank); //A16-0
+uint8_t doRIOROMRead(uint16_t Address, uint8_t ROMbank); //A16-0
+void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank); //A16-0
 
 uint8_t doRIOconfigRead(uint16_t Address ); //A16-1
 void doRIOconfigWrite(uint8_t Data, uint16_t Address); //A16-1

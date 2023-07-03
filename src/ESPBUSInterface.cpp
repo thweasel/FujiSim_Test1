@@ -1,5 +1,7 @@
 #include <ESPBUSInterface.h>
 
+uint8_t data;
+
 uint8_t *BUSpacket;
 //  BUSbyte [3] = Data;
 //  BUSbyte [2] = Control;
@@ -42,25 +44,25 @@ void ESP_setup(void)
 
 // ESP accessing the ROM/IOd chip VIA Z80 Bus
 // Uses these to read/write ROMs into the IOd chip
-uint8_t doCEROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
+uint8_t doRIOROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 {
     sendBUSRQ(3);
     enableRIO_ROMRD(ROMbank);
     
-    BUSpacket = doBUSReadOperation(Address, CONTROLBYTE_CEROMRQ_RD);
+    data = doReadBUSData(Address, CONTROLBYTE_CEROMRQ_RD);
            
     disableRIO_ROM();
 
-    return BUSpacket[3];
+    return data;
 }
 
-void doCEROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
+void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 {
     if ( sendBUSRQ(3) ) 
-    {
+    {        
         enableRIO_ROMRW(ROMbank);
     
-        doBUSWriteOperation(Data, Address, CONTROLBYTE_CEROMRQ_WR);
+        doWriteBUSData(Data, Address, CONTROLBYTE_CEROMRQ_WR);
     
         disableRIO_ROM();
     }
@@ -76,9 +78,9 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
     sendBUSRQ(); 
 
     // connect Z80Data and ROM/IOdbus
-    BUSpacket = doBUSReadOperation(Address, CONTROLBYTE_RIOCONFIG_RD);
+    data = doReadBUSData(Address, CONTROLBYTE_RIOCONFIG_RD);
       
-    return BUSpacket[3];
+    return data;
 }
 
 void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
@@ -87,7 +89,7 @@ void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
     enableRIO_IOdConfigWR();
     
     // connect Z80Data and ROM/IOdbus   
-    doBUSWriteOperation(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
+    doWriteBUSData(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
     
 }
 
@@ -97,17 +99,17 @@ uint8_t doZ80MEMRead(uint16_t Address)
 {
     sendBUSRQ();
 
-    BUSpacket = doBUSReadOperation(Address, CONTROLBYTE_MEMRQ_RD);
+    data = doReadBUSData(Address, CONTROLBYTE_MEMRQ_RD);
 
     
-    return BUSpacket[3];
+    return data;
 }
 
 void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 {
     sendBUSRQ();
 
-    doBUSWriteOperation(Data, Address, CONTROLBYTE_MEMRQ_WR);
+    doWriteBUSData(Data, Address, CONTROLBYTE_MEMRQ_WR);
 
     
 }
@@ -118,16 +120,16 @@ uint8_t doZ80IORead(uint16_t Address)
 {
     sendBUSRQ();
 
-    BUSpacket = doBUSReadOperation(Address, CONTROLBYTE_IORQ_RD);
+    data = doReadBUSData(Address, CONTROLBYTE_IORQ_RD);
    
-    return BUSpacket[3]; // Data Byte
+    return data; // Data Byte
 }
 
 void doZ80IOWrite(uint8_t Data, uint16_t Address)
 {
     sendBUSRQ();
 
-    doBUSWriteOperation(Data, Address, CONTROLBYTE_IORQ_WR);
+    doWriteBUSData(Data, Address, CONTROLBYTE_IORQ_WR);
     
 }
 
@@ -146,8 +148,8 @@ uint8_t doCacheDataRead(uint16_t Address) // A16-0
 {
     if(establishESPHardlock(1))
     {
-        BUSpacket = doBUSReadOperation(Address, CONTROLBYTE_CACHEDATA_RD);
-        return BUSpacket[3];
+        data = doReadBUSData(Address, CONTROLBYTE_CACHEDATA_RD);
+        return data;
     }
     return 0;
 }
@@ -156,7 +158,7 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 {
     establishESPHardlock(1);
 
-    doBUSWriteOperation(Data, Address, CONTROLBYTE_CACHEDATA_WR);
+    doWriteBUSData(Data, Address, CONTROLBYTE_CACHEDATA_WR);
 }
 
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
@@ -164,16 +166,16 @@ uint8_t doCacheStatusRead(uint16_t Address) // A16-1
     establishESPHardlock(1);
     //displayBUSPTR(BUSpacket);
 
-    BUSpacket = doBUSReadOperation(Address, CONTROLBYTE_CACHESTATUS_RD);
+    data = doReadBUSData(Address, CONTROLBYTE_CACHESTATUS_RD);
 
 //    displayBUSPTR(BUSpacket);
-    return BUSpacket[3];
+    return data;
 }
 
 void doCacheStatusWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     establishESPHardlock(1);
 
-    doBUSWriteOperation(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
+    doWriteBUSData(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
 
 }

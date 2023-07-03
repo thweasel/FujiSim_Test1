@@ -1,9 +1,6 @@
 // DO NOT MAKE THE HAL AVAILABLE HERE
 #include <Arduino.h>
 
-
-
-
 /*
 Z80 control
 0 - RD -- Z80_RD / Local_RD
@@ -14,23 +11,34 @@ Z80 control
 5 - WAIT -- Z80_WAIT
 6 - ROMCE -- Z80_ROMCE // HostROM ENABLED LOW, DISABLE HIGHn ( ZX spectrum )
 7 - NMI -- Z80_NMI
-
-
-
-// Control OUTPUT [ NMI | ROMCE  | WAIT | BUSRQ | MEMRQ | IORQ | WE  | RD ]
-// Control INPUT  [ NMI | BUSACK | WAIT | BUSRQ | MEMRQ | IORQ | WE  | RD ]
+                    7     6        5      4       3       2      1     0
+// Control OUTPUT [ NMI | ROMCE  | WAIT | BUSRQ | MEMRQ | IORQ | WR  | RD ]
+// Control INPUT  [ NMI | BUSACK | WAIT | BUSRQ | MEMRQ | IORQ | WR  | RD ]
 
 */ 
+
+#define CONTROL_MASK_RD     B00000001
+#define CONTROL_MASK_WR     B00000010
+#define CONTROL_MASK_IORQ   B00000100
+#define CONTROL_MASK_MEMRQ  B00001000
+
+#define CONTROL_MASK_BUSRQ  B00010000
+#define CONTROL_MASK_WAIT   B00100000
+#define CONTROL_MASK_BUSACK B01000000
+#define CONTROL_MASK_ROMCE  B01000000
+#define CONTROL_MASK_NMI    B10000000
+
+
                                 //   76543210
 #define CONTROLBYTE_CLEAR           B11111111
 
 // Z80 NATIVE BUS OPERATIONS
 // Memory access
-#define CONTROLBYTE_MEMRQ_RD        B10100110
-#define CONTROLBYTE_MEMRQ_WR        B10100101
+#define CONTROLBYTE_MEMRQ_RD        B11100110
+#define CONTROLBYTE_MEMRQ_WR        B11100101
 // IO access
-#define CONTROLBYTE_IORQ_RD         B10110110
-#define CONTROLBYTE_IORQ_WR         B10110101
+#define CONTROLBYTE_IORQ_RD         B11101010
+#define CONTROLBYTE_IORQ_WR         B11101001
 
 // Z80 FUJI OPERATIONS
 // RIO-ROM (Z80 or ESP under BUSRQ)
@@ -38,16 +46,16 @@ Z80 control
 #define CONTROLBYTE_CEROMRQ_WR      B10100101
 
 // RIO-IODconfig (ESP under BUSRQ ONLY)
-#define CONTROLBYTE_RIOCONFIG_RD    B10101110
-#define CONTROLBYTE_RIOCONFIG_WR    B10101101
+#define CONTROLBYTE_RIOCONFIG_RD    B11101110
+#define CONTROLBYTE_RIOCONFIG_WR    B11101101
 
 
 // CONTROL BYTE MASKS
-#define CONTROLBYTE_BUSRQ_ENABLE    B10101111
-#define CONTROLBYTE_BUSRQ_DISABLE   B10111111
+#define CONTROLBYTE_BUSRQ_ENABLE    B11101111
+#define CONTROLBYTE_BUSRQ_DISABLE   B11111111
 
-#define CONTROLBYTE_HOSTROM_ENABLE    B10111111
-#define CONTROLBYTE_HOSTROM_DISABLE   B11111111
+#define CONTROLBYTE_HOSTROM_ENABLE  B11111111
+#define CONTROLBYTE_HOSTROM_DISABLE B10111111
 
 
 // Local BUS
@@ -81,9 +89,9 @@ Z80 control
 //
 // BASIC bus operations exposed to BUS interface
 
-uint8_t * doBUSReadOperation(uint16_t Address, uint8_t Control);
+uint8_t doReadBUSData(uint16_t Address, uint8_t Control);
 
-void doBUSWriteOperation(uint8_t Data, uint16_t Address, uint8_t Control);
+void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control);
 
 void ESPHardware_setup(void);
 

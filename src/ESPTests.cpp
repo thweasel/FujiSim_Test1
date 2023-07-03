@@ -76,13 +76,11 @@ void ESP_ROM_Test(void)
     Serial.print("doROMWrite : data ");
     Serial.print(data,HEX);
     Serial.print(", addr ");
-    Serial.print(addr,HEX);
-    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-
-    doCEROMWrite(data, addr, 0);
+    Serial.println(addr,HEX);
+    doRIOROMWrite(data, addr, 0);
     
 
-    data = doCEROMRead(addr, 0);
+    data = doRIOROMRead(addr, 0);
     Serial.print(" - doROMRead : ");
     Serial.println(data,HEX);
     

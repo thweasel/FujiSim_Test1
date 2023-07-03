@@ -7,14 +7,15 @@
 void ESPHAL_setup(void);
 
 
-void WriteBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address);
+void WriteDataBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address);
 
-uint8_t *ReadBUSOperation(uint8_t Control, uint16_t Address);
+uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address);
 
 uint8_t *getBUSstate(void);
 
 void sendBusSignals(void);
 
+void stopBusSignals(void);
 
 //
 // RIO ROM

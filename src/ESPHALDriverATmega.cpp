@@ -3,6 +3,7 @@
 
 #define RUNSLOW true
 #define SLOWTIME 200
+#define SLOWPULSEDIV 5
 
 
 
@@ -21,7 +22,7 @@
 #define ESP_SPI_INT_STC 49  // OUTPUT (pulse)     --SPI Latch Bus packet in shift registers for output
 #define ESP_SPI_INT_OE 48   // OUTPUT (send/stop) --SPI Enable Output of an Address from shift registers
 #define ESP_PULSE 47        // OUTPUT (pulse)     -- Generate a pulse for Writing
-#define ESPin_PL 46         // OUTPUT (pulse)     -- SPI Load Host BUS state to shift registers
+#define ESP_SPI_INT_PL 46   // OUTPUT (pulse)     -- SPI Load Host BUS state to shift registers
 
 
 #define ESP_RIO_PROTECT 5   // OUTPUT (enable/disable)
@@ -94,7 +95,7 @@ void writeSPI(void)
   // LATCH the Shift Regs to Storage (pulse)
   digitalWrite(ESP_SPI_INT_STC, HIGH); // Move shift to storage
   
-  if(RUNSLOW) { delay(SLOWTIME); }
+  if(RUNSLOW) { delay(SLOWTIME); } // SLOW THE OUTPUT POINT
   
   digitalWrite(ESP_SPI_INT_STC, LOW);
 
@@ -107,17 +108,17 @@ void readSPI(void)
   // INPUT 74xx165 Shift Registers (x4)
 
   // LATCH data into the Shift Regs (pulse)
-  digitalWrite(ESPin_PL, LOW);  // Parallel Load
-  delay(2);
+  digitalWrite(ESP_SPI_INT_PL, LOW);  // Parallel Load
+  if(RUNSLOW) { delay(SLOWTIME); }  // SLOW THE INPUT POINT
   // Unload the Shift Reg to RXPacket
-  digitalWrite(ESPin_PL, HIGH); // Serial Shift
+  digitalWrite(ESP_SPI_INT_PL, HIGH); // Serial Shift
   
-  clearBusPacketBuffer();
+  //clearBusPacketBuffer();
   SPI.beginTransaction(mySpiSettings);
   SPI.transfer(BusPacketBuffer,4);  
   SPI.endTransaction(); 
 
-  if(RUNSLOW) { delay(SLOWTIME); }
+  
   return; // results in BusPacketBuffer
 }
 
@@ -144,7 +145,7 @@ void ESPHAL_setup(void)
   pinMode(ESP_SPI_INT_STC, OUTPUT);
   pinMode(ESP_SPI_INT_OE, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
-  pinMode(ESPin_PL, OUTPUT);
+  pinMode(ESP_SPI_INT_PL, OUTPUT);
   pinMode(ESP_RIO_PROTECT, OUTPUT);
   pinMode(ESP_ROMSELECT0, OUTPUT);
   pinMode(ESP_ROMSELECT1, OUTPUT);
@@ -156,7 +157,7 @@ void ESPHAL_setup(void)
   digitalWrite(ESP_SPI_INT_STC, HIGH);
   digitalWrite(ESP_SPI_INT_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);
-  digitalWrite(ESPin_PL, HIGH);
+  digitalWrite(ESP_SPI_INT_PL, HIGH);
   digitalWrite(ESP_RIO_PROTECT, HIGH);  // WRITE ENABLE LOW
   digitalWrite(ESP_ROMSELECT0, LOW);
   digitalWrite(ESP_ROMSELECT1, LOW);
@@ -167,21 +168,22 @@ void ESPHAL_setup(void)
 }
 
 
-void WriteBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address)
+void WriteDataBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address)
 {
   setBusPacketBuffer(Data,Control,Address);  
   writeSPI(); // Set Control and Address lines
   sendBusSignals();
+  sendPulse();
   return;
 }
 
-uint8_t * ReadBUSOperation(uint8_t Control, uint16_t Address)
+uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address)
 { 
   setBusPacketBuffer(0x00,Control,Address);  
   writeSPI(); // Set Control and Address lines
   sendBusSignals();
   readSPI();
-  return BusPacketBuffer;
+  return BusPacketBuffer[3]; // Data byte
 }
 
 uint8_t * getBUSstate(void) {
@@ -243,12 +245,14 @@ void sendPulse(void)
   // Some actions need a low clock pulse to trigger
   // This pin should idel high
   digitalWrite(ESP_PULSE,LOW);
+  if(RUNSLOW) { delay(SLOWTIME/SLOWPULSEDIV); }
   digitalWrite(ESP_PULSE,HIGH);
   return;
 }
 void sendWAITreset(void)
 {
   digitalWrite(ESP_WAIT_RESET,LOW);
+  if(RUNSLOW) { delay(SLOWTIME/SLOWPULSEDIV); }
   digitalWrite(ESP_WAIT_RESET,HIGH);
   return;
 }
@@ -256,6 +260,7 @@ void sendWAITreset(void)
 void sendRESET(void)
 {
   digitalWrite(ESP_RESET,LOW);
+  if(RUNSLOW) { delay(SLOWTIME/SLOWPULSEDIV); }
   delay(1); // Extend the delay as needed for clean reset of the host
   digitalWrite(ESP_RESET,HIGH);
   return;
