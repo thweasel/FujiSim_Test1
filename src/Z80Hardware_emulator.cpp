@@ -1,7 +1,7 @@
 #include <Z80Hardware_emulator.h>
 
 # define SLOW true
-# define SLOWRATE 100
+# define SLOWRATE 50
 
 #define PORT_DDR_OUTPUT 255
 #define PORT_DDR_INPUT 0
@@ -248,8 +248,9 @@ uint8_t fetchZ80_DATA(void)
 void Z80_IDLE() 
 {
     // DEFAULT state between actions    
-    setZ80_IDLEactive(); 
     if (SLOW) {delay(SLOWRATE);}   
+    setZ80_IDLEactive();  
+    if (SLOW) {delay(SLOWRATE);}      
 }
 
 void serviceBUSRQ (void) 

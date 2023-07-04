@@ -4,10 +4,7 @@
 void ESP_CacheStatusTest(void)
 {
   Serial.println("\nESP_CacheStatusTest");
-  uint8_t data;
-
-  //clearBUS();
-  delay(50);
+  uint8_t data; 
 
   uint8_t y = 0x00;
   for (uint16_t i = 0; i < 0x10; i++)
@@ -27,17 +24,12 @@ void ESP_CacheStatusTest(void)
     //delay(50);
   }
 
-  // CLEAR
-  delay(50);
 }
 
 void ESP_CacheData_Test(void)
 {
   Serial.println("\nESP_CacheData_Test");
   uint8_t data;
-
-  //clearBUS();
-  delay(50);
 
   uint8_t y = 0x00;
   for (uint16_t i = 0; i < 0x10; i++)
@@ -52,11 +44,8 @@ void ESP_CacheData_Test(void)
     Serial.println(data,HEX);
     
     y++;
-    //delay(50);
   }
 
-  // CLEAR
-  delay(50);
 }
 
 void ESP_ROM_Test(void)
@@ -90,9 +79,6 @@ void ESP_RIOconfig_Access_Test(void)
   Serial.println("\nESP_RIOconfig_Test");
   uint8_t data;
 
-  //clearBUS();
-  delay(50);
-
   uint8_t y = 0x00;
   for (uint16_t i = 0; i < 0x10; i++)
   {
@@ -108,11 +94,8 @@ void ESP_RIOconfig_Access_Test(void)
     Serial.println(data,HEX);
     
     y++;
-    //delay(50);
   }
 
-  // CLEAR
-  delay(50);
 }
 
 void ESP_FillCacheStatus (uint8_t data)

@@ -1,8 +1,10 @@
 
 #include <ESPHALDriverATmega.h>
 
+#define DEBUG_SPI false
+
 #define RUNSLOW true
-#define SLOWTIME 200
+#define SLOWTIME 50
 #define SLOWPULSEDIV 5
 
 
@@ -74,6 +76,17 @@ uint8_t * setBusPacketBuffer (uint8_t Data, uint8_t Control, uint16_t Address)
   return BusPacketBuffer;
 }
 
+void showBusPacketBuffer(void)
+{
+  Serial.print("Driver BusPacketBuffer - Data:");
+  Serial.print(BusPacketBuffer[3],BIN);
+  Serial.print(" Control: ");
+  Serial.print(BusPacketBuffer[2],BIN);
+  Serial.print(" AddrL: ");
+  Serial.print(BusPacketBuffer[1],BIN);
+  Serial.print(" AddrH: ");
+  Serial.println(BusPacketBuffer[0],BIN);
+}
 
 //
 // SPI BUS hardware implementation
@@ -86,6 +99,12 @@ SPISettings mySpiSettings (10000,MSBFIRST,SPI_MODE0);
 void writeSPI(void)
 { 
   // OUTPUT 74XX595 Shift registers (x4)
+
+  if(DEBUG_SPI) 
+  {
+    Serial.print("writeSPI  ");
+    showBusPacketBuffer();
+  }
 
   // Load TXPacket into the Shift Regs
   SPI.beginTransaction(mySpiSettings);
@@ -117,9 +136,19 @@ void readSPI(void)
   SPI.beginTransaction(mySpiSettings);
   SPI.transfer(BusPacketBuffer,4);  
   SPI.endTransaction(); 
+  
+  
+  
   // Needed if Shift registers are chained using !Q7
   //BusPacketBuffer[0] = ~BusPacketBuffer[0];
   //BusPacketBuffer[2] = ~BusPacketBuffer[2];
+
+  if(DEBUG_SPI) 
+  {
+    Serial.print("readSPI  ");
+    showBusPacketBuffer();
+  }
+
   return; // results in BusPacketBuffer
 }
 
@@ -189,15 +218,6 @@ uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address)
 
 uint8_t * getBUSstate(void) {
   readSPI();
-  Serial.print("BUS State Data: ");
-  Serial.print(BusPacketBuffer[3],BIN);
-  Serial.print(" Control: ");
-  Serial.print(BusPacketBuffer[2],BIN);
-  Serial.print(" AddrL: ");
-  Serial.print(BusPacketBuffer[1],BIN);
-  Serial.print(" AddrH: ");
-  Serial.println(BusPacketBuffer[0],BIN);
-
   return BusPacketBuffer;
 }
 
