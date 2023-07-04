@@ -24,11 +24,13 @@
 #define Z80_WR     20   // OUTPUT -- Write operation (pulse)
 #define Z80_IORQ   19   // OUTPUT -- IO Access operation
 #define Z80_MEMRQ  18   // OUTPUT -- Memory Access operation
-#define Z80_BUSRQ  2    // INPUT  -- [INTERRUPT] External device requesting control of the BUS
+#define Z80_BUSRQ  17    // INPUT -- External device requesting control of the BUS
 #define Z80_WAIT   16   // INPUT  -- Z80 enter WAIT mode
 #define Z80_ROMCS  15   // INPUT  -- ZX spectrum ROM access (ROM access decoded Via ULA MEMRQ+A14+A15)
 #define Z80_NMI    14   // INPUT  -- Z80 NMI trigger
 
+
+#define Z80_SIM_ISR 2   // [INTERRUPT] 
 // OTHER Z80 CPU PINS
 //  M1      // OUTPUT -- Extend T-State
 //  RFSH    // OUTPUT -- DRAM refresh?
@@ -79,8 +81,12 @@ boolean isNMI(void)
 //boolean checkRESET(void)    {   return !digitalRead(Z80_RESET); }
 boolean isBUSRQ(void)    
 {   
-     if(digitalRead(Z80_BUSRQ) == 0) { return true; }
-     else { return false; }
+     if(digitalRead(Z80_BUSRQ) == 0) 
+     { Serial.println("Z80_BUSRQ = 0");
+        return true; }
+     else { 
+        Serial.println("Z80_BUSRQ = 1");
+        return false; }
 }
   
 
@@ -282,7 +288,7 @@ void Z80Hardware_setup(void)
     Z80_IDLE();
 
     // Interrupt pins
-    attachInterrupt(digitalPinToInterrupt(Z80_BUSRQ),serviceBUSRQ, CHANGE);
+    //attachInterrupt(digitalPinToInterrupt(Z80_SIM_ISR),serviceBUSRQ, CHANGE);
 
     return;
 }

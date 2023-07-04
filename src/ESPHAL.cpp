@@ -47,15 +47,15 @@ uint8_t pollINT(void) {
   if( getINT() )
   {
     uint8_t *busPacket = getBUSstate(); // BusPacket [2] Control byte
-    uint8_t control = !busPacket[2];
+    uint8_t controlLogic = !busPacket[2];
     
-    if( control & B00000010 ) // BUSACK ?
+    if( controlLogic & B00000010 ) // BUSACK ?
     {
       // could add a check if we started the BUSRQ
       Serial.println ("BUSACK");
       
     }
-    if ( control & B00000100 ) // WAIT ?
+    if ( controlLogic & B00000100 ) // WAIT ?
     {
       // Check if we started a WAIT operation
       Serial.println ("WAIT");
@@ -70,7 +70,7 @@ uint8_t pollINT(void) {
   return intCode;
 }
 
-boolean establishESPHardlock (uint8_t waitus) 
+boolean establishESPHardlock (uint8_t retries) 
 {
   do
   {
@@ -84,49 +84,35 @@ boolean establishESPHardlock (uint8_t waitus)
       return true;    // SUCCESSFUL LOCK
     }
 
-  } while (--waitus > 0);
+  } while (--retries > 0);
   return false;       // FAILED TO LOCK
 }
 
-bool sendBUSRQ(uint8_t waitus)
+bool sendBUSRQ(uint8_t retries)
 {
   WriteDataBUSOperation(0xFF, CONTROLBYTE_BUSRQ_ENABLE, 0xFFFF);
-  // WAIT HERE FOR THE BUSACK signal
 
   uint8_t *busPacket = NULL;
-  uint8_t control = 0;
+  uint8_t controlLogic = 0;
   do
   {
-    
     busPacket = getBUSstate();
-    control = ~busPacket[2];  // controlByte     
-    /*   
-    Serial.print("Waiting for BUSACK : control ");
-    Serial.print(CONTROL_MASK_BUSACK,BIN);
-    Serial.print(" & ");
-    Serial.print(control,BIN);
-    Serial.print(" = ");
-    Serial.println((control & CONTROL_MASK_BUSACK),BIN);
-    */
-    if ((control & CONTROL_MASK_BUSACK) == CONTROL_MASK_BUSACK) // BUSACK ?
+    controlLogic = ~busPacket[2];  // controlByte     
+    if ((controlLogic & CONTROL_MASK_BUSACK) == CONTROL_MASK_BUSACK) // BUSACK ?
     {
       // could add a check if we started the BUSRQ
       Serial.println("BUSACK -- OK");
       return true;
     }
-    delay(1);
-  } while (--waitus > 0);
-  
-  //return true; // test setup
+  } while (--retries > 0);
+
+  Serial.println("BUSACK -- FAIL");
   return false;
 }
 
 bool clearBUSRQ(void)
 {
   WriteDataBUSOperation(0xFF,CONTROLBYTE_BUSRQ_DISABLE,0xFFFF);
-  
-  // WAIT HERE FOR THE BUSACK signal
-  delay(10);
   return true;
 }
 

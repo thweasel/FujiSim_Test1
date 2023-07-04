@@ -57,7 +57,7 @@ uint8_t doRIOROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
 }
 
 void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
-{
+{        
     if ( sendBUSRQ(3) ) 
     {        
         enableRIO_ROMRW(ROMbank);
@@ -67,7 +67,6 @@ void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
         disableRIO_ROM();
     }
 
-    
 }
 
 

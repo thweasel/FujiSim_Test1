@@ -64,33 +64,25 @@ void ESP_ROM_Test(void)
   Serial.println("\nESP_ROM_Test");
   uint8_t data;
 
-  //clearBUS();
-  delay(50);
-
   data = 0x00;
   for (uint16_t addr = 0; addr < 0x10; addr++)
   {
     data=addr;
-    //data = 0x0F;
-    
-    Serial.print("doROMWrite : data ");
-    Serial.print(data,HEX);
-    Serial.print(", addr ");
-    Serial.println(addr,HEX);
+        
+    Serial.print("doROMWrite : addr ");
+    Serial.print(addr,HEX);
+    Serial.print(", data = ");
+    Serial.println(data,HEX);
     doRIOROMWrite(data, addr, 0);
     
-
+    Serial.print("doROMRead : addr ");
+    Serial.println(addr,HEX);
     data = doRIOROMRead(addr, 0);
-    Serial.print(" - doROMRead : ");
+    Serial.print("data = ");
     Serial.println(data,HEX);
-    
-    
-    //delay(50);
-    //delay(1000);
+
   }
 
-  // CLEAR
-  delay(50);
 }
 
 void ESP_RIOconfig_Access_Test(void)

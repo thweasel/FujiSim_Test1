@@ -117,8 +117,9 @@ void readSPI(void)
   SPI.beginTransaction(mySpiSettings);
   SPI.transfer(BusPacketBuffer,4);  
   SPI.endTransaction(); 
-
-  
+  // Needed if Shift registers are chained using !Q7
+  //BusPacketBuffer[0] = ~BusPacketBuffer[0];
+  //BusPacketBuffer[2] = ~BusPacketBuffer[2];
   return; // results in BusPacketBuffer
 }
 
@@ -188,6 +189,15 @@ uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address)
 
 uint8_t * getBUSstate(void) {
   readSPI();
+  Serial.print("BUS State Data: ");
+  Serial.print(BusPacketBuffer[3],BIN);
+  Serial.print(" Control: ");
+  Serial.print(BusPacketBuffer[2],BIN);
+  Serial.print(" AddrL: ");
+  Serial.print(BusPacketBuffer[1],BIN);
+  Serial.print(" AddrH: ");
+  Serial.println(BusPacketBuffer[0],BIN);
+
   return BusPacketBuffer;
 }
 
