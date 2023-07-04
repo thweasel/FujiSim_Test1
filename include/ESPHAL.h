@@ -116,4 +116,5 @@ void disableRIO_ROM(void);
 
 //
 // RIO IOdevice
-void enableRIO_IOdConfigWR(void);
+void enableRIO_IOdConfigAccess(void);
+void disableRIO_IOdConfigAccess(void);

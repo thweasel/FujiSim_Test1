@@ -1,7 +1,8 @@
 #include <Z80Hardware_emulator.h>
 
-# define SLOW true
-# define SLOWRATE 50
+# define RUNSLOW true
+# define SLOWTIME 200
+# define SLOWPULSEDIV 1
 
 #define PORT_DDR_OUTPUT 255
 #define PORT_DDR_INPUT 0
@@ -45,13 +46,23 @@
 //
 
 // SEND conditions should set pull-ups?
+
+void sendZ80_WR(void)
+{
+    pinMode(Z80_WR, OUTPUT);
+    digitalWrite(Z80_WR, LOW);
+    if (RUNSLOW)
+    {
+        delay(SLOWTIME / SLOWPULSEDIV);
+    };
+    digitalWrite(Z80_WR, HIGH);
+}
+void clearZ80_WRactive(void)        {   pinMode(Z80_WR, OUTPUT);        digitalWrite(Z80_WR, HIGH);     }
+void clearZ80_WRpassive(void)       {   pinMode(Z80_WR, INPUT);         digitalWrite(Z80_WR, LOW);      }
+
 void sendZ80_RD(void)               {   pinMode(Z80_RD, OUTPUT);        digitalWrite(Z80_RD, LOW);      }
 void clearZ80_RDactive(void)        {   pinMode(Z80_RD, OUTPUT);        digitalWrite(Z80_RD, HIGH);     }
 void clearZ80_RDpassive(void)       {   pinMode(Z80_RD, INPUT);         digitalWrite(Z80_RD, LOW);      }
-
-void sendZ80_WR(void)               {   pinMode(Z80_WR, OUTPUT);        digitalWrite(Z80_WR, LOW); digitalWrite(Z80_WR, HIGH);      }
-void clearZ80_WRactive(void)        {   pinMode(Z80_WR, OUTPUT);        digitalWrite(Z80_WR, HIGH);     }
-void clearZ80_WRpassive(void)       {   pinMode(Z80_WR, INPUT);         digitalWrite(Z80_WR, LOW);      }
 
 void sendZ80_IORQ(void)             {   pinMode(Z80_IORQ, OUTPUT);      digitalWrite(Z80_IORQ, LOW);    }
 void clearZ80_IORQactive(void)      {   pinMode(Z80_IORQ, OUTPUT);      digitalWrite(Z80_IORQ, HIGH);   }
@@ -183,7 +194,7 @@ void setZ80_IDLEpassive(void)
 }
 
 void setZ80_IDLEactive(void)
-{
+{  // DO NOT USE, Z80 Tri-States high (we think)
 
     setZ80_IDLEpassive();
     // INPUT PINS UNCHANGED
@@ -248,22 +259,22 @@ uint8_t fetchZ80_DATA(void)
 void Z80_IDLE() 
 {
     // DEFAULT state between actions    
-    if (SLOW) {delay(SLOWRATE);}   
-    setZ80_IDLEactive();  
-    if (SLOW) {delay(SLOWRATE);}      
+    if (RUNSLOW) {delay(SLOWTIME);}   
+    setZ80_IDLEpassive();  
+    if (RUNSLOW) {delay(SLOWTIME);}      
 }
 
 void serviceBUSRQ (void) 
 {   // Broken, bounces on CHANGE detection
     if(isBUSRQ())
     {
-        setZ80_IDLEpassive();
+        //setZ80_IDLEpassive();
         sendZ80_BUSACK();
     } 
     else 
     {
         clearZ80_BUSACK();
-        setZ80_IDLEactive();
+        //setZ80_IDLEpassive();
     }
     return;
 }

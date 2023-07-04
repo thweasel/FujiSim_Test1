@@ -7,8 +7,8 @@
 
 
 
-#define RUNSLOW true
-#define SLOWTIME 50
+#define RUNSLOW false
+#define SLOWTIME 100
 #define SLOWPULSEDIV 5
 
 
@@ -163,6 +163,10 @@ void stopBusSignals(void)
 
 void Setup_ESPHALDriver(void)
 {
+  // INPUT PINS
+  pinMode(Z80_HARDLOCK, INPUT);
+  digitalWrite(Z80_HARDLOCK, LOW); // Tri-State
+
   // ESP pin Config
   pinMode(ESP_SPI_INT_STC, OUTPUT);
   pinMode(ESP_SPI_INT_OE, OUTPUT);
@@ -172,10 +176,9 @@ void Setup_ESPHALDriver(void)
   pinMode(ESP_ROMSELECT0, OUTPUT);
   pinMode(ESP_ROMSELECT1, OUTPUT);
   pinMode(ESP_HARDLOCK, OUTPUT);
-  pinMode(Z80_HARDLOCK, INPUT);
   pinMode(ESP_RIO_PROTECT, OUTPUT);
 
-  // ESP pin State
+  // OUTPUT States
   digitalWrite(ESP_SPI_INT_STC, HIGH);
   digitalWrite(ESP_SPI_INT_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);
@@ -183,9 +186,9 @@ void Setup_ESPHALDriver(void)
   digitalWrite(ESP_RIO_PROTECT, HIGH);  // WRITE ENABLE LOW
   digitalWrite(ESP_ROMSELECT0, LOW);
   digitalWrite(ESP_ROMSELECT1, LOW);
-  digitalWrite(ESP_HARDLOCK, HIGH);     // Lock set LOW
-  digitalWrite(Z80_HARDLOCK, HIGH);     // Lock set LOW
+  digitalWrite(ESP_HARDLOCK, HIGH);     // START LOCKED
   digitalWrite(ESP_RIO_PROTECT, HIGH);  // Connect on LOW (may be buffer with NOT?)
+ 
   return;
 }
 
@@ -291,13 +294,21 @@ void sendRESET(void)
 //
 // OUPUT set/release 
 
-void setESPHardlock(void)         { digitalWrite(ESP_HARDLOCK,HIGH);   }
-void releaseESPHardlock(void)     { digitalWrite(ESP_HARDLOCK,LOW);    }
+void setESPHardlock(void)       { digitalWrite(ESP_HARDLOCK,HIGH);   }
+void clearESPHardlock(void)     { digitalWrite(ESP_HARDLOCK,LOW);    }
 
 
 //
 // INPUT get
 
-boolean getZ80HardlockState(void) { return digitalRead(Z80_HARDLOCK); }
+boolean getZ80HardlockState(void) 
+{ 
+  if (digitalRead(Z80_HARDLOCK) == 1)
+  {
+    Serial.println("Z80 has lock");
+    return true;
+  }
+  return false; 
+}
 boolean getINT(void)              { return !digitalRead(ESP_INT); }
 

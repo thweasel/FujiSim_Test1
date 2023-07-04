@@ -36,11 +36,7 @@ void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control)
   return;
 }
 
-void ESPHardware_setup(void) 
-{
-  Setup_ESPHALDriver();
-  setBUSidle();
-}
+
 
 uint8_t pollINT(void) {
 
@@ -82,12 +78,19 @@ boolean establishESPHardlock (uint8_t retries)
     }
     else
     { 
+      Serial.println("ESP has Lock");
       setESPHardlock();
       return true;    // SUCCESSFUL LOCK
     }
 
   } while (--retries > 0);
   return false;       // FAILED TO LOCK
+}
+
+void releaseESPHardlock(void)
+{
+  Serial.println("ESP released Lock");
+  clearESPHardlock();
 }
 
 bool sendBUSRQ(uint8_t retries)
@@ -162,12 +165,27 @@ void disableRIO_ROM(void)
 //
 // RIO IOdevice
 
-void enableRIO_IOdConfigWR(void)
+void enableRIO_IOdConfigAccess(void)
 {
+    establishESPHardlock(3);
     disableRIOProtection();
 }
 
-void disableRIO_IOdConfigWR(void)
+void disableRIO_IOdConfigAccess(void)
 {
+    releaseESPHardlock();
     enableRIOProtection();
+}
+
+
+//
+// SETUP THE HAL
+
+void ESPHardware_setup(void) 
+{
+  Setup_ESPHALDriver();
+  // PUSH IODevice config to RIO
+
+  setBUSidle();
+  releaseESPHardlock();
 }

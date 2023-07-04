@@ -98,8 +98,16 @@ void ESP_FillCacheStatus (uint8_t data)
 
 void ESP_RIOconfig_Cache0to0x0001(void)
 {
+  uint8_t data;
   Serial.println("\nESP_test_configIOd");
-  doRIOconfigWrite(IODCONFIG_STATUS,1); //0x90
-  doRIOconfigWrite(IODCONFIG_CACHE0,3); //0x80
-  doRIOconfigWrite(IODCONFIG_IOEND,5);  //0x50
+  doRIOconfigWrite(IODCONFIG_STATUS, 1); // 0x90
+  doRIOconfigWrite(IODCONFIG_CACHE0, 3); // 0x80
+  doRIOconfigWrite(IODCONFIG_IOEND, 5);  // 0x50
+
+  data = doRIOconfigRead(1); // 0x90
+  consoleShowAddrData("IODCONFIG_STATUS", 1, data, HEX);
+  data = doRIOconfigRead(3); // 0x80
+  consoleShowAddrData("IODCONFIG_CACHE0", 3, data, HEX);
+  data = doRIOconfigRead(5); // 0x50
+  consoleShowAddrData("IODCONFIG_IOEND", 5, data, HEX);
 }

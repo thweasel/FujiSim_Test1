@@ -26,6 +26,8 @@ void setROMbank(uint8_t rom);
 void sendPulse(void);
 
 void setESPHardlock(void);
+void clearESPHardlock(void);
 boolean getZ80HardlockState(void);
+
 boolean getINT(void);
 bool resetESPHardlock(void);

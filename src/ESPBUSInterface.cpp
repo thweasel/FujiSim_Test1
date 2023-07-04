@@ -75,9 +75,10 @@ void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 {
     sendBUSRQ(3); 
-
+    enableRIO_IOdConfigAccess();
     // connect Z80Data and ROM/IOdbus
     data = doReadBUSData(Address, CONTROLBYTE_RIOCONFIG_RD);
+    disableRIO_IOdConfigAccess();
     setBUSidle();
     return data;
 }
@@ -85,10 +86,12 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 {
     sendBUSRQ(3);
-    enableRIO_IOdConfigWR();
+    enableRIO_IOdConfigAccess();
     
     // connect Z80Data and ROM/IOdbus   
-    doWriteBUSData(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
+    doWriteBUSData(Data, Address, CONTROLBYTE_RIOCONFIG_WR);    
+
+    disableRIO_IOdConfigAccess();
     setBUSidle();
 }
 
