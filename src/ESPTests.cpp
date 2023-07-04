@@ -76,8 +76,8 @@ void ESP_RIOconfig_Access_Test(void)
 
 void ESP_FillCacheStatus (uint8_t data)
 {
-  Serial.println("\nESP_FillCacheStatus");
-  Serial.print(data,HEX);
+  Serial.print("\nESP_FillCacheStatus : ");
+  Serial.println(data,HEX);
 
   uint8_t check = 0;
 

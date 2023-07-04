@@ -71,12 +71,16 @@ void loop()
   //  
   ESP_CacheStatusTest();
   ESP_CacheData_Test();
+  ESP_FillCacheStatus(0xf0);
+
+
 
   //
   // ESP RIO function tests
   //
   // ESP_ROM_Test();
   // ESP_RIOconfig_Access_Test();
+    
 
 
   /*
@@ -99,12 +103,12 @@ void loop()
   */
 
     
-  // IOD TEST#
-  
-  
-//  ESP_FillCacheStatus(0xf0);
-//  ESP_RIOconfig_Cache0to0x0001();
-//  Z80_IORQ_Test();
+//
+// IODdevice TEST
+//  
+
+  ESP_RIOconfig_Cache0to0x0001();
+  Z80_IORQ_Test();
   
 
 }
