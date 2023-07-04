@@ -65,14 +65,24 @@ void loop()
     digitalWrite(LED_BUILTIN, LOW);
     //delay(1000);
   
-  ESP_ROM_Test();
-  //ESP_RIOconfig_Access_Test();
+
   
-  //ESP_CacheStatusTest();
+  ESP_CacheStatusTest();
   //ESP_CacheData_Test();
 
+  //
+  // ESP RIO function tests
+  //
+  // ESP_ROM_Test();
+  // ESP_RIOconfig_Access_Test();
 
-  
+
+  /*
+
+  //
+  // RIO ROM Tests
+  //
+  ESP_ROM_Test();
   enableRIO_ROMRW(0);
   Z80_ROMMemory_Test();
   disableRIO_ROM();
@@ -84,7 +94,7 @@ void loop()
   enableRIO_ROMRW(3);
   Z80_ROMMemory_Test();
   disableRIO_ROM();
-  
+  */
 
     
   // IOD TEST#

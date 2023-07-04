@@ -103,8 +103,6 @@ boolean establishESPHardlock(uint8_t waitus);
 
 bool sendBUSRQ(uint8_t waitus);
 
-bool sendBUSRQ(void);
-
 bool clearBUSRQ(void);
 
 

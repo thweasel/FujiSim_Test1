@@ -1,6 +1,9 @@
 #include "ESPHALDriverATmega.h"
 #include "ESPBUSInterface.h"
 #include "ESPHAL.h"
+#include "consoleDebug.h"
+
+#define DEBUG_BUSRQ_BUSACK false
 
 // Should the HAL track the last bus state written or read
 //uint8_t dataRegister;
@@ -100,12 +103,12 @@ bool sendBUSRQ(uint8_t retries)
     if ((controlLogic & CONTROL_MASK_BUSACK) == CONTROL_MASK_BUSACK) // BUSACK ?
     {
       // could add a check if we started the BUSRQ
-      Serial.println("BUSACK -- OK");
+      if(DEBUG_BUSRQ_BUSACK) { Serial.println("BUSACK -- OK"); }
       return true;
     }
   } while (--retries > 0);
 
-  Serial.println("BUSACK -- FAIL");
+  if(DEBUG_BUSRQ_BUSACK) { Serial.println("BUSACK -- FAIL"); }
   return false;
 }
 
@@ -161,8 +164,10 @@ void disableRIO_ROM(void)
 
 void enableRIO_IOdConfigWR(void)
 {
-
+    disableRIOProtection();
 }
 
-
-
+void disableRIO_IOdConfigWR(void)
+{
+    enableRIOProtection();
+}

@@ -1,26 +1,23 @@
 
 #include "ESPTests.h"
+#include "consoleDebug.h"
 
 void ESP_CacheStatusTest(void)
 {
   Serial.println("\nESP_CacheStatusTest");
-  uint8_t data; 
 
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
+  uint8_t data = 0x00;
+  for (uint16_t addr = 0; addr < 0x10; addr++)
   {
-    Serial.print("doCacheStatusWrite : ");
-    Serial.print(y,HEX);
-    Serial.print(",");
-    Serial.print(i,HEX);
+    
+    consoleShowAddrData("doCacheStatusWrite",addr, data,HEX);
     // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doCacheStatusWrite(y, i);
+    doCacheStatusWrite(data, addr);
     
-    data = doCacheStatusRead(i);
-    Serial.print(" - doCacheStatusRead : ");
-    Serial.println(data,HEX);
+    data = doCacheStatusRead(addr);
+    consoleShowAddrData("doCacheStatusRead",addr, data,HEX);
     
-    y++;
+    data++;
     //delay(50);
   }
 
@@ -29,21 +26,20 @@ void ESP_CacheStatusTest(void)
 void ESP_CacheData_Test(void)
 {
   Serial.println("\nESP_CacheData_Test");
-  uint8_t data;
-
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
+  
+  uint8_t data = 0x00;
+  for (uint16_t addr = 0; addr < 0x10; addr++)
   {
     Serial.print("doCacheDataWrite : ");
-    Serial.print(y,HEX);
+    Serial.print(data,HEX);
     Serial.print(",");
-    Serial.print(i,HEX);
-    doCacheDataWrite(y, i);
-    data = doCacheDataRead(i);
+    Serial.print(addr,HEX);
+    doCacheDataWrite(data, addr);
+    data = doCacheDataRead(addr);
     Serial.print(" - doCacheDataRead : ");
     Serial.println(data,HEX);
     
-    y++;
+    data++;
   }
 
 }
@@ -51,51 +47,34 @@ void ESP_CacheData_Test(void)
 void ESP_ROM_Test(void)
 {
   Serial.println("\nESP_ROM_Test");
-  uint8_t data;
 
-  data = 0x00;
+  uint8_t data = 0x00;
   for (uint16_t addr = 0; addr < 0x10; addr++)
   {
-    data=addr;
-        
-    Serial.print("doROMWrite : addr ");
-    Serial.print(addr,HEX);
-    Serial.print(", data = ");
-    Serial.println(data,HEX);
+    data = addr;
+
+    consoleShowAddrData("doRIOROMWrite", addr, data, HEX);
     doRIOROMWrite(data, addr, 0);
-    
-    Serial.print("doROMRead : addr ");
-    Serial.println(addr,HEX);
+
     data = doRIOROMRead(addr, 0);
-    Serial.print("data = ");
-    Serial.println(data,HEX);
-
+    consoleShowAddrData("doRIOROMRead", addr, data, HEX);
   }
-
 }
 
 void ESP_RIOconfig_Access_Test(void)
 {
   Serial.println("\nESP_RIOconfig_Test");
-  uint8_t data;
 
-  uint8_t y = 0x00;
-  for (uint16_t i = 0; i < 0x10; i++)
+  uint8_t data = 0x00;
+  for (uint16_t addr = 0; addr < 0x10; addr++)
   {
-    Serial.print("doRIOconfigWrite : ");
-    Serial.print(y,HEX);
-    Serial.print(",");
-    Serial.print(i,HEX);
-    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doRIOconfigWrite(y, i);
-    
-    data = doRIOconfigRead(i);
-    Serial.print(" - doRIOconfigRead : ");
-    Serial.println(data,HEX);
-    
-    y++;
-  }
+    consoleShowAddrData("doRIOconfigWrite", addr, data, HEX);
+    doRIOconfigWrite(data, addr);
 
+    data = doRIOconfigRead(addr);
+    consoleShowAddrData("doRIOconfigRead", addr, data, HEX);
+    data++;
+  }
 }
 
 void ESP_FillCacheStatus (uint8_t data)
@@ -105,10 +84,10 @@ void ESP_FillCacheStatus (uint8_t data)
 
   uint8_t check = 0;
 
-  for (uint16_t i = 0x0000; i != 0x000F; i++)  // 0xFFFF takes ages!
+  for (uint16_t addr = 0x0000; addr != 0x000F; addr++)  // 0xFFFF takes ages!
   {
-    doCacheStatusWrite(data, i);
-    check = doCacheStatusRead(i);
+    doCacheStatusWrite(data, addr);
+    check = doCacheStatusRead(addr);
     if(check != data) {
       Serial.print("\nESP_FillCacheStatus - Write error [");
       Serial.print(check);

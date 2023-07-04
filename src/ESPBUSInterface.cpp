@@ -74,7 +74,7 @@ void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
 // These methods are for programming the RIO configuration bytes
 uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 {
-    sendBUSRQ(); 
+    sendBUSRQ(3); 
 
     // connect Z80Data and ROM/IOdbus
     data = doReadBUSData(Address, CONTROLBYTE_RIOCONFIG_RD);
@@ -84,7 +84,7 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 
 void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 {
-    sendBUSRQ();
+    sendBUSRQ(3);
     enableRIO_IOdConfigWR();
     
     // connect Z80Data and ROM/IOdbus   
@@ -96,7 +96,7 @@ void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
 // Direct access to the host system memory
 uint8_t doZ80MEMRead(uint16_t Address)
 {
-    sendBUSRQ();
+    sendBUSRQ(3);
 
     data = doReadBUSData(Address, CONTROLBYTE_MEMRQ_RD);
     setBUSidle();
@@ -106,7 +106,7 @@ uint8_t doZ80MEMRead(uint16_t Address)
 
 void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 {
-    sendBUSRQ();
+    sendBUSRQ(3);
 
     doWriteBUSData(Data, Address, CONTROLBYTE_MEMRQ_WR);
     setBUSidle();
@@ -117,7 +117,7 @@ void doZ80MEMWrite(uint8_t Data, uint16_t Address)
 // Probably will not be much use for interacting with actual hardware (does not create true bus timings)
 uint8_t doZ80IORead(uint16_t Address)
 {
-    sendBUSRQ();
+    sendBUSRQ(3);
 
     data = doReadBUSData(Address, CONTROLBYTE_IORQ_RD);
     setBUSidle();
@@ -126,7 +126,7 @@ uint8_t doZ80IORead(uint16_t Address)
 
 void doZ80IOWrite(uint8_t Data, uint16_t Address)
 {
-    sendBUSRQ();
+    sendBUSRQ(3);
 
     doWriteBUSData(Data, Address, CONTROLBYTE_IORQ_WR);
     setBUSidle();

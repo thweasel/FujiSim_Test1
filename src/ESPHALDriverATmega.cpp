@@ -1,7 +1,11 @@
 
 #include <ESPHALDriverATmega.h>
+#include "consoleDebug.h"
 
 #define DEBUG_SPI false
+#define DEBUG_SPI_FORMAT BIN // BIN / HEX /DEC
+
+
 
 #define RUNSLOW true
 #define SLOWTIME 50
@@ -76,17 +80,7 @@ uint8_t * setBusPacketBuffer (uint8_t Data, uint8_t Control, uint16_t Address)
   return BusPacketBuffer;
 }
 
-void showBusPacketBuffer(void)
-{
-  Serial.print("Driver BusPacketBuffer - Data:");
-  Serial.print(BusPacketBuffer[3],BIN);
-  Serial.print(" Control: ");
-  Serial.print(BusPacketBuffer[2],BIN);
-  Serial.print(" AddrL: ");
-  Serial.print(BusPacketBuffer[1],BIN);
-  Serial.print(" AddrH: ");
-  Serial.println(BusPacketBuffer[0],BIN);
-}
+
 
 //
 // SPI BUS hardware implementation
@@ -102,8 +96,7 @@ void writeSPI(void)
 
   if(DEBUG_SPI) 
   {
-    Serial.print("writeSPI  ");
-    showBusPacketBuffer();
+    consoleShowBusPacketBuffer("writeSPI",BusPacketBuffer,DEBUG_SPI_FORMAT);
   }
 
   // Load TXPacket into the Shift Regs
@@ -145,8 +138,7 @@ void readSPI(void)
 
   if(DEBUG_SPI) 
   {
-    Serial.print("readSPI  ");
-    showBusPacketBuffer();
+    consoleShowBusPacketBuffer("readSPI",BusPacketBuffer,DEBUG_SPI_FORMAT);
   }
 
   return; // results in BusPacketBuffer
