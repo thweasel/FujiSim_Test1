@@ -66,9 +66,11 @@ void loop()
     //delay(1000);
   
 
-  
+  //
+  //  ESP Cache Tests
+  //  
   ESP_CacheStatusTest();
-  //ESP_CacheData_Test();
+  ESP_CacheData_Test();
 
   //
   // ESP RIO function tests

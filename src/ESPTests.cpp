@@ -30,14 +30,11 @@ void ESP_CacheData_Test(void)
   uint8_t data = 0x00;
   for (uint16_t addr = 0; addr < 0x10; addr++)
   {
-    Serial.print("doCacheDataWrite : ");
-    Serial.print(data,HEX);
-    Serial.print(",");
-    Serial.print(addr,HEX);
+
+    consoleShowAddrData("doCacheDataWrite",addr, data,HEX);
     doCacheDataWrite(data, addr);
     data = doCacheDataRead(addr);
-    Serial.print(" - doCacheDataRead : ");
-    Serial.println(data,HEX);
+    consoleShowAddrData("doCacheDataRead",addr, data,HEX);
     
     data++;
   }
