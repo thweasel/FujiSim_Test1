@@ -253,7 +253,7 @@ void Z80_IDLE()
 }
 
 void serviceBUSRQ (void) 
-{
+{   // Broken, bounces on CHANGE detection
     if(isBUSRQ())
     {
         setZ80_IDLEpassive();
@@ -287,8 +287,8 @@ void Z80Hardware_setup(void)
 
     Z80_IDLE();
 
-    // Interrupt pins
-    //attachInterrupt(digitalPinToInterrupt(Z80_SIM_ISR),serviceBUSRQ, CHANGE);
+    // Interrupt pins -- Broken, bounces on CHANGE detection
+    // attachInterrupt(digitalPinToInterrupt(Z80_SIM_ISR),serviceBUSRQ, CHANGE);
 
     return;
 }

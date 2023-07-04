@@ -4,7 +4,7 @@
 //
 // Functions for the Hardware layer above
 
-void ESPHAL_setup(void);
+void Setup_ESPHALDriver(void);
 
 
 void WriteDataBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address);

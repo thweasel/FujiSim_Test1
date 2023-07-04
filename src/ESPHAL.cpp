@@ -12,10 +12,11 @@ uint8_t controlByte;  // Control bus state
 //
 // BASIC bus operations exposed to BUS interface
 
-void IDLE_BUS(void)
+void setBUSidle(void)
 {
   // Default IDLE state for the system
   stopBusSignals();
+  doWriteBUSData(0xff,0xffff,0xff);  // set all shift register outputs high
   return;
 }
 
@@ -23,21 +24,19 @@ uint8_t doReadBUSData(uint16_t Address, uint8_t Control)
 {
   uint8_t result;
   result = ReadDataBUSOperation(Control, Address);
-  IDLE_BUS();
   return result;
 }
 
 void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control)
 {
   WriteDataBUSOperation(Data,Control,Address);
-  IDLE_BUS();
   return;
 }
 
 void ESPHardware_setup(void) 
 {
-  ESPHAL_setup();
-  IDLE_BUS();
+  Setup_ESPHALDriver();
+  setBUSidle();
 }
 
 uint8_t pollINT(void) {

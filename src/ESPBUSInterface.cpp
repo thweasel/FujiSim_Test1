@@ -50,7 +50,7 @@ uint8_t doRIOROMRead(uint16_t Address, uint8_t ROMbank) // A16-0
     enableRIO_ROMRD(ROMbank);
     
     data = doReadBUSData(Address, CONTROLBYTE_CEROMRQ_RD);
-           
+    setBUSidle();
     disableRIO_ROM();
 
     return data;
@@ -63,7 +63,7 @@ void doRIOROMWrite(uint8_t Data, uint16_t Address, uint8_t ROMbank) // A16-0
         enableRIO_ROMRW(ROMbank);
     
         doWriteBUSData(Data, Address, CONTROLBYTE_CEROMRQ_WR);
-    
+        setBUSidle();
         disableRIO_ROM();
     }
 
@@ -78,7 +78,7 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 
     // connect Z80Data and ROM/IOdbus
     data = doReadBUSData(Address, CONTROLBYTE_RIOCONFIG_RD);
-      
+    setBUSidle();
     return data;
 }
 
@@ -89,7 +89,7 @@ void doRIOconfigWrite(uint8_t Data, uint16_t Address) // A16-1
     
     // connect Z80Data and ROM/IOdbus   
     doWriteBUSData(Data, Address, CONTROLBYTE_RIOCONFIG_WR);
-    
+    setBUSidle();
 }
 
 // ESP controlling the system in place of the Z80
@@ -99,7 +99,7 @@ uint8_t doZ80MEMRead(uint16_t Address)
     sendBUSRQ();
 
     data = doReadBUSData(Address, CONTROLBYTE_MEMRQ_RD);
-
+    setBUSidle();
     
     return data;
 }
@@ -109,7 +109,7 @@ void doZ80MEMWrite(uint8_t Data, uint16_t Address)
     sendBUSRQ();
 
     doWriteBUSData(Data, Address, CONTROLBYTE_MEMRQ_WR);
-
+    setBUSidle();
     
 }
 
@@ -120,7 +120,7 @@ uint8_t doZ80IORead(uint16_t Address)
     sendBUSRQ();
 
     data = doReadBUSData(Address, CONTROLBYTE_IORQ_RD);
-   
+    setBUSidle();
     return data; // Data Byte
 }
 
@@ -129,7 +129,7 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
     sendBUSRQ();
 
     doWriteBUSData(Data, Address, CONTROLBYTE_IORQ_WR);
-    
+    setBUSidle();
 }
 
 
@@ -158,6 +158,7 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
     establishESPHardlock(1);
 
     doWriteBUSData(Data, Address, CONTROLBYTE_CACHEDATA_WR);
+    setBUSidle();
 }
 
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
@@ -166,6 +167,7 @@ uint8_t doCacheStatusRead(uint16_t Address) // A16-1
     //displayBUSPTR(BUSpacket);
 
     data = doReadBUSData(Address, CONTROLBYTE_CACHESTATUS_RD);
+    setBUSidle();
 
 //    displayBUSPTR(BUSpacket);
     return data;
@@ -176,5 +178,6 @@ void doCacheStatusWrite(uint8_t Data, uint16_t Address) // A16-1
     establishESPHardlock(1);
 
     doWriteBUSData(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
+    setBUSidle();
 
 }

@@ -140,7 +140,7 @@ void stopBusSignals(void)
 // Interface for Hardware Abstraction Layer
 
 
-void ESPHAL_setup(void)
+void Setup_ESPHALDriver(void)
 {
   // ESP pin Config
   pinMode(ESP_SPI_INT_STC, OUTPUT);

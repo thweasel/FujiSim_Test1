@@ -89,6 +89,8 @@ Z80 control
 //
 // BASIC bus operations exposed to BUS interface
 
+void setBUSidle(void);
+
 uint8_t doReadBUSData(uint16_t Address, uint8_t Control);
 
 void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control);
