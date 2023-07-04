@@ -67,19 +67,19 @@ void clearZ80_BUSACK(void)          {   pinMode(Z80_BUSACK, OUTPUT);    digitalW
 // Z80 INPUT Control line operations (Return TRUE if LOW)
 boolean isWAIT(void)     
 {
-    if(digitalRead(Z80_WAIT) == 1) { return true; }
+    if(digitalRead(Z80_WAIT) == 0) { return true; }
     else { return false; }
 }
 //boolean checkINT(void)      {   return !digitalRead(Z80_INT)    ;}
 boolean isNMI(void)      
 {   
-    if(digitalRead(Z80_NMI) == 1) { return true; }
+    if(digitalRead(Z80_NMI) == 0) { return true; }
     else { return false; }
 }
 //boolean checkRESET(void)    {   return !digitalRead(Z80_RESET); }
 boolean isBUSRQ(void)    
 {   
-     if(digitalRead(Z80_BUSRQ) == 1) { return true; }
+     if(digitalRead(Z80_BUSRQ) == 0) { return true; }
      else { return false; }
 }
   
@@ -155,23 +155,6 @@ void clearZ80_DATAactive(void)
 }
 */
 
-void setZ80_IDLEactive(void)
-{
-    // INPUT PINS UNCHANGED
-    // Z80 OUTPUT pins HIGH
-
-    // Z80 Control lines
-    clearZ80_RDactive();
-    clearZ80_WRactive();
-    clearZ80_IORQactive();
-    clearZ80_MEMRQactive();
-
-    // Z80 BUS only Tri-States
-    clearZ80_ADDRpassive();
-    clearZ80_DATApassive();
-    
-    return;
-}
 
 void setZ80_IDLEpassive(void)
 {
@@ -190,6 +173,26 @@ void setZ80_IDLEpassive(void)
     clearZ80_ADDRpassive();
     clearZ80_DATApassive();
 
+    return;
+}
+
+void setZ80_IDLEactive(void)
+{
+
+    setZ80_IDLEpassive();
+    // INPUT PINS UNCHANGED
+    // Z80 OUTPUT pins HIGH
+
+    // Z80 Control lines
+    //clearZ80_RDactive();
+    //clearZ80_WRactive();
+    //clearZ80_IORQactive();
+    //clearZ80_MEMRQactive();
+
+    // Z80 BUS only Tri-States
+    //clearZ80_ADDRpassive();
+    //clearZ80_DATApassive();
+    
     return;
 }
 
