@@ -35,8 +35,8 @@ void setup()
 {
   // put your setup code here, to run once:
 
-  Serial.begin(115000);
-  //Serial.begin(9600);
+  //Serial.begin(115000);
+  Serial.begin(9600);
   Serial.println("Running.");
 
   pinMode(LED_BUILTIN, OUTPUT);
@@ -44,7 +44,7 @@ void setup()
   // Set pin start-up states
 
   // ESP SPI
-  SPI.begin();
+  
   ESP_setup();
   
 
@@ -63,7 +63,7 @@ void loop()
     digitalWrite(LED_BUILTIN, HIGH);
     delay(250);
     digitalWrite(LED_BUILTIN, LOW);
-    //delay(1000);
+    delay(1000);
   
 
   //
@@ -78,7 +78,7 @@ void loop()
   //
   // ESP RIO function tests
   //
-  // ESP_ROM_Test();
+   ESP_ROM_Test();
   // ESP_RIOconfig_Access_Test();
     
 
@@ -107,8 +107,8 @@ void loop()
 // IODdevice TEST
 //  
 
-  ESP_RIOconfig_Cache0to0x0001();
-  Z80_IORQ_Test();
+//  ESP_RIOconfig_Cache0to0x0001();
+//  Z80_IORQ_Test();
   
 
 }

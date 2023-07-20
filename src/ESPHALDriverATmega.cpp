@@ -2,8 +2,9 @@
 #include <ESPHALDriverATmega.h>
 #include "consoleDebug.h"
 
-#define DEBUG_SPI false
-#define DEBUG_SPI_FORMAT BIN // BIN / HEX /DEC
+#define DEBUG_SPI_READ false
+#define DEBUG_SPI_WRITE false
+#define DEBUG_SPI_FORMAT HEX // BIN / HEX /DEC
 
 
 
@@ -24,6 +25,11 @@
 // SPI SCK  52
 // SPI MOSI 51
 // SPI MISO 50
+
+#define SS_START LOW
+#define SS_STOP HIGH
+
+
 
 #define ESP_SPI_INT_STC 49  // OUTPUT (pulse)     --SPI Latch Bus packet in shift registers for output
 #define ESP_SPI_INT_OE 48   // OUTPUT (send/stop) --SPI Enable Output of an Address from shift registers
@@ -86,61 +92,58 @@ uint8_t * setBusPacketBuffer (uint8_t Data, uint8_t Control, uint16_t Address)
 // SPI BUS hardware implementation
 
 
-
-SPISettings mySpiSettings (10000,MSBFIRST,SPI_MODE0);
+SPISettings myTXSpiSettings (1000000,MSBFIRST,SPI_MODE0);
+SPISettings myRXSpiSettings (1000000,MSBFIRST,SPI_MODE2);
+#define LATCHINGDELAY 30
 
 // WRITE method for the bus hardware
 void writeSPI(void)
 { 
+  SPI.begin();
   // OUTPUT 74XX595 Shift registers (x4)
 
-  if(DEBUG_SPI) 
-  {
-    consoleShowBusPacketBuffer("writeSPI",BusPacketBuffer,DEBUG_SPI_FORMAT);
-  }
+  if(DEBUG_SPI_WRITE) { consoleShowBusPacketBuffer("writeSPI",BusPacketBuffer,DEBUG_SPI_FORMAT); }
 
   // Load TXPacket into the Shift Regs
-  SPI.beginTransaction(mySpiSettings);
+  SPI.beginTransaction(myTXSpiSettings);
   SPI.transfer(BusPacketBuffer,4);  
   SPI.endTransaction();
 
   // LATCH the Shift Regs to Storage (pulse)
-  digitalWrite(ESP_SPI_INT_STC, HIGH); // Move shift to storage
-  
+  digitalWrite(ESP_SPI_INT_STC, HIGH); // Move shift to storage  
+  delayMicroseconds(LATCHINGDELAY);
   if(RUNSLOW) { delay(SLOWTIME); } // SLOW THE OUTPUT POINT
-  
   digitalWrite(ESP_SPI_INT_STC, LOW);
-
+    
+  SPI.end();
   return;
 }
 
 // READ method for the bus hardware
 void readSPI(void)
 { 
+  SPI.begin();
+
   // INPUT 74xx165 Shift Registers (x4)
 
   // LATCH data into the Shift Regs (pulse)
   digitalWrite(ESP_SPI_INT_PL, LOW);  // Parallel Load
   if(RUNSLOW) { delay(SLOWTIME); }  // SLOW THE INPUT POINT
-  // Unload the Shift Reg to RXPacket
+  delayMicroseconds(LATCHINGDELAY);
   digitalWrite(ESP_SPI_INT_PL, HIGH); // Serial Shift
   
   //clearBusPacketBuffer();
-  SPI.beginTransaction(mySpiSettings);
+  SPI.beginTransaction(myRXSpiSettings);
   SPI.transfer(BusPacketBuffer,4);  
   SPI.endTransaction(); 
-  
-  
   
   // Needed if Shift registers are chained using !Q7
   //BusPacketBuffer[0] = ~BusPacketBuffer[0];
   //BusPacketBuffer[2] = ~BusPacketBuffer[2];
 
-  if(DEBUG_SPI) 
-  {
-    consoleShowBusPacketBuffer("readSPI",BusPacketBuffer,DEBUG_SPI_FORMAT);
-  }
-
+  if(DEBUG_SPI_READ) { consoleShowBusPacketBuffer("readSPI",BusPacketBuffer,DEBUG_SPI_FORMAT); }
+  
+  SPI.end();
   return; // results in BusPacketBuffer
 }
 
@@ -195,19 +198,23 @@ void Setup_ESPHALDriver(void)
 
 void WriteDataBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address)
 {
+  digitalWrite(SS,SS_START);
   setBusPacketBuffer(Data,Control,Address);  
   writeSPI(); // Set Control and Address lines
   sendBusSignals();
   sendPulse();
+  digitalWrite(SS,SS_STOP);
   return;
 }
 
 uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address)
 { 
+  digitalWrite(SS,SS_START);
   setBusPacketBuffer(0x00,Control,Address);  
   writeSPI(); // Set Control and Address lines
   sendBusSignals();
   readSPI();
+  digitalWrite(SS,SS_STOP);
   return BusPacketBuffer[3]; // Data byte
 }
 

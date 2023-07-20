@@ -2,12 +2,14 @@
 #include "ESPTests.h"
 #include "consoleDebug.h"
 
+
+
 void ESP_CacheStatusTest(void)
 {
   Serial.println("\nESP_CacheStatusTest");
 
   uint8_t data = 0x00;
-  for (uint16_t addr = 0; addr < 0x10; addr++)
+  for (uint16_t addr = 0x0000; addr < 0x0001; addr++)
   {
     
     consoleShowAddrData("doCacheStatusWrite",addr, data,HEX);
@@ -45,16 +47,20 @@ void ESP_ROM_Test(void)
 {
   Serial.println("\nESP_ROM_Test");
 
-  uint8_t data = 0x00;
-  for (uint16_t addr = 0; addr < 0x10; addr++)
+  uint8_t writeData = 0x00;
+  uint8_t readData = 0x00;
+  for (uint16_t addr = 0xF000; addr < 0xF008; addr++)
   {
-    data = addr;
+    //data = addr;
+    writeData = 0xAA;
 
-    consoleShowAddrData("doRIOROMWrite", addr, data, HEX);
-    doRIOROMWrite(data, addr, 0);
+    consoleShowAddrData("doRIOROMWrite", addr, writeData, HEX);
+    doRIOROMWrite(writeData, addr, 0);
 
-    data = doRIOROMRead(addr, 0);
-    consoleShowAddrData("doRIOROMRead", addr, data, HEX);
+    readData = doRIOROMRead(addr, 0);
+    consoleShowAddrData("doRIOROMRead", addr, readData, HEX);
+
+    delay(2000);
   }
 }
 
