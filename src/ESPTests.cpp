@@ -60,7 +60,6 @@ void ESP_ROM_Test(void)
     readData = doRIOROMRead(addr, 0);
     consoleShowAddrData("doRIOROMRead", addr, readData, HEX);
 
-    delay(2000);
   }
 }
 

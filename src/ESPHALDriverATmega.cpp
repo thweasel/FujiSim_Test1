@@ -30,7 +30,6 @@
 #define SS_STOP HIGH
 
 
-
 #define ESP_SPI_INT_STC 49  // OUTPUT (pulse)     --SPI Latch Bus packet in shift registers for output
 #define ESP_SPI_INT_OE 48   // OUTPUT (send/stop) --SPI Enable Output of an Address from shift registers
 #define ESP_PULSE 47        // OUTPUT (pulse)     -- Generate a pulse for Writing
@@ -46,9 +45,6 @@
 #define ESP_HARDLOCK 10     // OUTPUT (set/release)
 #define ESP_ROMSELECT0 11   // OUTPUT (select ROM)
 #define ESP_ROMSELECT1 12   // OUTPUT (select ROM)
-
-
-
 
 
 //
@@ -86,20 +82,18 @@ uint8_t * setBusPacketBuffer (uint8_t Data, uint8_t Control, uint16_t Address)
   return BusPacketBuffer;
 }
 
-
-
 //
 // SPI BUS hardware implementation
 
 
-SPISettings myTXSpiSettings (1000000,MSBFIRST,SPI_MODE0);
-SPISettings myRXSpiSettings (1000000,MSBFIRST,SPI_MODE2);
+SPISettings myTXSpiSettings (100000,MSBFIRST,SPI_MODE0);
+SPISettings myRXSpiSettings (100000,MSBFIRST,SPI_MODE0);  // IF clock is inverted to 165s
+//SPISettings myRXSpiSettings (1000000,MSBFIRST,SPI_MODE2); // IF clock is NOT inverted to 165s
 #define LATCHINGDELAY 30
 
 // WRITE method for the bus hardware
 void writeSPI(void)
 { 
-  SPI.begin();
   // OUTPUT 74XX595 Shift registers (x4)
 
   if(DEBUG_SPI_WRITE) { consoleShowBusPacketBuffer("writeSPI",BusPacketBuffer,DEBUG_SPI_FORMAT); }
@@ -115,15 +109,12 @@ void writeSPI(void)
   if(RUNSLOW) { delay(SLOWTIME); } // SLOW THE OUTPUT POINT
   digitalWrite(ESP_SPI_INT_STC, LOW);
     
-  SPI.end();
   return;
 }
 
 // READ method for the bus hardware
 void readSPI(void)
 { 
-  SPI.begin();
-
   // INPUT 74xx165 Shift Registers (x4)
 
   // LATCH data into the Shift Regs (pulse)
@@ -143,7 +134,6 @@ void readSPI(void)
 
   if(DEBUG_SPI_READ) { consoleShowBusPacketBuffer("readSPI",BusPacketBuffer,DEBUG_SPI_FORMAT); }
   
-  SPI.end();
   return; // results in BusPacketBuffer
 }
 
@@ -166,6 +156,8 @@ void stopBusSignals(void)
 
 void Setup_ESPHALDriver(void)
 {
+  SPI.begin();
+
   // INPUT PINS
   pinMode(Z80_HARDLOCK, INPUT);
   digitalWrite(Z80_HARDLOCK, LOW); // Tri-State
