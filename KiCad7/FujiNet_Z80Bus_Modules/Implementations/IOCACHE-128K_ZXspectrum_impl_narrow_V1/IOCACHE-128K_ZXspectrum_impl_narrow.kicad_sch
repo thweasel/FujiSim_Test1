@@ -62,7 +62,7 @@
     (property "Sheetname" "IOCACHE-128K_ZXspectrum" (at 113.665 46.2784 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "../IOCACHE-128K_ZXspectrum.kicad_sch" (at 113.665 81.8646 0)
+    (property "Sheetfile" "./IOCACHE-128K_ZXspectrum_V1/IOCACHE-128K_ZXspectrum.kicad_sch" (at 113.665 81.8646 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (pin "Z80_HARDLOCK" input (at 113.665 50.8 180)
