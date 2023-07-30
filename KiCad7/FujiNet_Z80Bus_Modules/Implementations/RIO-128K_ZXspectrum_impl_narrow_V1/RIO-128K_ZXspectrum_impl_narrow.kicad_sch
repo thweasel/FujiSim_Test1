@@ -139,7 +139,7 @@
     (property "Sheetname" "RIO-128K_ZXspectrum" (at 99.06 38.6584 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "../RIO-128K_ZXspectrum.kicad_sch" (at 99.06 78.0546 0)
+    (property "Sheetfile" "./RIO-128K_ZXspectrum_V1/RIO-128K_ZXspectrum.kicad_sch" (at 99.06 78.0546 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (pin "PERM_Z80_IORQ" input (at 99.06 67.31 180)

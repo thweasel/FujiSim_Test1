@@ -60,11 +60,12 @@ void loop()
 
   
     // Blinky code for enable to test if running
+    /*
     digitalWrite(LED_BUILTIN, HIGH);
     delay(250);
     digitalWrite(LED_BUILTIN, LOW);
     delay(1000);
-  
+    */
 
   //
   //  ESP Cache Tests
@@ -78,12 +79,12 @@ void loop()
   //
   // ESP RIO function tests
   //
-   ESP_ROM_Test();
+   //ESP_ROM_Test();
   // ESP_RIOconfig_Access_Test();
     
 
 
-  /*
+  
 
   //
   // RIO ROM Tests
@@ -100,7 +101,7 @@ void loop()
   enableRIO_ROMRW(3);
   Z80_ROMMemory_Test();
   disableRIO_ROM();
-  */
+  
 
     
 //

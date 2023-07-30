@@ -411,7 +411,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "RIO-128K_ZXspectrum_impl.kicad_pro",
+    "filename": "RIO-128K_ZXspectrum.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -1447,7 +1447,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "FujiNet_Z80Bus_Reference.net",
-      "specctra_dsn": "RIO-128K_ZXspectrum_impl.dsn",
+      "specctra_dsn": "FujiNet_Z80Bus_Reference.dsn",
       "step": "",
       "vrml": ""
     },
@@ -1498,16 +1498,8 @@
   },
   "sheets": [
     [
-      "532c0392-800e-45cc-8170-6d32f2390e83",
+      "c309cbb5-591c-4149-a6f5-223f04f1f3af",
       ""
-    ],
-    [
-      "6c4c7762-a89c-4208-ab7a-060b74bdaf3f",
-      "RIO-128K_ZXspectrum"
-    ],
-    [
-      "73970993-4e28-4b30-aebb-7de0b68bcfc0",
-      "RIO-128K_ZXspectrum_connector"
     ]
   ],
   "text_variables": {}
