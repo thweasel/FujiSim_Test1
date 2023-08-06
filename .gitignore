@@ -3,4 +3,5 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+/KiCad7/Z80Bus_Fabrication_CNC/
 /KiCad7/**/*-backups
