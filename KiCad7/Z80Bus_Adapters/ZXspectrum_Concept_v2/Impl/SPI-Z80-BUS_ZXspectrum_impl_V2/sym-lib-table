@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "esp32-wrover")(type "Legacy")(uri "${KIPRJMOD}/../../../FujiNet_KiCadLibs/esp32-wrover-kicad-master/esp32-wrover.lib")(options "")(descr ""))
+  (lib (name "FujiNet_Memory_RAM")(type "KiCad")(uri "${KIPRJMOD}/../../../FujiNet_KiCadLibs/FujiNet_Memory_RAM.kicad_sym")(options "")(descr ""))
+)

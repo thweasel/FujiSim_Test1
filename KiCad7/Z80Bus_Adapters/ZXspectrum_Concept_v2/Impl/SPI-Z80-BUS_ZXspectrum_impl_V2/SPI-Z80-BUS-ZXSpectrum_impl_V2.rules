@@ -1,0 +1,214 @@
+
+(rules PCB SPI-Z80-BUS-ZXSpectrum_impl_V2
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 49462)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.8)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.4)
+    )
+  )
+  (rule
+    (width 400.0)
+    (clear 600.0)
+    (clear 200.0 (type smd_to_turn_gap))
+  )
+  (padstack "Via[0-1]_1000:500_um"
+    (shape
+      (circle F.Cu 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_1000:500_um" "Via[0-1]_1000:500_um" default
+  )
+  (via 
+    "Via[0-1]_1000:500_um-kicad_default" "Via[0-1]_1000:500_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-ESP_CONTROL" "Via[0-1]_1000:500_um" "ESP_CONTROL"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-ESP_SPI_INTERNAL" "Via[0-1]_1000:500_um" "ESP_SPI_INTERNAL"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-LOCAL_ADDRESS" "Via[0-1]_1000:500_um" "LOCAL_ADDRESS"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-LOCAL_CONTROL" "Via[0-1]_1000:500_um" "LOCAL_CONTROL"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-LOCAL_DATA" "Via[0-1]_1000:500_um" "LOCAL_DATA"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-Z80_ADDRESS" "Via[0-1]_1000:500_um" "Z80_ADDRESS"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-Z80_CONTROL" "Via[0-1]_1000:500_um" "Z80_CONTROL"
+  )
+  (via 
+    "Via[0-1]_1000:500_um-Z80_DATA" "Via[0-1]_1000:500_um" "Z80_DATA"
+  )
+  (via_rule
+    default "Via[0-1]_1000:500_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_1000:500_um-kicad_default"
+  )
+  (via_rule
+    "ESP_CONTROL" "Via[0-1]_1000:500_um-ESP_CONTROL"
+  )
+  (via_rule
+    "ESP_SPI_INTERNAL" "Via[0-1]_1000:500_um-ESP_SPI_INTERNAL"
+  )
+  (via_rule
+    "LOCAL_ADDRESS" "Via[0-1]_1000:500_um-LOCAL_ADDRESS"
+  )
+  (via_rule
+    "LOCAL_CONTROL" "Via[0-1]_1000:500_um-LOCAL_CONTROL"
+  )
+  (via_rule
+    "LOCAL_DATA" "Via[0-1]_1000:500_um-LOCAL_DATA"
+  )
+  (via_rule
+    "Z80_ADDRESS" "Via[0-1]_1000:500_um-Z80_ADDRESS"
+  )
+  (via_rule
+    "Z80_CONTROL" "Via[0-1]_1000:500_um-Z80_CONTROL"
+  )
+  (via_rule
+    "Z80_DATA" "Via[0-1]_1000:500_um-Z80_DATA"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(CONTROL.SELECT1-1A1)" GND "/SPI-Z80-BUS/!ESP_HARDLOCK" +5V "Net-(D1-K)" "Net-(D2-K)" "Net-(D6-K)" "Net-(ESP_CONTROL.WR1-QH')"
+    "/SPI-Z80-BUS/ESP_SPI_INT.MR" "/SPI-Z80-BUS/ESP_SPI_INT.SCK" "/SPI-Z80-BUS/ESP_SPI_INT.STC" "/SPI-Z80-BUS/ESP_SPI_INT.OE" "Net-(ESP_CONTROL.WR1-SER)" "/SPI-Z80-BUS/ESP_PULSE" "/SPI-Z80-BUS/ESP_SPI_INT.MOSI" "/SPI-Z80-BUS/ESP_SPI_INT.MISO"
+    "/SPI-Z80-BUS/ESP_SPI_INT.PL" "/SPI-Z80-BUS/ESP_SPI_INT.CE" "/SPI-Z80-BUS/SPI-Z80-BUS_read/ESP_SPI_INT.SCK" "Net-(LOCAL_A-H.RD1-DS)" "unconnected-(LOCAL_A-H.RD1-~{Q7}-Pad7)" "Net-(LOCAL_A-L.RD1-DS)" "unconnected-(LOCAL_ADDR-H.WR1-QH'-Pad9)" "Net-(LOCAL_ADDR-H.WR1-SER)"
+    "unconnected-(LOCAL_A-L.RD1-~{Q7}-Pad7)" "unconnected-(LOCAL_D.RD1-~{Q7}-Pad7)" "unconnected-(RN1-R5-Pad6)" "unconnected-(RN1-R6-Pad7)" "unconnected-(RN1-R7-Pad8)" "unconnected-(RN1-R8-Pad9)" "Net-(LOCAL_D.RD1-Q7)" "unconnected-(ZX80_CONTROL.RD1-~{Q7}-Pad7)"
+    "Net-(U1-Pad12)" "Net-(U1-Pad13)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "ESP_CONTROL"
+    "/SPI-Z80-BUS/ESP_CONTROL.BUSRQ" "/SPI-Z80-BUS/ESP_CONTROL.RD" "/SPI-Z80-BUS/ESP_CONTROL.IORQ" "/SPI-Z80-BUS/ESP_CONTROL.MEMRQ" "/SPI-Z80-BUS/ESP_CONTROL.WAIT" "/SPI-Z80-BUS/ESP_CONTROL.ROMCS" "/SPI-Z80-BUS/ESP_CONTROL.NMI" "/SPI-Z80-BUS/ESP_CONTROL.WR"
+    (clearance_class "ESP_CONTROL")
+    (via_rule "ESP_CONTROL")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "ESP_SPI_INTERNAL"
+    (clearance_class "ESP_SPI_INTERNAL")
+    (via_rule "ESP_SPI_INTERNAL")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "LOCAL_ADDRESS"
+    "/SPI-Z80-BUS/LOCAL_A0" "/SPI-Z80-BUS/LOCAL_A1" "/SPI-Z80-BUS/LOCAL_A2" "/SPI-Z80-BUS/LOCAL_A3" "/SPI-Z80-BUS/LOCAL_A4" "/SPI-Z80-BUS/LOCAL_A5" "/SPI-Z80-BUS/LOCAL_A6" "/SPI-Z80-BUS/LOCAL_A7"
+    "/SPI-Z80-BUS/LOCAL_A8" "/SPI-Z80-BUS/LOCAL_A9" "/SPI-Z80-BUS/LOCAL_A10" "/SPI-Z80-BUS/LOCAL_A11" "/SPI-Z80-BUS/LOCAL_A12" "/SPI-Z80-BUS/LOCAL_A13" "/SPI-Z80-BUS/LOCAL_A14" "/SPI-Z80-BUS/LOCAL_A15"
+    (clearance_class "LOCAL_ADDRESS")
+    (via_rule "LOCAL_ADDRESS")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "LOCAL_CONTROL"
+    "/SPI-Z80-BUS/LOCAL_CONTROL.MEMRQ" "/SPI-Z80-BUS/LOCAL_CONTROL.IORQ" "/SPI-Z80-BUS/LOCAL_CONTROL.WR" "/SPI-Z80-BUS/LOCAL_CONTROL.RD"
+    (clearance_class "LOCAL_CONTROL")
+    (via_rule "LOCAL_CONTROL")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "LOCAL_DATA"
+    "/SPI-Z80-BUS/LOCAL_D0" "/SPI-Z80-BUS/LOCAL_D1" "/SPI-Z80-BUS/LOCAL_D2" "/SPI-Z80-BUS/LOCAL_D3" "/SPI-Z80-BUS/LOCAL_D4" "/SPI-Z80-BUS/LOCAL_D5" "/SPI-Z80-BUS/LOCAL_D6" "/SPI-Z80-BUS/LOCAL_D7"
+    (clearance_class "LOCAL_DATA")
+    (via_rule "LOCAL_DATA")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Z80_ADDRESS"
+    (clearance_class "Z80_ADDRESS")
+    (via_rule "Z80_ADDRESS")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Z80_CONTROL"
+    "/SPI-Z80-BUS/Z80_CONTROL.RD" "/SPI-Z80-BUS/Z80_CONTROL.WR" "/SPI-Z80-BUS/Z80_CONTROL.IORQ" "/SPI-Z80-BUS/Z80_CONTROL.MEMRQ" "/SPI-Z80-BUS/Z80_CONTROL.BUSRQ" "/SPI-Z80-BUS/Z80_CONTROL.WAIT" "/SPI-Z80-BUS/Z80_CONTROL.ROMCS" "/SPI-Z80-BUS/Z80_CONTROL.NMI"
+    "/SPI-Z80-BUS/Z80_CONTROL.BUSACK" "/SPI-Z80-BUS/Z80_CONTROL.RESET"
+    (clearance_class "Z80_CONTROL")
+    (via_rule "Z80_CONTROL")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Z80_DATA"
+    (clearance_class "Z80_DATA")
+    (via_rule "Z80_DATA")
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
