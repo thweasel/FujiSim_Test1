@@ -244,13 +244,13 @@
       )
     )
     (symbol "esp32-wrover:FREENOVE_ESP32-WROVER-DEV" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "U1" (at 3.175 10.541 0)
+      (property "Reference" "U" (at 1.27 -2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "FREENOVE_ESP32-WROVER-DEV" (at 3.175 8.2296 0)
+      (property "Value" "FREENOVE_ESP32-WROVER-DEV" (at 2.54 -54.61 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "esp32-wrover:FREENOVE_ESP32-WROVER-DEV" (at 1.27 11.43 0)
+      (property "Footprint" "" (at 1.27 11.43 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "" (at 1.27 11.43 0)
@@ -551,24 +551,70 @@
         )
       )
     )
+    (symbol "power:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "#FLG" (at 0 1.905 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "PWR_FLAG" (at 0 3.81 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "flag power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "PWR_FLAG_0_0"
+        (pin power_out line (at 0 0 90) (length 0)
+          (name "pwr" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+      (symbol "PWR_FLAG_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27)
+            (xy -1.016 1.905)
+            (xy 0 2.54)
+            (xy 1.016 1.905)
+            (xy 0 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+    )
   )
 
   (bus_alias "ESP_SPI_INTERNAL" (members "ESP_SPI_INT.MOSI" "ESP_SPI_INT.SCK" "ESP_SPI_INT.MR" "ESP_SPI_INT.STC" "ESP_SPI_INT.CE" "ESP_SPI_INT.PL" "ESP_SPI_INT.MISO" "ESP_SPI_INT.OE"))
   (bus_alias "LOCAL_CONTROL" (members "LOCAL_CONTROL.RD" "LOCAL_CONTROL.WR" "LOCAL_CONTROL.IORQ" "LOCAL_CONTROL.MEMRQ"))
-  (junction (at 110.49 80.01) (diameter 0) (color 0 0 0 0)
-    (uuid 0b01da44-92be-4d51-b863-832c75a3788b)
-  )
-  (junction (at 110.49 46.99) (diameter 0) (color 0 0 0 0)
-    (uuid 10ce13d2-28d2-433b-9e58-a85e1b704dce)
-  )
   (junction (at 217.17 73.66) (diameter 0) (color 0 0 0 0)
     (uuid 1f300790-65b1-4804-b3e0-761954857784)
+  )
+  (junction (at 59.69 80.01) (diameter 0) (color 0 0 0 0)
+    (uuid 3d931ffd-b3b2-4d57-91b4-21e0f990b808)
+  )
+  (junction (at 110.49 31.75) (diameter 0) (color 0 0 0 0)
+    (uuid 487520ea-d0de-4c9b-a7d6-6454e215529a)
   )
   (junction (at 217.17 66.04) (diameter 0) (color 0 0 0 0)
     (uuid 6e66009c-e1b7-40ae-96b5-40e9e51b6ec9)
   )
+  (junction (at 110.49 80.01) (diameter 0) (color 0 0 0 0)
+    (uuid 90293a10-4639-4374-9fc0-4d04a9e1d41d)
+  )
   (junction (at 217.17 46.99) (diameter 0) (color 0 0 0 0)
     (uuid 9cca741b-5786-4632-8d33-b7678a84833c)
+  )
+  (junction (at 110.49 46.99) (diameter 0) (color 0 0 0 0)
+    (uuid bb42b4da-627d-4f3c-a2a2-7f1f3b8f7df9)
   )
   (junction (at 217.17 58.42) (diameter 0) (color 0 0 0 0)
     (uuid be9ad16a-b81c-4102-8c74-b967f0039401)
@@ -625,10 +671,6 @@
     (stroke (width 0) (type default))
     (uuid 016b2812-c8e7-41ea-90e5-a6717fe4e816)
   )
-  (wire (pts (xy 58.42 80.01) (xy 58.42 83.82))
-    (stroke (width 0) (type default))
-    (uuid 061420a6-a792-4534-bb1a-b389211e3f1f)
-  )
   (wire (pts (xy 54.61 120.65) (xy 54.61 119.38))
     (stroke (width 0) (type default))
     (uuid 0633c804-532d-4afb-8cb1-3c1119701b10)
@@ -638,9 +680,9 @@
     (uuid 07f5d83a-ac1c-47ef-8ec3-18c103a57bc9)
   )
 
-  (wire (pts (xy 107.95 46.99) (xy 110.49 46.99))
+  (wire (pts (xy 59.69 80.01) (xy 63.5 80.01))
     (stroke (width 0) (type default))
-    (uuid 0a7df953-e9a2-49c8-bdc8-09b32b7e0ee9)
+    (uuid 0ea125fa-5d4d-4156-932b-7183a0781ded)
   )
   (wire (pts (xy 217.17 46.99) (xy 229.87 46.99))
     (stroke (width 0) (type default))
@@ -686,6 +728,10 @@
     (stroke (width 0) (type default))
     (uuid 4128be17-1756-43cf-ad81-180dcb6e47a5)
   )
+  (wire (pts (xy 107.95 46.99) (xy 110.49 46.99))
+    (stroke (width 0) (type default))
+    (uuid 416f5838-c028-4fe4-ad10-329c4e8e5d6a)
+  )
   (wire (pts (xy 63.5 54.61) (xy 39.37 54.61))
     (stroke (width 0) (type default))
     (uuid 46885f94-2bf9-47f7-be42-ae4e44457ef4)
@@ -726,9 +772,9 @@
     (uuid 52c6bf57-1cec-48ae-8f95-061f93c0c847)
   )
 
-  (wire (pts (xy 58.42 83.82) (xy 54.61 83.82))
+  (wire (pts (xy 110.49 46.99) (xy 110.49 80.01))
     (stroke (width 0) (type default))
-    (uuid 579c959d-e36e-49f9-b184-98d22a8307d3)
+    (uuid 530cd273-985b-425f-a3d4-fcf0042e00a3)
   )
   (wire (pts (xy 207.01 45.72) (xy 207.01 46.99))
     (stroke (width 0) (type default))
@@ -750,13 +796,9 @@
     (stroke (width 0) (type default))
     (uuid 6216af91-1792-4ff9-a2ad-5e5a68580499)
   )
-  (wire (pts (xy 110.49 46.99) (xy 110.49 80.01))
-    (stroke (width 0) (type default))
-    (uuid 6aa4a839-a4f6-47a5-9945-db2116da1ad1)
-  )
   (wire (pts (xy 110.49 31.75) (xy 110.49 46.99))
     (stroke (width 0) (type default))
-    (uuid 6b3c1fbf-68ac-494a-bc83-16558f26c083)
+    (uuid 6aa4a839-a4f6-47a5-9945-db2116da1ad1)
   )
   (wire (pts (xy 63.5 59.69) (xy 39.37 59.69))
     (stroke (width 0) (type default))
@@ -778,10 +820,6 @@
   (wire (pts (xy 63.5 57.15) (xy 59.69 57.15))
     (stroke (width 0) (type default))
     (uuid 790201b3-c0cd-4714-9d99-dc5f56bbe105)
-  )
-  (wire (pts (xy 110.49 80.01) (xy 110.49 82.55))
-    (stroke (width 0) (type default))
-    (uuid 7f8850fa-e781-4e53-a771-10dc1cbbf70e)
   )
   (bus (pts (xy 151.13 36.83) (xy 151.13 52.07))
     (stroke (width 0) (type default))
@@ -808,6 +846,10 @@
     (stroke (width 0) (type default))
     (uuid 9292fe7d-9b38-40cb-8c43-ef9beeb6de85)
   )
+  (wire (pts (xy 107.95 80.01) (xy 110.49 80.01))
+    (stroke (width 0) (type default))
+    (uuid 93f1f345-3683-4b86-9deb-b4996dc2707b)
+  )
   (bus (pts (xy 151.13 91.44) (xy 36.83 91.44))
     (stroke (width 0) (type default))
     (uuid 959858df-9ae3-4dc4-b7da-aebc8531c08b)
@@ -816,10 +858,6 @@
   (wire (pts (xy 107.95 67.31) (xy 115.57 67.31))
     (stroke (width 0) (type default))
     (uuid 99decd04-f631-4881-9064-b2583812ff6f)
-  )
-  (wire (pts (xy 107.95 80.01) (xy 110.49 80.01))
-    (stroke (width 0) (type default))
-    (uuid 9a106241-10b2-4eab-8af7-5562483911ae)
   )
   (wire (pts (xy 57.15 118.11) (xy 69.85 118.11))
     (stroke (width 0) (type default))
@@ -844,6 +882,10 @@
   (wire (pts (xy 69.85 110.49) (xy 57.15 110.49))
     (stroke (width 0) (type default))
     (uuid b0900c9c-40f2-4542-b314-ab8d8c36d202)
+  )
+  (wire (pts (xy 50.8 80.01) (xy 59.69 80.01))
+    (stroke (width 0) (type default))
+    (uuid b35fb6dc-594f-4fe7-b19a-4420838f94b3)
   )
   (bus (pts (xy 36.83 46.99) (xy 36.83 49.53))
     (stroke (width 0) (type default))
@@ -870,9 +912,9 @@
     (stroke (width 0) (type default))
     (uuid e20d016b-d535-4164-9db4-c3e19a1f112e)
   )
-  (wire (pts (xy 58.42 80.01) (xy 63.5 80.01))
+  (wire (pts (xy 110.49 80.01) (xy 110.49 82.55))
     (stroke (width 0) (type default))
-    (uuid eca982b7-cba1-4e0e-9800-ddf0292cbcb5)
+    (uuid e339b274-7e30-4944-ac6f-0f603ec43e6b)
   )
   (wire (pts (xy 107.95 31.75) (xy 110.49 31.75))
     (stroke (width 0) (type default))
@@ -1000,7 +1042,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 707cfa19-b9ec-40f5-912d-101ba90813c2)
   )
-  (hierarchical_label "ESP_PULSE" (shape input) (at 59.69 57.15 180) (fields_autoplaced)
+  (hierarchical_label "ESP_PULSE" (shape output) (at 59.69 57.15 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 740b78ec-a1f2-414b-bc20-9db0707755a1)
   )
@@ -1012,7 +1054,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7fccf6e8-9c33-4a0a-bf76-d81b98e33461)
   )
-  (hierarchical_label "ESP_ROM_WR_PROTECT" (shape output) (at 115.57 62.23 0) (fields_autoplaced)
+  (hierarchical_label "ESP_RIO_PROTECT" (shape output) (at 115.57 62.23 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 8bedac2c-cd92-4008-a3e8-2b14f114b35d)
   )
@@ -1074,12 +1116,12 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "D1") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "D?") (unit 1)
+          (reference "D1") (unit 1)
         )
       )
     )
@@ -1094,7 +1136,7 @@
     (property "Value" "FREENOVE_ESP32-WROVER-DEV" (at 85.725 19.7104 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "esp32-wrover:FREENOVE_ESP32-WROVER-DEV" (at 83.82 16.51 0)
+    (property "Footprint" "esp32-wrover:Controller Daughter Board" (at 83.82 16.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 83.82 16.51 0)
@@ -1156,12 +1198,12 @@
           (reference "U?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "U2") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "U?") (unit 1)
+          (reference "U1") (unit 1)
         )
       )
     )
@@ -1200,12 +1242,12 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "D5") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "D?") (unit 1)
+          (reference "D4") (unit 1)
         )
       )
     )
@@ -1244,12 +1286,12 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "D4") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "D?") (unit 1)
+          (reference "D3") (unit 1)
         )
       )
     )
@@ -1288,12 +1330,12 @@
           (reference "D?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "D3") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "D?") (unit 1)
+          (reference "D2") (unit 1)
         )
       )
     )
@@ -1332,12 +1374,12 @@
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "R2") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "R?") (unit 1)
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -1376,12 +1418,12 @@
           (reference "R?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "R1") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "R?") (unit 1)
+          (reference "R1") (unit 1)
         )
       )
     )
@@ -1424,12 +1466,12 @@
           (reference "EX_SPI?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "EX_SPI1") (unit 1)
+          (reference "EX_SPI?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "EX_SPI?") (unit 1)
+          (reference "EX_SPI1") (unit 1)
         )
       )
     )
@@ -1438,7 +1480,7 @@
   (symbol (lib_id "power:GND") (at 110.49 82.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000069a89e43)
-    (property "Reference" "#PWR05" (at 110.49 88.9 0)
+    (property "Reference" "#PWR?" (at 110.49 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 110.617 86.9442 0)
@@ -1454,22 +1496,22 @@
     (instances
       (project "CORE_ESP32-WROVER"
         (path "/305950fb-ad82-4307-a4f5-bd7099e734b4"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/7c488996-7a1e-4593-a75f-c48062e3224a"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "#PWR05") (unit 1)
+          (reference "#PWR04") (unit 1)
         )
       )
     )
@@ -1478,7 +1520,7 @@
   (symbol (lib_id "power:GND") (at 54.61 124.46 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 12c1b17b-ca33-4e69-bd09-3be90996f504)
-    (property "Reference" "#PWR07" (at 54.61 130.81 0)
+    (property "Reference" "#PWR?" (at 54.61 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 54.61 129.54 0)
@@ -1494,22 +1536,22 @@
     (instances
       (project "CORE_ESP32-WROVER"
         (path "/305950fb-ad82-4307-a4f5-bd7099e734b4"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/7c488996-7a1e-4593-a75f-c48062e3224a"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "#PWR07") (unit 1)
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -1518,7 +1560,7 @@
   (symbol (lib_id "power:GND") (at 228.6 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 348ef5a0-97ce-43f2-9e76-89a684138d7a)
-    (property "Reference" "#PWR09" (at 228.6 81.28 0)
+    (property "Reference" "#PWR?" (at 228.6 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 228.6 80.01 0)
@@ -1534,22 +1576,22 @@
     (instances
       (project "CORE_ESP32-WROVER"
         (path "/305950fb-ad82-4307-a4f5-bd7099e734b4"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/7c488996-7a1e-4593-a75f-c48062e3224a"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR06") (unit 1)
         )
       )
     )
@@ -1558,7 +1600,7 @@
   (symbol (lib_id "power:+5V") (at 207.01 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 553a8968-a271-47d6-bf66-5646c35ed364)
-    (property "Reference" "#PWR08" (at 207.01 49.53 0)
+    (property "Reference" "#PWR?" (at 207.01 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 207.01 41.91 0)
@@ -1574,62 +1616,112 @@
     (instances
       (project "CORE_ESP32-WROVER"
         (path "/305950fb-ad82-4307-a4f5-bd7099e734b4"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/7c488996-7a1e-4593-a75f-c48062e3224a"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR05") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 54.61 83.82 0) (unit 1)
+  (symbol (lib_id "power:PWR_FLAG") (at 110.49 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid cfcc89dc-73c1-4d5b-ab41-0ad8d554b1d1)
-    (property "Reference" "#PWR04" (at 54.61 87.63 0)
+    (uuid 9dcd7e64-6ed4-48a5-91ed-10b14d007556)
+    (property "Reference" "#FLG02" (at 110.49 29.845 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+5V" (at 54.61 80.01 0)
+    (property "Value" "PWR_FLAG" (at 110.49 27.94 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 54.61 83.82 0)
+    (property "Footprint" "" (at 110.49 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 54.61 83.82 0)
+    (property "Datasheet" "~" (at 110.49 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 48a13232-b2fb-4576-a304-23bd7db02e0f))
+    (instances
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
+          (reference "#FLG02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 50.8 80.01 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid cfcc89dc-73c1-4d5b-ab41-0ad8d554b1d1)
+    (property "Reference" "#PWR?" (at 50.8 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 50.8 85.09 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 50.8 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 50.8 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 30effc31-1def-4d22-9909-af1669a909ca))
     (instances
       (project "CORE_ESP32-WROVER"
         (path "/305950fb-ad82-4307-a4f5-bd7099e734b4"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/7c488996-7a1e-4593-a75f-c48062e3224a"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "#PWR04") (unit 1)
+          (reference "#PWR01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 59.69 80.01 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d4e1ffd4-2efc-4684-8219-a59c3f5877fc)
+    (property "Reference" "#FLG01" (at 59.69 81.915 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 59.69 85.09 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 59.69 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 59.69 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9bb35052-c098-42c3-8d80-e632724f84e0))
+    (instances
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
+          (reference "#FLG01") (unit 1)
         )
       )
     )
@@ -1638,7 +1730,7 @@
   (symbol (lib_id "power:+5V") (at 54.61 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fb635685-5b31-4361-9683-d1c1bf0dadb2)
-    (property "Reference" "#PWR06" (at 54.61 123.19 0)
+    (property "Reference" "#PWR?" (at 54.61 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 54.61 115.57 0)
@@ -1654,22 +1746,22 @@
     (instances
       (project "CORE_ESP32-WROVER"
         (path "/305950fb-ad82-4307-a4f5-bd7099e734b4"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/7c488996-7a1e-4593-a75f-c48062e3224a"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/794fe391-8dd6-42fa-8481-4a5265d16e9b"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/89656f16-bffa-4490-b8ce-bd491df66730"
-          (reference "#PWR06") (unit 1)
+          (reference "#PWR02") (unit 1)
         )
       )
     )

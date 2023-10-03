@@ -828,10 +828,6 @@
   )
 
 
-  (bus_entry (at 184.15 49.53) (size -2.54 2.54)
-    (stroke (width 0) (type default))
-    (uuid 0ce1af83-ea35-4c90-afad-21572fe2d34f)
-  )
   (bus_entry (at 62.23 63.5) (size 2.54 2.54)
     (stroke (width 0) (type default))
     (uuid 16a3dada-0944-4c8d-b1bb-d5d44659f3f0)
@@ -915,6 +911,10 @@
   (bus_entry (at 184.15 44.45) (size -2.54 2.54)
     (stroke (width 0) (type default))
     (uuid a9d5855e-14da-4c8a-a356-0cfdf33a4c8f)
+  )
+  (bus_entry (at 184.15 49.53) (size -2.54 2.54)
+    (stroke (width 0) (type default))
+    (uuid b672229b-ba36-48bb-acd0-50f52ec3d582)
   )
   (bus_entry (at 71.12 35.56) (size 2.54 2.54)
     (stroke (width 0) (type default))
@@ -1091,6 +1091,10 @@
     (uuid 5ea30dfa-7370-4dd5-a3b6-0a76d0eab2e4)
   )
 
+  (wire (pts (xy 181.61 52.07) (xy 156.21 52.07))
+    (stroke (width 0) (type default))
+    (uuid 5ff90aa1-075e-4eed-b790-6d949fa60ea7)
+  )
   (wire (pts (xy 85.09 38.1) (xy 73.66 38.1))
     (stroke (width 0) (type default))
     (uuid 65b7cff5-cbca-4dd7-9bf0-f311568d210c)
@@ -1156,10 +1160,6 @@
   (bus (pts (xy 62.23 78.74) (xy 62.23 81.28))
     (stroke (width 0) (type default))
     (uuid ac44c8dc-7a91-449a-9f24-e5b56c457dfa)
-  )
-  (bus (pts (xy 184.15 49.53) (xy 184.15 50.8))
-    (stroke (width 0) (type default))
-    (uuid b27fa712-6ee7-4e32-b413-884963fbab93)
   )
 
   (wire (pts (xy 156.21 74.93) (xy 163.83 74.93))
@@ -1269,10 +1269,6 @@
     (stroke (width 0) (type default))
     (uuid f8ab39b9-2796-43e7-8a72-4c3bbe4dd4a6)
   )
-  (wire (pts (xy 156.21 52.07) (xy 181.61 52.07))
-    (stroke (width 0) (type default))
-    (uuid f8af0b77-910d-405e-955d-f868e09c0166)
-  )
   (bus (pts (xy 71.12 45.72) (xy 71.12 48.26))
     (stroke (width 0) (type default))
     (uuid fa232b9a-6eb8-476c-989f-ec0ac51e34dc)
@@ -1331,6 +1327,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 56b9e6dd-3a9e-4622-8d5b-5994063ae288)
   )
+  (label "RIO_CONTROL.DATA_OE" (at 156.21 52.07 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 58a57773-73b1-432a-b897-701055631da9)
+  )
   (label "Z80_D1" (at 73.66 38.1 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5b3b849d-ddff-4d7d-97dc-b07a72e7c33c)
@@ -1362,10 +1362,6 @@
   (label "Z80_A11" (at 64.77 83.82 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9a10c816-66b5-4f4a-9108-dda27a098b9d)
-  )
-  (label "RIO_CONTROL.ROM_RDY" (at 156.21 52.07 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 9e282d7e-018c-4277-887d-c1e142cdc2c8)
   )
   (label "Z80_A0" (at 64.77 55.88 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1464,7 +1460,7 @@
   (symbol (lib_id "power:+5V") (at 160.02 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0ffc7539-debd-4725-885e-14330e4f3df6)
-    (property "Reference" "#PWR0102" (at 160.02 34.29 0)
+    (property "Reference" "#PWR?" (at 160.02 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 160.02 26.67 0)
@@ -1480,12 +1476,17 @@
     (instances
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
-          (reference "#PWR0102") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/0d5f1905-044f-4186-8c0e-e74aa689b436"
+          (reference "#PWR018") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
         (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af/45e8b7e1-b3fc-453c-b7ce-421d4c8eb212"
-          (reference "#PWR010") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1494,7 +1495,7 @@
   (symbol (lib_id "power:GND") (at 160.02 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5cd3a560-78b5-4262-864d-967ec420e628)
-    (property "Reference" "#PWR0101" (at 160.02 86.36 0)
+    (property "Reference" "#PWR?" (at 160.02 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 85.09 0)
@@ -1510,12 +1511,17 @@
     (instances
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
-          (reference "#PWR0101") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/0d5f1905-044f-4186-8c0e-e74aa689b436"
+          (reference "#PWR019") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
         (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af/45e8b7e1-b3fc-453c-b7ce-421d4c8eb212"
-          (reference "#PWR011") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1524,7 +1530,7 @@
   (symbol (lib_id "Connector:Conn_01x18_Socket") (at 151.13 54.61 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6fa93c22-d625-4eed-9097-2b0443df13aa)
-    (property "Reference" "RIO2" (at 151.765 30.48 0)
+    (property "Reference" "RIO?" (at 151.765 30.48 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Conn_01x18_Socket" (at 151.765 33.02 0)
@@ -1557,12 +1563,17 @@
     (instances
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
+          (reference "RIO?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/0d5f1905-044f-4186-8c0e-e74aa689b436"
           (reference "RIO2") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
         (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af/45e8b7e1-b3fc-453c-b7ce-421d4c8eb212"
-          (reference "J2") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -1571,7 +1582,7 @@
   (symbol (lib_id "Connector:Conn_01x24_Socket") (at 90.17 63.5 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ea1be596-9ede-4b73-a0ff-4c6e6dbeb30b)
-    (property "Reference" "RIO1" (at 91.44 64.135 0)
+    (property "Reference" "RIO?" (at 91.44 64.135 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x24_Socket" (at 91.44 66.675 0)
@@ -1610,12 +1621,17 @@
     (instances
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/8f76c5c7-fe36-4f58-b465-2615c9dcfdfb"
+          (reference "RIO?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/0d5f1905-044f-4186-8c0e-e74aa689b436"
           (reference "RIO1") (unit 1)
         )
       )
       (project "RIO-128K_ZXspectrum"
         (path "/c309cbb5-591c-4149-a6f5-223f04f1f3af/45e8b7e1-b3fc-453c-b7ce-421d4c8eb212"
-          (reference "J1") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )

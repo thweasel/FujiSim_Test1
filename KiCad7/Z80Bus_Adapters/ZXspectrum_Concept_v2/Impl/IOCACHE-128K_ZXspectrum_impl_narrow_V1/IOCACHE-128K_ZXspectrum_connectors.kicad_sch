@@ -1341,7 +1341,7 @@
   (symbol (lib_id "Connector:Conn_01x24_Socket") (at 87.63 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2e11e641-f1ce-4750-b319-8b6bcf8a3c36)
-    (property "Reference" "CACHE1" (at 89.535 139.065 0)
+    (property "Reference" "CACHE?" (at 89.535 139.065 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x24_Socket" (at 89.535 141.605 0)
@@ -1380,12 +1380,17 @@
     (instances
       (project "IOCACHE-128K_ZXspectrum_impl_narrow"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/84439c1e-570e-4c72-8fb1-44f7d27a07e5"
+          (reference "CACHE?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/c8a8ec74-821c-4c02-bbb4-83fc8ae5c878"
           (reference "CACHE1") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
         (path "/884c7ad2-5794-4c2b-8afa-8e07fcecd42b/f9303533-0d3f-4609-9fa9-076efff1786c"
-          (reference "J2") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -1394,7 +1399,7 @@
   (symbol (lib_id "Connector:Conn_01x14_Socket") (at 115.57 106.68 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3f13e71d-f4e8-4061-83bb-50f694ae2847)
-    (property "Reference" "CACHE2" (at 116.205 108.585 0)
+    (property "Reference" "CACHE?" (at 116.205 108.585 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x14_Socket" (at 118.745 108.585 0)
@@ -1423,12 +1428,17 @@
     (instances
       (project "IOCACHE-128K_ZXspectrum_impl_narrow"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/84439c1e-570e-4c72-8fb1-44f7d27a07e5"
+          (reference "CACHE?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/c8a8ec74-821c-4c02-bbb4-83fc8ae5c878"
           (reference "CACHE2") (unit 1)
         )
       )
       (project "IOCACHE-128K_ZXspectrum"
         (path "/884c7ad2-5794-4c2b-8afa-8e07fcecd42b/f9303533-0d3f-4609-9fa9-076efff1786c"
-          (reference "J1") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -1437,7 +1447,7 @@
   (symbol (lib_id "power:GND") (at 137.16 99.06 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 853b177e-a83f-4ffe-8aa0-fb9881703715)
-    (property "Reference" "#PWR042" (at 143.51 99.06 0)
+    (property "Reference" "#PWR017" (at 143.51 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 142.24 99.06 0)
@@ -1451,9 +1461,14 @@
     )
     (pin "1" (uuid dd891758-d7ac-4f23-a2e4-6ae8f310b969))
     (instances
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/c8a8ec74-821c-4c02-bbb4-83fc8ae5c878"
+          (reference "#PWR017") (unit 1)
+        )
+      )
       (project "IOCACHE-128K_ZXspectrum"
         (path "/884c7ad2-5794-4c2b-8afa-8e07fcecd42b/f9303533-0d3f-4609-9fa9-076efff1786c"
-          (reference "#PWR09") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1462,7 +1477,7 @@
   (symbol (lib_id "power:+5V") (at 97.79 99.06 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8f14bb82-370e-475f-ae62-fb4a983fa3a1)
-    (property "Reference" "#PWR0108" (at 101.6 99.06 0)
+    (property "Reference" "#PWR016" (at 101.6 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 93.98 99.06 0)
@@ -1476,9 +1491,14 @@
     )
     (pin "1" (uuid 88db7222-3889-4361-be2d-0db9ce09c96c))
     (instances
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/c8a8ec74-821c-4c02-bbb4-83fc8ae5c878"
+          (reference "#PWR016") (unit 1)
+        )
+      )
       (project "IOCACHE-128K_ZXspectrum"
         (path "/884c7ad2-5794-4c2b-8afa-8e07fcecd42b/f9303533-0d3f-4609-9fa9-076efff1786c"
-          (reference "#PWR08") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )

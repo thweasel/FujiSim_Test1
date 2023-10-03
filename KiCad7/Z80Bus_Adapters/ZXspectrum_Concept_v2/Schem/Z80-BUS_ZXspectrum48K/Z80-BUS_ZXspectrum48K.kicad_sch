@@ -1264,7 +1264,6 @@
 
   (no_connect (at 62.23 152.4) (uuid 2cac47d7-20ff-41c0-8142-e0160bde2d41))
   (no_connect (at 226.06 96.52) (uuid 2f34fca4-40a5-476b-963f-5c13efc2c75f))
-  (no_connect (at 54.61 152.4) (uuid 6cc84578-517a-4104-aa91-c2c7d812a60e))
   (no_connect (at 226.06 91.44) (uuid a0b819a9-389a-448b-94d0-55567f83390b))
   (no_connect (at 59.69 152.4) (uuid cb159b38-db7a-4444-ba87-f3154ac48ed7))
   (no_connect (at 226.06 93.98) (uuid d13ef124-ed5e-4d77-b2e4-f2a6e0e29873))
@@ -1411,6 +1410,10 @@
     (stroke (width 0) (type default))
     (uuid 64625bcc-bb9f-4cf5-a421-d7c284138386)
   )
+  (bus_entry (at 156.21 16.51) (size -2.54 2.54)
+    (stroke (width 0) (type default))
+    (uuid 676d8c51-8c07-4b66-8bdd-8e57bfbe3fa1)
+  )
   (bus_entry (at 92.71 19.05) (size 2.54 -2.54)
     (stroke (width 0) (type default))
     (uuid 6806a789-fbaa-48b1-a752-5bc191f35399)
@@ -1430,10 +1433,6 @@
   (bus_entry (at 57.15 20.32) (size 2.54 -2.54)
     (stroke (width 0) (type default))
     (uuid 7fdf1973-cb5c-4a00-900c-d4e9e6ba436e)
-  )
-  (bus_entry (at 153.67 19.05) (size 2.54 -2.54)
-    (stroke (width 0) (type default))
-    (uuid 820642f6-0d60-4c00-be83-6e8c30547396)
   )
   (bus_entry (at 210.82 50.8) (size 2.54 2.54)
     (stroke (width 0) (type default))
@@ -2245,6 +2244,10 @@
     (stroke (width 0) (type default))
     (uuid af6e0199-f2b2-435a-91f1-3f251aeb1ce8)
   )
+  (wire (pts (xy 54.61 152.4) (xy 54.61 156.21))
+    (stroke (width 0) (type default))
+    (uuid b01fdcc1-4a4a-4f9c-af59-2a6eba3012be)
+  )
   (bus (pts (xy 265.43 88.9) (xy 265.43 91.44))
     (stroke (width 0) (type default))
     (uuid b0d8ab3c-b981-4051-a0ca-0e363bb8f374)
@@ -2419,10 +2422,6 @@
     (stroke (width 0) (type default))
     (uuid e3ed2f7b-d1ef-4bdc-9607-b8d93159af5c)
   )
-  (wire (pts (xy 153.67 33.02) (xy 153.67 19.05))
-    (stroke (width 0) (type default))
-    (uuid e556ad15-bd17-49bc-b5e4-6dfe447ead64)
-  )
   (bus (pts (xy 95.25 72.39) (xy 97.79 72.39))
     (stroke (width 0) (type default))
     (uuid e60f3dbf-552d-4a4b-be60-8d87eb551e7e)
@@ -2472,6 +2471,10 @@
   (wire (pts (xy 262.89 76.2) (xy 238.76 76.2))
     (stroke (width 0) (type default))
     (uuid edb45022-4f3b-4ad8-b6a1-5c11d14361cd)
+  )
+  (wire (pts (xy 153.67 19.05) (xy 153.67 33.02))
+    (stroke (width 0) (type default))
+    (uuid f093d6f0-d8d9-403e-853d-0543125ce4a7)
   )
   (bus (pts (xy 151.13 16.51) (xy 153.67 16.51))
     (stroke (width 0) (type default))
@@ -2626,10 +2629,6 @@
   (label "LOCAL_A12" (at 146.05 19.05 270) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 15f797cc-ea3a-44b5-89df-ff7fc004ff01)
-  )
-  (label "LOCAL_A15" (at 153.67 19.05 270) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 17581e13-7383-4499-a585-71908d218c76)
   )
   (label "Z80_A9" (at 87.63 172.72 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -2875,6 +2874,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a01bf5ac-d66d-4700-8ed4-87da795610c4)
   )
+  (label "LOCAL_A15" (at 153.67 29.21 90) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid a1845134-4a3f-4c2e-93df-a58ee85010df)
+  )
   (label "Z80_A9" (at 251.46 66.04 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid a2470fc8-7f44-41ad-9753-80d035f75080)
@@ -3084,6 +3087,10 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 69849146-2653-4eef-9de3-5fb1d3f01372)
   )
+  (hierarchical_label "IORQ_FILTER_BIT" (shape output) (at 54.61 156.21 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 9852824a-ac7f-48f9-b41f-572c5670313f)
+  )
   (hierarchical_label "{Z80_BUS_CONTROL}" (shape input) (at 54.61 110.49 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 9c0f5d5c-ce8a-4b8c-98cf-d74cb941b0de)
@@ -3120,9 +3127,9 @@
   )
 
   (symbol (lib_id "Connector:Conn_01x40_Socket") (at 100.33 147.32 270) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board no) (dnp no)
     (uuid 00000000-0000-0000-0000-000064b825b9)
-    (property "Reference" "J1" (at 130.81 144.78 90)
+    (property "Reference" "J?" (at 130.81 144.78 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "DIAG-HOST_SYSTEM_BUS" (at 100.33 144.78 90)
@@ -3177,12 +3184,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "J1") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "DIAG-HOST_SYSTEM_BUS1") (unit 1)
+          (reference "DIAG-HOST_SYSTEM_BUS?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "J8") (unit 1)
         )
       )
     )
@@ -3191,7 +3203,7 @@
   (symbol (lib_id "Connector_Generic:Conn_02x20_Counter_Clockwise") (at 231.14 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000067bd4005)
-    (property "Reference" "J2" (at 232.41 45.2882 0)
+    (property "Reference" "J?" (at 232.41 45.2882 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "HOST SYSTEM HEADER" (at 232.41 47.5996 0)
@@ -3246,12 +3258,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "J2") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "J2") (unit 1)
+          (reference "J?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "J9") (unit 1)
         )
       )
     )
@@ -3303,6 +3320,11 @@
           (reference "Z80-LOCAL_DATA?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "Z80-LOCAL_DATA?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
           (reference "Z80-LOCAL_DATA1") (unit 1)
         )
       )
@@ -3355,6 +3377,11 @@
           (reference "Z80_ADDRHIGH?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "Z80_ADDRHIGH?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
           (reference "Z80_ADDRHIGH1") (unit 1)
         )
       )
@@ -3407,6 +3434,11 @@
           (reference "Z80_ADDRLOW?") (unit 1)
         )
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
+          (reference "Z80_ADDRLOW?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
           (reference "Z80_ADDRLOW1") (unit 1)
         )
       )
@@ -3416,7 +3448,7 @@
   (symbol (lib_id "power:GND") (at 49.53 165.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1c54f8f3-cb91-42bc-a557-2f871f06d958)
-    (property "Reference" "#PWR035" (at 49.53 171.45 0)
+    (property "Reference" "#PWR?" (at 49.53 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 49.53 170.18 0)
@@ -3432,12 +3464,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR035") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -3446,7 +3483,7 @@
   (symbol (lib_id "power:GND") (at 77.47 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 1d39d71d-2fe3-49fe-a855-af283e7aa4d8)
-    (property "Reference" "#PWR036" (at 77.47 52.07 0)
+    (property "Reference" "#PWR?" (at 77.47 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 77.47 50.8 0)
@@ -3462,12 +3499,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR036") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -3476,7 +3518,7 @@
   (symbol (lib_id "power:GND") (at 242.57 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 514eca61-fdc5-45d2-aae9-89ad62dd72e5)
-    (property "Reference" "#PWR041" (at 242.57 105.41 0)
+    (property "Reference" "#PWR?" (at 242.57 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 242.57 104.14 0)
@@ -3492,12 +3534,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR041") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -3506,7 +3553,7 @@
   (symbol (lib_id "power:GND") (at 168.91 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 54f698c0-3d54-45ed-98ed-e214b033143f)
-    (property "Reference" "#PWR040" (at 168.91 52.07 0)
+    (property "Reference" "#PWR?" (at 168.91 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 168.91 49.53 0)
@@ -3522,12 +3569,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR040") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -3536,7 +3588,7 @@
   (symbol (lib_id "power:+5V") (at 36.83 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a5d87c25-de79-43cf-a42c-a76f26ff6625)
-    (property "Reference" "#PWR034" (at 36.83 49.53 0)
+    (property "Reference" "#PWR?" (at 36.83 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 36.83 41.91 0)
@@ -3552,12 +3604,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR034") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -3566,7 +3623,7 @@
   (symbol (lib_id "power:+5V") (at 82.55 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid db7443f5-1798-4858-8202-a17822ddd20d)
-    (property "Reference" "#PWR037" (at 82.55 49.53 0)
+    (property "Reference" "#PWR?" (at 82.55 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 82.55 42.164 0)
@@ -3582,12 +3639,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR037") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -3596,7 +3658,7 @@
   (symbol (lib_id "power:+5V") (at 128.27 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dd3b4101-e73c-439c-981e-bdfb18ec6047)
-    (property "Reference" "#PWR039" (at 128.27 49.53 0)
+    (property "Reference" "#PWR?" (at 128.27 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 128.27 42.164 0)
@@ -3612,12 +3674,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR039") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -3626,7 +3693,7 @@
   (symbol (lib_id "power:GND") (at 123.19 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e1cb9dbd-63a4-4a7d-a159-4f7b0e8f337a)
-    (property "Reference" "#PWR038" (at 123.19 52.07 0)
+    (property "Reference" "#PWR?" (at 123.19 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 123.19 49.53 0)
@@ -3642,12 +3709,17 @@
     (instances
       (project "FujiNet_Z80Bus_Basic"
         (path "/35e54075-8ed7-4bf6-837e-479a97e77d5d/422c038a-6ca1-4459-8c55-caaae6c81329"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "ZXspectrum_Concept_v2.kicad_pro"
         (path "/532c0392-800e-45cc-8170-6d32f2390e83/626c22b0-78f2-4ece-97ec-724303f7d43c"
-          (reference "#PWR038") (unit 1)
+          (reference "#PWR?") (unit 1)
+        )
+      )
+      (project "ZXspectrum_Concept_v2.kicad_pro"
+        (path "/55b3df09-427f-490b-af7e-cf3fd0c70b9f/63e88c42-86cf-43ea-bccf-7ab349bf1eb5"
+          (reference "#PWR024") (unit 1)
         )
       )
     )
