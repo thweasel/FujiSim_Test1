@@ -52,7 +52,7 @@ void ESP_ROM_Test(void)
   for (uint16_t addr = 0xF000; addr < 0xF008; addr++)
   {
     //data = addr;
-    writeData = 0xAA;
+    writeData = writeData+1;
 
     consoleShowAddrData("doRIOROMWrite", addr, writeData, HEX);
     doRIOROMWrite(writeData, addr, 0);
@@ -110,9 +110,9 @@ void ESP_RIOconfig_Cache0to0x0001(void)
   doRIOconfigWrite(IODCONFIG_IOEND, 5);  // 0x50
 
   data = doRIOconfigRead(1); // 0x90
-  consoleShowAddrData("IODCONFIG_STATUS", 1, data, HEX);
+  consoleShowAddrData("READ IODCONFIG_STATUS", 1, data, HEX);
   data = doRIOconfigRead(3); // 0x80
-  consoleShowAddrData("IODCONFIG_CACHE0", 3, data, HEX);
+  consoleShowAddrData("READ IODCONFIG_CACHE0", 3, data, HEX);
   data = doRIOconfigRead(5); // 0x50
-  consoleShowAddrData("IODCONFIG_IOEND", 5, data, HEX);
+  consoleShowAddrData("READ IODCONFIG_IOEND", 5, data, HEX);
 }

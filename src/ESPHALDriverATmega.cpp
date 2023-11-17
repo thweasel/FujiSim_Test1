@@ -8,7 +8,7 @@
 
 
 
-#define RUNSLOW false
+#define RUNSLOW true
 #define SLOWTIME 100
 #define SLOWPULSEDIV 5
 

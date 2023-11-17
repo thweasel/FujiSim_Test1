@@ -76,8 +76,10 @@ uint8_t doRIOconfigRead(uint16_t Address) // A16-1
 {
     sendBUSRQ(3); 
     enableRIO_IOdConfigAccess();
+
     // connect Z80Data and ROM/IOdbus
     data = doReadBUSData(Address, CONTROLBYTE_RIOCONFIG_RD);
+    
     disableRIO_IOdConfigAccess();
     setBUSidle();
     return data;
