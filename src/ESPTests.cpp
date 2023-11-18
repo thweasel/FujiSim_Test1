@@ -46,21 +46,37 @@ void ESP_CacheData_Test(void)
 void ESP_ROM_Test(void)
 {
   Serial.println("\nESP_ROM_Test");
+  uint16_t errors =0;
 
   uint8_t writeData = 0x00;
   uint8_t readData = 0x00;
-  for (uint16_t addr = 0xF000; addr < 0xF008; addr++)
+  for (uint16_t addr = 0x0000; addr < 0xFFFF; addr++)
   {
     //data = addr;
     writeData = writeData+1;
 
-    consoleShowAddrData("doRIOROMWrite", addr, writeData, HEX);
+    
     doRIOROMWrite(writeData, addr, 0);
 
     readData = doRIOROMRead(addr, 0);
-    consoleShowAddrData("doRIOROMRead", addr, readData, HEX);
-
+    
+    if(writeData != readData)
+    {
+      consoleShowAddrData("doRIOROMWrite", addr, writeData, HEX);
+      consoleShowAddrData("doRIOROMRead", addr, readData, HEX);
+      errors++;
+    }
   }
+  if(errors !=0)
+  {
+    Serial.print("errors");
+    Serial.println(errors);
+  }
+  else
+  {
+    Serial.println(" [ PASS ]  ESP_ROM_Test \n");
+  }
+
 }
 
 void ESP_RIOconfig_Access_Test(void)

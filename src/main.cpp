@@ -109,8 +109,8 @@ void loop()
 // IODdevice TEST
 //  
 
-ESP_RIOconfig_Cache0to0x0001();
-Z80_IORQ_Test();
+//ESP_RIOconfig_Cache0to0x0001();
+//Z80_IORQ_Test();
   
 
 }
