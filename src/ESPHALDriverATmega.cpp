@@ -8,7 +8,7 @@
 
 
 
-#define RUNSLOW true
+#define RUNSLOW false
 #define SLOWTIME 100
 #define SLOWPULSEDIV 5
 
@@ -34,6 +34,7 @@
 #define ESP_SPI_INT_OE 48   // OUTPUT (send/stop) --SPI Enable Output of an Address from shift registers
 #define ESP_PULSE 47        // OUTPUT (pulse)     -- Generate a pulse for Writing
 #define ESP_SPI_INT_PL 46   // OUTPUT (pulse)     -- SPI Load Host BUS state to shift registers
+#define ESP_SPI_INT_CE 41   // OUTPUT
 
 
 #define ESP_RIO_PROTECT 5   // OUTPUT (enable/disable)
@@ -163,6 +164,7 @@ void Setup_ESPHALDriver(void)
   digitalWrite(Z80_HARDLOCK, LOW); // Tri-State
 
   // ESP pin Config
+  pinMode(ESP_SPI_INT_CE, OUTPUT);
   pinMode(ESP_SPI_INT_STC, OUTPUT);
   pinMode(ESP_SPI_INT_OE, OUTPUT);
   pinMode(ESP_PULSE, OUTPUT);
@@ -174,6 +176,7 @@ void Setup_ESPHALDriver(void)
   pinMode(ESP_RIO_PROTECT, OUTPUT);
 
   // OUTPUT States
+  digitalWrite(ESP_SPI_INT_OE, LOW);
   digitalWrite(ESP_SPI_INT_STC, HIGH);
   digitalWrite(ESP_SPI_INT_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);
