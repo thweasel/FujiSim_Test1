@@ -69,7 +69,7 @@ void ESP_ROM_Test(void)
   }
   if(errors !=0)
   {
-    Serial.print("errors");
+    Serial.print("[ FAIL ]  ESP_ROM_Test \n  errors counted: ");
     Serial.println(errors);
   }
   else
