@@ -139,6 +139,9 @@ void readSPI(void)
 }
 
 // LOCAL ADDRESS BUS signal output controls
+// The output from the 595s on the SPI bus must ONLY be activated when RIO's 245 Decoder is disabled.
+// This code is likely to be replaced with a NOT gate that inverts the OE signal from RIO's 245 Decoder chip, so we can never conflict the LOCAL HIGH ADDR BYTE
+
 void sendLocalAddressBusSignals(void)
 {
   digitalWrite(ESP_SPI_INT_OE, LOW);
