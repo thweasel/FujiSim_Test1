@@ -18,7 +18,7 @@ uint8_t controlByte;  // Control bus state
 void setBUSidle(void)
 {
   // Default IDLE state for the system
-  //  stopLocalAddressBusSignals();  // Stop when releasing the board
+  //  stopBusSignalsFromSPI();  // Stop when releasing the board
   WriteDataBUSOperation(0xff,0xffff,0xff);  // set all shift register outputs high
   return;
 }
@@ -86,7 +86,7 @@ boolean getLocalBus (uint8_t retries)
       { 
         //Serial.println("ESP has Lock");
         setESPHardlock();
-        sendLocalAddressBusSignals();
+        sendBusSignalsFromSPI();
         return true;    // SUCCESSFUL LOCK
       }
 
@@ -99,7 +99,7 @@ boolean getLocalBus (uint8_t retries)
 void releaseLocalBus(void)
 {
   //Serial.println("ESP released Lock");
-  stopLocalAddressBusSignals();
+  stopBusSignalsFromSPI();
   clearESPHardlock();
 }
 

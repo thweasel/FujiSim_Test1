@@ -138,16 +138,16 @@ void readSPI(void)
   return; // results in BusPacketBuffer
 }
 
-// LOCAL ADDRESS BUS signal output controls
+// SPI BUS signal output controls
 // The output from the 595s on the SPI bus must ONLY be activated when RIO's 245 Decoder is disabled.
 // This code is likely to be replaced with a NOT gate that inverts the OE signal from RIO's 245 Decoder chip, so we can never conflict the LOCAL HIGH ADDR BYTE
 
-void sendLocalAddressBusSignals(void)
+void sendBusSignalsFromSPI(void)
 {
   digitalWrite(ESP_SPI_INT_OE, LOW);
 }
 
-void stopLocalAddressBusSignals(void)
+void stopBusSignalsFromSPI(void)
 {
   digitalWrite(ESP_SPI_INT_OE, HIGH);
 }
@@ -199,7 +199,7 @@ void WriteDataBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address)
   digitalWrite(SS,SS_START);
   setBusPacketBuffer(Data,Control,Address);  
   writeSPI(); // Set Control and Address lines
-  // sendLocalAddressBusSignals();  // ADDRESS BUS CONNECTED AFTER ESP HARDLOCK
+  // sendBusSignalsFromSPI();  // ADDRESS BUS CONNECTED AFTER ESP HARDLOCK
   sendPulse();
   digitalWrite(SS,SS_STOP);
   return;
@@ -210,7 +210,7 @@ uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address)
   digitalWrite(SS,SS_START);
   setBusPacketBuffer(0x00,Control,Address);  
   writeSPI(); // Set Control and Address lines
-  // sendLocalAddressBusSignals();  // ADDRESS BUS CONNECTED AFTER ESP HARDLOCK
+  // sendBusSignalsFromSPI();  // ADDRESS BUS CONNECTED AFTER ESP HARDLOCK
   readSPI();
   digitalWrite(SS,SS_STOP);
   return BusPacketBuffer[3]; // Data byte
