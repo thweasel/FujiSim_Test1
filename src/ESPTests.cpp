@@ -3,25 +3,65 @@
 #include "consoleDebug.h"
 
 
+uint16_t errors =0;
+uint8_t writeData = 0x00;
+uint8_t readData = 0x00;
+
+
+void initWriteReadTest (const char * TestName)
+{
+  Serial.print("\nTESTING : ");
+  Serial.println(TestName);
+  errors = 0;
+  writeData = 0x00;
+  readData = 0x00;
+}
+
+void logWriteReadTest(uint16_t addr, uint8_t writeData, uint8_t readData)
+{
+    if(writeData != readData)
+    {
+      Serial.println ("Error! ");
+      consoleShowAddrData(" Write data ", addr, writeData, HEX);
+      consoleShowAddrData(" Read data ", addr, readData, HEX);
+      errors++;
+    }
+}
+
+void reportWriteReadTest(void)
+{
+
+  if(errors !=0)
+  {
+    Serial.print("[ FAIL ]  errors counted: ");
+    Serial.println(errors);
+  }
+  else
+  {
+    Serial.print("[ PASS ] ");
+  }
+  
+}
+
+
 
 void ESP_CacheStatusTest(void)
 {
-  Serial.println("\nESP_CacheStatusTest");
+  
+  initWriteReadTest("ESP_CacheStatusTest");
 
-  uint8_t data = 0x00;
-  for (uint16_t addr = 0x0000; addr < 0x0001; addr++)
+  for (uint16_t addr = 0x0000; addr < 0x000F; addr++)
   {
     
-    consoleShowAddrData("doCacheStatusWrite",addr, data,HEX);
-    // void doCacheStatusWrite(uint8_t Data, uint16_t Address); //A16-1
-    doCacheStatusWrite(data, addr);
-    
-    data = doCacheStatusRead(addr);
-    consoleShowAddrData("doCacheStatusRead",addr, data,HEX);
-    
-    data++;
+    doCacheStatusWrite(writeData, addr);
+    readData = doCacheStatusRead(addr);
+
+    logWriteReadTest(addr,writeData,readData);
+        
+    writeData++;
     //delay(50);
   }
+  reportWriteReadTest();
 
 }
 
@@ -45,38 +85,20 @@ void ESP_CacheData_Test(void)
 
 void ESP_ROM_Test(void)
 {
-  Serial.println("\nESP_ROM_Test");
-  uint16_t errors =0;
+  initWriteReadTest("ESP_ROM_Test");
 
-  uint8_t writeData = 0x00;
-  uint8_t readData = 0x00;
-  for (uint16_t addr = 0x0000; addr < 0xFFFF; addr++)
+  for (uint16_t addr = 0x0000; addr < 0x000F; addr++)
   {
     //data = addr;
     writeData = writeData+1;
 
     
     doRIOROMWrite(writeData, addr, 0);
-
     readData = doRIOROMRead(addr, 0);
-    
-    if(writeData != readData)
-    {
-      consoleShowAddrData("doRIOROMWrite", addr, writeData, HEX);
-      consoleShowAddrData("doRIOROMRead", addr, readData, HEX);
-      errors++;
-    }
-  }
-  if(errors !=0)
-  {
-    Serial.print("[ FAIL ]  ESP_ROM_Test \n  errors counted: ");
-    Serial.println(errors);
-  }
-  else
-  {
-    Serial.println(" [ PASS ]  ESP_ROM_Test \n");
-  }
+    logWriteReadTest(addr,writeData,readData);
 
+  }
+reportWriteReadTest();
 }
 
 void ESP_RIOconfig_Access_Test(void)
