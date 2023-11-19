@@ -27,14 +27,14 @@ uint8_t doReadBUSData(uint16_t Address, uint8_t Control)
 {
   uint8_t result;
   result = ReadDataBUSOperation(Control, Address);
-  setBUSidle();
+  //setBUSidle(); // Implicit as SPI output is cut off?
   return result;
 }
 
 void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control)
 {
   WriteDataBUSOperation(Data,Control,Address);
-  setBUSidle();
+  //setBUSidle(); // Implicit as SPI output is cut off?
   return;
 }
 
