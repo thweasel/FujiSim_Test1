@@ -18,8 +18,8 @@ uint8_t controlByte;  // Control bus state
 void setBUSidle(void)
 {
   // Default IDLE state for the system
-  stopBusSignals();
-  doWriteBUSData(0xff,0xffff,0xff);  // set all shift register outputs high
+  //  stopLocalAddressBusSignals();  // Stop when releasing the board
+  WriteDataBUSOperation(0xff,0xffff,0xff);  // set all shift register outputs high
   return;
 }
 
@@ -27,12 +27,14 @@ uint8_t doReadBUSData(uint16_t Address, uint8_t Control)
 {
   uint8_t result;
   result = ReadDataBUSOperation(Control, Address);
+  setBUSidle();
   return result;
 }
 
 void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control)
 {
   WriteDataBUSOperation(Data,Control,Address);
+  setBUSidle();
   return;
 }
 
@@ -68,28 +70,36 @@ uint8_t pollINT(void) {
   return intCode;
 }
 
-boolean establishESPHardlock (uint8_t retries) 
+boolean getLocalBus (uint8_t retries) 
 {
-  do
+  // Establish a ESP Hard Lock to block incoming Z80 IORQ
+  // Do not let RIO Decode IO while the SPI is using the Local Address bus via SPI!
+  if(retries > 0)
   {
-    if(getZ80HardlockState() == true) 
-    { 
-      delay(1); 
-    }
-    else
-    { 
-      //Serial.println("ESP has Lock");
-      setESPHardlock();
-      return true;    // SUCCESSFUL LOCK
-    }
+    do
+    {
+      if(getZ80HardlockState() == true) 
+      { 
+        delay(1); 
+      }
+      else
+      { 
+        //Serial.println("ESP has Lock");
+        setESPHardlock();
+        sendLocalAddressBusSignals();
+        return true;    // SUCCESSFUL LOCK
+      }
 
-  } while (--retries > 0);
+    } while (--retries > 0);
+  }
+  //Serial.println("ESP failed to Lock");
   return false;       // FAILED TO LOCK
 }
 
-void releaseESPHardlock(void)
+void releaseLocalBus(void)
 {
-  Serial.println("ESP released Lock");
+  //Serial.println("ESP released Lock");
+  stopLocalAddressBusSignals();
   clearESPHardlock();
 }
 
@@ -167,13 +177,13 @@ void disableRIO_ROM(void)
 
 void enableRIO_IOdConfigAccess(void)
 {
-    establishESPHardlock(3);
+    getLocalBus(3);
     disableRIOProtection();
 }
 
 void disableRIO_IOdConfigAccess(void)
 {
-    releaseESPHardlock();
+    releaseLocalBus();
     enableRIOProtection();
 }
 
@@ -187,7 +197,7 @@ void ESPHardware_setup(void)
   // PUSH IODevice config to RIO
 
   setBUSidle();
-  releaseESPHardlock();
+  releaseLocalBus();
 }
 
 

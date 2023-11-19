@@ -150,7 +150,7 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
 // ESP accessing Cache chip
 uint8_t doCacheDataRead(uint16_t Address) // A16-0
 {
-    if(establishESPHardlock(1))
+    if(getLocalBus(1))
     {
         data = doReadBUSData(Address, CONTROLBYTE_CACHEDATA_RD);
         return data;
@@ -160,7 +160,7 @@ uint8_t doCacheDataRead(uint16_t Address) // A16-0
 
 void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 {
-    establishESPHardlock(1);
+    getLocalBus(1);
 
     doWriteBUSData(Data, Address, CONTROLBYTE_CACHEDATA_WR);
     setBUSidle();
@@ -168,11 +168,12 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
-    establishESPHardlock(1);
-    //displayBUSPTR(BUSpacket);
-
-    data = doReadBUSData(Address, CONTROLBYTE_CACHESTATUS_RD);
-    setBUSidle();
+    boolean result = getLocalBus(1);
+    if(result)
+    {
+        data = doReadBUSData(Address, CONTROLBYTE_CACHESTATUS_RD);
+        releaseLocalBus();
+    }
 
 //    displayBUSPTR(BUSpacket);
     return data;
@@ -180,9 +181,13 @@ uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 
 void doCacheStatusWrite(uint8_t Data, uint16_t Address) // A16-1
 {
-    establishESPHardlock(1);
-
-    doWriteBUSData(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
-    setBUSidle();
+    boolean result = getLocalBus(1);
+    if(result)
+    {
+        doWriteBUSData(Data, Address, CONTROLBYTE_CACHESTATUS_WR);
+        releaseLocalBus();
+    }
+    
+    
 
 }

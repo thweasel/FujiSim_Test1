@@ -99,7 +99,8 @@ void ESPHardware_setup(void);
 
 uint8_t pollINT(void);
 
-boolean establishESPHardlock(uint8_t waitus);
+boolean getLocalBus(uint8_t waitus);
+void releaseLocalBus(void);
 
 bool sendBUSRQ(uint8_t waitus);
 

@@ -13,9 +13,9 @@ uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address);
 
 uint8_t *getBUSstate(void);
 
-void sendBusSignals(void);
+void sendLocalAddressBusSignals(void);
 
-void stopBusSignals(void);
+void stopLocalAddressBusSignals(void);
 
 //
 // RIO ROM

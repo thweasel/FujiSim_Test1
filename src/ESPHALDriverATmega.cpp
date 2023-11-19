@@ -138,13 +138,13 @@ void readSPI(void)
   return; // results in BusPacketBuffer
 }
 
-// BUS signal output controls
-void sendBusSignals(void)
+// LOCAL ADDRESS BUS signal output controls
+void sendLocalAddressBusSignals(void)
 {
   digitalWrite(ESP_SPI_INT_OE, LOW);
 }
 
-void stopBusSignals(void)
+void stopLocalAddressBusSignals(void)
 {
   digitalWrite(ESP_SPI_INT_OE, HIGH);
 }
@@ -196,7 +196,7 @@ void WriteDataBUSOperation(uint8_t Data, uint8_t Control, uint16_t Address)
   digitalWrite(SS,SS_START);
   setBusPacketBuffer(Data,Control,Address);  
   writeSPI(); // Set Control and Address lines
-  sendBusSignals();
+  // sendLocalAddressBusSignals();  // ADDRESS BUS CONNECTED AFTER ESP HARDLOCK
   sendPulse();
   digitalWrite(SS,SS_STOP);
   return;
@@ -207,7 +207,7 @@ uint8_t ReadDataBUSOperation(uint8_t Control, uint16_t Address)
   digitalWrite(SS,SS_START);
   setBusPacketBuffer(0x00,Control,Address);  
   writeSPI(); // Set Control and Address lines
-  sendBusSignals();
+  // sendLocalAddressBusSignals();  // ADDRESS BUS CONNECTED AFTER ESP HARDLOCK
   readSPI();
   digitalWrite(SS,SS_STOP);
   return BusPacketBuffer[3]; // Data byte
@@ -276,6 +276,7 @@ void sendPulse(void)
   digitalWrite(ESP_PULSE,HIGH);
   return;
 }
+
 void sendWAITreset(void)
 {
   digitalWrite(ESP_WAIT_RESET,LOW);

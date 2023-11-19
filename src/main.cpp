@@ -90,7 +90,7 @@ void loop()
   // RIO ROM Tests
   //
   
-  ESP_ROM_Test();
+  //ESP_ROM_Test(); // NEED TO change this -- getLocalBUS()
   //enableRIO_ROMRW(0);
   //Z80_ROMMemory_Test();
   //disableRIO_ROM();
