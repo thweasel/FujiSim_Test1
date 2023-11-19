@@ -2,6 +2,7 @@
 #include "ESPTests.h"
 #include "consoleDebug.h"
 
+#define DEBUG_DETAILED false
 
 uint16_t errors =0;
 uint8_t writeData = 0x00;
@@ -11,7 +12,8 @@ uint8_t readData = 0x00;
 void initWriteReadTest (const char * TestName)
 {
   Serial.print("\nTESTING : ");
-  Serial.println(TestName);
+  Serial.print(TestName);
+  Serial.print(" >>  ");
   errors = 0;
   writeData = 0x00;
   readData = 0x00;
@@ -21,9 +23,12 @@ void logWriteReadTest(uint16_t addr, uint8_t writeData, uint8_t readData)
 {
     if(writeData != readData)
     {
-      Serial.println ("Error! ");
-      consoleShowAddrData(" Write data ", addr, writeData, HEX);
-      consoleShowAddrData(" Read data ", addr, readData, HEX);
+      if(DEBUG_DETAILED)
+      {
+        Serial.println ("\n Error! ");
+        consoleShowAddrData("  Write data ", addr, writeData, HEX);
+        consoleShowAddrData("  Read data ", addr, readData, HEX);
+      }
       errors++;
     }
 }
@@ -33,12 +38,12 @@ void reportWriteReadTest(void)
 
   if(errors !=0)
   {
-    Serial.print("[ FAIL ]  errors counted: ");
+    Serial.print("[ FAILED ]\n   Errors counted: ");
     Serial.println(errors);
   }
   else
   {
-    Serial.print("[ PASS ] ");
+    Serial.println("[ PASSED ] ");
   }
   
 }
