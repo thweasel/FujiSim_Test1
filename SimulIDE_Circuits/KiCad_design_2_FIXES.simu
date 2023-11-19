@@ -1986,7 +1986,7 @@ Circuit Id: Resistor-10709
 
 Unique  Id: LAnalizer-48994: 
 Circuit Id: LAnalizer-48994
-<item valLabelx="0" Basic_X="135" Tunnels="z80 rd,z80 wr,z80 iorq,z80 memrq,z80 BUSRQ,z80 WAIT,z80 BUSACK," boardRot="-1e+06" Trigger="4" objectName="LAnalizer-48994" circPos="0,0" id="LAnalizer-48994" y="-612" mainComp="false" valLabRot="0" circRot="0" hflip="1" Basic_Y="135" labelrot="0" hTick="361076312" TimePos="0" labelx="-90" labely="-100" rotation="0" boardPos="-1e+06,-1e+06" valLabely="0" vflip="1" itemtype="LAnalizer" Show_id="false" vTick="1" x="-676"/>
+<item valLabelx="0" Basic_X="135" Tunnels="z80 rd,z80 wr,z80 iorq,z80 memrq,z80 BUSRQ,z80 WAIT,z80 BUSACK," boardRot="-1e+06" Trigger="4" objectName="LAnalizer-48994" circPos="0,0" id="LAnalizer-48994" y="-612" mainComp="false" valLabRot="0" circRot="0" hflip="1" Basic_Y="135" labelrot="0" hTick="127122" TimePos="0" labelx="-90" labely="-100" rotation="0" boardPos="-1e+06,-1e+06" valLabely="0" vflip="1" itemtype="LAnalizer" Show_id="false" vTick="1" x="-676"/>
 
 Unique  Id: Tunnel-58888: 
 Circuit Id: LOCAL_CONTROL.WR
@@ -2210,7 +2210,7 @@ Circuit Id: And Gate-175288
 
 Unique  Id: Rectangle-175480: 
 Circuit Id: Rectangle-175480
-<item valLabelx="0" boardRot="-1e+06" objectName="Rectangle-175480" circPos="0,0" id="Rectangle-175480" y="76" mainComp="false" H_size="50" valLabRot="0" circRot="0" hflip="1" Color="#ff0000" labelrot="0" labelx="-16" labely="-24" rotation="0" boardPos="-1e+06,-1e+06" valLabely="0" V_size="30" Opacity="1" vflip="1" Z_Value="-1" itemtype="Rectangle" Show_id="false" x="240" Border="2"/>
+<item valLabelx="0" boardRot="-1e+06" objectName="Rectangle-175480" circPos="0,0" id="Rectangle-175480" y="76" mainComp="false" H_size="50" valLabRot="0" circRot="0" hflip="1" Color="#00ff00" labelrot="0" labelx="-16" labely="-24" rotation="0" boardPos="-1e+06,-1e+06" valLabely="0" V_size="30" Opacity="1" vflip="1" Z_Value="-1" itemtype="Rectangle" Show_id="false" x="240" Border="2"/>
 
 Unique  Id: And Gate-175481: 
 Circuit Id: And Gate-175288
@@ -2439,10 +2439,6 @@ Circuit Id: TextComponent-182698
 Unique  Id: ResistorDip-186301: 
 Circuit Id: ResistorDip-10715
 <item valLabelx="5" boardRot="-1e+06" objectName="ResistorDip-186301" circPos="0,0" id="ResistorDip-10715" y="724" mainComp="false" Size="8" valLabRot="90" circRot="8.900601013234755e-307" hflip="1" labelrot="0" Show_res="true" labelx="-24" labely="-40" rotation="-90" boardPos="-1e+06,-1e+06" valLabely="-26" vflip="1" Unit=" kΩ" itemtype="ResistorDip" Show_id="false" Resistance="10" x="-932"/>
-
-Unique  Id: SerialTerm-186103: 
-Circuit Id: SerialTerm-186103
-<item valLabelx="0" boardRot="-1e+06" posx="0" objectName="SerialTerm-186103" circPos="0,0" id="SerialTerm-186103" y="-1012" mainComp="false" valLabRot="0" circRot="0" hflip="1" labelrot="0" sizex="761" labelx="-16" labely="-24" rotation="0" boardPos="-1e+06,-1e+06" valLabely="0" Mcu_Id="Arduino Mega-45559" vflip="1" Mcu_Uart="1" sizey="678" posy="156" itemtype="SerialTerm" Show_id="false" x="-1156"/>
 
 Unique  Id: Connector-373: 
 Circuit Id: Connector-373

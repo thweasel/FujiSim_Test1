@@ -89,7 +89,7 @@ Z80 control
 //
 // BASIC bus operations exposed to BUS interface
 
-void setBUSidle(void);
+// void setBUSidle(void);  // NOT a valid bus function outside of the HAL
 
 uint8_t doReadBUSData(uint16_t Address, uint8_t Control);
 
@@ -102,9 +102,9 @@ uint8_t pollINT(void);
 boolean getLocalBus(uint8_t waitus);
 void releaseLocalBus(void);
 
-bool sendBUSRQ(uint8_t waitus);
+bool getZ80BUS(uint8_t waitus);
 
-bool clearBUSRQ(void);
+// bool releaseZ80BUS(void); // Implicit when LocalBus is release (Z80BUSRQ goes high)
 
 
 

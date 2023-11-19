@@ -89,16 +89,15 @@ void ESP_ROM_Test(void)
 
   for (uint16_t addr = 0x0000; addr < 0x00FF; addr++)
   {
-    //data = addr;
     writeData = writeData+1;
-
     
     doRIOROMWrite(writeData, addr, 0);
     readData = doRIOROMRead(addr, 0);
+
     logWriteReadTest(addr,writeData,readData);
 
   }
-reportWriteReadTest();
+  reportWriteReadTest();
 }
 
 void ESP_RIOconfig_Access_Test(void)

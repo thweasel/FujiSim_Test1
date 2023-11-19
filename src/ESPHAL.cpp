@@ -103,8 +103,10 @@ void releaseLocalBus(void)
   clearESPHardlock();
 }
 
-bool sendBUSRQ(uint8_t retries)
+bool getZ80BUS(uint8_t retries)
 {
+  // Generate a Z80BUSRQ and wait for the HOST to reply Z80BUSACK
+  // Z80BUS will be release implicitly when LocalBus is Released
   WriteDataBUSOperation(0xFF, CONTROLBYTE_BUSRQ_ENABLE, 0xFFFF);
 
   uint8_t *busPacket = NULL;
@@ -125,11 +127,13 @@ bool sendBUSRQ(uint8_t retries)
   return false;
 }
 
-bool clearBUSRQ(void)
+/*
+bool releaseZ80BUS(void)  // IMPLICIT when bus IDLEs
 {
   WriteDataBUSOperation(0xFF,CONTROLBYTE_BUSRQ_DISABLE,0xFFFF);
   return true;
 }
+*/
 
 
 //

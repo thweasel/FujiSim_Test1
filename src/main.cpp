@@ -70,7 +70,7 @@ void loop()
   //
   //  ESP Cache Tests
   //  
-  ESP_CacheStatusTest();
+  //ESP_CacheStatusTest(); // WORKING
   //ESP_CacheData_Test();
   //ESP_FillCacheStatus(0xf0);
 
@@ -90,7 +90,7 @@ void loop()
   // RIO ROM Tests
   //
   
-  //ESP_ROM_Test(); // NEED TO change this -- getLocalBUS()
+  ESP_ROM_Test(); // WORKING
   //enableRIO_ROMRW(0);
   //Z80_ROMMemory_Test();
   //disableRIO_ROM();
