@@ -176,7 +176,7 @@ void Setup_ESPHALDriver(void)
   pinMode(ESP_RIO_PROTECT, OUTPUT);
 
   // OUTPUT States
-  digitalWrite(ESP_SPI_INT_OE, LOW);
+  digitalWrite(ESP_SPI_INT_CE, LOW);
   digitalWrite(ESP_SPI_INT_STC, HIGH);
   digitalWrite(ESP_SPI_INT_OE, HIGH);
   digitalWrite(ESP_PULSE, HIGH);

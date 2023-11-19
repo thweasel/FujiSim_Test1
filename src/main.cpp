@@ -70,7 +70,7 @@ void loop()
   //
   //  ESP Cache Tests
   //  
-  //ESP_CacheStatusTest();
+  ESP_CacheStatusTest();
   //ESP_CacheData_Test();
   //ESP_FillCacheStatus(0xf0);
 

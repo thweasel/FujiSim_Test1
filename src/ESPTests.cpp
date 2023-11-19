@@ -50,7 +50,7 @@ void ESP_CacheStatusTest(void)
   
   initWriteReadTest("ESP_CacheStatusTest");
 
-  for (uint16_t addr = 0x0000; addr < 0x000F; addr++)
+  for (uint16_t addr = 0x0000; addr < 0x00FF; addr++)
   {
     
     doCacheStatusWrite(writeData, addr);
@@ -87,7 +87,7 @@ void ESP_ROM_Test(void)
 {
   initWriteReadTest("ESP_ROM_Test");
 
-  for (uint16_t addr = 0x0000; addr < 0x000F; addr++)
+  for (uint16_t addr = 0x0000; addr < 0x00FF; addr++)
   {
     //data = addr;
     writeData = writeData+1;

@@ -78,7 +78,7 @@ boolean establishESPHardlock (uint8_t retries)
     }
     else
     { 
-      Serial.println("ESP has Lock");
+      //Serial.println("ESP has Lock");
       setESPHardlock();
       return true;    // SUCCESSFUL LOCK
     }
