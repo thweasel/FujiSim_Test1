@@ -57,12 +57,14 @@ Z80 control
 #define CONTROLBYTE_HOSTROM_ENABLE  B11111111
 #define CONTROLBYTE_HOSTROM_DISABLE B10111111
 
+//                      7     6        5      4       3       2      1     0
+// Control SPI OUTPUT [ NMI | ROMCE  | WAIT | BUSRQ | MEMRQ | IORQ | WR  | RD ]
 
-// Local BUS
-// CACHE data access
+// Local BUS                        
+// CACHE data access - IORQ == A16   76543210
 #define CONTROLBYTE_CACHEDATA_RD    B10110010
 #define CONTROLBYTE_CACHEDATA_WR    B10110001
-// CACHE status access
+// CACHE status access - IORQ == A16 76543210
 #define CONTROLBYTE_CACHESTATUS_RD  B10110110
 #define CONTROLBYTE_CACHESTATUS_WR  B10110101
 

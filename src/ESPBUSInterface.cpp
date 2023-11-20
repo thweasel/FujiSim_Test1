@@ -163,7 +163,7 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
 {
     if( getLocalBus(1) )
     {
-        if ( getZ80BUS(3) );
+        if ( getZ80BUS(3) )
         {
             doWriteBUSData(Data, Address, CONTROLBYTE_IORQ_WR);
         }
@@ -184,12 +184,12 @@ void doZ80IOWrite(uint8_t Data, uint16_t Address)
 // ESP accessing Cache chip
 uint8_t doCacheDataRead(uint16_t Address) // A16-0
 {
+    data = 0;
     if(getLocalBus(1))
     {
         data = doReadBUSData(Address, CONTROLBYTE_CACHEDATA_RD);
-        return data;
     }
-    return 0;
+    return data;
 }
 
 void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
@@ -203,6 +203,7 @@ void doCacheDataWrite(uint8_t Data, uint16_t Address) // A16-0
 
 uint8_t doCacheStatusRead(uint16_t Address) // A16-1
 {
+    data = 0;
     if(getLocalBus(1))
     {
         data = doReadBUSData(Address, CONTROLBYTE_CACHESTATUS_RD);

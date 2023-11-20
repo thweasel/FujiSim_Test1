@@ -70,8 +70,8 @@ void loop()
   //
   //  ESP Cache Tests
   //  
-  //ESP_CacheStatusTest(); // WORKING
-  //ESP_CacheData_Test();
+  //ESP_CacheStatusTest(); // WORKING (SIM)
+  ESP_CacheData_Test();  // SIM FAILS on Addr 0?
   //ESP_FillCacheStatus(0xf0);
 
 
@@ -90,7 +90,7 @@ void loop()
   // RIO ROM Tests
   //
   
-  ESP_ROM_Test(); // WORKING
+  //ESP_ROM_Test(); // WORKING (SIM)
   //enableRIO_ROMRW(0);
   //Z80_ROMMemory_Test();
   //disableRIO_ROM();

@@ -2,11 +2,11 @@
 #include "ESPTests.h"
 #include "consoleDebug.h"
 
-#define DEBUG_DETAILED false
+#define DEBUG_DETAILED true
 
 uint16_t errors =0;
-uint8_t writeData = 0x00;
-uint8_t readData = 0x00;
+uint8_t writeData = 0;
+uint8_t readData = 0;
 
 
 void initWriteReadTest (const char * TestName)
@@ -15,8 +15,8 @@ void initWriteReadTest (const char * TestName)
   Serial.print(TestName);
   Serial.print(" >>  ");
   errors = 0;
-  writeData = 0x00;
-  readData = 0x00;
+  writeData = 1;
+  readData = 1;
 }
 
 void logWriteReadTest(uint16_t addr, uint8_t writeData, uint8_t readData)
@@ -64,7 +64,7 @@ void ESP_CacheStatusTest(void)
     logWriteReadTest(addr,writeData,readData);
         
     writeData++;
-    //delay(50);
+    
   }
   reportWriteReadTest();
 
@@ -72,19 +72,18 @@ void ESP_CacheStatusTest(void)
 
 void ESP_CacheData_Test(void)
 {
-  Serial.println("\nESP_CacheData_Test");
+  initWriteReadTest("ESP_CacheData_Test");
   
-  uint8_t data = 0x00;
-  for (uint16_t addr = 0; addr < 0x10; addr++)
-  {
+  for (uint16_t addr = 0x0001; addr < 0x00FF; addr++)
+  {    
+    doCacheDataWrite(writeData, addr);
+    readData = doCacheDataRead(addr);
 
-    consoleShowAddrData("doCacheDataWrite",addr, data,HEX);
-    doCacheDataWrite(data, addr);
-    data = doCacheDataRead(addr);
-    consoleShowAddrData("doCacheDataRead",addr, data,HEX);
-    
-    data++;
+    logWriteReadTest(addr,writeData,readData);
+       
+    writeData++;
   }
+  reportWriteReadTest();
 
 }
 

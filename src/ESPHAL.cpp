@@ -19,7 +19,7 @@ void setBUSidle(void)
 {
   // Default IDLE state for the system
   //  stopBusSignalsFromSPI();  // Stop when releasing the board
-  WriteDataBUSOperation(0xff,0xffff,0xff);  // set all shift register outputs high
+  WriteDataBUSOperation(0xff,0xff,0xffff);  // set all shift register outputs high
   return;
 }
 
@@ -92,7 +92,7 @@ boolean getLocalBus (uint8_t retries)
 
     } while (--retries > 0);
   }
-  //Serial.println("ESP failed to Lock");
+  Serial.println("ESP failed to HardLock -- can't get Local Bus");
   return false;       // FAILED TO LOCK
 }
 
