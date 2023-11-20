@@ -106,18 +106,18 @@ void ESP_ROM_Test(void)
 
 void ESP_RIOconfig_Access_Test(void)
 {
-  Serial.println("\nESP_RIOconfig_Test");
+  initWriteReadTest("ESP_RIOconfig_Access_Test");
 
-  uint8_t data = 0x00;
   for (uint16_t addr = 0; addr < 0x10; addr++)
   {
-    consoleShowAddrData("doRIOconfigWrite", addr, data, HEX);
-    doRIOconfigWrite(data, addr);
-
-    data = doRIOconfigRead(addr);
-    consoleShowAddrData("doRIOconfigRead", addr, data, HEX);
-    data++;
+    
+    doRIOconfigWrite(writeData, addr);
+    readData = doRIOconfigRead(addr);
+    consoleShowAddrData("ESP_RIOconfig_Access_Test readData:", addr, readData, DEC);
+    logWriteReadTest(addr,writeData,readData);
+    writeData++;
   }
+  reportWriteReadTest();
 }
 
 void ESP_FillCacheStatus (uint8_t data)
