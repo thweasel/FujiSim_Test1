@@ -181,13 +181,13 @@ void disableRIO_ROM(void)
 
 void enableRIO_IOdConfigAccess(void)
 {
-    getLocalBus(3);
+    //getLocalBus(3);
     disableRIOProtection();
 }
 
 void disableRIO_IOdConfigAccess(void)
 {
-    releaseLocalBus();
+    //releaseLocalBus();
     enableRIOProtection();
 }
 
