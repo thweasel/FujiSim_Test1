@@ -68,19 +68,20 @@ void loop()
     */
 
   //
+  // BASIC LOCAL ESP FUNCTION TESTING
+  //
+
+  //
   //  ESP Cache Tests
   //  
-  //ESP_CacheStatusTest(); // WORKING (SIM)
-  ESP_CacheData_Test();  // SIM FAILS on Addr 0?
-  //ESP_FillCacheStatus(0xf0);
-
-
-
+  ESP_CACHE_Status_Access_Test(); // WORKING (SIM)
+  ESP_CACHE_Data_Access_Test();  // SIM FAILS on Addr 0?
+  
   //
-  // ESP RIO function tests
+  //  ESP RIO function tests
   //
-   //ESP_ROM_Test();
-  // ESP_RIOconfig_Access_Test();
+  ESP_RIO_ROM_Access_Test();
+  ESP_RIO_IODconfig_Access_Test();  // SIM PASSES BUT RIO CONFIG EMPTY?
     
 
 
@@ -90,7 +91,7 @@ void loop()
   // RIO ROM Tests
   //
   
-  //ESP_ROM_Test(); // WORKING (SIM)
+  //ESP_RIO_ROM_Access_Test(); // WORKING (SIM)
   //enableRIO_ROMRW(0);
   //Z80_ROMMemory_Test();
   //disableRIO_ROM();

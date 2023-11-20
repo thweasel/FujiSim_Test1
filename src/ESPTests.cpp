@@ -50,10 +50,10 @@ void reportWriteReadTest(void)
 
 
 
-void ESP_CacheStatusTest(void)
+void ESP_CACHE_Status_Access_Test(void)
 {
   
-  initWriteReadTest("ESP_CacheStatusTest");
+  initWriteReadTest("ESP_CACHE_Status_Access_Test");
 
   for (uint16_t addr = 0x0000; addr < 0x00FF; addr++)
   {
@@ -70,9 +70,9 @@ void ESP_CacheStatusTest(void)
 
 }
 
-void ESP_CacheData_Test(void)
+void ESP_CACHE_Data_Access_Test(void)
 {
-  initWriteReadTest("ESP_CacheData_Test");
+  initWriteReadTest("ESP_CACHE_Data_Access_Test");
   
   for (uint16_t addr = 0x0001; addr < 0x00FF; addr++)
   {    
@@ -87,9 +87,9 @@ void ESP_CacheData_Test(void)
 
 }
 
-void ESP_ROM_Test(void)
+void ESP_RIO_ROM_Access_Test(void)
 {
-  initWriteReadTest("ESP_ROM_Test");
+  initWriteReadTest("ESP_RIO_ROM_Access_Test");
 
   for (uint16_t addr = 0x0000; addr < 0x00FF; addr++)
   {
@@ -104,16 +104,16 @@ void ESP_ROM_Test(void)
   reportWriteReadTest();
 }
 
-void ESP_RIOconfig_Access_Test(void)
+void ESP_RIO_IODconfig_Access_Test(void)
 {
-  initWriteReadTest("ESP_RIOconfig_Access_Test");
+  initWriteReadTest("ESP_RIO_IODconfig_Access_Test");
 
   for (uint16_t addr = 0; addr < 0x10; addr++)
   {
     
     doRIOconfigWrite(writeData, addr);
     readData = doRIOconfigRead(addr);
-    consoleShowAddrData("ESP_RIOconfig_Access_Test readData:", addr, readData, DEC);
+    //consoleShowAddrData("\nESP_RIO_IODconfig_Access_Test readData:", addr, readData, DEC);  // SIMULTATION DEBUGGING
     logWriteReadTest(addr,writeData,readData);
     writeData++;
   }
