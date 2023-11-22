@@ -17,8 +17,8 @@ uint8_t controlByte;  // Control bus state
 
 void setBUSidle(void)
 {
-  // Default IDLE state for the system
-  //  stopBusSignalsFromSPI();  // Stop when releasing the board
+  // Default IDLE state for the system -- MASK control bits BUSRQ/WAIT/ROMCS/NMI?
+  
   WriteDataBUSOperation(0xff,0xff,0xffff);  // set all shift register outputs high
   return;
 }
@@ -27,14 +27,14 @@ uint8_t doReadBUSData(uint16_t Address, uint8_t Control)
 {
   uint8_t result;
   result = ReadDataBUSOperation(Control, Address);
-  //setBUSidle(); // Implicit as SPI output is cut off?
+  setBUSidle(); // Implicit as SPI output is cut off?
   return result;
 }
 
 void doWriteBUSData(uint8_t Data, uint16_t Address, uint8_t Control)
 {
   WriteDataBUSOperation(Data,Control,Address);
-  //setBUSidle(); // Implicit as SPI output is cut off?
+  setBUSidle(); // Implicit as SPI output is cut off?
   return;
 }
 
@@ -86,7 +86,7 @@ boolean getLocalBus (uint8_t retries)
       { 
         //Serial.println("ESP has Lock");
         setESPHardlock();
-        sendBusSignalsFromSPI();
+        //sendBusSignalsFromSPI();  // CONTROLLED FROM !RIO_IO_DECODE 
         return true;    // SUCCESSFUL LOCK
       }
 
@@ -99,7 +99,8 @@ boolean getLocalBus (uint8_t retries)
 void releaseLocalBus(void)
 {
   //Serial.println("ESP released Lock");
-  stopBusSignalsFromSPI();
+  //setBUSidle();
+  //stopBusSignalsFromSPI(); // CONTROLLED FROM !RIO_IO_DECODE 
   clearESPHardlock();
 }
 
@@ -200,8 +201,24 @@ void ESPHardware_setup(void)
   Setup_ESPHALDriver();
   // PUSH IODevice config to RIO
 
-  setBUSidle();
-  releaseLocalBus();
+  // Prepare the Local BUS and Release control
+
+
+
+  setESPHardlock();
+
+  // WAIT for the Z80 Hardlock to reset
+  do
+  {
+      delay(10); 
+  } while (getZ80HardlockState() == true) ;
+
+  setBUSidle();  
+  sendBusSignalsFromSPI();
+
+  clearESPHardlock();
+
+  sendRESET();
 }
 
 
