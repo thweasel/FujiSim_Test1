@@ -38,7 +38,7 @@
 
 
 #define ESP_RIO_PROTECT 5   // OUTPUT (enable/disable)
-#define ESP_RESET 6         // OUTPUT (pulse)
+#define ESP_RESET 6         // OUTPUT LOW RESETS HOST
 #define ESP_INT 3           // INPUT  [INTERRUPT]
 
 #define ESP_WAIT_RESET 8    // OUTPUT (pulse)
@@ -177,6 +177,7 @@ void Setup_ESPHALDriver(void)
   pinMode(ESP_ROMSELECT1, OUTPUT);
   pinMode(ESP_HARDLOCK, OUTPUT);
   pinMode(ESP_RIO_PROTECT, OUTPUT);
+  pinMode(ESP_RESET, OUTPUT);
 
   // OUTPUT States
   digitalWrite(ESP_SPI_INT_CE, LOW);
@@ -189,7 +190,7 @@ void Setup_ESPHALDriver(void)
   digitalWrite(ESP_ROMSELECT1, LOW);
   digitalWrite(ESP_HARDLOCK, HIGH);     // START LOCKED
   digitalWrite(ESP_RIO_PROTECT, HIGH);  // Connect on LOW (may be buffer with NOT?)
- 
+  digitalWrite(ESP_RESET, LOW);
   return;
 }
 
