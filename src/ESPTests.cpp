@@ -2,7 +2,7 @@
 #include "ESPTests.h"
 #include "consoleDebug.h"
 
-#define DEBUG_DETAILED true
+#define DEBUG_DETAILED false
 
 uint16_t errors =0;
 uint8_t writeData = 0;
@@ -74,7 +74,7 @@ void ESP_CACHE_Data_Access_Test(void)
 {
   initWriteReadTest("ESP_CACHE_Data_Access_Test");
   
-  for (uint16_t addr = 0x0001; addr < 0x00FF; addr++)
+  for (uint16_t addr = 0x0000; addr < 0x00FF; addr++)
   {    
     doCacheDataWrite(writeData, addr);
     readData = doCacheDataRead(addr);
@@ -108,7 +108,7 @@ void ESP_RIO_IODconfig_Access_Test(void)
 {
   initWriteReadTest("ESP_RIO_IODconfig_Access_Test");
 
-  for (uint16_t addr = 0; addr < 0x10; addr++)
+  for (uint16_t addr = 0; addr < 0x00FF; addr++)
   {
     
     doRIOconfigWrite(writeData, addr);
