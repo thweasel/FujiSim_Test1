@@ -92,9 +92,9 @@ void loop()
   // RIO ROM Tests
   //
     
-  //enableRIO_ROMRW(0);
-  //Z80_ROMMemory_Test();
-  //disableRIO_ROM();
+  enableRIO_ROMRW(0);
+  Z80_ROMMemory_Test();
+  disableRIO_ROM();
   /*
   enableRIO_ROMRW(1);
   Z80_ROMMemory_Test();
@@ -110,8 +110,9 @@ void loop()
 // IODdevice TEST
 //  
 
-//ESP_RIOconfig_Cache0to0x0001();
-//Z80_IORQ_Test();
+
+ESP_RIOconfig_Cache0to0x0001();
+Z80_IORQ_Test();
   
 Serial.println("\n\nTEST LOOP END");
 }
