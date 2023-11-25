@@ -214,6 +214,7 @@ void ESPHardware_setup(void)
   } while (getZ80HardlockState() == true) ;
 
   setBUSidle();  
+  setBUSidle();  // double set to fix bug in simulator
   sendBusSignalsFromSPI();
 
   clearESPHardlock();
